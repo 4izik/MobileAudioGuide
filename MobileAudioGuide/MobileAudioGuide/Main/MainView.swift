@@ -23,8 +23,11 @@ class MainView: UIView {
     
     var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = UIColor.red
-        tableView.rowHeight = 68
+        tableView.rowHeight = UIScreen.main.bounds.height / 5
+        tableView.contentMode = .scaleAspectFit
+        tableView.tableFooterView = UIView()
+        tableView.isScrollEnabled = false
+        tableView.backgroundColor = .clear
         tableView.register(MainTableViewCell.self, forCellReuseIdentifier: "MainTableViewCell")
         return tableView
     }()

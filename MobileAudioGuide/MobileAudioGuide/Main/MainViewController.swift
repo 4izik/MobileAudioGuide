@@ -10,6 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     // MARK: - Properties
     let mainView = MainView()
+    let namesTours = ["Istanbul in 1 day: The most popular route", "From Galata Bridge to Taksim Square", "Non-touristic Istanbul and the legacy of Constantinople"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +38,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as? MainTableViewCell
+        cell?.imageToursView.image = UIImage(named: "Image\(indexPath.row + 1)")
+        cell?.infoLabel.text = namesTours[indexPath.row]
+        cell?.backgroundColor = .clear
+        return cell ?? UITableViewCell()
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as? MainTableViewCell
+        cell?.imageToursView.alpha = 1
+    }
 }
 
