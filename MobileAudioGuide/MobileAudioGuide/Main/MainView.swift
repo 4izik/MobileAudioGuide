@@ -13,13 +13,21 @@ class MainView: UIView {
 
     private let infoLabel: UILabel = {
         let label = UILabel()
-        label.text = "Istanbul audio tours"
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.text = "Istanbul Audio tours"
+        label.font = UIFont.systemFont(ofSize: 25, weight: .medium)
         label.textAlignment = .center
         label.numberOfLines = 0
+        label.textColor = Colors.lblMainInfo
         return label
     }()
-
+    
+    var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = UIColor.red
+        tableView.rowHeight = 68
+        tableView.register(MainTableViewCell.self, forCellReuseIdentifier: "MainTableViewCell")
+        return tableView
+    }()
 
     // MARK: - Init
 
@@ -42,6 +50,7 @@ class MainView: UIView {
 
     private func setupViews() {
         addSubview(infoLabel)
+        addSubview(tableView)
 
         applyUIConstraints()
         
@@ -52,12 +61,18 @@ class MainView: UIView {
 
     func applyUIConstraints() {
         infoLabel.translatesAutoresizingMaskIntoConstraints = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            infoLabel.widthAnchor.constraint(equalToConstant: 105),
-            infoLabel.heightAnchor.constraint(equalToConstant: 105),
+            infoLabel.widthAnchor.constraint(equalToConstant: 170),
+            infoLabel.heightAnchor.constraint(equalToConstant: 60),
             infoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            infoLabel.topAnchor.constraint(equalTo: topAnchor, constant: super.bounds.height / 5)
+            infoLabel.topAnchor.constraint(equalTo: topAnchor, constant: super.bounds.height / 7),
+            
+            tableView.rightAnchor.constraint(equalTo: rightAnchor),
+            tableView.leftAnchor.constraint(equalTo: leftAnchor),
+            tableView.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 8),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100)
         ])
     }
 

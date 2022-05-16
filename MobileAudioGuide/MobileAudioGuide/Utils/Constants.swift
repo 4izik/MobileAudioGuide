@@ -12,8 +12,8 @@ enum Colors {
 //    Colors used in views
     static let vwBackground = UIColor(rgb: 0x1A1E26)
 
-//    Colors used in buttons views
-
+//    Colors used in label
+    static let lblMainInfo = UIColor(rgb: 0xCCCCCC)
 
 }
 

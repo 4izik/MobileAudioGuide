@@ -25,8 +25,22 @@ class MainViewController: UIViewController {
             mainView.heightAnchor.constraint(equalTo: view.heightAnchor),
             mainView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+        
+        mainView.tableView.delegate = self
+        mainView.tableView.dataSource = self
     }
+}
 
-
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
+            return cell
+    }
+    
+    
 }
 

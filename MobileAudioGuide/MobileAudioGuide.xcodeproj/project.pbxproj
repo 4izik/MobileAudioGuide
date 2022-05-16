@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D61FD1B28328A1E00AB33C3 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */; };
 		5DCB58FB283172BE00A2C3CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FA283172BE00A2C3CC /* AppDelegate.swift */; };
 		5DCB58FD283172BE00A2C3CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FC283172BE00A2C3CC /* SceneDelegate.swift */; };
 		5DCB58FF283172BE00A2C3CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FE283172BE00A2C3CC /* MainViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		5DCB58F7283172BE00A2C3CC /* MobileAudioGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAudioGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCB58FA283172BE00A2C3CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DCB58FC283172BE00A2C3CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				5DCB5900283172BE00A2C3CC /* Main.storyboard */,
 				5DCB58FE283172BE00A2C3CC /* MainViewController.swift */,
 				5DCB59112831736E00A2C3CC /* MainView.swift */,
+				5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			files = (
 				5DCB59192831758200A2C3CC /* UIColor+Extension.swift in Sources */,
 				5DCB58FF283172BE00A2C3CC /* MainViewController.swift in Sources */,
+				5D61FD1B28328A1E00AB33C3 /* MainTableViewCell.swift in Sources */,
 				5DCB5905283172BE00A2C3CC /* MobileAudioGuide.xcdatamodeld in Sources */,
 				5DCB58FB283172BE00A2C3CC /* AppDelegate.swift in Sources */,
 				5DCB59122831736E00A2C3CC /* MainView.swift in Sources */,
