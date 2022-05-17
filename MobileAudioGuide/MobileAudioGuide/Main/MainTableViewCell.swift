@@ -68,7 +68,4 @@ class MainTableViewCell: UITableViewCell {
             infoLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
-
-    
-
 }
