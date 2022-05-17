@@ -17,6 +17,12 @@ class MainViewController: UIViewController {
         
         setupUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     private func setupUI() {
         view.addSubview(mainView)
 
@@ -48,6 +54,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as? MainTableViewCell
         cell?.imageToursView.alpha = 1
+        let guideScreenViewController = GuideScreenTableViewController(indexOfSelectedItem: indexPath.row,
+                                                                       textLoader: TextLoader())
+        navigationController?.pushViewController(guideScreenViewController, animated: true)
     }
 }
-

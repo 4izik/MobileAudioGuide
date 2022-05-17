@@ -78,5 +78,4 @@ class MainView: UIView {
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100)
         ])
     }
-
 }
