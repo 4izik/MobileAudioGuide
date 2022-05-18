@@ -43,7 +43,7 @@ class MainTableViewCell: UITableViewCell {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("Initializing from Storyboard isn't supported")
     }
     
     func applyUIConstraints() {

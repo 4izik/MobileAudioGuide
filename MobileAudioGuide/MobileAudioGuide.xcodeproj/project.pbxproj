@@ -22,6 +22,7 @@
 		CE200B332833C13C0043F57A /* GuideDescribingTexts.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE200B322833C13C0043F57A /* GuideDescribingTexts.txt */; };
 		CE200B382833C6EE0043F57A /* ExcursionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200B372833C6EE0043F57A /* ExcursionInfo.swift */; };
 		CE200B3C2833CA010043F57A /* TextLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200B3B2833CA010043F57A /* TextLoader.swift */; };
+		CE4151412835098900CF9D53 /* GuideFeatureViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4151402835098900CF9D53 /* GuideFeatureViewBuilder.swift */; };
 		CE634F4D283429FC006C2F73 /* GuideHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE634F4C283429FC006C2F73 /* GuideHeaderView.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		CE200B322833C13C0043F57A /* GuideDescribingTexts.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = GuideDescribingTexts.txt; sourceTree = "<group>"; };
 		CE200B372833C6EE0043F57A /* ExcursionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionInfo.swift; sourceTree = "<group>"; };
 		CE200B3B2833CA010043F57A /* TextLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLoader.swift; sourceTree = "<group>"; };
+		CE4151402835098900CF9D53 /* GuideFeatureViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideFeatureViewBuilder.swift; sourceTree = "<group>"; };
 		CE634F4C283429FC006C2F73 /* GuideHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 			children = (
 				5DCB5915283174CE00A2C3CC /* Constants.swift */,
 				CE200B3B2833CA010043F57A /* TextLoader.swift */,
+				CE4151402835098900CF9D53 /* GuideFeatureViewBuilder.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				5DCB5905283172BE00A2C3CC /* MobileAudioGuide.xcdatamodeld in Sources */,
 				CE200B2A28339F680043F57A /* GuideScreenTableViewController.swift in Sources */,
 				CE200B3C2833CA010043F57A /* TextLoader.swift in Sources */,
+				CE4151412835098900CF9D53 /* GuideFeatureViewBuilder.swift in Sources */,
 				5DCB58FB283172BE00A2C3CC /* AppDelegate.swift in Sources */,
 				CE200B382833C6EE0043F57A /* ExcursionInfo.swift in Sources */,
 				5DCB59122831736E00A2C3CC /* MainView.swift in Sources */,
@@ -375,6 +379,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -402,6 +407,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
