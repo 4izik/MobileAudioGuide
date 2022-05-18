@@ -10,7 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     // MARK: - Properties
     let mainView = MainView()
-    let namesTours = ["Istanbul in 1 day: The most popular route", "From Galata Bridge to Taksim Square", "Non-touristic Istanbul and the legacy of Constantinople"]
+    let namesTours = ["Istanbul in 1 day: The most popular route", "From Galata Bridge\nto Taksim Square", "Non-touristic Istanbul and\nthe legacy of Constantinople"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,21 @@ class MainViewController: UIViewController {
         
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
+        
+        mainView.hotelsButton.addTarget(self, action: #selector(openHotelsURL), for: .touchUpInside)
+        mainView.ticketsButton.addTarget(self, action: #selector(openTicketsURL), for: .touchUpInside)
+    }
+    
+    @objc func openHotelsURL() {
+        guard let urlComponents = URLComponents(string: "https://www.booking.com/city/tr/istanbul.ru.html?aid=334407&no_rooms=1&group_adults=2&label=alex-app-istanbul-ios") else { return }
+        guard let url = urlComponents.url else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
+    @objc func openTicketsURL() {
+        guard let urlComponents = URLComponents(string: "https://experience.tripster.ru/experience/Istanbul/?sorting=rating&type=private&utm_campaign=affiliates&utm_medium=link&utm_source=travelpayouts") else { return }
+        guard let url = urlComponents.url else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }
 
@@ -52,8 +67,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as? MainTableViewCell
-        cell?.imageToursView.alpha = 1
         let guideScreenViewController = GuideScreenTableViewController(indexOfSelectedItem: indexPath.row,
                                                                        textLoader: TextLoader())
         navigationController?.pushViewController(guideScreenViewController, animated: true)

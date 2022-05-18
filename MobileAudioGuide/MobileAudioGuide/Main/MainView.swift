@@ -31,6 +31,35 @@ class MainView: UIView {
         tableView.register(MainTableViewCell.self, forCellReuseIdentifier: "MainTableViewCell")
         return tableView
     }()
+    
+    var ticketsButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = Colors.btnBlue
+        button.setTitle("Tickets/tours", for: .normal)
+        button.titleLabel?.font =  UIFont.systemFont(ofSize: 12, weight: .medium)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 6
+        return button
+    }()
+    
+    var hotelsButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = Colors.btnYellow
+        button.setTitle("Hotels", for: .normal)
+        button.titleLabel?.font =  UIFont.systemFont(ofSize: 12, weight: .medium)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 6
+        return button
+    }()
+    
+    let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.spacing = 10
+        stackView.distribution = .fillEqually
+        return stackView
+    }()
 
     // MARK: - Init
 
@@ -52,8 +81,12 @@ class MainView: UIView {
     // MARK: - Setup View
 
     private func setupViews() {
+        stackView.addArrangedSubview(ticketsButton)
+        stackView.addArrangedSubview(hotelsButton)
+        
         addSubview(infoLabel)
         addSubview(tableView)
+        addSubview(stackView)
 
         applyUIConstraints()
         
@@ -63,19 +96,25 @@ class MainView: UIView {
     // MARK: - Add constraints
 
     func applyUIConstraints() {
-        infoLabel.translatesAutoresizingMaskIntoConstraints = false
-        tableView.translatesAutoresizingMaskIntoConstraints = false
+        [infoLabel, tableView, stackView, ticketsButton, hotelsButton].forEach { view in
+            view.translatesAutoresizingMaskIntoConstraints = false
+        }
         
         NSLayoutConstraint.activate([
             infoLabel.widthAnchor.constraint(equalToConstant: 170),
             infoLabel.heightAnchor.constraint(equalToConstant: 60),
             infoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            infoLabel.topAnchor.constraint(equalTo: topAnchor, constant: super.bounds.height / 7),
+            infoLabel.topAnchor.constraint(equalTo: topAnchor, constant: 60),
             
             tableView.rightAnchor.constraint(equalTo: rightAnchor),
             tableView.leftAnchor.constraint(equalTo: leftAnchor),
             tableView.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 8),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100)
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100),
+            
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -40),
+            stackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
+            stackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20),
+            stackView.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 }
