@@ -96,11 +96,9 @@ class MainView: UIView {
     // MARK: - Add constraints
 
     func applyUIConstraints() {
-        infoLabel.translatesAutoresizingMaskIntoConstraints = false
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        ticketsButton.translatesAutoresizingMaskIntoConstraints = false
-        hotelsButton.translatesAutoresizingMaskIntoConstraints = false
+        [infoLabel, tableView, stackView, ticketsButton, hotelsButton].forEach { view in
+            view.translatesAutoresizingMaskIntoConstraints = false
+        }
         
         NSLayoutConstraint.activate([
             infoLabel.widthAnchor.constraint(equalToConstant: 170),

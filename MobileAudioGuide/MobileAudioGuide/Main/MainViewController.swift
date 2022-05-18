@@ -47,7 +47,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func openTicketsURL() {
-        guard let urlComponents = URLComponents(string: "https://experience.tripster.ru/experience/Istanbul/?sorting=rating&type=private&utm_campaign=affiliates&utm_medium=link&utm_source=travelpayouts") else {return}
+        guard let urlComponents = URLComponents(string: "https://experience.tripster.ru/experience/Istanbul/?sorting=rating&type=private&utm_campaign=affiliates&utm_medium=link&utm_source=travelpayouts") else { return }
         guard let url = urlComponents.url else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
