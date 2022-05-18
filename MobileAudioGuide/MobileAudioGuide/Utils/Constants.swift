@@ -14,6 +14,10 @@ enum Colors {
 
 //    Colors used in label
     static let lblMainInfo = UIColor(rgb: 0xCCCCCC)
+    
+//    Colors used in button
+    static let btnBlue = UIColor(rgb: 0x0676A8)
+    static let btnYellow = UIColor(rgb: 0xC9964D)
 
 }
 
