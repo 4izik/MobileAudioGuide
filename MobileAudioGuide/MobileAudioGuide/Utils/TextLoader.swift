@@ -33,6 +33,7 @@ class TextLoader {
             if blockText.contains("_DURATION_:") { excursionInfo.excursionDuration = setSingleLineTextFor(blockText) }
             if blockText.contains("_DISTANCE_:") { excursionInfo.routeDistance = setSingleLineTextFor(blockText) }
             if blockText.contains("_TRANSPORT_:") { excursionInfo.transportType = setSingleLineTextFor(blockText) }
+            if blockText.contains("_SIGHTSEENGS_:") { excursionInfo.numberOfSightseengs = setSingleLineTextFor(blockText) }
             if blockText.contains("_DESCRIPTION_:") {
                 excursionInfo.excursionDescription = setDescriptionTextFor(blockText)
             } else {

@@ -12,6 +12,8 @@ class GuideScreenTableViewController: UITableViewController {
     private let infoImage = UIImage(systemName: "info.circle")
     let indexOfSelectedItem: Int
     let textLoader: TextLoader
+    let headerView = GuideHeaderView()
+    
     private var excursionInfo: ExcursionInfo? {
         textLoader.loadExcursionInfoFor(index: indexOfSelectedItem)
     }

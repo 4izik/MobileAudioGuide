@@ -10,6 +10,9 @@ _DISTANCE_:
 _TRANSPORT_:
 on foot
 
+_SIGHTSEENGS_:
+50 sightseengs
+
 _DESCRIPTION_:
 Istanbul is a city with incredible energy, a long and complicated history. For two and a half millennia, it was dominated by the Greeks, Romans, Byzantines and Ottomans, managed to visit the capital of four empires and absorb the spirit of three religions.
 
@@ -45,6 +48,9 @@ _DISTANCE_:
 _TRANSPORT_:
 on foot
 
+_SIGHTSEENGS_:
+30 sightseengs
+
 _DESCRIPTION_:
 North of Golden Horn Bay is the modern district of Beyoglu, which differs radically from the historic center. For centuries the hilly shores of Beyoglu have been the residence of overseas merchants and ambassadors. At one time there was even a Genoese and then Venetian settlement here.
 
@@ -77,6 +83,9 @@ _DISTANCE_:
 
 _TRANSPORT_:
 Ацуцтвует в файле
+
+_SIGHTSEENGS_:
+36 sightseengs
 
 _DESCRIPTION_:
 Ацуцтвует в файле
