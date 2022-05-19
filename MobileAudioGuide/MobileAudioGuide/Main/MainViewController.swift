@@ -11,6 +11,8 @@ class MainViewController: UIViewController {
     // MARK: - Properties
     let mainView = MainView()
     let namesTours = ["Istanbul in 1 day: The most popular route", "From Galata Bridge\nto Taksim Square", "Non-touristic Istanbul and\nthe legacy of Constantinople"]
+    let tagsColors = [Colors.btnHit, Colors.btnNew, Colors.btnSpecial]
+    let tagsNames = ["hit","new","special"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +65,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.imageToursView.image = UIImage(named: "Image\(indexPath.row + 1)")
         cell?.infoLabel.text = namesTours[indexPath.row]
         cell?.backgroundColor = .clear
+        cell?.tagLabel.text = tagsNames[indexPath.row]
+        cell?.tagLabel.backgroundColor = tagsColors[indexPath.row]
         return cell ?? UITableViewCell()
     }
     
