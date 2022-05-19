@@ -36,7 +36,6 @@ final class GuideScreenTableViewController: UITableViewController {
         super.viewDidLoad()
         setupViewController()
         setupNavigationController()
-        tableView.register(GuideHeaderView.self, forHeaderFooterViewReuseIdentifier: GuideHeaderView.reuseID)
     }
     
     override func viewWillAppear(_ animated: Bool) {

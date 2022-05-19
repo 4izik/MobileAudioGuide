@@ -10,7 +10,7 @@ import UIKit
 /// Header View для таблицы описания экскурсии
 final class GuideHeaderView: UITableViewHeaderFooterView {
     
-    static let reuseID = "GuideHeaderView"
+    private let reuseID = "GuideHeaderView"
     private let excursionInfo: ExcursionInfo
     private let imageName: String
     private let guideFeatureViewBuilder: GuideFeatureViewBuilder
@@ -94,7 +94,7 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
         self.excursionInfo = excursionInfo
         self.imageName = imageName
         self.guideFeatureViewBuilder = guideFeatureViewBuilder
-        super.init(reuseIdentifier: GuideHeaderView.reuseID)
+        super.init(reuseIdentifier: reuseID)
         setupViews()
         activateConstraints()
     }
@@ -106,7 +106,7 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
     private func setupViews() {
         backgroundView?.backgroundColor = .white
         
-        [titleLabel, imageView, routeView, distanceView, transportView, sightseengView, aboutExcursionButton, beginExcursionButton,buttonsStackView]
+        [titleLabel, imageView, routeView, distanceView, transportView, sightseengView, aboutExcursionButton, beginExcursionButton, buttonsStackView]
             .forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         
         [titleLabel, imageView, routeView, distanceView, transportView, sightseengView, buttonsStackView]
