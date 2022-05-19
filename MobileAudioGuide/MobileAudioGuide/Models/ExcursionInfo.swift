@@ -2,7 +2,7 @@
 //  ExcursionInfo.swift
 //  MobileAudioGuide
 //
-//  Created by user on 17.05.2022.
+//  Created by Aleksei Pavlov on 17.05.2022.
 //
 
 import Foundation

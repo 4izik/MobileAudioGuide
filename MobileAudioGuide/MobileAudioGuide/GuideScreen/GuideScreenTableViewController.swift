@@ -2,28 +2,34 @@
 //  GuideScreenTableViewController.swift
 //  MobileAudioGuide
 //
-//  Created by AlekseiPavlov on 17.05.2022.
+//  Created by Aleksei Pavlov on 17.05.2022.
 //
 
 import UIKit
 
-class GuideScreenTableViewController: UITableViewController {
+/// TableViewController для экрана описания экскурсии
+final class GuideScreenTableViewController: UITableViewController {
     
     private let infoImage = UIImage(systemName: "info.circle")
     let indexOfSelectedItem: Int
     let textLoader: TextLoader
+    
     private var excursionInfo: ExcursionInfo? {
         textLoader.loadExcursionInfoFor(index: indexOfSelectedItem)
     }
     
+    /// Инициализатор
+    /// - Parameters:
+    ///   - indexOfSelectedItem: индекс ячейки главного экрана, с которой совершен переход
+    ///   - textLoader: экземпляр загрузчика текста из файла
     init(indexOfSelectedItem: Int, textLoader: TextLoader) {
         self.indexOfSelectedItem = indexOfSelectedItem
         self.textLoader = textLoader
-        super.init(style: .plain)
+        super.init(style: .grouped)
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("Initializing from Storyboard isn't supported")
     }
     
     override func viewDidLoad() {
@@ -39,6 +45,9 @@ class GuideScreenTableViewController: UITableViewController {
     
     private func setupViewController() {
         title = "Istanbul"
+        tableView.allowsSelection = false
+        tableView.showsVerticalScrollIndicator = false
+        tableView.backgroundColor = .white
         tableView.separatorStyle = .none
     }
     
@@ -62,9 +71,9 @@ class GuideScreenTableViewController: UITableViewController {
         // TODO: обработка нажатия на кнопку инфо
         print("button tapped")
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -72,8 +81,15 @@ class GuideScreenTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "GuideTextCell")
         cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.font = .systemFont(ofSize: 15)
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         cell.textLabel?.text = excursionInfo?.excursionDescription
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let excursionInfo = excursionInfo else { return nil }
+        let imageName = "Image\(indexOfSelectedItem + 1)"
+        let headerView = GuideHeaderView(excursionInfo: excursionInfo, imageName: imageName, guideFeatureViewBuilder: GuideFeatureViewBuilder(excursionInfo: excursionInfo))
+        return headerView
     }
 }
