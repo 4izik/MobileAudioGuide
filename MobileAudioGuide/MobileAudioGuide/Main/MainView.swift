@@ -10,6 +10,20 @@ import UIKit
 
 class MainView: UIView {
     // MARK: - Definition UIElements
+    
+    private let backgroundImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Image2")
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
+    private let backgroundView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .black
+        view.alpha = 0.8
+        return view
+    }()
 
     private let infoLabel: UILabel = {
         let label = UILabel()
@@ -81,6 +95,9 @@ class MainView: UIView {
     // MARK: - Setup View
 
     private func setupViews() {
+        addSubview(backgroundImageView)
+        addSubview(backgroundView)
+        
         stackView.addArrangedSubview(ticketsButton)
         stackView.addArrangedSubview(hotelsButton)
         
@@ -89,18 +106,26 @@ class MainView: UIView {
         addSubview(stackView)
 
         applyUIConstraints()
-        
-        self.backgroundColor = Colors.vwBackground
     }
 
     // MARK: - Add constraints
 
     func applyUIConstraints() {
-        [infoLabel, tableView, stackView, ticketsButton, hotelsButton].forEach { view in
+        [infoLabel, tableView, stackView, ticketsButton, hotelsButton, backgroundImageView, backgroundView].forEach { view in
             view.translatesAutoresizingMaskIntoConstraints = false
         }
         
         NSLayoutConstraint.activate([
+            backgroundImageView.topAnchor.constraint(equalTo: topAnchor),
+            backgroundImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            backgroundImageView.leftAnchor.constraint(equalTo: leftAnchor),
+            backgroundImageView.rightAnchor.constraint(equalTo: rightAnchor),
+            
+            backgroundView.topAnchor.constraint(equalTo: topAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            backgroundView.leftAnchor.constraint(equalTo: leftAnchor),
+            backgroundView.rightAnchor.constraint(equalTo: rightAnchor),
+            
             infoLabel.widthAnchor.constraint(equalToConstant: 170),
             infoLabel.heightAnchor.constraint(equalToConstant: 60),
             infoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
