@@ -43,14 +43,12 @@ class MainViewController: UIViewController {
     }
     
     @objc func openHotelsURL() {
-        guard let urlComponents = URLComponents(string: "https://www.booking.com/city/tr/istanbul.ru.html?aid=334407&no_rooms=1&group_adults=2&label=alex-app-istanbul-ios") else { return }
-        guard let url = urlComponents.url else { return }
+        guard let url = URL(string: "https://www.booking.com/city/tr/istanbul.ru.html?aid=334407&no_rooms=1&group_adults=2&label=alex-app-istanbul-ios") else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
     @objc func openTicketsURL() {
-        guard let urlComponents = URLComponents(string: "https://experience.tripster.ru/experience/Istanbul/?sorting=rating&type=private&utm_campaign=affiliates&utm_medium=link&utm_source=travelpayouts") else { return }
-        guard let url = urlComponents.url else { return }
+        guard let url = URL(string: "https://experience.tripster.ru/experience/Istanbul/?sorting=rating&type=private&utm_campaign=affiliates&utm_medium=link&utm_source=travelpayouts") else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }
