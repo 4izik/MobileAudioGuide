@@ -61,13 +61,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as? MainTableViewCell
-        cell?.imageToursView.image = UIImage(named: "Image\(indexPath.row + 1)")
-        cell?.infoLabel.text = namesTours[indexPath.row]
-        cell?.backgroundColor = .clear
-        cell?.tagLabel.text = tagsNames[indexPath.row]
-        cell?.tagLabel.backgroundColor = tagsColors[indexPath.row]
-        return cell ?? UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
+        cell.imageToursView.image = UIImage(named: "Image\(indexPath.row + 1)")
+        cell.infoLabel.text = namesTours[indexPath.row]
+        cell.backgroundColor = .clear
+        cell.tagLabel.text = tagsNames[indexPath.row]
+        cell.tagLabel.backgroundColor = tagsColors[indexPath.row]
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

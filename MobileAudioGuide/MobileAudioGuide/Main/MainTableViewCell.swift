@@ -34,7 +34,6 @@ class MainTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 10, weight: .semibold)
         label.textAlignment = .center
-        label.numberOfLines = 0
         label.textColor = .white
         label.layer.cornerRadius = 6
         label.clipsToBounds = true
