@@ -11,6 +11,8 @@ class MainViewController: UIViewController {
     // MARK: - Properties
     let mainView = MainView()
     let namesTours = ["Istanbul in 1 day: The most popular route", "From Galata Bridge\nto Taksim Square", "Non-touristic Istanbul and\nthe legacy of Constantinople"]
+    let tagsColors = [Colors.btnHit, Colors.btnNew, Colors.btnSpecial]
+    let tagsNames = ["hit","new","special"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,14 +43,12 @@ class MainViewController: UIViewController {
     }
     
     @objc func openHotelsURL() {
-        guard let urlComponents = URLComponents(string: "https://www.booking.com/city/tr/istanbul.ru.html?aid=334407&no_rooms=1&group_adults=2&label=alex-app-istanbul-ios") else { return }
-        guard let url = urlComponents.url else { return }
+        guard let url = URL(string: "https://www.booking.com/city/tr/istanbul.ru.html?aid=334407&no_rooms=1&group_adults=2&label=alex-app-istanbul-ios") else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
     @objc func openTicketsURL() {
-        guard let urlComponents = URLComponents(string: "https://experience.tripster.ru/experience/Istanbul/?sorting=rating&type=private&utm_campaign=affiliates&utm_medium=link&utm_source=travelpayouts") else { return }
-        guard let url = urlComponents.url else { return }
+        guard let url = URL(string: "https://experience.tripster.ru/experience/Istanbul/?sorting=rating&type=private&utm_campaign=affiliates&utm_medium=link&utm_source=travelpayouts") else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }
@@ -59,11 +59,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as? MainTableViewCell
-        cell?.imageToursView.image = UIImage(named: "Image\(indexPath.row + 1)")
-        cell?.infoLabel.text = namesTours[indexPath.row]
-        cell?.backgroundColor = .clear
-        return cell ?? UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
+        cell.imageToursView.image = UIImage(named: "Image\(indexPath.row + 1)")
+        cell.infoLabel.text = namesTours[indexPath.row]
+        cell.backgroundColor = .clear
+        cell.tagLabel.text = tagsNames[indexPath.row]
+        cell.tagLabel.backgroundColor = tagsColors[indexPath.row]
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
