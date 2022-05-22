@@ -68,8 +68,8 @@ final class GuideScreenTableViewController: UITableViewController {
     }
     
     @objc private func showInfo() {
-        // TODO: обработка нажатия на кнопку инфо
-        print("button tapped")
+        let infoScreenViewController = InfoScreenViewController()
+        navigationController?.pushViewController(infoScreenViewController, animated: true)
     }
     
     // MARK: - Table view data source
