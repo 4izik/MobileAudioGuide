@@ -11,7 +11,7 @@ import UIKit
 class InfoScreenView: UIView {
     // MARK: - Definition UIElements
     
-    private var segmentedControl: UISegmentedControl = {
+    var segmentedControl: UISegmentedControl = {
         let control = UISegmentedControl(items: ["Photo authors", "Alex"])
         control.selectedSegmentIndex = 1
         control.layer.borderColor = UIColor.gray.cgColor
@@ -92,6 +92,16 @@ class InfoScreenView: UIView {
         return textView
     }()
     
+    private let photoAuthorsLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        label.isHidden = true
+        label.numberOfLines = 0
+        label.text = "Если у Вас есть комментарии или предложения по работе приложения, что-то не работает или Вы хотите предложить какой-то совместный проект - пишите мне на e-mail, указанный на этой страничке."
+        return label
+    }()
     // MARK: - Init
 
     required init?(coder aDecoder: NSCoder) {
@@ -122,6 +132,8 @@ class InfoScreenView: UIView {
         addSubview(emailLabel)
         addSubview(stackView)
         addSubview(textView)
+        
+        addSubview(photoAuthorsLabel)
     
 
         applyUIConstraints()
@@ -130,12 +142,12 @@ class InfoScreenView: UIView {
     // MARK: - Add constraints
 
     func applyUIConstraints() {
-        [segmentedControl, photoImageView, nameLabel, infoLabel, emailLabel, stackView, facebookButton, instagramButton, textView].forEach { view in
+        [segmentedControl, photoImageView, nameLabel, infoLabel, emailLabel, stackView, facebookButton, instagramButton, textView, photoAuthorsLabel].forEach { view in
             view.translatesAutoresizingMaskIntoConstraints = false
         }
         
         NSLayoutConstraint.activate([
-            segmentedControl.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            segmentedControl.topAnchor.constraint(equalTo: topAnchor, constant: UIScreen.main.bounds.height / 7),
             segmentedControl.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
             segmentedControl.rightAnchor.constraint(equalTo: rightAnchor, constant: -20),
             segmentedControl.heightAnchor.constraint(equalToConstant: 40),
@@ -168,9 +180,28 @@ class InfoScreenView: UIView {
             textView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
             textView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20),
             textView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
-            textView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30)
+            textView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30),
+            
+            photoAuthorsLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            photoAuthorsLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            photoAuthorsLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
+            photoAuthorsLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -20)
             
         ])
+    }
+    
+    func showViewAboutAuthor() {
+        [photoImageView, nameLabel, infoLabel, emailLabel, stackView, facebookButton, instagramButton, textView].forEach { view in
+            view.isHidden = false
+        }
+        photoAuthorsLabel.isHidden = true
+    }
+    
+    func showViewAboutPhotoAuthors() {
+        [photoImageView, nameLabel, infoLabel, emailLabel, stackView, facebookButton, instagramButton, textView].forEach { view in
+            view.isHidden = true
+        }
+        photoAuthorsLabel.isHidden = false
     }
 }
 

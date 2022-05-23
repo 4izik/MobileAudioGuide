@@ -18,11 +18,6 @@ class InfoScreenViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
     private func setupViews() {
         title = "Author"
         view.addSubview(infoScreenView)
@@ -30,18 +25,37 @@ class InfoScreenViewController: UIViewController {
 
         infoScreenView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            infoScreenView.topAnchor.constraint(equalTo: view.topAnchor),
+            infoScreenView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             infoScreenView.widthAnchor.constraint(equalTo: view.widthAnchor),
-            infoScreenView.heightAnchor.constraint(equalTo: view.heightAnchor),
             infoScreenView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
+        infoScreenView.segmentedControl.addTarget(self, action: #selector(changeView), for: .valueChanged)
         loaderInfo()
     }
     
+    @objc func changeView() {
+        let value = infoScreenView.segmentedControl.selectedSegmentIndex
+        if value == 0 {
+            infoScreenView.showViewAboutPhotoAuthors()
+        } else {
+            infoScreenView.showViewAboutAuthor()
+        }
+    }
+    
     private func setupNavigationController() {
-        guard let navigationBar = navigationController?.navigationBar else { return }
-        navigationBar.isTranslucent = false
-        navigationBar.barTintColor = .systemBlue
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .systemBlue
+        appearance.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 21, weight: .bold)
+        ]
+
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
     private func loaderInfo() {
