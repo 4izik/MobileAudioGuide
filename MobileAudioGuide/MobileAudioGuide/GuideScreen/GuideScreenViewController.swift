@@ -96,8 +96,8 @@ final class GuideScreenViewController: UIViewController {
     }
     
     @objc private func showInfo() {
-        // TODO: обработка нажатия на кнопку инфо
-        print("button tapped")
+        let infoScreenViewController = InfoScreenViewController()
+        navigationController?.pushViewController(infoScreenViewController, animated: true)
     }
     
     @objc private func aboutExcursionButtonTapped() {
