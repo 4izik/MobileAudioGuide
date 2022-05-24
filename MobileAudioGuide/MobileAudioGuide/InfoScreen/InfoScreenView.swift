@@ -176,7 +176,6 @@ class InfoScreenView: UIView {
             photoAuthorsLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             photoAuthorsLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
             photoAuthorsLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -20)
-            
         ])
     }
     
