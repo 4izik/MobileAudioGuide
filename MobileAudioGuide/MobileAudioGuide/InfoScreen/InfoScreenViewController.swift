@@ -15,7 +15,6 @@ class InfoScreenViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationController()
         setupViews()
-        
     }
     
     private func setupViews() {
@@ -37,11 +36,7 @@ class InfoScreenViewController: UIViewController {
     
     @objc func changeView() {
         let value = infoScreenView.segmentedControl.selectedSegmentIndex
-        if value == 0 {
-            infoScreenView.showViewAboutPhotoAuthors()
-        } else {
-            infoScreenView.showViewAboutAuthor()
-        }
+        infoScreenView.showView(selectedSegment: value)
     }
     
     private func setupNavigationController() {
@@ -59,10 +54,9 @@ class InfoScreenViewController: UIViewController {
     }
     
     private func loaderInfo() {
-        if let path = Bundle.main.path(forResource: "infoAboutAuthor", ofType: "txt") {
-            if let text = try? String(contentsOfFile: path) {
-                infoScreenView.textView.text = text
-            }
+        if let path = Bundle.main.path(forResource: "infoAboutAuthor", ofType: "txt"),
+           let text = try? String(contentsOfFile: path) {
+                infoScreenView.infoAboutAuthorTextView.text = text
         }
     }
 }

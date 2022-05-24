@@ -5,13 +5,12 @@
 //  Created by Настя on 21.05.2022.
 //
 
-import Foundation
 import UIKit
 
 class InfoScreenView: UIView {
     // MARK: - Definition UIElements
     
-    var segmentedControl: UISegmentedControl = {
+    let segmentedControl: UISegmentedControl = {
         let control = UISegmentedControl(items: ["Photo authors", "Alex"])
         control.selectedSegmentIndex = 1
         control.layer.borderColor = UIColor.gray.cgColor
@@ -57,7 +56,7 @@ class InfoScreenView: UIView {
         return label
     }()
     
-    var facebookButton: UIButton = {
+    let facebookButton: UIButton = {
         let button = UIButton()
         button.setTitle("", for: .normal)
         button.setImage(UIImage(named: "facebook"), for: .normal)
@@ -65,7 +64,7 @@ class InfoScreenView: UIView {
         return button
     }()
     
-    var instagramButton: UIButton = {
+    let instagramButton: UIButton = {
         let button = UIButton()
         button.setTitle("", for: .normal)
         button.setImage(UIImage(named: "instagram"), for: .normal)
@@ -73,7 +72,7 @@ class InfoScreenView: UIView {
         return button
     }()
     
-    private let stackView: UIStackView = {
+    private let socialNetworksStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.alignment = .center
@@ -82,12 +81,13 @@ class InfoScreenView: UIView {
         return stackView
     }()
     
-    let textView: UITextView = {
+    let infoAboutAuthorTextView: UITextView = {
         let textView = UITextView()
         textView.isSelectable = false
         textView.isEditable = false
         textView.textColor = .black
         textView.textAlignment = .left
+        textView.showsVerticalScrollIndicator = false
         textView.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         return textView
     }()
@@ -122,19 +122,8 @@ class InfoScreenView: UIView {
     // MARK: - Setup View
 
     private func setupViews() {
-        stackView.addArrangedSubview(facebookButton)
-        stackView.addArrangedSubview(instagramButton)
-        
-        addSubview(segmentedControl)
-        addSubview(photoImageView)
-        addSubview(nameLabel)
-        addSubview(infoLabel)
-        addSubview(emailLabel)
-        addSubview(stackView)
-        addSubview(textView)
-        
-        addSubview(photoAuthorsLabel)
-    
+        socialNetworksStackView.addArrangedSubview(facebookButton)
+        socialNetworksStackView.addArrangedSubview(instagramButton)
 
         applyUIConstraints()
     }
@@ -142,7 +131,8 @@ class InfoScreenView: UIView {
     // MARK: - Add constraints
 
     func applyUIConstraints() {
-        [segmentedControl, photoImageView, nameLabel, infoLabel, emailLabel, stackView, facebookButton, instagramButton, textView, photoAuthorsLabel].forEach { view in
+        [segmentedControl, photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, facebookButton, instagramButton, infoAboutAuthorTextView, photoAuthorsLabel].forEach { view in
+            addSubview(view)
             view.translatesAutoresizingMaskIntoConstraints = false
         }
         
@@ -172,15 +162,15 @@ class InfoScreenView: UIView {
             emailLabel.heightAnchor.constraint(equalToConstant: 20),
             emailLabel.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 10),
             
-            stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            stackView.heightAnchor.constraint(equalToConstant: 30),
-            stackView.widthAnchor.constraint(equalToConstant: 70),
-            stackView.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 10),
+            socialNetworksStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            socialNetworksStackView.heightAnchor.constraint(equalToConstant: 30),
+            socialNetworksStackView.widthAnchor.constraint(equalToConstant: 70),
+            socialNetworksStackView.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 10),
             
-            textView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
-            textView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20),
-            textView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
-            textView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30),
+            infoAboutAuthorTextView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
+            infoAboutAuthorTextView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20),
+            infoAboutAuthorTextView.topAnchor.constraint(equalTo: socialNetworksStackView.bottomAnchor, constant: 20),
+            infoAboutAuthorTextView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30),
             
             photoAuthorsLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             photoAuthorsLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -190,18 +180,14 @@ class InfoScreenView: UIView {
         ])
     }
     
-    func showViewAboutAuthor() {
-        [photoImageView, nameLabel, infoLabel, emailLabel, stackView, facebookButton, instagramButton, textView].forEach { view in
-            view.isHidden = false
+    func showView(selectedSegment: Int) {
+        if selectedSegment == 1 {
+            [photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, facebookButton, instagramButton, infoAboutAuthorTextView].forEach { $0.isHidden = false }
+            photoAuthorsLabel.isHidden = true
+        } else {
+            [photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, facebookButton, instagramButton, infoAboutAuthorTextView].forEach { $0.isHidden = true }
+            photoAuthorsLabel.isHidden = false
         }
-        photoAuthorsLabel.isHidden = true
-    }
-    
-    func showViewAboutPhotoAuthors() {
-        [photoImageView, nameLabel, infoLabel, emailLabel, stackView, facebookButton, instagramButton, textView].forEach { view in
-            view.isHidden = true
-        }
-        photoAuthorsLabel.isHidden = false
     }
 }
 
