@@ -99,7 +99,7 @@ class InfoScreenView: UIView {
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.isHidden = true
         label.numberOfLines = 0
-        label.text = "Если у Вас есть комментарии или предложения по работе приложения, что-то не работает или Вы хотите предложить какой-то совместный проект - пишите мне на e-mail, указанный на этой страничке."
+        label.text = "This application uses photos by Christopher Matiaz and the following authors under a Creative common license"
         return label
     }()
     // MARK: - Init
@@ -124,6 +124,10 @@ class InfoScreenView: UIView {
     private func setupViews() {
         socialNetworksStackView.addArrangedSubview(facebookButton)
         socialNetworksStackView.addArrangedSubview(instagramButton)
+        
+        [segmentedControl, photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, infoAboutAuthorTextView, photoAuthorsLabel].forEach { view in
+            addSubview(view)
+        }
 
         applyUIConstraints()
     }
@@ -132,7 +136,6 @@ class InfoScreenView: UIView {
 
     func applyUIConstraints() {
         [segmentedControl, photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, facebookButton, instagramButton, infoAboutAuthorTextView, photoAuthorsLabel].forEach { view in
-            addSubview(view)
             view.translatesAutoresizingMaskIntoConstraints = false
         }
         
@@ -180,13 +183,8 @@ class InfoScreenView: UIView {
     }
     
     func showView(selectedSegment: Int) {
-        if selectedSegment == 1 {
-            [photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, facebookButton, instagramButton, infoAboutAuthorTextView].forEach { $0.isHidden = false }
-            photoAuthorsLabel.isHidden = true
-        } else {
-            [photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, facebookButton, instagramButton, infoAboutAuthorTextView].forEach { $0.isHidden = true }
-            photoAuthorsLabel.isHidden = false
-        }
+        [photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, facebookButton, instagramButton, infoAboutAuthorTextView].forEach { $0.isHidden = (selectedSegment != 1) }
+        photoAuthorsLabel.isHidden = (selectedSegment == 1)
     }
 }
 
