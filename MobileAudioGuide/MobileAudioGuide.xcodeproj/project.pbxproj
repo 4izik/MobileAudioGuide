@@ -17,6 +17,9 @@
 		5DCB59122831736E00A2C3CC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB59112831736E00A2C3CC /* MainView.swift */; };
 		5DCB5916283174CE00A2C3CC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB5915283174CE00A2C3CC /* Constants.swift */; };
 		5DCB59192831758200A2C3CC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB59182831758200A2C3CC /* UIColor+Extension.swift */; };
+		5DD753FB28391C230093FFBE /* InfoScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD753FA28391C230093FFBE /* InfoScreenViewController.swift */; };
+		5DD753FD28391D910093FFBE /* InfoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD753FC28391D910093FFBE /* InfoScreenView.swift */; };
+		5DE36F41283A677F00B191C7 /* infoAboutAuthor.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5DE36F40283A677F00B191C7 /* infoAboutAuthor.txt */; };
 		CE1094B22834345000F9AA89 /* GuideFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1094B12834345000F9AA89 /* GuideFeatureView.swift */; };
 		CE200B2A28339F680043F57A /* GuideScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200B2928339F680043F57A /* GuideScreenViewController.swift */; };
 		CE200B332833C13C0043F57A /* GuideDescribingTexts.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE200B322833C13C0043F57A /* GuideDescribingTexts.txt */; };
@@ -42,6 +45,9 @@
 		5DCB59112831736E00A2C3CC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5DCB5915283174CE00A2C3CC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5DCB59182831758200A2C3CC /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		5DD753FA28391C230093FFBE /* InfoScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenViewController.swift; sourceTree = "<group>"; };
+		5DD753FC28391D910093FFBE /* InfoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenView.swift; sourceTree = "<group>"; };
+		5DE36F40283A677F00B191C7 /* infoAboutAuthor.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = infoAboutAuthor.txt; path = MobileAudioGuide/Resources/infoAboutAuthor.txt; sourceTree = SOURCE_ROOT; };
 		CE1094B12834345000F9AA89 /* GuideFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideFeatureView.swift; sourceTree = "<group>"; };
 		CE200B2928339F680043F57A /* GuideScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideScreenViewController.swift; sourceTree = "<group>"; };
 		CE200B322833C13C0043F57A /* GuideDescribingTexts.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = GuideDescribingTexts.txt; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 				5DCB59142831746D00A2C3CC /* Utils */,
 				5DCB59132831738400A2C3CC /* Main */,
 				CE200B28283398650043F57A /* GuideScreen */,
+				5DD753F928391BF80093FFBE /* InfoScreen */,
 				CE200B362833C6D40043F57A /* Models */,
 				CE200B312833C1040043F57A /* Resources */,
 				5DCB58FA283172BE00A2C3CC /* AppDelegate.swift */,
@@ -130,6 +137,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		5DD753F928391BF80093FFBE /* InfoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5DD753FA28391C230093FFBE /* InfoScreenViewController.swift */,
+				5DD753FC28391D910093FFBE /* InfoScreenView.swift */,
+			);
+			path = InfoScreen;
+			sourceTree = "<group>";
+		};
 		CE200B28283398650043F57A /* GuideScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +161,7 @@
 			children = (
 				CEE4AA7D283AF193000C1FF7 /* Audio */,
 				CE200B322833C13C0043F57A /* GuideDescribingTexts.txt */,
+				5DE36F40283A677F00B191C7 /* infoAboutAuthor.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -235,6 +252,7 @@
 				5DCB5907283172C000A2C3CC /* Assets.xcassets in Resources */,
 				CEE4AA7F283AF1BA000C1FF7 /* Tour1About.mp3 in Resources */,
 				CE200B332833C13C0043F57A /* GuideDescribingTexts.txt in Resources */,
+				5DE36F41283A677F00B191C7 /* infoAboutAuthor.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +267,9 @@
 				5DCB58FF283172BE00A2C3CC /* MainViewController.swift in Sources */,
 				CE634F4D283429FC006C2F73 /* GuideHeaderView.swift in Sources */,
 				CE1094B22834345000F9AA89 /* GuideFeatureView.swift in Sources */,
+				5DD753FB28391C230093FFBE /* InfoScreenViewController.swift in Sources */,
 				5D61FD1B28328A1E00AB33C3 /* MainTableViewCell.swift in Sources */,
+				5DD753FD28391D910093FFBE /* InfoScreenView.swift in Sources */,
 				CE415155283AB61E00CF9D53 /* TimeInterval+minSecFormatted.swift in Sources */,
 				5DCB5905283172BE00A2C3CC /* MobileAudioGuide.xcdatamodeld in Sources */,
 				CE200B2A28339F680043F57A /* GuideScreenViewController.swift in Sources */,
