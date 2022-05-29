@@ -144,11 +144,12 @@ final class AudioPlayerView: UIView {
     
     @objc private func sliderPositionChanged() {
         guard let audioPlayer = audioPlayer else { return }
+        let isPlaying = audioPlayer.isPlaying
         updateCurrentPlayingTimeLabel()
         audioPlayer.stop()
         audioPlayer.currentTime = TimeInterval(sliderView.value)
         audioPlayer.prepareToPlay()
-        audioPlayer.play()
+        if isPlaying { audioPlayer.play() }
     }
     
     @objc private func updateSliderPosition() {
