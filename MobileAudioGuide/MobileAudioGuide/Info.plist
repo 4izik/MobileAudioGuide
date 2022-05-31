@@ -25,5 +25,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>App need always have access to your location</string>
 </dict>
 </plist>

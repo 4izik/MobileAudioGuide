@@ -107,6 +107,11 @@ final class GuideScreenViewController: UIViewController {
         }
     }
     
+    @objc private func beginExcursionButtonTapped() {
+        let mapScreenViewController = MapScreenViewController()
+        navigationController?.pushViewController(mapScreenViewController, animated: true)
+    }
+    
     private func removeAudioPlayerView() {
         UIView.animate(withDuration: 0.3) { [weak self] in
             guard let self = self else { return }
@@ -156,6 +161,7 @@ extension GuideScreenViewController: UITableViewDataSource, UITableViewDelegate 
         let imageName = "Image\(indexOfSelectedItem + 1)"
         let headerView = GuideHeaderView(excursionInfo: excursionInfo, imageName: imageName, guideFeatureViewBuilder: GuideFeatureViewBuilder(excursionInfo: excursionInfo))
         headerView.aboutExcursionButton.addTarget(self, action: #selector(aboutExcursionButtonTapped), for: .touchUpInside)
+        headerView.beginExcursionButton.addTarget(self, action: #selector(beginExcursionButtonTapped), for: .touchUpInside)
         return headerView
     }
 }
