@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// TableViewController для экрана описания экскурсии
+/// ViewController для экрана описания экскурсии
 final class GuideScreenViewController: UIViewController {
     
     private let infoImage = UIImage(systemName: "info.circle")
