@@ -13,7 +13,6 @@ class InfoScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationController()
         setupViews()
     }
     
@@ -21,6 +20,7 @@ class InfoScreenViewController: UIViewController {
         title = "Author"
         view.addSubview(infoScreenView)
         view.backgroundColor = .white
+        navigationController?.navigationBar.topItem?.title = ""
 
         infoScreenView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -37,20 +37,6 @@ class InfoScreenViewController: UIViewController {
     @objc func changeView() {
         let value = infoScreenView.segmentedControl.selectedSegmentIndex
         infoScreenView.showView(selectedSegment: value)
-    }
-    
-    private func setupNavigationController() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .systemBlue
-        appearance.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 21, weight: .bold)
-        ]
-
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
     private func loaderInfo() {
