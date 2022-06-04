@@ -61,7 +61,7 @@ final class DetailsScreenViewController: UIViewController {
     /// - Parameters:
     ///   - excursionInfo: модель с информацией об экскурсии
     ///   - viewpointIndex: цифра с нажатого на карте кружочка - номер точки в экскурсии
-    init(excursionInfo: ExcursionInfo,viewpointIndex: Int) {
+    init(excursionInfo: ExcursionInfo, viewpointIndex: Int) {
         self.excursionInfo = excursionInfo
         self.viewpointIndex = viewpointIndex
         super.init(nibName: nil, bundle: nil)
@@ -73,7 +73,6 @@ final class DetailsScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationController()
         setupViewController()
         activateConstraints()
     }
@@ -87,18 +86,7 @@ final class DetailsScreenViewController: UIViewController {
         // TODO: Подставлять короткое название из модели
         title = excursionInfo.excursionTitle
         view.backgroundColor = .white
-    }
-    
-    private func setupNavigationController() {
-        guard let navigationBar = navigationController?.navigationBar else { return }
-        
-        navigationBar.barTintColor = .systemBlue
-        navigationBar.tintColor = .white
-        navigationBar.topItem?.title = ""
-        navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 21, weight: .bold)
-        ]
+        navigationController?.navigationBar.topItem?.title = ""
     }
     
     @objc private func showInfo() {
