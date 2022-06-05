@@ -27,5 +27,7 @@
 	</array>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>App need always have access to your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>App need always have access to your location</string>
 </dict>
 </plist>

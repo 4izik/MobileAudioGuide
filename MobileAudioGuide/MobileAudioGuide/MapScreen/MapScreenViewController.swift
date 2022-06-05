@@ -9,25 +9,36 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class MapScreenViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class MapScreenViewController: UIViewController, MKMapViewDelegate {
 
     let locationManager = CLLocationManager()
     let mapScreenView = MapScreenView()
+    private var excursionInfo = ExcursionInfo()
+    
+    init(excursionInfo: ExcursionInfo) {
+        self.excursionInfo = excursionInfo
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("Initializing from Storyboard isn't supported")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        locationManager.delegate = self
-        locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        
+        setupLocationManager()
         setupViews()
         setupNavigationController()
-        setupData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        checkLocationEnabled()
     }
     
     private func setupViews() {
-        title = "Istanbul"
+        title = excursionInfo.excursionTitle
         view.addSubview(mapScreenView)
         view.backgroundColor = .white
 
@@ -40,6 +51,8 @@ class MapScreenViewController: UIViewController, CLLocationManagerDelegate, MKMa
         ])
         
         mapScreenView.mapView.delegate = self
+        mapScreenView.imageView.image = UIImage(named: "Image1")
+        mapScreenView.titleLabel.text = excursionInfo.excursionTitle
     }
     
     private func setupNavigationController() {
@@ -56,37 +69,50 @@ class MapScreenViewController: UIViewController, CLLocationManagerDelegate, MKMa
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
-    func setupData() {
-        // 1. check if system can monitor regions
-        if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
-            // 2. region data
-            let title = "Lorrenzillo' s"
-            let coordinate = CLLocationCoordinate2DMake(37.703026, -121.759735)
-            let regionRadius = 300.0
-
-            // 3. setup region
-            let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,longitude: coordinate.longitude), radius: regionRadius, identifier: title)
-
-            // 4. setup annotation
-            let restaurantAnnotation = MKPointAnnotation()
-            restaurantAnnotation.coordinate = coordinate;
-            restaurantAnnotation.title = "\(title)";
-            self.mapScreenView.mapView.addAnnotation(restaurantAnnotation)
-
-            // 5. setup circle
-            let circle = MKCircle(center: coordinate, radius: 10)
-            self.mapScreenView.mapView.addOverlay(circle)
+    private func setupLocationManager() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
+    private func checkLocationEnabled() {
+        if CLLocationManager.locationServicesEnabled() {
+            setupLocationManager()
+            checkAuthorization()
+            mapScreenView.mapView.showsUserLocation = true
+            let location = CLLocationCoordinate2D(latitude: 41.011225, longitude: 28.978151)
+            let region = MKCoordinateRegion(center: location, latitudinalMeters: 5000, longitudinalMeters: 5000)
+            mapScreenView.mapView.setRegion(region, animated: true)
+        } else {
+            showAlertLocation(title: "Your location service is turned off", message: "Do you want to enable?", url: URL(string: "App-Prefs:root=LOCATION_SERVICES"))
         }
-        else {
-            print("System can't track regions")
+    }
+    
+    private func checkAuthorization() {
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+    private func showAlertLocation(title: String, message: String, url: URL?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let settingAction = UIAlertAction(title: "Settings", style: .default) { (alert) in
+            if let url = url {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
         }
-
-        // 6. draw circle
-        func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
-            let circleRenderer = MKCircleRenderer(overlay: overlay)
-            circleRenderer.strokeColor = UIColor.red
-            circleRenderer.lineWidth = 1.0
-            return circleRenderer
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alert.addAction(settingAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+    }
+}
+extension MapScreenViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last?.coordinate {
+            let region = MKCoordinateRegion(center: location, latitudinalMeters: 5000, longitudinalMeters: 5000)
+            mapScreenView.mapView.setRegion(region, animated: true)
         }
+    }
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkAuthorization()
     }
 }

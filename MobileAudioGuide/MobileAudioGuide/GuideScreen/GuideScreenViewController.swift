@@ -108,7 +108,8 @@ final class GuideScreenViewController: UIViewController {
     }
     
     @objc private func beginExcursionButtonTapped() {
-        let mapScreenViewController = MapScreenViewController()
+        guard let excursionInfo = excursionInfo else { return }
+        let mapScreenViewController = MapScreenViewController(excursionInfo: excursionInfo)
         navigationController?.pushViewController(mapScreenViewController, animated: true)
     }
     
