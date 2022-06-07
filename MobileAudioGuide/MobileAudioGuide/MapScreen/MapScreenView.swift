@@ -103,10 +103,9 @@ class MapScreenView: UIView {
     private func setupViews() {
         purchaseView.addSubview(purchaseButton)
         
-        infoView.addSubview(imageView)
-        infoView.addSubview(titleLabel)
-        infoView.addSubview(detailButton)
-        infoView.addSubview(closeButton)
+        [imageView, titleLabel, detailButton, closeButton].forEach { view in
+            infoView.addSubview(view)
+        }
         
         [mapView, myGeoButton, moreButton, audioPlayerView, purchaseView, infoView].forEach { view in
             addSubview(view)

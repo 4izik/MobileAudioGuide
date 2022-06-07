@@ -29,7 +29,6 @@ class MapScreenViewController: UIViewController, MKMapViewDelegate {
 
         setupLocationManager()
         setupViews()
-        setupNavigationController()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,20 +52,6 @@ class MapScreenViewController: UIViewController, MKMapViewDelegate {
         mapScreenView.mapView.delegate = self
         mapScreenView.imageView.image = UIImage(named: "Image1")
         mapScreenView.titleLabel.text = excursionInfo.excursionTitle
-    }
-    
-    private func setupNavigationController() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .systemBlue
-        appearance.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 21, weight: .bold)
-        ]
-
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
     private func setupLocationManager() {
