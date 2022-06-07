@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5D61FD1B28328A1E00AB33C3 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */; };
+		5DBAC3E4284650B00081CA0D /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBAC3E3284650B00081CA0D /* MapScreenView.swift */; };
+		5DBAC3E6284651760081CA0D /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBAC3E5284651760081CA0D /* MapScreenViewController.swift */; };
 		5DCB58FB283172BE00A2C3CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FA283172BE00A2C3CC /* AppDelegate.swift */; };
 		5DCB58FD283172BE00A2C3CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FC283172BE00A2C3CC /* SceneDelegate.swift */; };
 		5DCB58FF283172BE00A2C3CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FE283172BE00A2C3CC /* MainViewController.swift */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		5DBAC3E3284650B00081CA0D /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
+		5DBAC3E5284651760081CA0D /* MapScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewController.swift; sourceTree = "<group>"; };
 		5DCB58F7283172BE00A2C3CC /* MobileAudioGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAudioGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCB58FA283172BE00A2C3CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DCB58FC283172BE00A2C3CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DBAC3E2284650440081CA0D /* MapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5DBAC3E3284650B00081CA0D /* MapScreenView.swift */,
+				5DBAC3E5284651760081CA0D /* MapScreenViewController.swift */,
+			);
+			path = MapScreen;
+			sourceTree = "<group>";
+		};
 		5DCB58EE283172BE00A2C3CC = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 				CE200B28283398650043F57A /* GuideScreen */,
 				CE861D5F2843DE90005B3A53 /* DetailsScreen */,
 				5DD753F928391BF80093FFBE /* InfoScreen */,
+				5DBAC3E2284650440081CA0D /* MapScreen */,
 				CE200B362833C6D40043F57A /* Models */,
 				CE200B312833C1040043F57A /* Resources */,
 				5DCB58FA283172BE00A2C3CC /* AppDelegate.swift */,
@@ -276,6 +290,7 @@
 			files = (
 				CE2E90E72843F295008D50E0 /* DetailsScreenViewController.swift in Sources */,
 				5DCB59192831758200A2C3CC /* UIColor+Extension.swift in Sources */,
+				5DBAC3E4284650B00081CA0D /* MapScreenView.swift in Sources */,
 				5DCB58FF283172BE00A2C3CC /* MainViewController.swift in Sources */,
 				CE634F4D283429FC006C2F73 /* GuideHeaderView.swift in Sources */,
 				CE1094B22834345000F9AA89 /* GuideFeatureView.swift in Sources */,
@@ -286,6 +301,7 @@
 				5DCB5905283172BE00A2C3CC /* MobileAudioGuide.xcdatamodeld in Sources */,
 				CE200B2A28339F680043F57A /* GuideScreenViewController.swift in Sources */,
 				CE4151412835098900CF9D53 /* GuideFeatureViewBuilder.swift in Sources */,
+				5DBAC3E6284651760081CA0D /* MapScreenViewController.swift in Sources */,
 				CE200B3C2833CA010043F57A /* TextLoader.swift in Sources */,
 				5DCB58FB283172BE00A2C3CC /* AppDelegate.swift in Sources */,
 				CE200B382833C6EE0043F57A /* ExcursionInfo.swift in Sources */,
