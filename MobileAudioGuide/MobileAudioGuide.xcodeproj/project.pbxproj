@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0C3CA9284FB1B6005FBAE0 /* aboutPurchase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5D0C3CA8284FB1B6005FBAE0 /* aboutPurchase.txt */; };
+		5D0C3CAB284FB1BF005FBAE0 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C3CAA284FB1BF005FBAE0 /* PurchaseView.swift */; };
+		5D0C3CAD284FB1C3005FBAE0 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C3CAC284FB1C3005FBAE0 /* PurchaseViewController.swift */; };
 		5D61FD1B28328A1E00AB33C3 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */; };
 		5DBAC3E4284650B00081CA0D /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBAC3E3284650B00081CA0D /* MapScreenView.swift */; };
 		5DBAC3E6284651760081CA0D /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBAC3E5284651760081CA0D /* MapScreenViewController.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D0C3CA8284FB1B6005FBAE0 /* aboutPurchase.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aboutPurchase.txt; sourceTree = "<group>"; };
+		5D0C3CAA284FB1BF005FBAE0 /* PurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		5D0C3CAC284FB1C3005FBAE0 /* PurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		5DBAC3E3284650B00081CA0D /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
 		5DBAC3E5284651760081CA0D /* MapScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D0C3CA7284FB1A0005FBAE0 /* PurchaseScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5D0C3CAA284FB1BF005FBAE0 /* PurchaseView.swift */,
+				5D0C3CAC284FB1C3005FBAE0 /* PurchaseViewController.swift */,
+			);
+			path = PurchaseScreen;
+			sourceTree = "<group>";
+		};
 		5DBAC3E2284650440081CA0D /* MapScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +120,7 @@
 		5DCB58F9283172BE00A2C3CC /* MobileAudioGuide */ = {
 			isa = PBXGroup;
 			children = (
+				5D0C3CA7284FB1A0005FBAE0 /* PurchaseScreen */,
 				CE41514E283A9AE600CF9D53 /* Common */,
 				5DCB59172831756A00A2C3CC /* Extension */,
 				5DCB59142831746D00A2C3CC /* Utils */,
@@ -178,6 +194,7 @@
 			children = (
 				CEE4AA7D283AF193000C1FF7 /* Audio */,
 				CE200B322833C13C0043F57A /* GuideDescribingTexts.txt */,
+				5D0C3CA8284FB1B6005FBAE0 /* aboutPurchase.txt */,
 				5DE36F40283A677F00B191C7 /* infoAboutAuthor.txt */,
 			);
 			path = Resources;
@@ -276,6 +293,7 @@
 				5DCB590A283172C000A2C3CC /* LaunchScreen.storyboard in Resources */,
 				5DCB5907283172C000A2C3CC /* Assets.xcassets in Resources */,
 				CEE4AA7F283AF1BA000C1FF7 /* Tour1About.mp3 in Resources */,
+				5D0C3CA9284FB1B6005FBAE0 /* aboutPurchase.txt in Resources */,
 				CE200B332833C13C0043F57A /* GuideDescribingTexts.txt in Resources */,
 				5DE36F41283A677F00B191C7 /* infoAboutAuthor.txt in Resources */,
 			);
@@ -288,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D0C3CAD284FB1C3005FBAE0 /* PurchaseViewController.swift in Sources */,
 				CE2E90E72843F295008D50E0 /* DetailsScreenViewController.swift in Sources */,
 				5DCB59192831758200A2C3CC /* UIColor+Extension.swift in Sources */,
 				5DBAC3E4284650B00081CA0D /* MapScreenView.swift in Sources */,
@@ -295,6 +314,7 @@
 				CE634F4D283429FC006C2F73 /* GuideHeaderView.swift in Sources */,
 				CE1094B22834345000F9AA89 /* GuideFeatureView.swift in Sources */,
 				5DD753FB28391C230093FFBE /* InfoScreenViewController.swift in Sources */,
+				5D0C3CAB284FB1BF005FBAE0 /* PurchaseView.swift in Sources */,
 				5D61FD1B28328A1E00AB33C3 /* MainTableViewCell.swift in Sources */,
 				5DD753FD28391D910093FFBE /* InfoScreenView.swift in Sources */,
 				CE415155283AB61E00CF9D53 /* TimeInterval+minSecFormatted.swift in Sources */,

@@ -52,6 +52,12 @@ class MapScreenViewController: UIViewController, MKMapViewDelegate {
         mapScreenView.mapView.delegate = self
         mapScreenView.imageView.image = UIImage(named: "Image1")
         mapScreenView.titleLabel.text = excursionInfo.excursionTitle
+        mapScreenView.purchaseButton.addTarget(self, action: #selector(makePurchase), for: .touchUpInside)
+    }
+    
+    @objc func makePurchase() {
+        let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo)
+        navigationController?.pushViewController(purchaseViewController, animated: true)
     }
     
     private func setupLocationManager() {
