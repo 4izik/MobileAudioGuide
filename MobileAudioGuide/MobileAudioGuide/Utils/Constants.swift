@@ -5,7 +5,6 @@
 //  Created by Настя on 15.05.2022.
 //
 
-import Foundation
 import UIKit
 
 enum Colors {
@@ -21,6 +20,4 @@ enum Colors {
     static let btnHit = UIColor(rgb: 0x3293C5)
     static let btnNew = UIColor(rgb: 0x1C9D2C)
     static let btnSpecial = UIColor(rgb: 0xC46432)
-
 }
-

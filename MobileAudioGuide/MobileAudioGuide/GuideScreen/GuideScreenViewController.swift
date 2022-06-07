@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// TableViewController для экрана описания экскурсии
+/// ViewController для экрана описания экскурсии
 final class GuideScreenViewController: UIViewController {
     
     private let infoImage = UIImage(systemName: "info.circle")
@@ -55,10 +55,10 @@ final class GuideScreenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationItem.title = "Istanbul"
     }
     
     private func setupViewController() {
-        title = "Istanbul"
         view.backgroundColor = .white
     }
     
@@ -80,15 +80,7 @@ final class GuideScreenViewController: UIViewController {
     }
     
     private func setupNavigationController() {
-        guard let navigationBar = navigationController?.navigationBar else { return }
-        
-        navigationBar.barTintColor = .systemBlue
-        navigationBar.tintColor = .white
-        navigationBar.topItem?.title = ""
-        navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 21, weight: .bold)
-        ]
+        navigationController?.navigationBar.topItem?.title = ""
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: infoImage,
                                                             style: .plain,
                                                             target: self,

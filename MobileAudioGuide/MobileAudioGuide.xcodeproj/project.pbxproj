@@ -27,6 +27,7 @@
 		CE200B332833C13C0043F57A /* GuideDescribingTexts.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE200B322833C13C0043F57A /* GuideDescribingTexts.txt */; };
 		CE200B382833C6EE0043F57A /* ExcursionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200B372833C6EE0043F57A /* ExcursionInfo.swift */; };
 		CE200B3C2833CA010043F57A /* TextLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200B3B2833CA010043F57A /* TextLoader.swift */; };
+		CE2E90E72843F295008D50E0 /* DetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE861D602843DECB005B3A53 /* DetailsScreenViewController.swift */; };
 		CE4151412835098900CF9D53 /* GuideFeatureViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4151402835098900CF9D53 /* GuideFeatureViewBuilder.swift */; };
 		CE415150283A9B1000CF9D53 /* AudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41514F283A9B0F00CF9D53 /* AudioPlayerView.swift */; };
 		CE415155283AB61E00CF9D53 /* TimeInterval+minSecFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE415154283AB61D00CF9D53 /* TimeInterval+minSecFormatted.swift */; };
@@ -61,6 +62,7 @@
 		CE41514F283A9B0F00CF9D53 /* AudioPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerView.swift; sourceTree = "<group>"; };
 		CE415154283AB61D00CF9D53 /* TimeInterval+minSecFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+minSecFormatted.swift"; sourceTree = "<group>"; };
 		CE634F4C283429FC006C2F73 /* GuideHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideHeaderView.swift; sourceTree = "<group>"; };
+		CE861D602843DECB005B3A53 /* DetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewController.swift; sourceTree = "<group>"; };
 		CEE4AA7E283AF1BA000C1FF7 /* Tour1About.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tour1About.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				5DCB59142831746D00A2C3CC /* Utils */,
 				5DCB59132831738400A2C3CC /* Main */,
 				CE200B28283398650043F57A /* GuideScreen */,
+				CE861D5F2843DE90005B3A53 /* DetailsScreen */,
 				5DD753F928391BF80093FFBE /* InfoScreen */,
 				5DBAC3E2284650440081CA0D /* MapScreen */,
 				CE200B362833C6D40043F57A /* Models */,
@@ -196,6 +199,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		CE861D5F2843DE90005B3A53 /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE861D602843DECB005B3A53 /* DetailsScreenViewController.swift */,
+			);
+			path = DetailsScreen;
+			sourceTree = "<group>";
+		};
 		CEE4AA7D283AF193000C1FF7 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2E90E72843F295008D50E0 /* DetailsScreenViewController.swift in Sources */,
 				5DCB59192831758200A2C3CC /* UIColor+Extension.swift in Sources */,
 				5DBAC3E4284650B00081CA0D /* MapScreenView.swift in Sources */,
 				5DCB58FF283172BE00A2C3CC /* MainViewController.swift in Sources */,
@@ -288,9 +300,9 @@
 				CE415155283AB61E00CF9D53 /* TimeInterval+minSecFormatted.swift in Sources */,
 				5DCB5905283172BE00A2C3CC /* MobileAudioGuide.xcdatamodeld in Sources */,
 				CE200B2A28339F680043F57A /* GuideScreenViewController.swift in Sources */,
-				CE200B3C2833CA010043F57A /* TextLoader.swift in Sources */,
 				CE4151412835098900CF9D53 /* GuideFeatureViewBuilder.swift in Sources */,
 				5DBAC3E6284651760081CA0D /* MapScreenViewController.swift in Sources */,
+				CE200B3C2833CA010043F57A /* TextLoader.swift in Sources */,
 				5DCB58FB283172BE00A2C3CC /* AppDelegate.swift in Sources */,
 				CE200B382833C6EE0043F57A /* ExcursionInfo.swift in Sources */,
 				5DCB59122831736E00A2C3CC /* MainView.swift in Sources */,
@@ -437,7 +449,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TRVL9SXHFC;
+				DEVELOPMENT_TEAM = 5JFF3U9J3C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MobileAudioGuide/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -465,7 +477,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TRVL9SXHFC;
+				DEVELOPMENT_TEAM = 5JFF3U9J3C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MobileAudioGuide/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
