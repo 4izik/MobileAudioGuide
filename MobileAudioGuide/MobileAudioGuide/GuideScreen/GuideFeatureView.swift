@@ -35,7 +35,7 @@ final class GuideFeatureView: UIView {
     private lazy var iconImageView: UIImageView = {
         guard let image = UIImage(named: iconName) else { return UIImageView() }
         let iconView = UIImageView(image: image)
-        iconView.contentMode = .scaleAspectFill
+        iconView.contentMode = .scaleAspectFit
         return iconView
     }()
     
@@ -68,17 +68,17 @@ final class GuideFeatureView: UIView {
     
     private func activateConstraints() {
         NSLayoutConstraint.activate([
-            iconImageView.widthAnchor.constraint(equalToConstant: 36),
+            iconImageView.widthAnchor.constraint(equalToConstant: 29),
             iconImageView.heightAnchor.constraint(equalTo: iconImageView.widthAnchor),
             iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             iconImageView.topAnchor.constraint(equalTo: topAnchor),
             iconImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            secondaryTextLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 8),
-            secondaryTextLabel.topAnchor.constraint(equalTo: topAnchor),
+            secondaryTextLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 10),
+            secondaryTextLabel.topAnchor.constraint(equalTo: topAnchor, constant: -2),
             
             primaryTextLabel.leadingAnchor.constraint(equalTo: secondaryTextLabel.leadingAnchor),
-            primaryTextLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
+            primaryTextLabel.firstBaselineAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }
