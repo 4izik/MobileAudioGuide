@@ -38,7 +38,7 @@ class PurchaseButtonFooterView: UITableViewHeaderFooterView {
             purchaseButton.topAnchor.constraint(equalTo: topAnchor),
             purchaseButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             purchaseButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            purchaseButton.bottomAnchor.constraint(equalTo: bottomAnchor),
+            purchaseButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
             purchaseButton.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
