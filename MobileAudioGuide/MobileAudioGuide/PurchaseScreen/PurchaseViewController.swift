@@ -8,7 +8,10 @@
 import UIKit
 
 class PurchaseViewController: UIViewController {
+    
     private var excursionInfo: ExcursionInfo
+    var storeManager = StoreManager()
+    var typePurchase = "month"
     
     // MARK: - Properties
     private let purchaseView = PurchaseView()
@@ -41,6 +44,9 @@ class PurchaseViewController: UIViewController {
             purchaseView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         loaderInfo()
+        
+        /*oneMonthPriceLabel.text = UserDefaults.standard.object(forKey: "com.redrazr.redstickerz") as? String
+        unlimitPriceLabel.text = UserDefaults.standard.object(forKey: "com.redrazr.redstickerz.endless") as? String*/
     }
     
     private func loaderInfo() {
@@ -49,4 +55,26 @@ class PurchaseViewController: UIViewController {
                 purchaseView.infoAboutPurchaseTextView.text = text
         }
     }
+    
+    /*@IBAction func firstViewAction(_ sender: UIButton) {
+        setupView(for: sender)
+        typePurchase = "month"
+    }
+    
+    @IBAction func secondViewAction(_ sender: UIButton) {
+        setupView(for: sender)
+        typePurchase = "endless"
+    }
+    
+    @IBAction func makePurchase(_ sender: Any) {
+        if typePurchase == "month" {
+            storeManager.buyInApp(inAppID: "com.redrazr.redstickerz")
+        } else {
+            storeManager.buyInApp(inAppID: "com.redrazr.redstickerz.endless")
+        }
+    }
+    
+    @IBAction func restorePurchase(_ sender: Any) {
+        storeManager.restorePurchases()
+    }*/
 }
