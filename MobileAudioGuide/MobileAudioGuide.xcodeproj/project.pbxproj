@@ -39,6 +39,7 @@
 		CE415150283A9B1000CF9D53 /* AudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41514F283A9B0F00CF9D53 /* AudioPlayerView.swift */; };
 		CE415155283AB61E00CF9D53 /* TimeInterval+minSecFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE415154283AB61D00CF9D53 /* TimeInterval+minSecFormatted.swift */; };
 		CE634F4D283429FC006C2F73 /* GuideHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE634F4C283429FC006C2F73 /* GuideHeaderView.swift */; };
+		CE8A3C09285381EF004B8BFB /* PurchaseButtonFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A3C08285381EF004B8BFB /* PurchaseButtonFooterView.swift */; };
 		CEE4AA7F283AF1BA000C1FF7 /* Tour1About.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEE4AA7E283AF1BA000C1FF7 /* Tour1About.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		CE415154283AB61D00CF9D53 /* TimeInterval+minSecFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+minSecFormatted.swift"; sourceTree = "<group>"; };
 		CE634F4C283429FC006C2F73 /* GuideHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideHeaderView.swift; sourceTree = "<group>"; };
 		CE861D602843DECB005B3A53 /* DetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewController.swift; sourceTree = "<group>"; };
+		CE8A3C08285381EF004B8BFB /* PurchaseButtonFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButtonFooterView.swift; sourceTree = "<group>"; };
 		CEE4AA7E283AF1BA000C1FF7 /* Tour1About.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tour1About.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,7 +130,6 @@
 		5DCB58F9283172BE00A2C3CC /* MobileAudioGuide */ = {
 			isa = PBXGroup;
 			children = (
-				5D0C3CA7284FB1A0005FBAE0 /* PurchaseScreen */,
 				CE41514E283A9AE600CF9D53 /* Common */,
 				5DCB59172831756A00A2C3CC /* Extension */,
 				5DCB59142831746D00A2C3CC /* Utils */,
@@ -138,6 +139,7 @@
 				CE05C06A284B535300AF37CE /* RouteScreen */,
 				5DD753F928391BF80093FFBE /* InfoScreen */,
 				5DBAC3E2284650440081CA0D /* MapScreen */,
+				5D0C3CA7284FB1A0005FBAE0 /* PurchaseScreen */,
 				CE200B362833C6D40043F57A /* Models */,
 				CE200B312833C1040043F57A /* Resources */,
 				5DCB58FA283172BE00A2C3CC /* AppDelegate.swift */,
@@ -204,6 +206,7 @@
 			children = (
 				CE200B2928339F680043F57A /* GuideScreenViewController.swift */,
 				CE634F4C283429FC006C2F73 /* GuideHeaderView.swift */,
+				CE8A3C08285381EF004B8BFB /* PurchaseButtonFooterView.swift */,
 				CE1094B12834345000F9AA89 /* GuideFeatureView.swift */,
 			);
 			path = GuideScreen;
@@ -328,6 +331,7 @@
 			files = (
 				5D0C3CAD284FB1C3005FBAE0 /* PurchaseViewController.swift in Sources */,
 				CE2E90E72843F295008D50E0 /* DetailsScreenViewController.swift in Sources */,
+				CE8A3C09285381EF004B8BFB /* PurchaseButtonFooterView.swift in Sources */,
 				5DCB59192831758200A2C3CC /* UIColor+Extension.swift in Sources */,
 				5DBAC3E4284650B00081CA0D /* MapScreenView.swift in Sources */,
 				5DCB58FF283172BE00A2C3CC /* MainViewController.swift in Sources */,

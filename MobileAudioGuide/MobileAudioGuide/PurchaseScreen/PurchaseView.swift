@@ -14,6 +14,7 @@ class PurchaseView: UIView {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Image1")
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         return imageView
     }()
     
