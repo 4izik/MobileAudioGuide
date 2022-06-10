@@ -36,8 +36,13 @@ class MapScreenViewController: UIViewController, MKMapViewDelegate {
         checkLocationEnabled()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = excursionInfo.excursionTitle
+    }
+    
     private func setupViews() {
-        title = excursionInfo.excursionTitle
+        navigationController?.navigationBar.topItem?.title = ""
         view.addSubview(mapScreenView)
         view.backgroundColor = .white
 

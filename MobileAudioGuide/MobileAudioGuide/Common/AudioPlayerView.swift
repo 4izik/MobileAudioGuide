@@ -108,7 +108,7 @@ final class AudioPlayerView: UIView {
             
             playButton.leadingAnchor.constraint(equalTo: backView.leadingAnchor, constant: 10),
             playButton.topAnchor.constraint(equalTo: backView.topAnchor, constant: 10),
-            playButton.heightAnchor.constraint(equalTo: backView.heightAnchor, constant: -40),
+            playButton.heightAnchor.constraint(equalToConstant: 50),
             playButton.widthAnchor.constraint(equalTo: playButton.heightAnchor),
             
             currentPlayingTimeLabel.leadingAnchor.constraint(equalTo: playButton.trailingAnchor, constant: 10),

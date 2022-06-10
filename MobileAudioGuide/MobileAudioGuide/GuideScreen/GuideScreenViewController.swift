@@ -13,8 +13,9 @@ final class GuideScreenViewController: UIViewController {
     private let infoImage = UIImage(systemName: "info.circle")
     let indexOfSelectedItem: Int
     let textLoader: TextLoader
+    var isFullVersion = false
     
-    private lazy var GuideScreenTableView: UITableView = {
+    private lazy var guideScreenTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.delegate = self
         tableView.dataSource = self
@@ -28,7 +29,17 @@ final class GuideScreenViewController: UIViewController {
     private lazy var audioPlayerView: AudioPlayerView = {
         // TODO: Подставлять актуальное имя файла для каждого экрана
         let audioPlayerView = AudioPlayerView(audioFileName: "Tour1About")
+        audioPlayerView.isHidden = true
+        audioPlayerView.alpha = 0
         return audioPlayerView
+    }()
+    
+    private lazy var tableViewToSuperViewBottomAnchor: NSLayoutConstraint = {
+        guideScreenTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+    }()
+    
+    private lazy var tableViewToAudioPlayerViewBottomAnchor: NSLayoutConstraint = {
+        guideScreenTableView.bottomAnchor.constraint(equalTo: audioPlayerView.topAnchor, constant: -15)
     }()
     
     /// Инициализатор
@@ -49,7 +60,7 @@ final class GuideScreenViewController: UIViewController {
         super.viewDidLoad()
         setupViewController()
         setupNavigationController()
-        setupTableView()
+        setupViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,20 +73,28 @@ final class GuideScreenViewController: UIViewController {
         view.backgroundColor = .white
     }
     
-    private func setupTableView() {
-        view.addSubview(GuideScreenTableView)
-        GuideScreenTableView.translatesAutoresizingMaskIntoConstraints = false
-        GuideScreenTableView.allowsSelection = false
-        GuideScreenTableView.showsVerticalScrollIndicator = false
-        GuideScreenTableView.backgroundColor = .white
-        GuideScreenTableView.separatorStyle = .none
-        GuideScreenTableView.register(UITableViewCell.self, forCellReuseIdentifier: "GuideTextCell")
+    private func setupViews() {
+        [guideScreenTableView, audioPlayerView].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview($0)
+        }
+        
+        guideScreenTableView.allowsSelection = false
+        guideScreenTableView.showsVerticalScrollIndicator = false
+        guideScreenTableView.backgroundColor = .white
+        guideScreenTableView.separatorStyle = .none
+        guideScreenTableView.register(UITableViewCell.self, forCellReuseIdentifier: "GuideTextCell")
         
         NSLayoutConstraint.activate([
-            GuideScreenTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            GuideScreenTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            GuideScreenTableView.topAnchor.constraint(equalTo: view.topAnchor),
-            GuideScreenTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            guideScreenTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            guideScreenTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            guideScreenTableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableViewToSuperViewBottomAnchor,
+            
+            audioPlayerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            audioPlayerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            audioPlayerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            audioPlayerView.heightAnchor.constraint(equalToConstant: 90)
         ])
     }
     
@@ -93,44 +112,48 @@ final class GuideScreenViewController: UIViewController {
     }
     
     @objc private func aboutExcursionButtonTapped() {
-        switch view.subviews.contains(audioPlayerView) {
-        case true: removeAudioPlayerView()
-        case false: setupAudioPlayerView()
+        switch audioPlayerView.isHidden {
+        case false: hideAudioPlayerView()
+        case true: showAudioPlayerView()
         }
     }
     
     @objc private func beginExcursionButtonTapped() {
         guard let excursionInfo = excursionInfo else { return }
+        
         let mapScreenViewController = MapScreenViewController(excursionInfo: excursionInfo)
         navigationController?.pushViewController(mapScreenViewController, animated: true)
     }
     
-    private func removeAudioPlayerView() {
+    private func hideAudioPlayerView() {
         UIView.animate(withDuration: 0.3) { [weak self] in
             guard let self = self else { return }
             self.audioPlayerView.alpha = 0
         } completion: { [weak self] _ in
             guard let self = self else { return }
-            self.audioPlayerView.removeFromSuperview()
+            self.audioPlayerView.isHidden = true
+            self.tableViewToSuperViewBottomAnchor.isActive = true
+            self.tableViewToAudioPlayerViewBottomAnchor.isActive = false
         }
     }
     
-    private func setupAudioPlayerView() {
-        audioPlayerView.translatesAutoresizingMaskIntoConstraints = false
-        audioPlayerView.alpha = 0
-        view.addSubview(audioPlayerView)
-        
-        NSLayoutConstraint.activate([
-            audioPlayerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            audioPlayerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            audioPlayerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            audioPlayerView.heightAnchor.constraint(equalToConstant: 90)
-        ])
-        
+    private func showAudioPlayerView() {
+        audioPlayerView.isHidden = false
         UIView.animate(withDuration: 0.3) { [weak self] in
             guard let self = self else { return }
             self.audioPlayerView.alpha = 1
+        } completion: { [weak self] _ in
+            guard let self = self else { return }
+            self.tableViewToSuperViewBottomAnchor.isActive = false
+            self.tableViewToAudioPlayerViewBottomAnchor.isActive = true
         }
+    }
+    
+    @objc func purchaseButtonTapped() {
+        guard let excursionInfo = excursionInfo else { return }
+        
+        let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo)
+        navigationController?.pushViewController(purchaseViewController, animated: true)
     }
 }
 
@@ -156,5 +179,12 @@ extension GuideScreenViewController: UITableViewDataSource, UITableViewDelegate 
         headerView.aboutExcursionButton.addTarget(self, action: #selector(aboutExcursionButtonTapped), for: .touchUpInside)
         headerView.beginExcursionButton.addTarget(self, action: #selector(beginExcursionButtonTapped), for: .touchUpInside)
         return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard !isFullVersion else { return nil }
+        let footerView = PurchaseButtonFooterView(reuseIdentifier: "FooterView")
+        footerView.purchaseButton.addTarget(self, action: #selector(purchaseButtonTapped), for: .touchUpInside)
+        return footerView
     }
 }
