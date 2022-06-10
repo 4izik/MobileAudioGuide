@@ -25,6 +25,10 @@
 		5DD753FB28391C230093FFBE /* InfoScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD753FA28391C230093FFBE /* InfoScreenViewController.swift */; };
 		5DD753FD28391D910093FFBE /* InfoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD753FC28391D910093FFBE /* InfoScreenView.swift */; };
 		5DE36F41283A677F00B191C7 /* infoAboutAuthor.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5DE36F40283A677F00B191C7 /* infoAboutAuthor.txt */; };
+		CE05C070284B54CC00AF37CE /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05C06F284B54CC00AF37CE /* RouteViewController.swift */; };
+		CE05C0732850FA9D00AF37CE /* PointOfInterestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05C0722850FA9D00AF37CE /* PointOfInterestTableViewCell.swift */; };
+		CE05C07B2850FBAE00AF37CE /* BuyFullVersionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05C07A2850FBAE00AF37CE /* BuyFullVersionTableViewCell.swift */; };
+		CE05C07F28528FFC00AF37CE /* UIImageView+makeImageGrayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05C07E28528FFB00AF37CE /* UIImageView+makeImageGrayscale.swift */; };
 		CE1094B22834345000F9AA89 /* GuideFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1094B12834345000F9AA89 /* GuideFeatureView.swift */; };
 		CE200B2A28339F680043F57A /* GuideScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200B2928339F680043F57A /* GuideScreenViewController.swift */; };
 		CE200B332833C13C0043F57A /* GuideDescribingTexts.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE200B322833C13C0043F57A /* GuideDescribingTexts.txt */; };
@@ -59,6 +63,10 @@
 		5DD753FA28391C230093FFBE /* InfoScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenViewController.swift; sourceTree = "<group>"; };
 		5DD753FC28391D910093FFBE /* InfoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenView.swift; sourceTree = "<group>"; };
 		5DE36F40283A677F00B191C7 /* infoAboutAuthor.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = infoAboutAuthor.txt; path = MobileAudioGuide/Resources/infoAboutAuthor.txt; sourceTree = SOURCE_ROOT; };
+		CE05C06F284B54CC00AF37CE /* RouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		CE05C0722850FA9D00AF37CE /* PointOfInterestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterestTableViewCell.swift; sourceTree = "<group>"; };
+		CE05C07A2850FBAE00AF37CE /* BuyFullVersionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyFullVersionTableViewCell.swift; sourceTree = "<group>"; };
+		CE05C07E28528FFB00AF37CE /* UIImageView+makeImageGrayscale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+makeImageGrayscale.swift"; sourceTree = "<group>"; };
 		CE1094B12834345000F9AA89 /* GuideFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideFeatureView.swift; sourceTree = "<group>"; };
 		CE200B2928339F680043F57A /* GuideScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideScreenViewController.swift; sourceTree = "<group>"; };
 		CE200B322833C13C0043F57A /* GuideDescribingTexts.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = GuideDescribingTexts.txt; sourceTree = "<group>"; };
@@ -127,6 +135,7 @@
 				5DCB59132831738400A2C3CC /* Main */,
 				CE200B28283398650043F57A /* GuideScreen */,
 				CE861D5F2843DE90005B3A53 /* DetailsScreen */,
+				CE05C06A284B535300AF37CE /* RouteScreen */,
 				5DD753F928391BF80093FFBE /* InfoScreen */,
 				5DBAC3E2284650440081CA0D /* MapScreen */,
 				CE200B362833C6D40043F57A /* Models */,
@@ -166,6 +175,7 @@
 			children = (
 				5DCB59182831758200A2C3CC /* UIColor+Extension.swift */,
 				CE415154283AB61D00CF9D53 /* TimeInterval+minSecFormatted.swift */,
+				CE05C07E28528FFB00AF37CE /* UIImageView+makeImageGrayscale.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -177,6 +187,16 @@
 				5DD753FC28391D910093FFBE /* InfoScreenView.swift */,
 			);
 			path = InfoScreen;
+			sourceTree = "<group>";
+		};
+		CE05C06A284B535300AF37CE /* RouteScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE05C06F284B54CC00AF37CE /* RouteViewController.swift */,
+				CE05C0722850FA9D00AF37CE /* PointOfInterestTableViewCell.swift */,
+				CE05C07A2850FBAE00AF37CE /* BuyFullVersionTableViewCell.swift */,
+			);
+			path = RouteScreen;
 			sourceTree = "<group>";
 		};
 		CE200B28283398650043F57A /* GuideScreen */ = {
@@ -316,6 +336,7 @@
 				5DD753FB28391C230093FFBE /* InfoScreenViewController.swift in Sources */,
 				5D0C3CAB284FB1BF005FBAE0 /* PurchaseView.swift in Sources */,
 				5D61FD1B28328A1E00AB33C3 /* MainTableViewCell.swift in Sources */,
+				CE05C0732850FA9D00AF37CE /* PointOfInterestTableViewCell.swift in Sources */,
 				5DD753FD28391D910093FFBE /* InfoScreenView.swift in Sources */,
 				CE415155283AB61E00CF9D53 /* TimeInterval+minSecFormatted.swift in Sources */,
 				5DCB5905283172BE00A2C3CC /* MobileAudioGuide.xcdatamodeld in Sources */,
@@ -323,12 +344,15 @@
 				CE4151412835098900CF9D53 /* GuideFeatureViewBuilder.swift in Sources */,
 				5DBAC3E6284651760081CA0D /* MapScreenViewController.swift in Sources */,
 				CE200B3C2833CA010043F57A /* TextLoader.swift in Sources */,
+				CE05C07B2850FBAE00AF37CE /* BuyFullVersionTableViewCell.swift in Sources */,
 				5DCB58FB283172BE00A2C3CC /* AppDelegate.swift in Sources */,
 				CE200B382833C6EE0043F57A /* ExcursionInfo.swift in Sources */,
 				5DCB59122831736E00A2C3CC /* MainView.swift in Sources */,
 				5DCB58FD283172BE00A2C3CC /* SceneDelegate.swift in Sources */,
 				5DCB5916283174CE00A2C3CC /* Constants.swift in Sources */,
+				CE05C070284B54CC00AF37CE /* RouteViewController.swift in Sources */,
 				CE415150283A9B1000CF9D53 /* AudioPlayerView.swift in Sources */,
+				CE05C07F28528FFC00AF37CE /* UIImageView+makeImageGrayscale.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
