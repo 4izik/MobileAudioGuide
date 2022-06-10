@@ -54,11 +54,11 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
     lazy var aboutExcursionButton: UIButton = {
         let aboutExcursionButton = UIButton(type: .roundedRect)
         aboutExcursionButton.setTitle("About excursion", for: .normal)
-        aboutExcursionButton.setTitleColor(.systemBlue, for: .normal)
+        aboutExcursionButton.setTitleColor(Colors.vwBlueColor, for: .normal)
         aboutExcursionButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         aboutExcursionButton.backgroundColor = .clear
         aboutExcursionButton.layer.borderWidth = 1
-        aboutExcursionButton.layer.borderColor = UIColor.systemBlue.cgColor
+        aboutExcursionButton.layer.borderColor = Colors.vwBlueColor.cgColor
         aboutExcursionButton.layer.cornerRadius = 3
         return aboutExcursionButton
     }()
@@ -69,9 +69,9 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
         beginExcursionButton.setTitle("Start", for: .normal)
         beginExcursionButton.setTitleColor(.white, for: .normal)
         beginExcursionButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        beginExcursionButton.backgroundColor = .systemBlue
+        beginExcursionButton.backgroundColor = Colors.vwBlueColor
         beginExcursionButton.layer.borderWidth = 1
-        beginExcursionButton.layer.borderColor = UIColor.systemBlue.cgColor
+        beginExcursionButton.layer.borderColor = Colors.vwBlueColor.cgColor
         beginExcursionButton.layer.cornerRadius = 3
         return beginExcursionButton
     }()

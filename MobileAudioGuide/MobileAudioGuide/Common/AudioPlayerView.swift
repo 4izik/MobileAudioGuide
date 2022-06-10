@@ -32,7 +32,7 @@ final class AudioPlayerView: UIView {
     
     private lazy var backView: UIView = {
         let backView = UIView(frame: .zero)
-        backView.backgroundColor = .systemBlue
+        backView.backgroundColor = Colors.vwBlueColor
         return backView
     }()
     

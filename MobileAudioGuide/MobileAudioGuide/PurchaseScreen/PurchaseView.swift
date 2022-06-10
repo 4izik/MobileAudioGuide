@@ -47,7 +47,7 @@ class PurchaseView: UIView {
     
     private let footerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = Colors.vwBlueColor
         return view
     }()
     
