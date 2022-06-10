@@ -13,10 +13,10 @@ class PurchaseButtonFooterView: UITableViewHeaderFooterView {
         let button = UIButton()
         button.backgroundColor = .white
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        button.layer.borderColor = UIColor.systemBlue.cgColor
+        button.layer.borderColor = Colors.vwBlueColor.cgColor
         button.layer.borderWidth = 1
         button.setTitle("Buy full version", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(Colors.vwBlueColor, for: .normal)
         button.layer.cornerRadius = 3
         return button
     }()
@@ -38,7 +38,7 @@ class PurchaseButtonFooterView: UITableViewHeaderFooterView {
             purchaseButton.topAnchor.constraint(equalTo: topAnchor),
             purchaseButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             purchaseButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            purchaseButton.bottomAnchor.constraint(equalTo: bottomAnchor),
+            purchaseButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
             purchaseButton.heightAnchor.constraint(equalToConstant: 40)
         ])
     }

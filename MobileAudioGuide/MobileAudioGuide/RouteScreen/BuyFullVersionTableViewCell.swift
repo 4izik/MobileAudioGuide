@@ -47,7 +47,7 @@ final class BuyFullVersionTableViewCell: UITableViewCell {
     
     private lazy var colorBackdropView: UIView = {
         let view = UIView(frame: .zero)
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = Colors.vwBlueColor
         return view
     }()
     

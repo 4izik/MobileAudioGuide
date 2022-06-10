@@ -10,6 +10,7 @@ import UIKit
 enum Colors {
 //    Colors used in views
     static let vwBackground = UIColor(rgb: 0x1A1E26)
+    static let vwBlueColor = UIColor(rgb: 0x0096D3)
 
 //    Colors used in label
     static let lblMainInfo = UIColor(rgb: 0xCCCCCC)

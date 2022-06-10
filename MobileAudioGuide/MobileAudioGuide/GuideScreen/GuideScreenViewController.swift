@@ -39,7 +39,7 @@ final class GuideScreenViewController: UIViewController {
     }()
     
     private lazy var tableViewToAudioPlayerViewBottomAnchor: NSLayoutConstraint = {
-        guideScreenTableView.bottomAnchor.constraint(equalTo: audioPlayerView.topAnchor, constant: -15)
+        guideScreenTableView.bottomAnchor.constraint(equalTo: audioPlayerView.topAnchor, constant: 0)
     }()
     
     /// Инициализатор
@@ -81,6 +81,7 @@ final class GuideScreenViewController: UIViewController {
         
         guideScreenTableView.allowsSelection = false
         guideScreenTableView.showsVerticalScrollIndicator = false
+        guideScreenTableView.showsHorizontalScrollIndicator = false
         guideScreenTableView.backgroundColor = .white
         guideScreenTableView.separatorStyle = .none
         guideScreenTableView.register(UITableViewCell.self, forCellReuseIdentifier: "GuideTextCell")
@@ -126,14 +127,14 @@ final class GuideScreenViewController: UIViewController {
     }
     
     private func hideAudioPlayerView() {
+        self.tableViewToSuperViewBottomAnchor.isActive = true
+        self.tableViewToAudioPlayerViewBottomAnchor.isActive = false
         UIView.animate(withDuration: 0.3) { [weak self] in
             guard let self = self else { return }
             self.audioPlayerView.alpha = 0
         } completion: { [weak self] _ in
             guard let self = self else { return }
             self.audioPlayerView.isHidden = true
-            self.tableViewToSuperViewBottomAnchor.isActive = true
-            self.tableViewToAudioPlayerViewBottomAnchor.isActive = false
         }
     }
     

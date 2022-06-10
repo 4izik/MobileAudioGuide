@@ -32,7 +32,7 @@ final class PointOfInterestTableViewCell: UITableViewCell {
     }()
     
     private lazy var checkPointView: UIImageView = {
-        let image = UIImage(named: "mapPin")?.withTintColor(.systemBlue)
+        let image = UIImage(named: "mapPin")?.withTintColor(Colors.vwBlueColor)
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
@@ -42,7 +42,7 @@ final class PointOfInterestTableViewCell: UITableViewCell {
     // TODO: сделать private после доработок с моделью
     lazy var checkPointNumberLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .systemBlue
+        label.textColor = Colors.vwBlueColor
         label.font = UIFont.systemFont(ofSize: 11, weight: .regular)
         label.textAlignment = .center
         label.text = "49"
@@ -81,7 +81,7 @@ final class PointOfInterestTableViewCell: UITableViewCell {
     
     private lazy var showDetailsButton: UIButton = {
         let button = UIButton()
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(Colors.vwBlueColor, for: .normal)
         button.setTitle("More info", for: .normal)
         button.backgroundColor = .clear
         button.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .regular)
@@ -94,7 +94,7 @@ final class PointOfInterestTableViewCell: UITableViewCell {
         playButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
         playButton.contentVerticalAlignment = .fill
         playButton.contentHorizontalAlignment = .fill
-        playButton.tintColor = .systemBlue
+        playButton.tintColor = Colors.vwBlueColor
         return playButton
     }()
     

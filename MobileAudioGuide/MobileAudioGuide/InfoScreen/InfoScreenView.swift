@@ -24,7 +24,7 @@ class InfoScreenView: UIView {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 50
-        imageView.layer.borderColor = UIColor.systemBlue.cgColor
+        imageView.layer.borderColor = Colors.vwBlueColor.cgColor
         imageView.layer.borderWidth = 1
         return imageView
     }()
@@ -52,7 +52,7 @@ class InfoScreenView: UIView {
         label.text = "contact@offlineofficialguide.com"
         label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         label.textAlignment = .center
-        label.textColor = .systemBlue
+        label.textColor = Colors.vwBlueColor
         return label
     }()
     

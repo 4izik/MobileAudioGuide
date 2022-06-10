@@ -38,10 +38,10 @@ class MapScreenView: UIView {
     let purchaseButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
-        button.layer.borderColor = UIColor.systemBlue.cgColor
+        button.layer.borderColor = Colors.vwBlueColor.cgColor
         button.layer.borderWidth = 1
         button.setTitle("Buy full version", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(Colors.vwBlueColor, for: .normal)
         return button
     }()
     
@@ -72,7 +72,7 @@ class MapScreenView: UIView {
         button.backgroundColor = .white
         button.setTitle("More", for: .normal)
         button.titleLabel?.textAlignment = .left
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(Colors.vwBlueColor, for: .normal)
         return button
     }()
     
