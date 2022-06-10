@@ -126,14 +126,14 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
             imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 250),
+            imageView.heightAnchor.constraint(equalToConstant: 277),
             
             routeView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             routeView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 25),
             routeView.trailingAnchor.constraint(greaterThanOrEqualTo: distanceView.leadingAnchor),
             
             transportView.leadingAnchor.constraint(equalTo: routeView.leadingAnchor),
-            transportView.topAnchor.constraint(equalTo: routeView.bottomAnchor, constant: 15),
+            transportView.topAnchor.constraint(equalTo: routeView.bottomAnchor, constant: 20),
             transportView.trailingAnchor.constraint(lessThanOrEqualTo: sightseengView.leadingAnchor),
             
             distanceView.topAnchor.constraint(equalTo: routeView.topAnchor),
