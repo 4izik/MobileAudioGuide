@@ -10,6 +10,9 @@
 		5D0C3CA9284FB1B6005FBAE0 /* aboutPurchase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5D0C3CA8284FB1B6005FBAE0 /* aboutPurchase.txt */; };
 		5D0C3CAB284FB1BF005FBAE0 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C3CAA284FB1BF005FBAE0 /* PurchaseView.swift */; };
 		5D0C3CAD284FB1C3005FBAE0 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C3CAC284FB1C3005FBAE0 /* PurchaseViewController.swift */; };
+		5D18645A2857197B00A001E5 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 5D1864592857197B00A001E5 /* MapboxMaps */; };
+		5D18645C28573F2300A001E5 /* CameraLocationConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18645B28573F2300A001E5 /* CameraLocationConsumer.swift */; };
+		5D18645E2857818C00A001E5 /* OfflineManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18645D2857818C00A001E5 /* OfflineManagerViewController.swift */; };
 		5D61FD1B28328A1E00AB33C3 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */; };
 		5DBAC3E4284650B00081CA0D /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBAC3E3284650B00081CA0D /* MapScreenView.swift */; };
 		5DBAC3E6284651760081CA0D /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBAC3E5284651760081CA0D /* MapScreenViewController.swift */; };
@@ -47,6 +50,8 @@
 		5D0C3CA8284FB1B6005FBAE0 /* aboutPurchase.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aboutPurchase.txt; sourceTree = "<group>"; };
 		5D0C3CAA284FB1BF005FBAE0 /* PurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		5D0C3CAC284FB1C3005FBAE0 /* PurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		5D18645B28573F2300A001E5 /* CameraLocationConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraLocationConsumer.swift; sourceTree = "<group>"; };
+		5D18645D2857818C00A001E5 /* OfflineManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineManagerViewController.swift; sourceTree = "<group>"; };
 		5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		5DBAC3E3284650B00081CA0D /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
 		5DBAC3E5284651760081CA0D /* MapScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D18645A2857197B00A001E5 /* MapboxMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +113,8 @@
 			children = (
 				5DBAC3E3284650B00081CA0D /* MapScreenView.swift */,
 				5DBAC3E5284651760081CA0D /* MapScreenViewController.swift */,
+				5D18645B28573F2300A001E5 /* CameraLocationConsumer.swift */,
+				5D18645D2857818C00A001E5 /* OfflineManagerViewController.swift */,
 			);
 			path = MapScreen;
 			sourceTree = "<group>";
@@ -271,6 +279,9 @@
 			dependencies = (
 			);
 			name = MobileAudioGuide;
+			packageProductDependencies = (
+				5D1864592857197B00A001E5 /* MapboxMaps */,
+			);
 			productName = MobileAudioGuide;
 			productReference = 5DCB58F7283172BE00A2C3CC /* MobileAudioGuide.app */;
 			productType = "com.apple.product-type.application";
@@ -299,6 +310,9 @@
 				Base,
 			);
 			mainGroup = 5DCB58EE283172BE00A2C3CC;
+			packageReferences = (
+				5D1864582857197B00A001E5 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+			);
 			productRefGroup = 5DCB58F8283172BE00A2C3CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -349,10 +363,12 @@
 				5DBAC3E6284651760081CA0D /* MapScreenViewController.swift in Sources */,
 				CE200B3C2833CA010043F57A /* TextLoader.swift in Sources */,
 				CE05C07B2850FBAE00AF37CE /* BuyFullVersionTableViewCell.swift in Sources */,
+				5D18645C28573F2300A001E5 /* CameraLocationConsumer.swift in Sources */,
 				5DCB58FB283172BE00A2C3CC /* AppDelegate.swift in Sources */,
 				CE200B382833C6EE0043F57A /* ExcursionInfo.swift in Sources */,
 				5DCB59122831736E00A2C3CC /* MainView.swift in Sources */,
 				5DCB58FD283172BE00A2C3CC /* SceneDelegate.swift in Sources */,
+				5D18645E2857818C00A001E5 /* OfflineManagerViewController.swift in Sources */,
 				5DCB5916283174CE00A2C3CC /* Constants.swift in Sources */,
 				CE05C070284B54CC00AF37CE /* RouteViewController.swift in Sources */,
 				CE415150283A9B1000CF9D53 /* AudioPlayerView.swift in Sources */,
@@ -568,6 +584,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D1864582857197B00A001E5 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D1864592857197B00A001E5 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D1864582857197B00A001E5 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		5DCB5903283172BE00A2C3CC /* MobileAudioGuide.xcdatamodeld */ = {
