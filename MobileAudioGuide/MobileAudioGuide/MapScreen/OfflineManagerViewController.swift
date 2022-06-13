@@ -25,7 +25,17 @@ final class OfflineManagerViewController: UIViewController {
     
     private var mapView: MapView?
     private var tileStore: TileStore?
-
+    let excursionInfo: ExcursionInfo
+    
+    init(excursionInfo: ExcursionInfo) {
+        self.excursionInfo = excursionInfo
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private lazy var mapInitOptions: MapInitOptions = {
         MapInitOptions(cameraOptions: CameraOptions(center: istanbulCoord, zoom: istanbulZoom),
                        styleURI: .outdoors)
@@ -176,6 +186,25 @@ final class OfflineManagerViewController: UIViewController {
         // Canceling will trigger `.canceled` errors that will then change state
         downloads.forEach { $0.cancel() }
     }
+    
+    private func addMarkersOnMap() {
+        let tours = excursionInfo.tours
+        var points: [PointAnnotation] = []
+        
+        for tour in tours {
+            var pointAnnotation = PointAnnotation(coordinate: CLLocationCoordinate2D(latitude: tour.latitude, longitude: tour.longitude))
+
+            // Make the annotation show a red pin
+            pointAnnotation.image = .init(image: UIImage(named: "mapbox-marker-icon-20px-blue")!, name: "mapbox-marker-icon-20px-blue")
+            pointAnnotation.iconAnchor = .bottom
+            points.append(pointAnnotation)
+        }
+        // Create the `PointAnnotationManager` which will be responsible for handling this annotation
+        let pointAnnotationManager = mapView?.annotations.makePointAnnotationManager()
+        // Add the annotation to the manager in order to render it on the map.
+        pointAnnotationManager?.annotations = points
+
+    }
 
     private func logDownloadResult<T, Error>(message: String, result: Result<[T], Error>) {
         switch result {
@@ -257,6 +286,7 @@ final class OfflineManagerViewController: UIViewController {
 
             case (.downloaded, .mapViewDisplayed):
                 showMapView()
+                addMarkersOnMap()
 
             case (.mapViewDisplayed, .finished),
                  (.downloading, .finished):
