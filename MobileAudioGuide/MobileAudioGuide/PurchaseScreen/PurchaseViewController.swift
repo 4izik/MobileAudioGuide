@@ -44,9 +44,10 @@ class PurchaseViewController: UIViewController {
             purchaseView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         loaderInfo()
-        
+        print(UserDefaults.standard.object(forKey: "com.Istanbul.MobileAudioGuide.OneTour") as? String)
         /*oneMonthPriceLabel.text = UserDefaults.standard.object(forKey: "com.redrazr.redstickerz") as? String
         unlimitPriceLabel.text = UserDefaults.standard.object(forKey: "com.redrazr.redstickerz.endless") as? String*/
+        purchaseView.buyOneTourButton.addTarget(self, action: #selector(makePurchaseOneTour), for: .touchUpInside)
     }
     
     private func loaderInfo() {
@@ -54,6 +55,10 @@ class PurchaseViewController: UIViewController {
            let text = try? String(contentsOfFile: path) {
                 purchaseView.infoAboutPurchaseTextView.text = text
         }
+    }
+    
+    @objc func makePurchaseOneTour() {
+        storeManager.buyInApp(inAppID: "com.istanbul.audioguide.onetour")
     }
     
     /*@IBAction func firstViewAction(_ sender: UIButton) {
