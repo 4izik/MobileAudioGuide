@@ -61,7 +61,7 @@ final class BuyFullVersionTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var buyFullVersionButton: UIButton = {
+    lazy var buyFullVersionButton: UIButton = {
         let button = UIButton(type: .roundedRect)
         button.setTitleColor(.white, for: .normal)
         button.setTitle("Buy full version", for: .normal)

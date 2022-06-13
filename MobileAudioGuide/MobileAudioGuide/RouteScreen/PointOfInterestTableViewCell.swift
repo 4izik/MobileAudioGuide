@@ -11,7 +11,17 @@ import UIKit
 final class PointOfInterestTableViewCell: UITableViewCell {
     
     static let identifier = "PointOfInterestTableViewCell"
-    var excursionInfo: ExcursionInfo?
+    var cellIndex: Int = 1
+    var excursionInfo: ExcursionInfo? {
+        didSet {
+            guard let excursionInfo = excursionInfo else { return }
+            mainImageView.image = UIImage(named: excursionInfo.filenamePrefix + String(cellIndex + 1))
+            checkPointNumberLabel.text = String(cellIndex + 1)
+            if excursionInfo.tours.indices.contains(cellIndex) {
+                titleLabel.text = excursionInfo.tours[cellIndex].tourTitle
+            }
+        }
+    }
     
     /// Активна ли ячейка (цветная или серая)
     var isActive = true {
@@ -39,8 +49,7 @@ final class PointOfInterestTableViewCell: UITableViewCell {
         return imageView
     }()
     
-    // TODO: сделать private после доработок с моделью
-    lazy var checkPointNumberLabel: UILabel = {
+    private lazy var checkPointNumberLabel: UILabel = {
         let label = UILabel()
         label.textColor = Colors.vwBlueColor
         label.font = UIFont.systemFont(ofSize: 11, weight: .regular)
@@ -56,8 +65,7 @@ final class PointOfInterestTableViewCell: UITableViewCell {
         return view
     }()
     
-    // TODO: сделать private после доработок с моделью
-    lazy var mainImageView: UIImageView = {
+    private lazy var mainImageView: UIImageView = {
         let image = UIImage(named: "Image1")
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFill
@@ -79,7 +87,7 @@ final class PointOfInterestTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var showDetailsButton: UIButton = {
+    lazy var showDetailsButton: UIButton = {
         let button = UIButton()
         button.setTitleColor(Colors.vwBlueColor, for: .normal)
         button.setTitle("More info", for: .normal)
@@ -104,16 +112,10 @@ final class PointOfInterestTableViewCell: UITableViewCell {
         drawDottedLine(start: CGPoint(x: 1, y: 0),
                        end: CGPoint(x: 1, y: 130),
                        view: verticalLineView)
-        
-        showDetailsButton.addTarget(self, action: #selector(showDetailsButtonTapped), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
         fatalError("Initializing from Storyboard isn't supported")
-    }
-    
-    @objc private func showDetailsButtonTapped() {
-        print("Button tapped")
     }
     
     private func activateConstraints() {
@@ -156,6 +158,7 @@ final class PointOfInterestTableViewCell: UITableViewCell {
             
             titleLabel.topAnchor.constraint(equalTo: grayBackdropView.topAnchor, constant: 10),
             titleLabel.leadingAnchor.constraint(equalTo: grayBackdropView.leadingAnchor, constant: 10),
+            titleLabel.trailingAnchor.constraint(equalTo: playAudioButton.trailingAnchor),
             
             showDetailsButton.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             showDetailsButton.bottomAnchor.constraint(equalTo: grayBackdropView.bottomAnchor, constant: -12),

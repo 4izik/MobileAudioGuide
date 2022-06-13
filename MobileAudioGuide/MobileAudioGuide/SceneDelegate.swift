@@ -15,7 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            let navigationController = UINavigationController.init(rootViewController: MainViewController())
+            let excursionsInfo = ExcursionsPlistLoader.loadExcursionInfo()
+            let navigationController = UINavigationController.init(rootViewController: MainViewController(excursionsInfo: excursionsInfo))
             setupNavigationController(navigationController)
             window.rootViewController = navigationController
             self.window = window

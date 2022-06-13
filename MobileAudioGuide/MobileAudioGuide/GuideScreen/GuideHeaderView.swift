@@ -12,7 +12,6 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
     
     private let reuseID = "GuideHeaderView"
     private let excursionInfo: ExcursionInfo
-    private let imageName: String
     private let guideFeatureViewBuilder: GuideFeatureViewBuilder
     
     private lazy var titleLabel: UILabel = {
@@ -27,7 +26,7 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
-        let image = UIImage(named: imageName)
+        let image = UIImage(named: excursionInfo.filenamePrefix + "0")
         imageView.image = image
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -88,11 +87,9 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
     /// Инициализатор
     /// - Parameters:
     ///   - excursionInfo: модель с  информацей об экскурсии
-    ///   - imageName: имя файла большого изображения
     ///   - guideFeatureViewBuilder: экземпляр билдера вьюх с характеристиками экскурсии
-    init(excursionInfo: ExcursionInfo, imageName: String, guideFeatureViewBuilder: GuideFeatureViewBuilder) {
+    init(excursionInfo: ExcursionInfo, guideFeatureViewBuilder: GuideFeatureViewBuilder) {
         self.excursionInfo = excursionInfo
-        self.imageName = imageName
         self.guideFeatureViewBuilder = guideFeatureViewBuilder
         super.init(reuseIdentifier: reuseID)
         setupViews()
