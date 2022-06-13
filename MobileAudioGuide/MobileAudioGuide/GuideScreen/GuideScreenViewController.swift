@@ -10,9 +10,9 @@ import UIKit
 /// ViewController для экрана описания экскурсии
 final class GuideScreenViewController: UIViewController {
     
+    private let excursionInfo: ExcursionInfo
     private let infoImage = UIImage(systemName: "info.circle")
-    let indexOfSelectedItem: Int
-    let textLoader: TextLoader
+    private let textLoader: TextLoader
     var isFullVersion = false
     
     private lazy var guideScreenTableView: UITableView = {
@@ -22,13 +22,8 @@ final class GuideScreenViewController: UIViewController {
         return tableView
     }()
     
-    private var excursionInfo: ExcursionInfo? {
-        textLoader.loadExcursionInfoFor(index: indexOfSelectedItem)
-    }
-    
     private lazy var audioPlayerView: AudioPlayerView = {
-        // TODO: Подставлять актуальное имя файла для каждого экрана
-        let audioPlayerView = AudioPlayerView(audioFileName: "Tour1About")
+        let audioPlayerView = AudioPlayerView(audioFileName: excursionInfo.filenamePrefix + "0")
         audioPlayerView.isHidden = true
         audioPlayerView.alpha = 0
         return audioPlayerView
@@ -46,8 +41,8 @@ final class GuideScreenViewController: UIViewController {
     /// - Parameters:
     ///   - indexOfSelectedItem: индекс ячейки главного экрана, с которой совершен переход
     ///   - textLoader: экземпляр загрузчика текста из файла
-    init(indexOfSelectedItem: Int, textLoader: TextLoader) {
-        self.indexOfSelectedItem = indexOfSelectedItem
+    init(excursionInfo: ExcursionInfo, indexOfSelectedItem: Int, textLoader: TextLoader) {
+        self.excursionInfo = excursionInfo
         self.textLoader = textLoader
         super.init(nibName: nil, bundle: nil)
     }
@@ -120,15 +115,13 @@ final class GuideScreenViewController: UIViewController {
     }
     
     @objc private func beginExcursionButtonTapped() {
-        guard let excursionInfo = excursionInfo else { return }
-        
         let mapScreenViewController = MapScreenViewController(excursionInfo: excursionInfo)
         navigationController?.pushViewController(mapScreenViewController, animated: true)
     }
     
     private func hideAudioPlayerView() {
-        self.tableViewToSuperViewBottomAnchor.isActive = true
         self.tableViewToAudioPlayerViewBottomAnchor.isActive = false
+        self.tableViewToSuperViewBottomAnchor.isActive = true
         UIView.animate(withDuration: 0.3) { [weak self] in
             guard let self = self else { return }
             self.audioPlayerView.alpha = 0
@@ -151,8 +144,6 @@ final class GuideScreenViewController: UIViewController {
     }
     
     @objc func purchaseButtonTapped() {
-        guard let excursionInfo = excursionInfo else { return }
-        
         let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo)
         navigationController?.pushViewController(purchaseViewController, animated: true)
     }
@@ -169,14 +160,12 @@ extension GuideScreenViewController: UITableViewDataSource, UITableViewDelegate 
         let cell = tableView.dequeueReusableCell(withIdentifier: "GuideTextCell", for: indexPath)
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        cell.textLabel?.text = excursionInfo?.excursionDescription
+        cell.textLabel?.text = excursionInfo.excursionDescription
         return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let excursionInfo = excursionInfo else { return nil }
-        let imageName = "Image\(indexOfSelectedItem + 1)"
-        let headerView = GuideHeaderView(excursionInfo: excursionInfo, imageName: imageName, guideFeatureViewBuilder: GuideFeatureViewBuilder(excursionInfo: excursionInfo))
+        let headerView = GuideHeaderView(excursionInfo: excursionInfo, guideFeatureViewBuilder: GuideFeatureViewBuilder(excursionInfo: excursionInfo))
         headerView.aboutExcursionButton.addTarget(self, action: #selector(aboutExcursionButtonTapped), for: .touchUpInside)
         headerView.beginExcursionButton.addTarget(self, action: #selector(beginExcursionButtonTapped), for: .touchUpInside)
         return headerView

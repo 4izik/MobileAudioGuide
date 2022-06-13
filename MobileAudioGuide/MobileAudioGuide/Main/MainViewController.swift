@@ -13,11 +13,16 @@ class MainViewController: UIViewController {
     let namesTours = ["Istanbul in 1 day: The most popular route", "From Galata Bridge\nto Taksim Square", "Non-touristic Istanbul and\nthe legacy of Constantinople"]
     let tagsColors = [Colors.btnHit, Colors.btnNew, Colors.btnSpecial]
     let tagsNames = ["hit","new","special"]
+    let excursionsInfo: [ExcursionInfo]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    init(excursionsInfo: [ExcursionInfo]) {
+        self.excursionsInfo = excursionsInfo
+        super.init(nibName: nil, bundle: nil)
         setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("Initializing from Storyboard isn't supported")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,7 +65,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
-        cell.imageToursView.image = UIImage(named: "Image\(indexPath.row + 1)")
+        cell.imageToursView.image = UIImage(named: (excursionsInfo[indexPath.row].filenamePrefix) + "0")
         cell.infoLabel.text = namesTours[indexPath.row]
         cell.backgroundColor = .clear
         cell.tagLabel.text = tagsNames[indexPath.row]
@@ -69,7 +74,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let guideScreenViewController = GuideScreenViewController(indexOfSelectedItem: indexPath.row,
+        let guideScreenViewController = GuideScreenViewController(excursionInfo: excursionsInfo[indexPath.row], indexOfSelectedItem: indexPath.row,
                                                                        textLoader: TextLoader())
         navigationController?.pushViewController(guideScreenViewController, animated: true)
     }
