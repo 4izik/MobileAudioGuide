@@ -34,7 +34,7 @@
 		CE05C07F28528FFC00AF37CE /* UIImageView+makeImageGrayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05C07E28528FFB00AF37CE /* UIImageView+makeImageGrayscale.swift */; };
 		CE1094B22834345000F9AA89 /* GuideFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1094B12834345000F9AA89 /* GuideFeatureView.swift */; };
 		CE200B2A28339F680043F57A /* GuideScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200B2928339F680043F57A /* GuideScreenViewController.swift */; };
-		CE200B332833C13C0043F57A /* GuideDescribingTexts.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE200B322833C13C0043F57A /* GuideDescribingTexts.txt */; };
+		CE200B332833C13C0043F57A /* Beyoglu0.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE200B322833C13C0043F57A /* Beyoglu0.txt */; };
 		CE200B382833C6EE0043F57A /* ExcursionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200B372833C6EE0043F57A /* ExcursionInfo.swift */; };
 		CE200B3C2833CA010043F57A /* TextLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200B3B2833CA010043F57A /* TextLoader.swift */; };
 		CE2E90E72843F295008D50E0 /* DetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE861D602843DECB005B3A53 /* DetailsScreenViewController.swift */; };
@@ -43,7 +43,11 @@
 		CE415155283AB61E00CF9D53 /* TimeInterval+minSecFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE415154283AB61D00CF9D53 /* TimeInterval+minSecFormatted.swift */; };
 		CE634F4D283429FC006C2F73 /* GuideHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE634F4C283429FC006C2F73 /* GuideHeaderView.swift */; };
 		CE8A3C09285381EF004B8BFB /* PurchaseButtonFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A3C08285381EF004B8BFB /* PurchaseButtonFooterView.swift */; };
-		CEE4AA7F283AF1BA000C1FF7 /* Tour1About.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEE4AA7E283AF1BA000C1FF7 /* Tour1About.mp3 */; };
+		CE8DD9ED28575E9100FFD28A /* Excursions.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE8DD9EC28575E9100FFD28A /* Excursions.plist */; };
+		CE8DD9EF28577B8B00FFD28A /* ExcursionsPlistLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DD9EE28577B8B00FFD28A /* ExcursionsPlistLoader.swift */; };
+		CE8DD9F528578C0B00FFD28A /* IstambulInOneDay0.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DD9F428578C0B00FFD28A /* IstambulInOneDay0.txt */; };
+		CE8DD9FE28578D2A00FFD28A /* NontouristicIstanbul0.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DD9FD28578D2A00FFD28A /* NontouristicIstanbul0.txt */; };
+		CEE4AA7F283AF1BA000C1FF7 /* IstambulInOneDay0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEE4AA7E283AF1BA000C1FF7 /* IstambulInOneDay0.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +79,7 @@
 		CE05C07E28528FFB00AF37CE /* UIImageView+makeImageGrayscale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+makeImageGrayscale.swift"; sourceTree = "<group>"; };
 		CE1094B12834345000F9AA89 /* GuideFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideFeatureView.swift; sourceTree = "<group>"; };
 		CE200B2928339F680043F57A /* GuideScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideScreenViewController.swift; sourceTree = "<group>"; };
-		CE200B322833C13C0043F57A /* GuideDescribingTexts.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = GuideDescribingTexts.txt; sourceTree = "<group>"; };
+		CE200B322833C13C0043F57A /* Beyoglu0.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Beyoglu0.txt; sourceTree = "<group>"; };
 		CE200B372833C6EE0043F57A /* ExcursionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionInfo.swift; sourceTree = "<group>"; };
 		CE200B3B2833CA010043F57A /* TextLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLoader.swift; sourceTree = "<group>"; };
 		CE4151402835098900CF9D53 /* GuideFeatureViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideFeatureViewBuilder.swift; sourceTree = "<group>"; };
@@ -84,7 +88,11 @@
 		CE634F4C283429FC006C2F73 /* GuideHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideHeaderView.swift; sourceTree = "<group>"; };
 		CE861D602843DECB005B3A53 /* DetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewController.swift; sourceTree = "<group>"; };
 		CE8A3C08285381EF004B8BFB /* PurchaseButtonFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButtonFooterView.swift; sourceTree = "<group>"; };
-		CEE4AA7E283AF1BA000C1FF7 /* Tour1About.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tour1About.mp3; sourceTree = "<group>"; };
+		CE8DD9EC28575E9100FFD28A /* Excursions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Excursions.plist; sourceTree = "<group>"; };
+		CE8DD9EE28577B8B00FFD28A /* ExcursionsPlistLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionsPlistLoader.swift; sourceTree = "<group>"; };
+		CE8DD9F428578C0B00FFD28A /* IstambulInOneDay0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay0.txt; sourceTree = "<group>"; };
+		CE8DD9FD28578D2A00FFD28A /* NontouristicIstanbul0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NontouristicIstanbul0.txt; path = MobileAudioGuide/Resources/ExcursionsInfoData/NontouristicIstanbul/Texts/NontouristicIstanbul0.txt; sourceTree = SOURCE_ROOT; };
+		CEE4AA7E283AF1BA000C1FF7 /* IstambulInOneDay0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay0.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +184,7 @@
 				5DCB5915283174CE00A2C3CC /* Constants.swift */,
 				CE200B3B2833CA010043F57A /* TextLoader.swift */,
 				CE4151402835098900CF9D53 /* GuideFeatureViewBuilder.swift */,
+				CE8DD9EE28577B8B00FFD28A /* ExcursionsPlistLoader.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -223,8 +232,8 @@
 		CE200B312833C1040043F57A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CEE4AA7D283AF193000C1FF7 /* Audio */,
-				CE200B322833C13C0043F57A /* GuideDescribingTexts.txt */,
+				CE8DD9FC28578CC300FFD28A /* ExcursionsInfoData */,
+				CE8DD9EC28575E9100FFD28A /* Excursions.plist */,
 				5D0C3CA8284FB1B6005FBAE0 /* aboutPurchase.txt */,
 				5DE36F40283A677F00B191C7 /* infoAboutAuthor.txt */,
 			);
@@ -255,12 +264,87 @@
 			path = DetailsScreen;
 			sourceTree = "<group>";
 		};
-		CEE4AA7D283AF193000C1FF7 /* Audio */ = {
+		CE8DD9F02857856C00FFD28A /* IstambulInOneDay */ = {
 			isa = PBXGroup;
 			children = (
-				CEE4AA7E283AF1BA000C1FF7 /* Tour1About.mp3 */,
+				CE8DD9F32857859A00FFD28A /* Audio */,
+				CE8DD9F22857858A00FFD28A /* Texts */,
+			);
+			path = IstambulInOneDay;
+			sourceTree = "<group>";
+		};
+		CE8DD9F22857858A00FFD28A /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				CE8DD9F428578C0B00FFD28A /* IstambulInOneDay0.txt */,
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		CE8DD9F32857859A00FFD28A /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				CEE4AA7E283AF1BA000C1FF7 /* IstambulInOneDay0.mp3 */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		CE8DD9F628578C4500FFD28A /* Beyoglu */ = {
+			isa = PBXGroup;
+			children = (
+				CE8DD9F728578C5600FFD28A /* Audio */,
+				CE8DD9F828578C6000FFD28A /* Texts */,
+			);
+			path = Beyoglu;
+			sourceTree = "<group>";
+		};
+		CE8DD9F728578C5600FFD28A /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		CE8DD9F828578C6000FFD28A /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				CE200B322833C13C0043F57A /* Beyoglu0.txt */,
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		CE8DD9F928578C7900FFD28A /* NontouristicIstanbul */ = {
+			isa = PBXGroup;
+			children = (
+				CE8DD9FA28578C9C00FFD28A /* Audio */,
+				CE8DD9FB28578CA200FFD28A /* Texts */,
+			);
+			path = NontouristicIstanbul;
+			sourceTree = "<group>";
+		};
+		CE8DD9FA28578C9C00FFD28A /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		CE8DD9FB28578CA200FFD28A /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				CE8DD9FD28578D2A00FFD28A /* NontouristicIstanbul0.txt */,
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		CE8DD9FC28578CC300FFD28A /* ExcursionsInfoData */ = {
+			isa = PBXGroup;
+			children = (
+				CE8DD9F02857856C00FFD28A /* IstambulInOneDay */,
+				CE8DD9F628578C4500FFD28A /* Beyoglu */,
+				CE8DD9F928578C7900FFD28A /* NontouristicIstanbul */,
+			);
+			path = ExcursionsInfoData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,11 +411,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8DD9ED28575E9100FFD28A /* Excursions.plist in Resources */,
 				5DCB590A283172C000A2C3CC /* LaunchScreen.storyboard in Resources */,
+				CE8DD9F528578C0B00FFD28A /* IstambulInOneDay0.txt in Resources */,
 				5DCB5907283172C000A2C3CC /* Assets.xcassets in Resources */,
-				CEE4AA7F283AF1BA000C1FF7 /* Tour1About.mp3 in Resources */,
+				CEE4AA7F283AF1BA000C1FF7 /* IstambulInOneDay0.mp3 in Resources */,
+				CE8DD9FE28578D2A00FFD28A /* NontouristicIstanbul0.txt in Resources */,
 				5D0C3CA9284FB1B6005FBAE0 /* aboutPurchase.txt in Resources */,
-				CE200B332833C13C0043F57A /* GuideDescribingTexts.txt in Resources */,
+				CE200B332833C13C0043F57A /* Beyoglu0.txt in Resources */,
 				5DE36F41283A677F00B191C7 /* infoAboutAuthor.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8DD9EF28577B8B00FFD28A /* ExcursionsPlistLoader.swift in Sources */,
 				5D0C3CAD284FB1C3005FBAE0 /* PurchaseViewController.swift in Sources */,
 				CE2E90E72843F295008D50E0 /* DetailsScreenViewController.swift in Sources */,
 				CE8A3C09285381EF004B8BFB /* PurchaseButtonFooterView.swift in Sources */,
@@ -520,7 +608,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,7 +636,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -11,11 +11,11 @@ import UIKit
 final class DetailsScreenViewController: UIViewController {
     
     private let excursionInfo: ExcursionInfo
-    private let viewpointIndex: Int
+    private let viewpointNumber: Int
     
     private lazy var topImageView: UIImageView = {
         // TODO: Подставлять актуальное имя изображения для каждого экрана
-        let imageView = UIImageView(image: UIImage(named: "Image1"))
+        let imageView = UIImageView(image: UIImage(named: excursionInfo.filenamePrefix + String(viewpointNumber)))
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         return imageView
@@ -37,24 +37,23 @@ final class DetailsScreenViewController: UIViewController {
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 21)
         label.textColor = .black
-        // TODO: Подставлять актуальное название конкретной экскурсии
-        label.text = excursionInfo.excursionTitle
         label.numberOfLines = 0
+        
+        if excursionInfo.tours.indices.contains(viewpointNumber - 1) {
+            label.text = excursionInfo.tours[viewpointNumber - 1].tourTitle
+        }
         return label
     }()
     
     private lazy var excursionTextView: UITextView = {
         let textView = UITextView(frame: .zero)
         textView.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        // TODO: Подставлять актуальный текст конкретной экскурсии
-        textView.text = excursionInfo.excursionDescription
+        textView.text = TextLoader.loadFromTxtFile(named: excursionInfo.filenamePrefix + String(viewpointNumber))
         return textView
     }()
     
     private lazy var audioPlayerView: AudioPlayerView = {
-        // TODO: Подставлять актуальное имя файла для каждого экрана
-        let audioPlayerView = AudioPlayerView(audioFileName: "Tour1About")
-        return audioPlayerView
+        AudioPlayerView(audioFileName: excursionInfo.filenamePrefix + String(viewpointNumber))
     }()
     
     /// Инициализатор
@@ -63,7 +62,7 @@ final class DetailsScreenViewController: UIViewController {
     ///   - viewpointIndex: цифра с нажатого на карте кружочка - номер точки в экскурсии
     init(excursionInfo: ExcursionInfo, viewpointIndex: Int) {
         self.excursionInfo = excursionInfo
-        self.viewpointIndex = viewpointIndex
+        self.viewpointNumber = viewpointIndex
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -83,8 +82,7 @@ final class DetailsScreenViewController: UIViewController {
     }
     
     private func setupViewController() {
-        // TODO: Подставлять короткое название из модели
-        title = excursionInfo.excursionTitle
+        title = excursionInfo.shortTitle
         view.backgroundColor = .white
         navigationController?.navigationBar.topItem?.title = ""
     }

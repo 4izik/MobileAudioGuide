@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>excursionTitle</key>
+		<string>Istanbul in 1 day: The most popular route</string>
+		<key>shortTitle</key>
+		<string>Istanbul in 1 day</string>
+		<key>excursionDuration</key>
+		<string>1 day</string>
+		<key>routeDistance</key>
+		<string>6 km</string>
+		<key>transportType</key>
+		<string>on foot</string>
+		<key>filenamePrefix</key>
+		<string>IstambulInOneDay</string>
+		<key>mapScreenCoordinates</key>
+		<dict>
+			<key>latitude</key>
+			<real>41.011225</real>
+			<key>longitude</key>
+			<real>28.978151</real>
+		</dict>
+		<key>tours</key>
+		<array>
+			<dict>
+				<key>tourTitle</key>
+				<string>Sirkeci Railway station</string>
+				<key>latitude</key>
+				<real>41.014981</real>
+				<key>longitude</key>
+				<real>28.97647</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Byzantium, Constantinople, Istanbul</string>
+				<key>latitude</key>
+				<real>41.017576</real>
+				<key>longitude</key>
+				<real>28.985616</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The Golden Horn</string>
+				<key>latitude</key>
+				<real>41.039288</real>
+				<key>longitude</key>
+				<real>28.95015</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The Bosphorus Strait</string>
+				<key>latitude</key>
+				<real>41.115706</real>
+				<key>longitude</key>
+				<real>29.068557</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>View of the Maiden Tower</string>
+				<key>latitude</key>
+				<real>41.016722</real>
+				<key>longitude</key>
+				<real>28.986096</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Gulhane Park</string>
+				<key>latitude</key>
+				<real>41.01343</real>
+				<key>longitude</key>
+				<real>28.981538</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The Gothic column</string>
+				<key>latitude</key>
+				<real>41.01453</real>
+				<key>longitude</key>
+				<real>28.985484</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Topkapi Palace</string>
+				<key>latitude</key>
+				<real>41.012768</real>
+				<key>longitude</key>
+				<real>28.984042</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Harem of Topkapi Palace</string>
+				<key>latitude</key>
+				<real>41.012768</real>
+				<key>longitude</key>
+				<real>28.984042</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The tulip is the main flower of the Ottoman Empire</string>
+				<key>latitude</key>
+				<real>41.01343</real>
+				<key>longitude</key>
+				<real>28.981538</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Istanbul Archaeological Museum.</string>
+				<key>latitude</key>
+				<real>41.011601</real>
+				<key>longitude</key>
+				<real>28.981526</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The first courtyard of Topkapi</string>
+				<key>latitude</key>
+				<real>41.011601</real>
+				<key>longitude</key>
+				<real>28.981526</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Gate of greetings</string>
+				<key>latitude</key>
+				<real>41.011601</real>
+				<key>longitude</key>
+				<real>28.981526</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Mint</string>
+				<key>latitude</key>
+				<real>41.011601</real>
+				<key>longitude</key>
+				<real>28.981526</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The Church of St. Irene</string>
+				<key>latitude</key>
+				<real>41.00971</real>
+				<key>longitude</key>
+				<real>28.98114</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Sultan Gate</string>
+				<key>latitude</key>
+				<real>41.007898</real>
+				<key>longitude</key>
+				<real>28.979688</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The Fountain of Ahmed III</string>
+				<key>latitude</key>
+				<real>41.008306</real>
+				<key>longitude</key>
+				<real>28.981258</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Hagia Sophia</string>
+				<key>latitude</key>
+				<real>41.00856</real>
+				<key>longitude</key>
+				<real>28.979945</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Secrets and legends of St. Sophia</string>
+				<key>latitude</key>
+				<real>41.00856</real>
+				<key>longitude</key>
+				<real>28.979945</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Sultan&apos;s tombs</string>
+				<key>latitude</key>
+				<real>41.008544</real>
+				<key>longitude</key>
+				<real>28.973008</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Augusteion</string>
+				<key>latitude</key>
+				<real>41.007289</real>
+				<key>longitude</key>
+				<real>28.978046</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Milion</string>
+				<key>latitude</key>
+				<real>41.007697</real>
+				<key>longitude</key>
+				<real>28.97707</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The Basilica cistern</string>
+				<key>latitude</key>
+				<real>41.008372</real>
+				<key>longitude</key>
+				<real>28.977922</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Sultanahmet Square</string>
+				<key>latitude</key>
+				<real>41.006591</real>
+				<key>longitude</key>
+				<real>28.977881</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Baths of Roksolana</string>
+				<key>latitude</key>
+				<real>41.007223</real>
+				<key>longitude</key>
+				<real>28.979145</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The Blue Mosque</string>
+				<key>latitude</key>
+				<real>41.005243</real>
+				<key>longitude</key>
+				<real>28.976806</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The Grand Imperial Palace</string>
+				<key>latitude</key>
+				<real>35.682493</real>
+				<key>longitude</key>
+				<real>139.752709</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Constantine the Great</string>
+				<key>latitude</key>
+				<real>41.004302</real>
+				<key>longitude</key>
+				<real>28.977432</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The hippodrome</string>
+				<key>latitude</key>
+				<real>41.005066</real>
+				<key>longitude</key>
+				<real>28.974878</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The obelisk of Constantine</string>
+				<key>latitude</key>
+				<real>41.005411</real>
+				<key>longitude</key>
+				<real>28.974837</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Snake column</string>
+				<key>latitude</key>
+				<real>41.005687</real>
+				<key>longitude</key>
+				<real>28.975115</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The obelisk of Theodosius</string>
+				<key>latitude</key>
+				<real>41.005919</real>
+				<key>longitude</key>
+				<real>28.975335</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Museum of Turkish and Islamic Art</string>
+				<key>latitude</key>
+				<real>41.006182</real>
+				<key>longitude</key>
+				<real>28.974936</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>German fountain</string>
+				<key>latitude</key>
+				<real>41.007095</real>
+				<key>longitude</key>
+				<real>28.976683</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Firuz-Agha Mosque</string>
+				<key>latitude</key>
+				<real>41.007867</real>
+				<key>longitude</key>
+				<real>28.976142</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Divan-Yolu Street</string>
+				<key>latitude</key>
+				<real>40.867608</real>
+				<key>longitude</key>
+				<real>29.294286</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The mausoleum of Mahmud II</string>
+				<key>latitude</key>
+				<real>41.008544</real>
+				<key>longitude</key>
+				<real>28.973008</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The column of Constantine the Great</string>
+				<key>latitude</key>
+				<real>41.008571</real>
+				<key>longitude</key>
+				<real>28.971243</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Chamberlitash Square</string>
+				<key>latitude</key>
+				<real>41.196338</real>
+				<key>longitude</key>
+				<real>28.766481</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Kullike Koja Sinan Pasha</string>
+				<key>latitude</key>
+				<real>39.311296</real>
+				<key>longitude</key>
+				<real>28.206462</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>The former madrasah of Chorlulu Damat Ali Pasha</string>
+				<key>latitude</key>
+				<real>41.009242</real>
+				<key>longitude</key>
+				<real>28.96835</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Grand Bazaar</string>
+				<key>latitude</key>
+				<real>41.010672</real>
+				<key>longitude</key>
+				<real>28.968477</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Bayezid Mosque</string>
+				<key>latitude</key>
+				<real>41.009854</real>
+				<key>longitude</key>
+				<real>28.965593</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Istanbul University</string>
+				<key>latitude</key>
+				<real>41.013103</real>
+				<key>longitude</key>
+				<real>28.963847</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Suleymaniye Mosque</string>
+				<key>latitude</key>
+				<real>41.016099</real>
+				<key>longitude</key>
+				<real>28.963962</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Suleiman the Magnificent and his Hurrem</string>
+				<key>latitude</key>
+				<real>41.015743</real>
+				<key>longitude</key>
+				<real>28.964452</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Turkish coffee</string>
+				<key>latitude</key>
+				<real>41.015083</real>
+				<key>longitude</key>
+				<real>28.967355</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Buyuk Valide Sultan Khan</string>
+				<key>latitude</key>
+				<real>41.013013</real>
+				<key>longitude</key>
+				<real>28.968378</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Egyptian bazaar</string>
+				<key>latitude</key>
+				<real>41.016635</real>
+				<key>longitude</key>
+				<real>28.9706</real>
+			</dict>
+			<dict>
+				<key>tourTitle</key>
+				<string>Yeni-Jami</string>
+				<key>latitude</key>
+				<real>41.016855</real>
+				<key>longitude</key>
+				<real>28.972155</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>excursionTitle</key>
+		<string>From Galata Bridge to Taksim Square</string>
+		<key>shortTitle</key>
+		<string>Istanbul. Beyoglu</string>
+		<key>excursionDuration</key>
+		<string>1 day</string>
+		<key>routeDistance</key>
+		<string>3 km</string>
+		<key>transportType</key>
+		<string>on foot</string>
+		<key>filenamePrefix</key>
+		<string>Beyoglu</string>
+		<key>mapScreenCoordinates</key>
+		<dict>
+			<key>latitude</key>
+			<real>41.011225</real>
+			<key>longitude</key>
+			<real>28.978151</real>
+		</dict>
+		<key>tours</key>
+		<array>
+			<dict>
+				<key>tourTitle</key>
+				<string>Galata Bridge</string>
+				<key>latitude</key>
+				<real>41.02021784638747</real>
+				<key>longitude</key>
+				<real>28.97316645386479</real>
+			</dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Karayoi district</string>
+                <key>latitude</key>
+                <real>41.02417205498189</real>
+                <key>longitude</key>
+                <real>28.978270338524034</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Karaköl Beyoglu Tunnel</string>
+                <key>latitude</key>
+                <real>41.02307123667627</real>
+                <key>longitude</key>
+                <real>28.974182652161364</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Galata District</string>
+                <key>latitude</key>
+                <real>41.023500013306155</real>
+                <key>longitude</key>
+                <real>28.975012905995836</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Ashkenazi synagogue. Jewish Quarter</string>
+                <key>latitude</key>
+                <real>41.02481470333839</real>
+                <key>longitude</key>
+                <real>28.974948277730252</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Galata Tower</string>
+                <key>latitude</key>
+                <real>41.025730753382675</real>
+                <key>longitude</key>
+                <real>28.974338199887157</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Galib-Dede street</string>
+                <key>latitude</key>
+                <real>41.0266998172043</real>
+                <key>longitude</key>
+                <real>28.9745737474927</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Galata Cloister of Mavlevi</string>
+                <key>latitude</key>
+                <real>41.02811547283998</real>
+                <key>longitude</key>
+                <real>28.975051904974777</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Istiklal Street</string>
+                <key>latitude</key>
+                <real>41.028819886313904</real>
+                <key>longitude</key>
+                <real>28.97484440270009</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Normans Khan</string>
+                <key>latitude</key>
+                <real>41.02908813020771</real>
+                <key>longitude</key>
+                <real>28.97481646859364</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Consulate General of the Russian Federation</string>
+                <key>latitude</key>
+                <real>41.0302202749316</real>
+                <key>longitude</key>
+                <real>28.97572806614743</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Russians in Istanbul</string>
+                <key>latitude</key>
+                <real>41.03039063589064</real>
+                <key>longitude</key>
+                <real>28.974703954611936</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Korpi Palace</string>
+                <key>latitude</key>
+                <real>41.03031363782122</real>
+                <key>longitude</key>
+                <real>28.973083586054713</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Pera Palace Hotel</string>
+                <key>latitude</key>
+                <real>41.03105474052515</real>
+                <key>longitude</key>
+                <real>28.973600317743937</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Pera district</string>
+                <key>latitude</key>
+                <real>41.03171883847733</real>
+                <key>longitude</key>
+                <real>28.97473585154845</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Pera Museum</string>
+                <key>latitude</key>
+                <real>41.03195945201741</real>
+                <key>longitude</key>
+                <real>28.975035683516268</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Streetcar on Istiklal Street</string>
+                <key>latitude</key>
+                <real>41.03199795011016</real>
+                <key>longitude</key>
+                <real>28.97622863204358</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Church of Anthony of Padua</string>
+                <key>latitude</key>
+                <real>41.032363680793075</real>
+                <key>longitude</key>
+                <real>28.976923987032784</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Cultural Center of Japa Kredi Bank</string>
+                <key>latitude</key>
+                <real>41.033263562122066</real>
+                <key>longitude</key>
+                <real>28.97705157511923</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Galatasaray Lyceum</string>
+                <key>latitude</key>
+                <real>41.03270534842007</real>
+                <key>longitude</key>
+                <real>28.97883142871547</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Flower Passage</string>
+                <key>latitude</key>
+                <real>41.03423561264334</real>
+                <key>longitude</key>
+                <real>28.97797658875668</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>European Passage</string>
+                <key>latitude</key>
+                <real>41.03424523683393</real>
+                <key>longitude</key>
+                <real>28.97704519583535</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Atlas Passage</string>
+                <key>latitude</key>
+                <real>41.03424042474136</real>
+                <key>longitude</key>
+                <real>28.979277987162828</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Hüseyin-Agi Mosque</string>
+                <key>latitude</key>
+                <real>41.03526539306449</real>
+                <key>longitude</key>
+                <real>28.980681456039587</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Hadji Bekir's Confectionery</string>
+                <key>latitude</key>
+                <real>41.03501516753035</real>
+                <key>longitude</key>
+                <real>28.98143422566093</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Turkish sweets</string>
+                <key>latitude</key>
+                <real>41.03539531748592</real>
+                <key>longitude</key>
+                <real>28.98200199257873</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Church of the Holy Trinity</string>
+                <key>latitude</key>
+                <real>41.035669601553444</real>
+                <key>longitude</key>
+                <real>28.984298578135697</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Taksim Maxemi</string>
+                <key>latitude</key>
+                <real>41.03630478127591</real>
+                <key>longitude</key>
+                <real>28.984266681117848</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Monument of the Republic.</string>
+                <key>latitude</key>
+                <real>41.036935142979864</real>
+                <key>longitude</key>
+                <real>28.98503220961317</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Taksim Square</string>
+                <key>latitude</key>
+                <real>41.03698807383987</real>
+                <key>longitude</key>
+                <real>28.985446870845266</real>
+            </dict>
+		</array>
+	</dict>
+	<dict>
+		<key>excursionTitle</key>
+		<string>Non-touristic Istanbul and the heritage of Constantinople</string>
+		<key>shortTitle</key>
+		<string>Non-touristic Istanbul</string>
+		<key>excursionDuration</key>
+		<string>1 day</string>
+		<key>routeDistance</key>
+		<string>7 km</string>
+		<key>transportType</key>
+		<string>on foot</string>
+		<key>filenamePrefix</key>
+		<string>NontouristicIstanbul</string>
+		<key>mapScreenCoordinates</key>
+		<dict>
+			<key>latitude</key>
+			<real>41.011225</real>
+			<key>longitude</key>
+			<real>28.978151</real>
+		</dict>
+		<key>tours</key>
+		<array>
+			<dict>
+				<key>tourTitle</key>
+				<string>Subway "Vesnedzhiler"</string>
+				<key>latitude</key>
+				<real>41.01285293189557</real>
+				<key>longitude</key>
+				<real>28.95957196136932</real>
+			</dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Aqueduct of Valens</string>
+                <key>latitude</key>
+                <real>41.016058316751725</real>
+                <key>longitude</key>
+                <real>28.955677371327507</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The secret church of One Day</string>
+                <key>latitude</key>
+                <real>40.99551761964978</real>
+                <key>longitude</key>
+                <real>29.02495918465767</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Small Blachernae Palace</string>
+                <key>latitude</key>
+                <real>41.034534752037</real>
+                <key>longitude</key>
+                <real>28.940743092053978</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Theodosian walls</string>
+                <key>latitude</key>
+                <real>41.03204974103202</real>
+                <key>longitude</key>
+                <real>28.9362899</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Fatih Mosque</string>
+                <key>latitude</key>
+                <real>41.01944245909737</real>
+                <key>longitude</key>
+                <real>28.950097014058937</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Church of the Holy Apostles</string>
+                <key>latitude</key>
+                <real>41.01994276140102</real>
+                <key>longitude</key>
+                <real>28.949677498527706</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Monument to Mehmed the Conqueror</string>
+                <key>latitude</key>
+                <real>41.015611456695126</real>
+                <key>longitude</key>
+                <real>28.95425320026514</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Aqueduct of Valens</string>
+                <key>latitude</key>
+                <real>41.01609131689974</real>
+                <key>longitude</key>
+                <real>28.955414585475616</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Gazanfer-agi Madrasah</string>
+                <key>latitude</key>
+                <real>41.01609131689974</real>
+                <key>longitude</key>
+                <real>28.955414585475616</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Church of One Day</string>
+                <key>latitude</key>
+                <real>41.01818546995313</real>
+                <key>longitude</key>
+                <real>28.95872919884218</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Shep Sefa Khatun Mosque</string>
+                <key>latitude</key>
+                <real>41.019229395409376</real>
+                <key>longitude</key>
+                <real>28.958496497731907</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Zeyrek cistern</string>
+                <key>latitude</key>
+                <real>41.020078101737774</real>
+                <key>longitude</key>
+                <real>28.958597567428033</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Boulevard and the Ataturk Bridge</string>
+                <key>latitude</key>
+                <real>41.021547847969245</real>
+                <key>longitude</key>
+                <real>28.959947985502</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Jibali district</string>
+                <key>latitude</key>
+                <real>41.02432170785288</real>
+                <key>longitude</key>
+                <real>28.95957405561107</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Jibali Police Station</string>
+                <key>latitude</key>
+                <real>41.026281284688345</real>
+                <key>longitude</key>
+                <real>28.958608760842406</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Greek fire</string>
+                <key>latitude</key>
+                <real>41.028326667306395</real>
+                <key>longitude</key>
+                <real>28.954362838507027</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Fanar district</string>
+                <key>latitude</key>
+                <real>41.028738986929795</real>
+                <key>longitude</key>
+                <real>28.95230139250283</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>St. George's Cathedral. The Patriarchate of Constantinople</string>
+                <key>latitude</key>
+                <real>41.02896446530069</real>
+                <key>longitude</key>
+                <real>28.95194151214645</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>A double-headed eagle</string>
+                <key>latitude</key>
+                <real>41.029783478183134</real>
+                <key>longitude</key>
+                <real>28.951531556790474</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Church of Mary of Mongolia</string>
+                <key>latitude</key>
+                <real>41.02959253770387</real>
+                <key>longitude</key>
+                <real>28.949169024671082</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Greek Lyceum</string>
+                <key>latitude</key>
+                <real>41.029573256464595</real>
+                <key>longitude</key>
+                <real>28.949005560126388</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Bulgarian Church of St. Stephen</string>
+                <key>latitude</key>
+                <real>41.03185932157832</real>
+                <key>longitude</key>
+                <real>28.949739344356274</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Cafe "Agora Meyhanesi"</string>
+                <key>latitude</key>
+                <real>41.03418024312906</real>
+                <key>longitude</key>
+                <real>28.946584307452735</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Balat district</string>
+                <key>latitude</key>
+                <real>41.03520935054853</real>
+                <key>longitude</key>
+                <real>28.946476584855436</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Cats in Istanbul</string>
+                <key>latitude</key>
+                <real>41.03714771113506</real>
+                <key>longitude</key>
+                <real>28.945299582371018</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Blachernae Church</string>
+                <key>latitude</key>
+                <real>41.038695251589836</real>
+                <key>longitude</key>
+                <real>28.94281526079554</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Aivaz Effendi Mosque</string>
+                <key>latitude</key>
+                <real>41.03791352578697</real>
+                <key>longitude</key>
+                <real>28.9411008491529</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Constantinople walls</string>
+                <key>latitude</key>
+                <real>41.03643176332468</real>
+                <key>longitude</key>
+                <real>28.939714955193438</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The area of Blachernae</string>
+                <key>latitude</key>
+                <real>41.035261879955925</real>
+                <key>longitude</key>
+                <real>28.939815862782083</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Small Blachernae Palace</string>
+                <key>latitude</key>
+                <real>41.033804307771945</real>
+                <key>longitude</key>
+                <real>28.94055404004848</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The capture of Constantinople by the Ottomans</string>
+                <key>latitude</key>
+                <real>41.032625358615974</real>
+                <key>longitude</key>
+                <real>28.938739481867596</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>The Monastery of Hora</string>
+                <key>latitude</key>
+                <real>41.0312011792822</real>
+                <key>longitude</key>
+                <real>28.93918861136014</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>St. George 's Church</string>
+                <key>latitude</key>
+                <real>41.03046165499813</real>
+                <key>longitude</key>
+                <real>28.93582416175201</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Charisian Gate</string>
+                <key>latitude</key>
+                <real>41.03011827971808</real>
+                <key>longitude</key>
+                <real>28.935319663997756</real>
+            </dict>
+            <dict>
+                <key>tourTitle</key>
+                <string>Mihrimah Sultan Mosque</string>
+                <key>latitude</key>
+                <real>41.02925983365225</real>
+                <key>longitude</key>
+                <real>28.935824161754873</real>
+            </dict>
+		</array>
+	</dict>
+</array>
+</plist>

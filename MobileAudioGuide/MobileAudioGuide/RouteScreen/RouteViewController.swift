@@ -11,7 +11,7 @@ import UIKit
 final class RouteViewController: UIViewController {
     
     // TODO: Передавать в excursions массив с моделями точек на маршруте
-    private let excursions: [ExcursionInfo]
+    private let excursionInfo: ExcursionInfo
     private var isFullVersionPurchsded = false
     private var numberOfFreePoints = 5
     
@@ -40,12 +40,13 @@ final class RouteViewController: UIViewController {
         setupRouteTableView()
         setupViews()
         activateConstraints()
+        routeTableView.layoutIfNeeded()
     }
     
     /// Инициализатор
-    /// - Parameter excursions: массив моделек точек маршрута для выбранной экскурсии
-    init(excursions: [ExcursionInfo]) {
-        self.excursions = excursions
+    /// - Parameter excursionInfo: модель текущей экскурсии
+    init(excursionInfo: ExcursionInfo) {
+        self.excursionInfo = excursionInfo
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -90,13 +91,13 @@ final class RouteViewController: UIViewController {
 extension RouteViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        isFullVersionPurchsded ? excursions.count : numberOfFreePoints + 2
+        isFullVersionPurchsded ? excursionInfo.tours.count : numberOfFreePoints + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch (isFullVersionPurchsded, indexPath.row) {
         
-        case (true, excursions.count - 1):
+        case (true, excursionInfo.tours.count - 1):
             return getPointOfInterestCellIn(tableView, forIndexPath: indexPath, isLast: true)
             
         case (true, _), (false, ..<numberOfFreePoints):
@@ -116,7 +117,8 @@ extension RouteViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BuyFullVersionTableViewCell.identifier,
                                                        for: indexPath) as? BuyFullVersionTableViewCell
         else { return UITableViewCell() }
-        cell.totalPointsNumber = excursions.count
+        cell.totalPointsNumber = excursionInfo.tours.count
+        cell.buyFullVersionButton.addTarget(self, action: #selector(purchaseButtonTapped), for: .touchUpInside)
         return cell
     }
     
@@ -125,17 +127,29 @@ extension RouteViewController: UITableViewDelegate, UITableViewDataSource {
                                           isLast: Bool,
                                           isActive: Bool = true) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PointOfInterestTableViewCell.identifier,
-                                                       for: indexPath) as? PointOfInterestTableViewCell,
-              excursions.indices.contains(indexPath.row)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PointOfInterestTableViewCell.identifier, for: indexPath) as? PointOfInterestTableViewCell,
+              excursionInfo.tours.indices.contains(indexPath.row)
         else { return UITableViewCell() }
         
-        // TODO: После создания модели передавать ее в ячейку, где она сама ее распарсит
-        cell.excursionInfo = excursions[indexPath.row]
-        cell.checkPointNumberLabel.text = "\(indexPath.row + 1)"
-        cell.mainImageView.image = UIImage(named: "Image\((indexPath.row % 3) + 1)")
+        cell.cellIndex = indexPath.row
+        cell.excursionInfo = excursionInfo
         cell.isActive = isActive
         cell.isLast = isLast
+        if isActive {
+            cell.showDetailsButton.tag = indexPath.row
+            cell.showDetailsButton.addTarget(self, action: #selector(showDetailsButtonTapped), for: .touchUpInside)
+        }
         return cell
+    }
+    
+    @objc private func purchaseButtonTapped() {
+        let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo)
+        navigationController?.pushViewController(purchaseViewController, animated: true)
+    }
+    
+    @objc private func showDetailsButtonTapped(sender: UIButton) {
+        let detailsViewController = DetailsScreenViewController(excursionInfo: excursionInfo, viewpointIndex: sender.tag + 1)
+        navigationController?.pushViewController(detailsViewController, animated: true)
+        
     }
 }
