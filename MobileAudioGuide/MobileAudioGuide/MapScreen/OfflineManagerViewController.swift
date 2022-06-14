@@ -23,9 +23,13 @@ final class OfflineManagerViewController: UIViewController {
         return button
     }()
     
+    private let mapFooterView = MapFooterView()
+    
     private var mapView: MapView?
     private var tileStore: TileStore?
     let excursionInfo: ExcursionInfo
+    private var isFullVersionPurchased = false
+    private var selectedIndex = 0
     
     init(excursionInfo: ExcursionInfo) {
         self.excursionInfo = excursionInfo
@@ -48,8 +52,8 @@ final class OfflineManagerViewController: UIViewController {
     // Regions and style pack downloads
     private var downloads: [Cancelable] = []
 
-    private let istanbulCoord = CLLocationCoordinate2D(latitude: 41.011225, longitude: 28.978151)
-    private let istanbulZoom: CGFloat = 12
+    private var istanbulCoord = CLLocationCoordinate2D(latitude: 41.011225, longitude: 28.978151)
+    private let istanbulZoom: CGFloat = 13
     private let tileRegionId = "myTileRegion"
 
     private enum State {
@@ -63,7 +67,7 @@ final class OfflineManagerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        istanbulCoord = CLLocationCoordinate2D(latitude: excursionInfo.tours.first?.latitude ?? 41.011225, longitude: excursionInfo.tours.first?.longitude ?? 28.978151)
         state = .initial
         setupUI()
     }
@@ -71,9 +75,14 @@ final class OfflineManagerViewController: UIViewController {
     func setupUI() {
         view.addSubview(mapViewContainer)
         view.addSubview(myGeoButton)
+        view.addSubview(mapFooterView)
+        
+        mapFooterView.alpha = 0
+        mapFooterView.isHidden = true
 
         mapViewContainer.translatesAutoresizingMaskIntoConstraints = false
         myGeoButton.translatesAutoresizingMaskIntoConstraints = false
+        mapFooterView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             mapViewContainer.widthAnchor.constraint(equalTo: view.widthAnchor),
@@ -84,7 +93,12 @@ final class OfflineManagerViewController: UIViewController {
             myGeoButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10),
             myGeoButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
             myGeoButton.heightAnchor.constraint(equalToConstant: 40),
-            myGeoButton.widthAnchor.constraint(equalToConstant: 40)
+            myGeoButton.widthAnchor.constraint(equalToConstant: 40),
+            
+            mapFooterView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            mapFooterView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mapFooterView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mapFooterView.heightAnchor.constraint(equalToConstant: 300)
         ])
         downloadTileRegions()
         
@@ -190,20 +204,34 @@ final class OfflineManagerViewController: UIViewController {
     private func addMarkersOnMap() {
         let tours = excursionInfo.tours
         var points: [PointAnnotation] = []
-        
-        for tour in tours {
+    
+        for (index,tour) in tours.enumerated() {
             var pointAnnotation = PointAnnotation(coordinate: CLLocationCoordinate2D(latitude: tour.latitude, longitude: tour.longitude))
-
-            // Make the annotation show a red pin
-            pointAnnotation.image = .init(image: UIImage(named: "mapbox-marker-icon-20px-blue")!, name: "mapbox-marker-icon-20px-blue")
+            if !isFullVersionPurchased && index > 5 {
+                pointAnnotation.image = .init(image: UIImage(named: "mapbox-marker-icon-20px-gray")!, name: "mapbox-marker-icon-20px-gray")
+            } else {
+                pointAnnotation.image = .init(image: UIImage(named: "mapbox-marker-icon-20px-blue")!, name: "mapbox-marker-icon-20px-blue")
+            }
             pointAnnotation.iconAnchor = .bottom
+            pointAnnotation.userInfo = ["number" : index]
             points.append(pointAnnotation)
         }
         // Create the `PointAnnotationManager` which will be responsible for handling this annotation
         let pointAnnotationManager = mapView?.annotations.makePointAnnotationManager()
         // Add the annotation to the manager in order to render it on the map.
         pointAnnotationManager?.annotations = points
+        pointAnnotationManager?.delegate = self
 
+    }
+    
+    private func setFooterView(number: Int) {
+        mapFooterView.imageView.image = UIImage(named: excursionInfo.filenamePrefix + String(number))
+        mapFooterView.titleLabel.text = excursionInfo.tours[number].tourTitle
+        mapFooterView.audioPlayerView = AudioPlayerView(audioFileName: excursionInfo.filenamePrefix + String(number))
+        mapFooterView.purchaseButton.addTarget(self, action: #selector(showPurchaseScreen), for: .touchUpInside)
+        mapFooterView.closeButton.addTarget(self, action: #selector(hideMapFooterView), for: .touchUpInside)
+        mapFooterView.detailButton.addTarget(self, action: #selector(showDetailScreen), for: .touchUpInside)
+        selectedIndex = number
     }
 
     private func logDownloadResult<T, Error>(message: String, result: Result<[T], Error>) {
@@ -317,14 +345,44 @@ final class OfflineManagerViewController: UIViewController {
                 return
             }
 
-            var pointAnnotation = PointAnnotation(coordinate: self.istanbulCoord)
-            //pointAnnotation.image = .init(image: UIImage(named: "custom_marker")!, name: "custom-marker")
+            let pointAnnotation = PointAnnotation(coordinate: self.istanbulCoord)
 
             let pointAnnotationManager = mapView.annotations.makePointAnnotationManager()
             pointAnnotationManager.annotations = [pointAnnotation]
         }
 
         self.mapView = mapView
+    }
+    
+    @objc func showPurchaseScreen() {
+        let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo)
+        navigationController?.pushViewController(purchaseViewController, animated: true)
+    }
+    
+    @objc func hideMapFooterView() {
+        mapFooterView.isHidden = true
+        mapFooterView.alpha = 0
+    }
+    
+    @objc func showDetailScreen() {
+        let detailScreenViewController = DetailsScreenViewController(excursionInfo: excursionInfo, viewpointIndex: selectedIndex)
+        navigationController?.pushViewController(detailScreenViewController, animated: true)
+    }
+}
+
+extension OfflineManagerViewController: AnnotationInteractionDelegate {
+    public func annotationManager(_ manager: AnnotationManager, didDetectTappedAnnotations annotations: [Annotation]) {
+        guard let number = annotations.last?.userInfo?["number"] as? Int else { return }
+        if !isFullVersionPurchased && number > 5 {
+            mapFooterView.isHidden = false
+            showPurchaseScreen()
+        } else {
+            setFooterView(number: number)
+            mapFooterView.isHidden = false
+            UIView.animate(withDuration: 0.3) { [self] in
+                mapFooterView.alpha = 1
+            }
+        }
     }
 }
 

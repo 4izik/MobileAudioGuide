@@ -25,6 +25,7 @@
 		5DCB59122831736E00A2C3CC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB59112831736E00A2C3CC /* MainView.swift */; };
 		5DCB5916283174CE00A2C3CC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB5915283174CE00A2C3CC /* Constants.swift */; };
 		5DCB59192831758200A2C3CC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB59182831758200A2C3CC /* UIColor+Extension.swift */; };
+		5DCF99F02858F3E900FD5588 /* MapFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCF99EF2858F3E900FD5588 /* MapFooterView.swift */; };
 		5DD753FB28391C230093FFBE /* InfoScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD753FA28391C230093FFBE /* InfoScreenViewController.swift */; };
 		5DD753FD28391D910093FFBE /* InfoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD753FC28391D910093FFBE /* InfoScreenView.swift */; };
 		5DE36F41283A677F00B191C7 /* infoAboutAuthor.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5DE36F40283A677F00B191C7 /* infoAboutAuthor.txt */; };
@@ -70,6 +71,7 @@
 		5DCB59112831736E00A2C3CC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5DCB5915283174CE00A2C3CC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5DCB59182831758200A2C3CC /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		5DCF99EF2858F3E900FD5588 /* MapFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFooterView.swift; sourceTree = "<group>"; };
 		5DD753FA28391C230093FFBE /* InfoScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenViewController.swift; sourceTree = "<group>"; };
 		5DD753FC28391D910093FFBE /* InfoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenView.swift; sourceTree = "<group>"; };
 		5DE36F40283A677F00B191C7 /* infoAboutAuthor.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = infoAboutAuthor.txt; path = MobileAudioGuide/Resources/infoAboutAuthor.txt; sourceTree = SOURCE_ROOT; };
@@ -123,6 +125,7 @@
 				5DBAC3E5284651760081CA0D /* MapScreenViewController.swift */,
 				5D18645B28573F2300A001E5 /* CameraLocationConsumer.swift */,
 				5D18645D2857818C00A001E5 /* OfflineManagerViewController.swift */,
+				5DCF99EF2858F3E900FD5588 /* MapFooterView.swift */,
 			);
 			path = MapScreen;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				CE200B3C2833CA010043F57A /* TextLoader.swift in Sources */,
 				CE05C07B2850FBAE00AF37CE /* BuyFullVersionTableViewCell.swift in Sources */,
 				5D18645C28573F2300A001E5 /* CameraLocationConsumer.swift in Sources */,
+				5DCF99F02858F3E900FD5588 /* MapFooterView.swift in Sources */,
 				5DCB58FB283172BE00A2C3CC /* AppDelegate.swift in Sources */,
 				CE200B382833C6EE0043F57A /* ExcursionInfo.swift in Sources */,
 				5DCB59122831736E00A2C3CC /* MainView.swift in Sources */,
@@ -601,14 +605,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5JFF3U9J3C;
+				DEVELOPMENT_TEAM = TRVL9SXHFC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MobileAudioGuide/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -629,14 +633,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5JFF3U9J3C;
+				DEVELOPMENT_TEAM = TRVL9SXHFC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MobileAudioGuide/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
