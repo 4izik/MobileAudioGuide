@@ -10,8 +10,6 @@ import UIKit
 class PurchaseViewController: UIViewController {
     
     private var excursionInfo: ExcursionInfo
-    var storeManager = StoreManager()
-    var typePurchase = "month"
     
     // MARK: - Properties
     private let purchaseView = PurchaseView()
@@ -44,10 +42,9 @@ class PurchaseViewController: UIViewController {
             purchaseView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         loaderInfo()
-        print(UserDefaults.standard.object(forKey: "com.Istanbul.MobileAudioGuide.OneTour") as? String)
-        /*oneMonthPriceLabel.text = UserDefaults.standard.object(forKey: "com.redrazr.redstickerz") as? String
-        unlimitPriceLabel.text = UserDefaults.standard.object(forKey: "com.redrazr.redstickerz.endless") as? String*/
         purchaseView.buyOneTourButton.addTarget(self, action: #selector(makePurchaseOneTour), for: .touchUpInside)
+        purchaseView.buyThreeToursButton.addTarget(self, action: #selector(makePurchaseThreeTours), for: .touchUpInside)
+        purchaseView.restorePurchaseButton.addTarget(self, action: #selector(restorePurchase), for: .touchUpInside)
     }
     
     private func loaderInfo() {
@@ -58,28 +55,16 @@ class PurchaseViewController: UIViewController {
     }
     
     @objc func makePurchaseOneTour() {
-        storeManager.buyInApp(inAppID: "com.istanbul.audioguide.onetour")
+        StoreManager(index: 2).buyInApp(inAppID: "com.istanbul.audioguide.onetour")
     }
     
-    /*@IBAction func firstViewAction(_ sender: UIButton) {
-        setupView(for: sender)
-        typePurchase = "month"
+    @objc func makePurchaseThreeTours() {
+        StoreManager(index: 3).buyInApp(inAppID: "com.istanbul.audioguide.threetours")
     }
     
-    @IBAction func secondViewAction(_ sender: UIButton) {
-        setupView(for: sender)
-        typePurchase = "endless"
+    @objc func restorePurchase(_ sender: Any) {
+        StoreManager(index: 3).restorePurchases()
     }
-    
-    @IBAction func makePurchase(_ sender: Any) {
-        if typePurchase == "month" {
-            storeManager.buyInApp(inAppID: "com.redrazr.redstickerz")
-        } else {
-            storeManager.buyInApp(inAppID: "com.redrazr.redstickerz.endless")
-        }
-    }
-    
-    @IBAction func restorePurchase(_ sender: Any) {
-        storeManager.restorePurchases()
-    }*/
+
+
 }
