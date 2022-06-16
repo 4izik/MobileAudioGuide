@@ -10,6 +10,9 @@
 		5D0C3CA9284FB1B6005FBAE0 /* aboutPurchase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5D0C3CA8284FB1B6005FBAE0 /* aboutPurchase.txt */; };
 		5D0C3CAB284FB1BF005FBAE0 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C3CAA284FB1BF005FBAE0 /* PurchaseView.swift */; };
 		5D0C3CAD284FB1C3005FBAE0 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C3CAC284FB1C3005FBAE0 /* PurchaseViewController.swift */; };
+		5D0C3CAF285235FA005FBAE0 /* PriceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C3CAE285235FA005FBAE0 /* PriceManager.swift */; };
+		5D0C3CB128523601005FBAE0 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C3CB028523601005FBAE0 /* StoreManager.swift */; };
+		5D1864572854E03600A001E5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1864562854E03600A001E5 /* StoreKit.framework */; };
 		5D61FD1B28328A1E00AB33C3 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */; };
 		5DBAC3E4284650B00081CA0D /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBAC3E3284650B00081CA0D /* MapScreenView.swift */; };
 		5DBAC3E6284651760081CA0D /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBAC3E5284651760081CA0D /* MapScreenViewController.swift */; };
@@ -51,6 +54,9 @@
 		5D0C3CA8284FB1B6005FBAE0 /* aboutPurchase.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aboutPurchase.txt; sourceTree = "<group>"; };
 		5D0C3CAA284FB1BF005FBAE0 /* PurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		5D0C3CAC284FB1C3005FBAE0 /* PurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		5D0C3CAE285235FA005FBAE0 /* PriceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceManager.swift; sourceTree = "<group>"; };
+		5D0C3CB028523601005FBAE0 /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		5D1864562854E03600A001E5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		5DBAC3E3284650B00081CA0D /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
 		5DBAC3E5284651760081CA0D /* MapScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D1864572854E03600A001E5 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,9 +112,19 @@
 			isa = PBXGroup;
 			children = (
 				5D0C3CAA284FB1BF005FBAE0 /* PurchaseView.swift */,
+				5D0C3CB028523601005FBAE0 /* StoreManager.swift */,
+				5D0C3CAE285235FA005FBAE0 /* PriceManager.swift */,
 				5D0C3CAC284FB1C3005FBAE0 /* PurchaseViewController.swift */,
 			);
 			path = PurchaseScreen;
+			sourceTree = "<group>";
+		};
+		5D1864552854E03600A001E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D1864562854E03600A001E5 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5DBAC3E2284650440081CA0D /* MapScreen */ = {
@@ -124,6 +141,7 @@
 			children = (
 				5DCB58F9283172BE00A2C3CC /* MobileAudioGuide */,
 				5DCB58F8283172BE00A2C3CC /* Products */,
+				5D1864552854E03600A001E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -419,8 +437,10 @@
 				CE8DD9EF28577B8B00FFD28A /* ExcursionsPlistLoader.swift in Sources */,
 				5D0C3CAD284FB1C3005FBAE0 /* PurchaseViewController.swift in Sources */,
 				CE2E90E72843F295008D50E0 /* DetailsScreenViewController.swift in Sources */,
+				5D0C3CB128523601005FBAE0 /* StoreManager.swift in Sources */,
 				CE8A3C09285381EF004B8BFB /* PurchaseButtonFooterView.swift in Sources */,
 				5DCB59192831758200A2C3CC /* UIColor+Extension.swift in Sources */,
+				5D0C3CAF285235FA005FBAE0 /* PriceManager.swift in Sources */,
 				5DBAC3E4284650B00081CA0D /* MapScreenView.swift in Sources */,
 				5DCB58FF283172BE00A2C3CC /* MainViewController.swift in Sources */,
 				CE634F4D283429FC006C2F73 /* GuideHeaderView.swift in Sources */,
@@ -583,13 +603,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5JFF3U9J3C;
+				DEVELOPMENT_TEAM = GP9JU9VAHV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MobileAudioGuide/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "App need always have access to your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App need always have access to your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
@@ -598,8 +622,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.group.MobileAudioGuide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Istanbul.MobileAudioGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Profile2;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -611,13 +636,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5JFF3U9J3C;
+				DEVELOPMENT_TEAM = GP9JU9VAHV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MobileAudioGuide/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "App need always have access to your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App need always have access to your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
@@ -626,8 +655,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.group.MobileAudioGuide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Istanbul.MobileAudioGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Profile2;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
