@@ -30,7 +30,8 @@ class PurchaseViewController: UIViewController {
     }
     
     private func setupUI() {
-        title = "Buy full version"
+        navigationItem.title = "Buy full version"
+        navigationController?.navigationBar.topItem?.title = ""
         view.addSubview(purchaseView)
         view.backgroundColor = .black
         purchaseView.nameExcursionLabel.text = excursionInfo.excursionTitle

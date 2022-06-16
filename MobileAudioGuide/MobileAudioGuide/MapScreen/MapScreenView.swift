@@ -24,8 +24,10 @@ class MapScreenView: UIView {
         return button
     }()
     
+    
     let audioPlayerView: AudioPlayerView = {
-        let audioPlayerView = AudioPlayerView(audioFileName: "Tour1About")
+        // В имя файла передавать excursionInfo.filenamePrefix + номер выбранного кружочка
+        let audioPlayerView = AudioPlayerView(audioFileName: "IstambulInOneDay0")
         return audioPlayerView
     }()
     
@@ -38,10 +40,10 @@ class MapScreenView: UIView {
     let purchaseButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
-        button.layer.borderColor = UIColor.systemBlue.cgColor
+        button.layer.borderColor = Colors.vwBlueColor.cgColor
         button.layer.borderWidth = 1
         button.setTitle("Buy full version", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(Colors.vwBlueColor, for: .normal)
         return button
     }()
     
@@ -72,7 +74,7 @@ class MapScreenView: UIView {
         button.backgroundColor = .white
         button.setTitle("More", for: .normal)
         button.titleLabel?.textAlignment = .left
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(Colors.vwBlueColor, for: .normal)
         return button
     }()
     
@@ -163,7 +165,7 @@ class MapScreenView: UIView {
             imageView.widthAnchor.constraint(equalToConstant: 120),
             
             titleLabel.leftAnchor.constraint(equalTo: imageView.rightAnchor, constant: 20),
-            titleLabel.rightAnchor.constraint(equalTo: infoView.rightAnchor, constant: 10),
+            titleLabel.rightAnchor.constraint(equalTo: infoView.rightAnchor, constant: -10),
             titleLabel.topAnchor.constraint(equalTo: infoView.topAnchor, constant: 10),
             titleLabel.heightAnchor.constraint(equalToConstant: 70),
             

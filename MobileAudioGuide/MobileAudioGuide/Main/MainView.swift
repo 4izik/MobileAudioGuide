@@ -13,7 +13,7 @@ class MainView: UIView {
     
     private let backgroundImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "Image2")
+        imageView.image = UIImage(named: "backGroundImage")
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()

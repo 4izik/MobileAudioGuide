@@ -12,7 +12,6 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
     
     private let reuseID = "GuideHeaderView"
     private let excursionInfo: ExcursionInfo
-    private let imageName: String
     private let guideFeatureViewBuilder: GuideFeatureViewBuilder
     
     private lazy var titleLabel: UILabel = {
@@ -27,7 +26,7 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
-        let image = UIImage(named: imageName)
+        let image = UIImage(named: excursionInfo.filenamePrefix + "0")
         imageView.image = image
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -54,11 +53,11 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
     lazy var aboutExcursionButton: UIButton = {
         let aboutExcursionButton = UIButton(type: .roundedRect)
         aboutExcursionButton.setTitle("About excursion", for: .normal)
-        aboutExcursionButton.setTitleColor(.systemBlue, for: .normal)
+        aboutExcursionButton.setTitleColor(Colors.vwBlueColor, for: .normal)
         aboutExcursionButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         aboutExcursionButton.backgroundColor = .clear
         aboutExcursionButton.layer.borderWidth = 1
-        aboutExcursionButton.layer.borderColor = UIColor.systemBlue.cgColor
+        aboutExcursionButton.layer.borderColor = Colors.vwBlueColor.cgColor
         aboutExcursionButton.layer.cornerRadius = 3
         return aboutExcursionButton
     }()
@@ -69,9 +68,9 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
         beginExcursionButton.setTitle("Start", for: .normal)
         beginExcursionButton.setTitleColor(.white, for: .normal)
         beginExcursionButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        beginExcursionButton.backgroundColor = .systemBlue
+        beginExcursionButton.backgroundColor = Colors.vwBlueColor
         beginExcursionButton.layer.borderWidth = 1
-        beginExcursionButton.layer.borderColor = UIColor.systemBlue.cgColor
+        beginExcursionButton.layer.borderColor = Colors.vwBlueColor.cgColor
         beginExcursionButton.layer.cornerRadius = 3
         return beginExcursionButton
     }()
@@ -88,11 +87,9 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
     /// Инициализатор
     /// - Parameters:
     ///   - excursionInfo: модель с  информацей об экскурсии
-    ///   - imageName: имя файла большого изображения
     ///   - guideFeatureViewBuilder: экземпляр билдера вьюх с характеристиками экскурсии
-    init(excursionInfo: ExcursionInfo, imageName: String, guideFeatureViewBuilder: GuideFeatureViewBuilder) {
+    init(excursionInfo: ExcursionInfo, guideFeatureViewBuilder: GuideFeatureViewBuilder) {
         self.excursionInfo = excursionInfo
-        self.imageName = imageName
         self.guideFeatureViewBuilder = guideFeatureViewBuilder
         super.init(reuseIdentifier: reuseID)
         setupViews()
@@ -126,14 +123,14 @@ final class GuideHeaderView: UITableViewHeaderFooterView {
             imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 250),
+            imageView.heightAnchor.constraint(equalToConstant: 277),
             
             routeView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             routeView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 25),
             routeView.trailingAnchor.constraint(greaterThanOrEqualTo: distanceView.leadingAnchor),
             
             transportView.leadingAnchor.constraint(equalTo: routeView.leadingAnchor),
-            transportView.topAnchor.constraint(equalTo: routeView.bottomAnchor, constant: 15),
+            transportView.topAnchor.constraint(equalTo: routeView.bottomAnchor, constant: 20),
             transportView.trailingAnchor.constraint(lessThanOrEqualTo: sightseengView.leadingAnchor),
             
             distanceView.topAnchor.constraint(equalTo: routeView.topAnchor),

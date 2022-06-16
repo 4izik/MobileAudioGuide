@@ -14,6 +14,7 @@ class PurchaseView: UIView {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Image1")
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -46,7 +47,7 @@ class PurchaseView: UIView {
     
     private let footerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = Colors.vwBlueColor
         return view
     }()
     

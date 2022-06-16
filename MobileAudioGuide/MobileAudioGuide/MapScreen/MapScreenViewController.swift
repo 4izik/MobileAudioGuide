@@ -13,6 +13,8 @@ class MapScreenViewController: UIViewController, MKMapViewDelegate {
 
     let locationManager = CLLocationManager()
     let mapScreenView = MapScreenView()
+    // Менять selectedPointNumber при выборе новой точки и обновлять данные во вьюхах
+    var selectedPointNumber = 1
     private var excursionInfo = ExcursionInfo()
     
     init(excursionInfo: ExcursionInfo) {
@@ -36,8 +38,13 @@ class MapScreenViewController: UIViewController, MKMapViewDelegate {
         checkLocationEnabled()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = excursionInfo.shortTitle
+    }
+    
     private func setupViews() {
-        title = excursionInfo.excursionTitle
+        navigationController?.navigationBar.topItem?.title = ""
         view.addSubview(mapScreenView)
         view.backgroundColor = .white
 
@@ -50,14 +57,29 @@ class MapScreenViewController: UIViewController, MKMapViewDelegate {
         ])
         
         mapScreenView.mapView.delegate = self
-        mapScreenView.imageView.image = UIImage(named: "Image1")
-        mapScreenView.titleLabel.text = excursionInfo.excursionTitle
+        mapScreenView.imageView.image = UIImage(named: excursionInfo.filenamePrefix + String(selectedPointNumber))
+        if excursionInfo.tours.indices.contains(selectedPointNumber - 1) {
+            mapScreenView.titleLabel.text = excursionInfo.tours[selectedPointNumber - 1].tourTitle
+        }
+        
         mapScreenView.purchaseButton.addTarget(self, action: #selector(makePurchase), for: .touchUpInside)
+        mapScreenView.detailButton.addTarget(self, action: #selector(showDetails), for: .touchUpInside)
+        mapScreenView.moreButton.addTarget(self, action: #selector(showRouteScreen), for: .touchUpInside)
     }
     
-    @objc func makePurchase() {
+    @objc private func makePurchase() {
         let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo)
         navigationController?.pushViewController(purchaseViewController, animated: true)
+    }
+    
+    @objc private func showDetails() {
+        let detailsViewController = DetailsScreenViewController(excursionInfo: excursionInfo, viewpointIndex: selectedPointNumber)
+        navigationController?.pushViewController(detailsViewController, animated: true)
+    }
+    
+    @objc private func showRouteScreen() {
+        let routeViewController = RouteViewController(excursionInfo: excursionInfo)
+        navigationController?.pushViewController(routeViewController, animated: true)
     }
     
     private func setupLocationManager() {
@@ -70,7 +92,8 @@ class MapScreenViewController: UIViewController, MKMapViewDelegate {
             setupLocationManager()
             checkAuthorization()
             mapScreenView.mapView.showsUserLocation = true
-            let location = CLLocationCoordinate2D(latitude: 41.011225, longitude: 28.978151)
+            let location = CLLocationCoordinate2D(latitude: excursionInfo.mapScreenCoordinates.latitude,
+                                                  longitude: excursionInfo.mapScreenCoordinates.longitude)
             let region = MKCoordinateRegion(center: location, latitudinalMeters: 5000, longitudinalMeters: 5000)
             mapScreenView.mapView.setRegion(region, animated: true)
         } else {
