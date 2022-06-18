@@ -49,6 +49,241 @@
 		CE8DD9EF28577B8B00FFD28A /* ExcursionsPlistLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DD9EE28577B8B00FFD28A /* ExcursionsPlistLoader.swift */; };
 		CE8DD9F528578C0B00FFD28A /* IstambulInOneDay0.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DD9F428578C0B00FFD28A /* IstambulInOneDay0.txt */; };
 		CE8DD9FE28578D2A00FFD28A /* NontouristicIstanbul0.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DD9FD28578D2A00FFD28A /* NontouristicIstanbul0.txt */; };
+		CE8DDA002857DD0B00FFD28A /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DD9FF2857DD0B00FFD28A /* AudioPlayer.swift */; };
+		CE8DDA33285BB19900FFD28A /* IstambulInOneDay11.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA01285BB19700FFD28A /* IstambulInOneDay11.txt */; };
+		CE8DDA34285BB19900FFD28A /* IstambulInOneDay48.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA02285BB19700FFD28A /* IstambulInOneDay48.txt */; };
+		CE8DDA35285BB19900FFD28A /* IstambulInOneDay49.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA03285BB19700FFD28A /* IstambulInOneDay49.txt */; };
+		CE8DDA36285BB19900FFD28A /* IstambulInOneDay25.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA04285BB19800FFD28A /* IstambulInOneDay25.txt */; };
+		CE8DDA37285BB19900FFD28A /* IstambulInOneDay21.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA05285BB19800FFD28A /* IstambulInOneDay21.txt */; };
+		CE8DDA38285BB19900FFD28A /* IstambulInOneDay32.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA06285BB19800FFD28A /* IstambulInOneDay32.txt */; };
+		CE8DDA39285BB19900FFD28A /* IstambulInOneDay22.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA07285BB19800FFD28A /* IstambulInOneDay22.txt */; };
+		CE8DDA3A285BB19900FFD28A /* IstambulInOneDay39.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA08285BB19800FFD28A /* IstambulInOneDay39.txt */; };
+		CE8DDA3B285BB19900FFD28A /* IstambulInOneDay46.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA09285BB19800FFD28A /* IstambulInOneDay46.txt */; };
+		CE8DDA3C285BB19900FFD28A /* IstambulInOneDay47.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA0A285BB19800FFD28A /* IstambulInOneDay47.txt */; };
+		CE8DDA3D285BB19900FFD28A /* IstambulInOneDay31.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA0B285BB19800FFD28A /* IstambulInOneDay31.txt */; };
+		CE8DDA3E285BB19900FFD28A /* IstambulInOneDay4.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA0C285BB19800FFD28A /* IstambulInOneDay4.txt */; };
+		CE8DDA3F285BB19900FFD28A /* IstambulInOneDay9.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA0D285BB19800FFD28A /* IstambulInOneDay9.txt */; };
+		CE8DDA40285BB19900FFD28A /* IstambulInOneDay27.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA0E285BB19800FFD28A /* IstambulInOneDay27.txt */; };
+		CE8DDA41285BB19900FFD28A /* IstambulInOneDay34.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA0F285BB19800FFD28A /* IstambulInOneDay34.txt */; };
+		CE8DDA42285BB19900FFD28A /* IstambulInOneDay28.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA10285BB19800FFD28A /* IstambulInOneDay28.txt */; };
+		CE8DDA43285BB19900FFD28A /* IstambulInOneDay41.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA11285BB19800FFD28A /* IstambulInOneDay41.txt */; };
+		CE8DDA44285BB19900FFD28A /* IstambulInOneDay29.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA12285BB19800FFD28A /* IstambulInOneDay29.txt */; };
+		CE8DDA45285BB19900FFD28A /* IstambulInOneDay43.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA13285BB19800FFD28A /* IstambulInOneDay43.txt */; };
+		CE8DDA46285BB19900FFD28A /* IstambulInOneDay18.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA14285BB19800FFD28A /* IstambulInOneDay18.txt */; };
+		CE8DDA47285BB19900FFD28A /* IstambulInOneDay40.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA15285BB19800FFD28A /* IstambulInOneDay40.txt */; };
+		CE8DDA48285BB19900FFD28A /* IstambulInOneDay44.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA16285BB19800FFD28A /* IstambulInOneDay44.txt */; };
+		CE8DDA49285BB19900FFD28A /* IstambulInOneDay2.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA17285BB19800FFD28A /* IstambulInOneDay2.txt */; };
+		CE8DDA4A285BB19900FFD28A /* IstambulInOneDay3.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA18285BB19800FFD28A /* IstambulInOneDay3.txt */; };
+		CE8DDA4B285BB19900FFD28A /* IstambulInOneDay13.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA19285BB19800FFD28A /* IstambulInOneDay13.txt */; };
+		CE8DDA4C285BB19900FFD28A /* IstambulInOneDay24.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA1A285BB19800FFD28A /* IstambulInOneDay24.txt */; };
+		CE8DDA4D285BB19900FFD28A /* IstambulInOneDay1.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA1B285BB19800FFD28A /* IstambulInOneDay1.txt */; };
+		CE8DDA4E285BB19900FFD28A /* IstambulInOneDay42.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA1C285BB19800FFD28A /* IstambulInOneDay42.txt */; };
+		CE8DDA4F285BB19900FFD28A /* IstambulInOneDay23.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA1D285BB19800FFD28A /* IstambulInOneDay23.txt */; };
+		CE8DDA50285BB19900FFD28A /* IstambulInOneDay33.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA1E285BB19800FFD28A /* IstambulInOneDay33.txt */; };
+		CE8DDA51285BB19900FFD28A /* IstambulInOneDay12.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA1F285BB19800FFD28A /* IstambulInOneDay12.txt */; };
+		CE8DDA52285BB19900FFD28A /* IstambulInOneDay20.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA20285BB19800FFD28A /* IstambulInOneDay20.txt */; };
+		CE8DDA53285BB19900FFD28A /* IstambulInOneDay6.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA21285BB19800FFD28A /* IstambulInOneDay6.txt */; };
+		CE8DDA54285BB19900FFD28A /* IstambulInOneDay45.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA22285BB19800FFD28A /* IstambulInOneDay45.txt */; };
+		CE8DDA55285BB19900FFD28A /* IstambulInOneDay17.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA23285BB19800FFD28A /* IstambulInOneDay17.txt */; };
+		CE8DDA56285BB19900FFD28A /* IstambulInOneDay10.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA24285BB19800FFD28A /* IstambulInOneDay10.txt */; };
+		CE8DDA57285BB19900FFD28A /* IstambulInOneDay38.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA25285BB19800FFD28A /* IstambulInOneDay38.txt */; };
+		CE8DDA58285BB19900FFD28A /* IstambulInOneDay35.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA26285BB19800FFD28A /* IstambulInOneDay35.txt */; };
+		CE8DDA59285BB19900FFD28A /* IstambulInOneDay50.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA27285BB19900FFD28A /* IstambulInOneDay50.txt */; };
+		CE8DDA5A285BB19900FFD28A /* IstambulInOneDay14.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA28285BB19900FFD28A /* IstambulInOneDay14.txt */; };
+		CE8DDA5B285BB19900FFD28A /* IstambulInOneDay5.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA29285BB19900FFD28A /* IstambulInOneDay5.txt */; };
+		CE8DDA5C285BB19900FFD28A /* IstambulInOneDay7.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA2A285BB19900FFD28A /* IstambulInOneDay7.txt */; };
+		CE8DDA5D285BB19900FFD28A /* IstambulInOneDay19.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA2B285BB19900FFD28A /* IstambulInOneDay19.txt */; };
+		CE8DDA5E285BB19900FFD28A /* IstambulInOneDay26.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA2C285BB19900FFD28A /* IstambulInOneDay26.txt */; };
+		CE8DDA5F285BB19900FFD28A /* IstambulInOneDay36.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA2D285BB19900FFD28A /* IstambulInOneDay36.txt */; };
+		CE8DDA60285BB19900FFD28A /* IstambulInOneDay37.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA2E285BB19900FFD28A /* IstambulInOneDay37.txt */; };
+		CE8DDA61285BB19900FFD28A /* IstambulInOneDay8.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA2F285BB19900FFD28A /* IstambulInOneDay8.txt */; };
+		CE8DDA62285BB19900FFD28A /* IstambulInOneDay16.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA30285BB19900FFD28A /* IstambulInOneDay16.txt */; };
+		CE8DDA63285BB19900FFD28A /* IstambulInOneDay15.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA31285BB19900FFD28A /* IstambulInOneDay15.txt */; };
+		CE8DDA64285BB19900FFD28A /* IstambulInOneDay30.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA32285BB19900FFD28A /* IstambulInOneDay30.txt */; };
+		CE8DDA89285BC12400FFD28A /* NontouristicIstanbul21.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA65285BC12300FFD28A /* NontouristicIstanbul21.txt */; };
+		CE8DDA8A285BC12400FFD28A /* NontouristicIstanbul12.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA66285BC12300FFD28A /* NontouristicIstanbul12.txt */; };
+		CE8DDA8B285BC12400FFD28A /* NontouristicIstanbul2.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA67285BC12300FFD28A /* NontouristicIstanbul2.txt */; };
+		CE8DDA8C285BC12400FFD28A /* NontouristicIstanbul15.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA68285BC12300FFD28A /* NontouristicIstanbul15.txt */; };
+		CE8DDA8D285BC12400FFD28A /* NontouristicIstanbul13.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA69285BC12300FFD28A /* NontouristicIstanbul13.txt */; };
+		CE8DDA8E285BC12400FFD28A /* NontouristicIstanbul4.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA6A285BC12300FFD28A /* NontouristicIstanbul4.txt */; };
+		CE8DDA8F285BC12400FFD28A /* NontouristicIstanbul24.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA6B285BC12300FFD28A /* NontouristicIstanbul24.txt */; };
+		CE8DDA90285BC12400FFD28A /* NontouristicIstanbul23.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA6C285BC12300FFD28A /* NontouristicIstanbul23.txt */; };
+		CE8DDA91285BC12400FFD28A /* NontouristicIstanbul1.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA6D285BC12300FFD28A /* NontouristicIstanbul1.txt */; };
+		CE8DDA92285BC12400FFD28A /* NontouristicIstanbul32.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA6E285BC12300FFD28A /* NontouristicIstanbul32.txt */; };
+		CE8DDA93285BC12400FFD28A /* NontouristicIstanbul31.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA6F285BC12300FFD28A /* NontouristicIstanbul31.txt */; };
+		CE8DDA94285BC12400FFD28A /* NontouristicIstanbul35.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA70285BC12300FFD28A /* NontouristicIstanbul35.txt */; };
+		CE8DDA95285BC12400FFD28A /* NontouristicIstanbul10.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA71285BC12300FFD28A /* NontouristicIstanbul10.txt */; };
+		CE8DDA96285BC12400FFD28A /* NontouristicIstanbul25.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA72285BC12300FFD28A /* NontouristicIstanbul25.txt */; };
+		CE8DDA97285BC12400FFD28A /* NontouristicIstanbul14.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA73285BC12300FFD28A /* NontouristicIstanbul14.txt */; };
+		CE8DDA98285BC12400FFD28A /* NontouristicIstanbul9.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA74285BC12300FFD28A /* NontouristicIstanbul9.txt */; };
+		CE8DDA99285BC12400FFD28A /* NontouristicIstanbul17.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA75285BC12300FFD28A /* NontouristicIstanbul17.txt */; };
+		CE8DDA9A285BC12400FFD28A /* NontouristicIstanbul18.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA76285BC12300FFD28A /* NontouristicIstanbul18.txt */; };
+		CE8DDA9B285BC12400FFD28A /* NontouristicIstanbul30.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA77285BC12300FFD28A /* NontouristicIstanbul30.txt */; };
+		CE8DDA9C285BC12400FFD28A /* NontouristicIstanbul16.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA78285BC12300FFD28A /* NontouristicIstanbul16.txt */; };
+		CE8DDA9D285BC12400FFD28A /* NontouristicIstanbul36.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA79285BC12300FFD28A /* NontouristicIstanbul36.txt */; };
+		CE8DDA9E285BC12400FFD28A /* NontouristicIstanbul6.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA7A285BC12300FFD28A /* NontouristicIstanbul6.txt */; };
+		CE8DDA9F285BC12400FFD28A /* NontouristicIstanbul29.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA7B285BC12300FFD28A /* NontouristicIstanbul29.txt */; };
+		CE8DDAA0285BC12400FFD28A /* NontouristicIstanbul3.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA7C285BC12300FFD28A /* NontouristicIstanbul3.txt */; };
+		CE8DDAA1285BC12400FFD28A /* NontouristicIstanbul26.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA7D285BC12300FFD28A /* NontouristicIstanbul26.txt */; };
+		CE8DDAA2285BC12400FFD28A /* NontouristicIstanbul28.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA7E285BC12300FFD28A /* NontouristicIstanbul28.txt */; };
+		CE8DDAA3285BC12400FFD28A /* NontouristicIstanbul22.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA7F285BC12300FFD28A /* NontouristicIstanbul22.txt */; };
+		CE8DDAA4285BC12400FFD28A /* NontouristicIstanbul20.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA80285BC12300FFD28A /* NontouristicIstanbul20.txt */; };
+		CE8DDAA5285BC12400FFD28A /* NontouristicIstanbul33.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA81285BC12300FFD28A /* NontouristicIstanbul33.txt */; };
+		CE8DDAA6285BC12400FFD28A /* NontouristicIstanbul11.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA82285BC12400FFD28A /* NontouristicIstanbul11.txt */; };
+		CE8DDAA7285BC12400FFD28A /* NontouristicIstanbul5.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA83285BC12400FFD28A /* NontouristicIstanbul5.txt */; };
+		CE8DDAA8285BC12400FFD28A /* NontouristicIstanbul7.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA84285BC12400FFD28A /* NontouristicIstanbul7.txt */; };
+		CE8DDAA9285BC12400FFD28A /* NontouristicIstanbul34.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA85285BC12400FFD28A /* NontouristicIstanbul34.txt */; };
+		CE8DDAAA285BC12400FFD28A /* NontouristicIstanbul27.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA86285BC12400FFD28A /* NontouristicIstanbul27.txt */; };
+		CE8DDAAB285BC12400FFD28A /* NontouristicIstanbul19.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA87285BC12400FFD28A /* NontouristicIstanbul19.txt */; };
+		CE8DDAAC285BC12400FFD28A /* NontouristicIstanbul8.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDA88285BC12400FFD28A /* NontouristicIstanbul8.txt */; };
+		CE8DDACB285BC17300FFD28A /* Beyoglu29.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAAD285BC17200FFD28A /* Beyoglu29.txt */; };
+		CE8DDACC285BC17300FFD28A /* Beyoglu5.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAAE285BC17200FFD28A /* Beyoglu5.txt */; };
+		CE8DDACD285BC17300FFD28A /* Beyoglu25.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAAF285BC17200FFD28A /* Beyoglu25.txt */; };
+		CE8DDACE285BC17300FFD28A /* Beyoglu24.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAB0285BC17200FFD28A /* Beyoglu24.txt */; };
+		CE8DDACF285BC17300FFD28A /* Beyoglu18.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAB1285BC17200FFD28A /* Beyoglu18.txt */; };
+		CE8DDAD0285BC17300FFD28A /* Beyoglu11.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAB2285BC17200FFD28A /* Beyoglu11.txt */; };
+		CE8DDAD1285BC17300FFD28A /* Beyoglu26.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAB3285BC17200FFD28A /* Beyoglu26.txt */; };
+		CE8DDAD2285BC17300FFD28A /* Beyoglu7.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAB4285BC17200FFD28A /* Beyoglu7.txt */; };
+		CE8DDAD3285BC17300FFD28A /* Beyoglu22.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAB5285BC17200FFD28A /* Beyoglu22.txt */; };
+		CE8DDAD4285BC17300FFD28A /* Beyoglu14.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAB6285BC17300FFD28A /* Beyoglu14.txt */; };
+		CE8DDAD5285BC17300FFD28A /* Beyoglu17.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAB7285BC17300FFD28A /* Beyoglu17.txt */; };
+		CE8DDAD6285BC17300FFD28A /* Beyoglu30.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAB8285BC17300FFD28A /* Beyoglu30.txt */; };
+		CE8DDAD7285BC17300FFD28A /* Beyoglu20.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAB9285BC17300FFD28A /* Beyoglu20.txt */; };
+		CE8DDAD8285BC17300FFD28A /* Beyoglu23.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDABA285BC17300FFD28A /* Beyoglu23.txt */; };
+		CE8DDAD9285BC17300FFD28A /* Beyoglu6.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDABB285BC17300FFD28A /* Beyoglu6.txt */; };
+		CE8DDADA285BC17300FFD28A /* Beyoglu15.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDABC285BC17300FFD28A /* Beyoglu15.txt */; };
+		CE8DDADB285BC17300FFD28A /* Beyoglu9.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDABD285BC17300FFD28A /* Beyoglu9.txt */; };
+		CE8DDADC285BC17300FFD28A /* Beyoglu21.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDABE285BC17300FFD28A /* Beyoglu21.txt */; };
+		CE8DDADD285BC17300FFD28A /* Beyoglu3.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDABF285BC17300FFD28A /* Beyoglu3.txt */; };
+		CE8DDADE285BC17300FFD28A /* Beyoglu28.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAC0285BC17300FFD28A /* Beyoglu28.txt */; };
+		CE8DDADF285BC17300FFD28A /* Beyoglu12.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAC1285BC17300FFD28A /* Beyoglu12.txt */; };
+		CE8DDAE0285BC17300FFD28A /* Beyoglu27.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAC2285BC17300FFD28A /* Beyoglu27.txt */; };
+		CE8DDAE1285BC17300FFD28A /* Beyoglu4.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAC3285BC17300FFD28A /* Beyoglu4.txt */; };
+		CE8DDAE2285BC17300FFD28A /* Beyoglu8.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAC4285BC17300FFD28A /* Beyoglu8.txt */; };
+		CE8DDAE3285BC17300FFD28A /* Beyoglu2.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAC5285BC17300FFD28A /* Beyoglu2.txt */; };
+		CE8DDAE4285BC17300FFD28A /* Beyoglu19.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAC6285BC17300FFD28A /* Beyoglu19.txt */; };
+		CE8DDAE5285BC17300FFD28A /* Beyoglu16.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAC7285BC17300FFD28A /* Beyoglu16.txt */; };
+		CE8DDAE6285BC17300FFD28A /* Beyoglu1.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAC8285BC17300FFD28A /* Beyoglu1.txt */; };
+		CE8DDAE7285BC17300FFD28A /* Beyoglu10.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAC9285BC17300FFD28A /* Beyoglu10.txt */; };
+		CE8DDAE8285BC17300FFD28A /* Beyoglu13.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDACA285BC17300FFD28A /* Beyoglu13.txt */; };
+		CE8DDB1B285BC38500FFD28A /* IstambulInOneDay3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAE9285BC38100FFD28A /* IstambulInOneDay3.mp3 */; };
+		CE8DDB1C285BC38500FFD28A /* IstambulInOneDay32.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAEA285BC38100FFD28A /* IstambulInOneDay32.mp3 */; };
+		CE8DDB1D285BC38500FFD28A /* IstambulInOneDay8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAEB285BC38100FFD28A /* IstambulInOneDay8.mp3 */; };
+		CE8DDB1E285BC38500FFD28A /* IstambulInOneDay16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAEC285BC38100FFD28A /* IstambulInOneDay16.mp3 */; };
+		CE8DDB1F285BC38500FFD28A /* IstambulInOneDay1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAED285BC38100FFD28A /* IstambulInOneDay1.mp3 */; };
+		CE8DDB20285BC38500FFD28A /* IstambulInOneDay36.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAEE285BC38200FFD28A /* IstambulInOneDay36.mp3 */; };
+		CE8DDB21285BC38500FFD28A /* IstambulInOneDay22.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAEF285BC38200FFD28A /* IstambulInOneDay22.mp3 */; };
+		CE8DDB22285BC38500FFD28A /* IstambulInOneDay41.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAF0285BC38200FFD28A /* IstambulInOneDay41.mp3 */; };
+		CE8DDB23285BC38500FFD28A /* IstambulInOneDay9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAF1285BC38200FFD28A /* IstambulInOneDay9.mp3 */; };
+		CE8DDB24285BC38500FFD28A /* IstambulInOneDay40.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAF2285BC38200FFD28A /* IstambulInOneDay40.mp3 */; };
+		CE8DDB25285BC38500FFD28A /* IstambulInOneDay25.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAF3285BC38200FFD28A /* IstambulInOneDay25.mp3 */; };
+		CE8DDB26285BC38500FFD28A /* IstambulInOneDay11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAF4285BC38200FFD28A /* IstambulInOneDay11.mp3 */; };
+		CE8DDB27285BC38500FFD28A /* IstambulInOneDay46.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAF5285BC38200FFD28A /* IstambulInOneDay46.mp3 */; };
+		CE8DDB28285BC38500FFD28A /* IstambulInOneDay13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAF6285BC38200FFD28A /* IstambulInOneDay13.mp3 */; };
+		CE8DDB29285BC38500FFD28A /* IstambulInOneDay15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAF7285BC38200FFD28A /* IstambulInOneDay15.mp3 */; };
+		CE8DDB2A285BC38500FFD28A /* IstambulInOneDay38.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAF8285BC38200FFD28A /* IstambulInOneDay38.mp3 */; };
+		CE8DDB2B285BC38500FFD28A /* IstambulInOneDay43.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAF9285BC38200FFD28A /* IstambulInOneDay43.mp3 */; };
+		CE8DDB2C285BC38500FFD28A /* IstambulInOneDay44.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAFA285BC38200FFD28A /* IstambulInOneDay44.mp3 */; };
+		CE8DDB2D285BC38500FFD28A /* IstambulInOneDay42.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAFB285BC38200FFD28A /* IstambulInOneDay42.mp3 */; };
+		CE8DDB2E285BC38500FFD28A /* IstambulInOneDay14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAFC285BC38300FFD28A /* IstambulInOneDay14.mp3 */; };
+		CE8DDB2F285BC38500FFD28A /* IstambulInOneDay33.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAFD285BC38300FFD28A /* IstambulInOneDay33.mp3 */; };
+		CE8DDB30285BC38500FFD28A /* IstambulInOneDay10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAFE285BC38300FFD28A /* IstambulInOneDay10.mp3 */; };
+		CE8DDB31285BC38500FFD28A /* IstambulInOneDay39.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDAFF285BC38300FFD28A /* IstambulInOneDay39.mp3 */; };
+		CE8DDB32285BC38500FFD28A /* IstambulInOneDay2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB00285BC38300FFD28A /* IstambulInOneDay2.mp3 */; };
+		CE8DDB33285BC38500FFD28A /* IstambulInOneDay4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB01285BC38300FFD28A /* IstambulInOneDay4.mp3 */; };
+		CE8DDB34285BC38500FFD28A /* IstambulInOneDay20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB02285BC38300FFD28A /* IstambulInOneDay20.mp3 */; };
+		CE8DDB35285BC38500FFD28A /* IstambulInOneDay21.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB03285BC38300FFD28A /* IstambulInOneDay21.mp3 */; };
+		CE8DDB36285BC38500FFD28A /* IstambulInOneDay47.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB04285BC38300FFD28A /* IstambulInOneDay47.mp3 */; };
+		CE8DDB37285BC38500FFD28A /* IstambulInOneDay12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB05285BC38300FFD28A /* IstambulInOneDay12.mp3 */; };
+		CE8DDB38285BC38500FFD28A /* IstambulInOneDay29.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB06285BC38300FFD28A /* IstambulInOneDay29.mp3 */; };
+		CE8DDB39285BC38500FFD28A /* IstambulInOneDay45.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB07285BC38300FFD28A /* IstambulInOneDay45.mp3 */; };
+		CE8DDB3A285BC38500FFD28A /* IstambulInOneDay48.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB08285BC38300FFD28A /* IstambulInOneDay48.mp3 */; };
+		CE8DDB3B285BC38500FFD28A /* IstambulInOneDay30.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB09285BC38300FFD28A /* IstambulInOneDay30.mp3 */; };
+		CE8DDB3C285BC38500FFD28A /* IstambulInOneDay23.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB0A285BC38400FFD28A /* IstambulInOneDay23.mp3 */; };
+		CE8DDB3D285BC38500FFD28A /* IstambulInOneDay34.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB0B285BC38400FFD28A /* IstambulInOneDay34.mp3 */; };
+		CE8DDB3E285BC38500FFD28A /* IstambulInOneDay37.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB0C285BC38400FFD28A /* IstambulInOneDay37.mp3 */; };
+		CE8DDB3F285BC38500FFD28A /* IstambulInOneDay18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB0D285BC38400FFD28A /* IstambulInOneDay18.mp3 */; };
+		CE8DDB40285BC38500FFD28A /* IstambulInOneDay49.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB0E285BC38400FFD28A /* IstambulInOneDay49.mp3 */; };
+		CE8DDB41285BC38500FFD28A /* IstambulInOneDay50.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB0F285BC38400FFD28A /* IstambulInOneDay50.mp3 */; };
+		CE8DDB42285BC38500FFD28A /* IstambulInOneDay28.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB10285BC38400FFD28A /* IstambulInOneDay28.mp3 */; };
+		CE8DDB43285BC38500FFD28A /* IstambulInOneDay31.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB11285BC38400FFD28A /* IstambulInOneDay31.mp3 */; };
+		CE8DDB44285BC38500FFD28A /* IstambulInOneDay7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB12285BC38400FFD28A /* IstambulInOneDay7.mp3 */; };
+		CE8DDB45285BC38500FFD28A /* IstambulInOneDay6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB13285BC38400FFD28A /* IstambulInOneDay6.mp3 */; };
+		CE8DDB46285BC38500FFD28A /* IstambulInOneDay17.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB14285BC38400FFD28A /* IstambulInOneDay17.mp3 */; };
+		CE8DDB47285BC38500FFD28A /* IstambulInOneDay27.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB15285BC38400FFD28A /* IstambulInOneDay27.mp3 */; };
+		CE8DDB48285BC38500FFD28A /* IstambulInOneDay24.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB16285BC38400FFD28A /* IstambulInOneDay24.mp3 */; };
+		CE8DDB49285BC38500FFD28A /* IstambulInOneDay5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB17285BC38400FFD28A /* IstambulInOneDay5.mp3 */; };
+		CE8DDB4A285BC38500FFD28A /* IstambulInOneDay35.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB18285BC38500FFD28A /* IstambulInOneDay35.mp3 */; };
+		CE8DDB4B285BC38500FFD28A /* IstambulInOneDay19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB19285BC38500FFD28A /* IstambulInOneDay19.mp3 */; };
+		CE8DDB4C285BC38500FFD28A /* IstambulInOneDay26.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB1A285BC38500FFD28A /* IstambulInOneDay26.mp3 */; };
+		CE8DDB6C285BE7A000FFD28A /* Beyoglu1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB4D285BE79E00FFD28A /* Beyoglu1.mp3 */; };
+		CE8DDB6D285BE7A000FFD28A /* Beyoglu13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB4E285BE79E00FFD28A /* Beyoglu13.mp3 */; };
+		CE8DDB6E285BE7A000FFD28A /* Beyoglu19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB4F285BE79E00FFD28A /* Beyoglu19.mp3 */; };
+		CE8DDB6F285BE7A000FFD28A /* Beyoglu4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB50285BE79E00FFD28A /* Beyoglu4.mp3 */; };
+		CE8DDB70285BE7A000FFD28A /* Beyoglu29.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB51285BE79E00FFD28A /* Beyoglu29.mp3 */; };
+		CE8DDB71285BE7A000FFD28A /* Beyoglu8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB52285BE79E00FFD28A /* Beyoglu8.mp3 */; };
+		CE8DDB72285BE7A000FFD28A /* Beyoglu2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB53285BE79E00FFD28A /* Beyoglu2.mp3 */; };
+		CE8DDB73285BE7A000FFD28A /* Beyoglu14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB54285BE79E00FFD28A /* Beyoglu14.mp3 */; };
+		CE8DDB74285BE7A000FFD28A /* Beyoglu17.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB55285BE79E00FFD28A /* Beyoglu17.mp3 */; };
+		CE8DDB75285BE7A000FFD28A /* Beyoglu18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB56285BE79E00FFD28A /* Beyoglu18.mp3 */; };
+		CE8DDB76285BE7A000FFD28A /* Beyoglu11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB57285BE79E00FFD28A /* Beyoglu11.mp3 */; };
+		CE8DDB77285BE7A000FFD28A /* Beyoglu15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB58285BE79E00FFD28A /* Beyoglu15.mp3 */; };
+		CE8DDB78285BE7A000FFD28A /* Beyoglu26.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB59285BE79E00FFD28A /* Beyoglu26.mp3 */; };
+		CE8DDB79285BE7A000FFD28A /* Beyoglu12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB5A285BE79F00FFD28A /* Beyoglu12.mp3 */; };
+		CE8DDB7A285BE7A000FFD28A /* Beyoglu27.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB5B285BE79F00FFD28A /* Beyoglu27.mp3 */; };
+		CE8DDB7B285BE7A000FFD28A /* Beyoglu16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB5C285BE79F00FFD28A /* Beyoglu16.mp3 */; };
+		CE8DDB7C285BE7A000FFD28A /* Beyoglu20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB5D285BE79F00FFD28A /* Beyoglu20.mp3 */; };
+		CE8DDB7D285BE7A000FFD28A /* Beyoglu23.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB5E285BE79F00FFD28A /* Beyoglu23.mp3 */; };
+		CE8DDB7E285BE7A000FFD28A /* Beyoglu22.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB5F285BE79F00FFD28A /* Beyoglu22.mp3 */; };
+		CE8DDB7F285BE7A000FFD28A /* Beyoglu10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB60285BE79F00FFD28A /* Beyoglu10.mp3 */; };
+		CE8DDB80285BE7A000FFD28A /* Beyoglu3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB61285BE79F00FFD28A /* Beyoglu3.mp3 */; };
+		CE8DDB81285BE7A000FFD28A /* Beyoglu30.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB62285BE79F00FFD28A /* Beyoglu30.mp3 */; };
+		CE8DDB82285BE7A000FFD28A /* Beyoglu25.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB63285BE79F00FFD28A /* Beyoglu25.mp3 */; };
+		CE8DDB83285BE7A000FFD28A /* Beyoglu5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB64285BE79F00FFD28A /* Beyoglu5.mp3 */; };
+		CE8DDB84285BE7A000FFD28A /* Beyoglu0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB65285BE79F00FFD28A /* Beyoglu0.mp3 */; };
+		CE8DDB85285BE7A000FFD28A /* Beyoglu6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB66285BE7A000FFD28A /* Beyoglu6.mp3 */; };
+		CE8DDB86285BE7A000FFD28A /* Beyoglu28.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB67285BE7A000FFD28A /* Beyoglu28.mp3 */; };
+		CE8DDB87285BE7A000FFD28A /* Beyoglu24.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB68285BE7A000FFD28A /* Beyoglu24.mp3 */; };
+		CE8DDB88285BE7A000FFD28A /* Beyoglu7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB69285BE7A000FFD28A /* Beyoglu7.mp3 */; };
+		CE8DDB89285BE7A000FFD28A /* Beyoglu21.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB6A285BE7A000FFD28A /* Beyoglu21.mp3 */; };
+		CE8DDB8A285BE7A000FFD28A /* Beyoglu9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB6B285BE7A000FFD28A /* Beyoglu9.mp3 */; };
+		CE8DDBB0285BE7E600FFD28A /* NontouristicIstanbul33.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB8B285BE7E300FFD28A /* NontouristicIstanbul33.mp3 */; };
+		CE8DDBB1285BE7E600FFD28A /* NontouristicIstanbul10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB8C285BE7E300FFD28A /* NontouristicIstanbul10.mp3 */; };
+		CE8DDBB2285BE7E600FFD28A /* NontouristicIstanbul18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB8D285BE7E300FFD28A /* NontouristicIstanbul18.mp3 */; };
+		CE8DDBB3285BE7E600FFD28A /* NontouristicIstanbul12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB8E285BE7E300FFD28A /* NontouristicIstanbul12.mp3 */; };
+		CE8DDBB4285BE7E600FFD28A /* NontouristicIstanbul19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB8F285BE7E300FFD28A /* NontouristicIstanbul19.mp3 */; };
+		CE8DDBB5285BE7E600FFD28A /* NontouristicIstanbul28.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB90285BE7E300FFD28A /* NontouristicIstanbul28.mp3 */; };
+		CE8DDBB6285BE7E600FFD28A /* NontouristicIstanbul23.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB91285BE7E300FFD28A /* NontouristicIstanbul23.mp3 */; };
+		CE8DDBB7285BE7E600FFD28A /* NontouristicIstanbul32.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB92285BE7E300FFD28A /* NontouristicIstanbul32.mp3 */; };
+		CE8DDBB8285BE7E600FFD28A /* NontouristicIstanbul14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB93285BE7E300FFD28A /* NontouristicIstanbul14.mp3 */; };
+		CE8DDBB9285BE7E600FFD28A /* NontouristicIstanbul4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB94285BE7E400FFD28A /* NontouristicIstanbul4.mp3 */; };
+		CE8DDBBA285BE7E600FFD28A /* NontouristicIstanbul9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB95285BE7E400FFD28A /* NontouristicIstanbul9.mp3 */; };
+		CE8DDBBB285BE7E600FFD28A /* NontouristicIstanbul27.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB96285BE7E400FFD28A /* NontouristicIstanbul27.mp3 */; };
+		CE8DDBBC285BE7E600FFD28A /* NontouristicIstanbul31.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB97285BE7E400FFD28A /* NontouristicIstanbul31.mp3 */; };
+		CE8DDBBD285BE7E600FFD28A /* NontouristicIstanbul24.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB98285BE7E400FFD28A /* NontouristicIstanbul24.mp3 */; };
+		CE8DDBBE285BE7E600FFD28A /* NontouristicIstanbul5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB99285BE7E400FFD28A /* NontouristicIstanbul5.mp3 */; };
+		CE8DDBBF285BE7E600FFD28A /* NontouristicIstanbul15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB9A285BE7E400FFD28A /* NontouristicIstanbul15.mp3 */; };
+		CE8DDBC0285BE7E600FFD28A /* NontouristicIstanbul26.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB9B285BE7E400FFD28A /* NontouristicIstanbul26.mp3 */; };
+		CE8DDBC1285BE7E600FFD28A /* NontouristicIstanbul2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB9C285BE7E400FFD28A /* NontouristicIstanbul2.mp3 */; };
+		CE8DDBC2285BE7E600FFD28A /* NontouristicIstanbul1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB9D285BE7E400FFD28A /* NontouristicIstanbul1.mp3 */; };
+		CE8DDBC3285BE7E600FFD28A /* NontouristicIstanbul29.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB9E285BE7E400FFD28A /* NontouristicIstanbul29.mp3 */; };
+		CE8DDBC4285BE7E600FFD28A /* NontouristicIstanbul34.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDB9F285BE7E400FFD28A /* NontouristicIstanbul34.mp3 */; };
+		CE8DDBC5285BE7E600FFD28A /* NontouristicIstanbul36.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBA0285BE7E500FFD28A /* NontouristicIstanbul36.mp3 */; };
+		CE8DDBC6285BE7E600FFD28A /* NontouristicIstanbul13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBA1285BE7E500FFD28A /* NontouristicIstanbul13.mp3 */; };
+		CE8DDBC7285BE7E600FFD28A /* NontouristicIstanbul17.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBA2285BE7E500FFD28A /* NontouristicIstanbul17.mp3 */; };
+		CE8DDBC8285BE7E600FFD28A /* NontouristicIstanbul8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBA3285BE7E500FFD28A /* NontouristicIstanbul8.mp3 */; };
+		CE8DDBC9285BE7E600FFD28A /* NontouristicIstanbul0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBA4285BE7E500FFD28A /* NontouristicIstanbul0.mp3 */; };
+		CE8DDBCA285BE7E600FFD28A /* NontouristicIstanbul20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBA5285BE7E500FFD28A /* NontouristicIstanbul20.mp3 */; };
+		CE8DDBCB285BE7E600FFD28A /* NontouristicIstanbul30.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBA6285BE7E500FFD28A /* NontouristicIstanbul30.mp3 */; };
+		CE8DDBCC285BE7E600FFD28A /* NontouristicIstanbul16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBA7285BE7E500FFD28A /* NontouristicIstanbul16.mp3 */; };
+		CE8DDBCD285BE7E600FFD28A /* NontouristicIstanbul11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBA8285BE7E500FFD28A /* NontouristicIstanbul11.mp3 */; };
+		CE8DDBCE285BE7E600FFD28A /* NontouristicIstanbul35.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBA9285BE7E500FFD28A /* NontouristicIstanbul35.mp3 */; };
+		CE8DDBCF285BE7E600FFD28A /* NontouristicIstanbul21.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBAA285BE7E500FFD28A /* NontouristicIstanbul21.mp3 */; };
+		CE8DDBD0285BE7E600FFD28A /* NontouristicIstanbul25.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBAB285BE7E500FFD28A /* NontouristicIstanbul25.mp3 */; };
+		CE8DDBD1285BE7E600FFD28A /* NontouristicIstanbul7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBAC285BE7E500FFD28A /* NontouristicIstanbul7.mp3 */; };
+		CE8DDBD2285BE7E600FFD28A /* NontouristicIstanbul22.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBAD285BE7E500FFD28A /* NontouristicIstanbul22.mp3 */; };
+		CE8DDBD3285BE7E600FFD28A /* NontouristicIstanbul3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBAE285BE7E600FFD28A /* NontouristicIstanbul3.mp3 */; };
+		CE8DDBD4285BE7E600FFD28A /* NontouristicIstanbul6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE8DDBAF285BE7E600FFD28A /* NontouristicIstanbul6.mp3 */; };
 		CEE4AA7F283AF1BA000C1FF7 /* IstambulInOneDay0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEE4AA7E283AF1BA000C1FF7 /* IstambulInOneDay0.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +331,241 @@
 		CE8DD9EE28577B8B00FFD28A /* ExcursionsPlistLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionsPlistLoader.swift; sourceTree = "<group>"; };
 		CE8DD9F428578C0B00FFD28A /* IstambulInOneDay0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay0.txt; sourceTree = "<group>"; };
 		CE8DD9FD28578D2A00FFD28A /* NontouristicIstanbul0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NontouristicIstanbul0.txt; path = MobileAudioGuide/Resources/ExcursionsInfoData/NontouristicIstanbul/Texts/NontouristicIstanbul0.txt; sourceTree = SOURCE_ROOT; };
+		CE8DD9FF2857DD0B00FFD28A /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		CE8DDA01285BB19700FFD28A /* IstambulInOneDay11.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay11.txt; sourceTree = "<group>"; };
+		CE8DDA02285BB19700FFD28A /* IstambulInOneDay48.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay48.txt; sourceTree = "<group>"; };
+		CE8DDA03285BB19700FFD28A /* IstambulInOneDay49.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay49.txt; sourceTree = "<group>"; };
+		CE8DDA04285BB19800FFD28A /* IstambulInOneDay25.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay25.txt; sourceTree = "<group>"; };
+		CE8DDA05285BB19800FFD28A /* IstambulInOneDay21.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay21.txt; sourceTree = "<group>"; };
+		CE8DDA06285BB19800FFD28A /* IstambulInOneDay32.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay32.txt; sourceTree = "<group>"; };
+		CE8DDA07285BB19800FFD28A /* IstambulInOneDay22.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay22.txt; sourceTree = "<group>"; };
+		CE8DDA08285BB19800FFD28A /* IstambulInOneDay39.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay39.txt; sourceTree = "<group>"; };
+		CE8DDA09285BB19800FFD28A /* IstambulInOneDay46.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay46.txt; sourceTree = "<group>"; };
+		CE8DDA0A285BB19800FFD28A /* IstambulInOneDay47.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay47.txt; sourceTree = "<group>"; };
+		CE8DDA0B285BB19800FFD28A /* IstambulInOneDay31.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay31.txt; sourceTree = "<group>"; };
+		CE8DDA0C285BB19800FFD28A /* IstambulInOneDay4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay4.txt; sourceTree = "<group>"; };
+		CE8DDA0D285BB19800FFD28A /* IstambulInOneDay9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay9.txt; sourceTree = "<group>"; };
+		CE8DDA0E285BB19800FFD28A /* IstambulInOneDay27.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay27.txt; sourceTree = "<group>"; };
+		CE8DDA0F285BB19800FFD28A /* IstambulInOneDay34.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay34.txt; sourceTree = "<group>"; };
+		CE8DDA10285BB19800FFD28A /* IstambulInOneDay28.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay28.txt; sourceTree = "<group>"; };
+		CE8DDA11285BB19800FFD28A /* IstambulInOneDay41.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay41.txt; sourceTree = "<group>"; };
+		CE8DDA12285BB19800FFD28A /* IstambulInOneDay29.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay29.txt; sourceTree = "<group>"; };
+		CE8DDA13285BB19800FFD28A /* IstambulInOneDay43.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay43.txt; sourceTree = "<group>"; };
+		CE8DDA14285BB19800FFD28A /* IstambulInOneDay18.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay18.txt; sourceTree = "<group>"; };
+		CE8DDA15285BB19800FFD28A /* IstambulInOneDay40.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay40.txt; sourceTree = "<group>"; };
+		CE8DDA16285BB19800FFD28A /* IstambulInOneDay44.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay44.txt; sourceTree = "<group>"; };
+		CE8DDA17285BB19800FFD28A /* IstambulInOneDay2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay2.txt; sourceTree = "<group>"; };
+		CE8DDA18285BB19800FFD28A /* IstambulInOneDay3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay3.txt; sourceTree = "<group>"; };
+		CE8DDA19285BB19800FFD28A /* IstambulInOneDay13.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay13.txt; sourceTree = "<group>"; };
+		CE8DDA1A285BB19800FFD28A /* IstambulInOneDay24.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay24.txt; sourceTree = "<group>"; };
+		CE8DDA1B285BB19800FFD28A /* IstambulInOneDay1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay1.txt; sourceTree = "<group>"; };
+		CE8DDA1C285BB19800FFD28A /* IstambulInOneDay42.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay42.txt; sourceTree = "<group>"; };
+		CE8DDA1D285BB19800FFD28A /* IstambulInOneDay23.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay23.txt; sourceTree = "<group>"; };
+		CE8DDA1E285BB19800FFD28A /* IstambulInOneDay33.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay33.txt; sourceTree = "<group>"; };
+		CE8DDA1F285BB19800FFD28A /* IstambulInOneDay12.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay12.txt; sourceTree = "<group>"; };
+		CE8DDA20285BB19800FFD28A /* IstambulInOneDay20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay20.txt; sourceTree = "<group>"; };
+		CE8DDA21285BB19800FFD28A /* IstambulInOneDay6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay6.txt; sourceTree = "<group>"; };
+		CE8DDA22285BB19800FFD28A /* IstambulInOneDay45.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay45.txt; sourceTree = "<group>"; };
+		CE8DDA23285BB19800FFD28A /* IstambulInOneDay17.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay17.txt; sourceTree = "<group>"; };
+		CE8DDA24285BB19800FFD28A /* IstambulInOneDay10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay10.txt; sourceTree = "<group>"; };
+		CE8DDA25285BB19800FFD28A /* IstambulInOneDay38.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay38.txt; sourceTree = "<group>"; };
+		CE8DDA26285BB19800FFD28A /* IstambulInOneDay35.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay35.txt; sourceTree = "<group>"; };
+		CE8DDA27285BB19900FFD28A /* IstambulInOneDay50.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay50.txt; sourceTree = "<group>"; };
+		CE8DDA28285BB19900FFD28A /* IstambulInOneDay14.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay14.txt; sourceTree = "<group>"; };
+		CE8DDA29285BB19900FFD28A /* IstambulInOneDay5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay5.txt; sourceTree = "<group>"; };
+		CE8DDA2A285BB19900FFD28A /* IstambulInOneDay7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay7.txt; sourceTree = "<group>"; };
+		CE8DDA2B285BB19900FFD28A /* IstambulInOneDay19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay19.txt; sourceTree = "<group>"; };
+		CE8DDA2C285BB19900FFD28A /* IstambulInOneDay26.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay26.txt; sourceTree = "<group>"; };
+		CE8DDA2D285BB19900FFD28A /* IstambulInOneDay36.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay36.txt; sourceTree = "<group>"; };
+		CE8DDA2E285BB19900FFD28A /* IstambulInOneDay37.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay37.txt; sourceTree = "<group>"; };
+		CE8DDA2F285BB19900FFD28A /* IstambulInOneDay8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay8.txt; sourceTree = "<group>"; };
+		CE8DDA30285BB19900FFD28A /* IstambulInOneDay16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay16.txt; sourceTree = "<group>"; };
+		CE8DDA31285BB19900FFD28A /* IstambulInOneDay15.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay15.txt; sourceTree = "<group>"; };
+		CE8DDA32285BB19900FFD28A /* IstambulInOneDay30.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay30.txt; sourceTree = "<group>"; };
+		CE8DDA65285BC12300FFD28A /* NontouristicIstanbul21.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul21.txt; sourceTree = "<group>"; };
+		CE8DDA66285BC12300FFD28A /* NontouristicIstanbul12.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul12.txt; sourceTree = "<group>"; };
+		CE8DDA67285BC12300FFD28A /* NontouristicIstanbul2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul2.txt; sourceTree = "<group>"; };
+		CE8DDA68285BC12300FFD28A /* NontouristicIstanbul15.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul15.txt; sourceTree = "<group>"; };
+		CE8DDA69285BC12300FFD28A /* NontouristicIstanbul13.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul13.txt; sourceTree = "<group>"; };
+		CE8DDA6A285BC12300FFD28A /* NontouristicIstanbul4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul4.txt; sourceTree = "<group>"; };
+		CE8DDA6B285BC12300FFD28A /* NontouristicIstanbul24.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul24.txt; sourceTree = "<group>"; };
+		CE8DDA6C285BC12300FFD28A /* NontouristicIstanbul23.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul23.txt; sourceTree = "<group>"; };
+		CE8DDA6D285BC12300FFD28A /* NontouristicIstanbul1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul1.txt; sourceTree = "<group>"; };
+		CE8DDA6E285BC12300FFD28A /* NontouristicIstanbul32.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul32.txt; sourceTree = "<group>"; };
+		CE8DDA6F285BC12300FFD28A /* NontouristicIstanbul31.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul31.txt; sourceTree = "<group>"; };
+		CE8DDA70285BC12300FFD28A /* NontouristicIstanbul35.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul35.txt; sourceTree = "<group>"; };
+		CE8DDA71285BC12300FFD28A /* NontouristicIstanbul10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul10.txt; sourceTree = "<group>"; };
+		CE8DDA72285BC12300FFD28A /* NontouristicIstanbul25.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul25.txt; sourceTree = "<group>"; };
+		CE8DDA73285BC12300FFD28A /* NontouristicIstanbul14.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul14.txt; sourceTree = "<group>"; };
+		CE8DDA74285BC12300FFD28A /* NontouristicIstanbul9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul9.txt; sourceTree = "<group>"; };
+		CE8DDA75285BC12300FFD28A /* NontouristicIstanbul17.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul17.txt; sourceTree = "<group>"; };
+		CE8DDA76285BC12300FFD28A /* NontouristicIstanbul18.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul18.txt; sourceTree = "<group>"; };
+		CE8DDA77285BC12300FFD28A /* NontouristicIstanbul30.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul30.txt; sourceTree = "<group>"; };
+		CE8DDA78285BC12300FFD28A /* NontouristicIstanbul16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul16.txt; sourceTree = "<group>"; };
+		CE8DDA79285BC12300FFD28A /* NontouristicIstanbul36.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul36.txt; sourceTree = "<group>"; };
+		CE8DDA7A285BC12300FFD28A /* NontouristicIstanbul6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul6.txt; sourceTree = "<group>"; };
+		CE8DDA7B285BC12300FFD28A /* NontouristicIstanbul29.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul29.txt; sourceTree = "<group>"; };
+		CE8DDA7C285BC12300FFD28A /* NontouristicIstanbul3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul3.txt; sourceTree = "<group>"; };
+		CE8DDA7D285BC12300FFD28A /* NontouristicIstanbul26.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul26.txt; sourceTree = "<group>"; };
+		CE8DDA7E285BC12300FFD28A /* NontouristicIstanbul28.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul28.txt; sourceTree = "<group>"; };
+		CE8DDA7F285BC12300FFD28A /* NontouristicIstanbul22.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul22.txt; sourceTree = "<group>"; };
+		CE8DDA80285BC12300FFD28A /* NontouristicIstanbul20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul20.txt; sourceTree = "<group>"; };
+		CE8DDA81285BC12300FFD28A /* NontouristicIstanbul33.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul33.txt; sourceTree = "<group>"; };
+		CE8DDA82285BC12400FFD28A /* NontouristicIstanbul11.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul11.txt; sourceTree = "<group>"; };
+		CE8DDA83285BC12400FFD28A /* NontouristicIstanbul5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul5.txt; sourceTree = "<group>"; };
+		CE8DDA84285BC12400FFD28A /* NontouristicIstanbul7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul7.txt; sourceTree = "<group>"; };
+		CE8DDA85285BC12400FFD28A /* NontouristicIstanbul34.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul34.txt; sourceTree = "<group>"; };
+		CE8DDA86285BC12400FFD28A /* NontouristicIstanbul27.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul27.txt; sourceTree = "<group>"; };
+		CE8DDA87285BC12400FFD28A /* NontouristicIstanbul19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul19.txt; sourceTree = "<group>"; };
+		CE8DDA88285BC12400FFD28A /* NontouristicIstanbul8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul8.txt; sourceTree = "<group>"; };
+		CE8DDAAD285BC17200FFD28A /* Beyoglu29.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu29.txt; sourceTree = "<group>"; };
+		CE8DDAAE285BC17200FFD28A /* Beyoglu5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu5.txt; sourceTree = "<group>"; };
+		CE8DDAAF285BC17200FFD28A /* Beyoglu25.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu25.txt; sourceTree = "<group>"; };
+		CE8DDAB0285BC17200FFD28A /* Beyoglu24.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu24.txt; sourceTree = "<group>"; };
+		CE8DDAB1285BC17200FFD28A /* Beyoglu18.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu18.txt; sourceTree = "<group>"; };
+		CE8DDAB2285BC17200FFD28A /* Beyoglu11.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu11.txt; sourceTree = "<group>"; };
+		CE8DDAB3285BC17200FFD28A /* Beyoglu26.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu26.txt; sourceTree = "<group>"; };
+		CE8DDAB4285BC17200FFD28A /* Beyoglu7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu7.txt; sourceTree = "<group>"; };
+		CE8DDAB5285BC17200FFD28A /* Beyoglu22.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu22.txt; sourceTree = "<group>"; };
+		CE8DDAB6285BC17300FFD28A /* Beyoglu14.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu14.txt; sourceTree = "<group>"; };
+		CE8DDAB7285BC17300FFD28A /* Beyoglu17.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu17.txt; sourceTree = "<group>"; };
+		CE8DDAB8285BC17300FFD28A /* Beyoglu30.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu30.txt; sourceTree = "<group>"; };
+		CE8DDAB9285BC17300FFD28A /* Beyoglu20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu20.txt; sourceTree = "<group>"; };
+		CE8DDABA285BC17300FFD28A /* Beyoglu23.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu23.txt; sourceTree = "<group>"; };
+		CE8DDABB285BC17300FFD28A /* Beyoglu6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu6.txt; sourceTree = "<group>"; };
+		CE8DDABC285BC17300FFD28A /* Beyoglu15.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu15.txt; sourceTree = "<group>"; };
+		CE8DDABD285BC17300FFD28A /* Beyoglu9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu9.txt; sourceTree = "<group>"; };
+		CE8DDABE285BC17300FFD28A /* Beyoglu21.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu21.txt; sourceTree = "<group>"; };
+		CE8DDABF285BC17300FFD28A /* Beyoglu3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu3.txt; sourceTree = "<group>"; };
+		CE8DDAC0285BC17300FFD28A /* Beyoglu28.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu28.txt; sourceTree = "<group>"; };
+		CE8DDAC1285BC17300FFD28A /* Beyoglu12.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu12.txt; sourceTree = "<group>"; };
+		CE8DDAC2285BC17300FFD28A /* Beyoglu27.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu27.txt; sourceTree = "<group>"; };
+		CE8DDAC3285BC17300FFD28A /* Beyoglu4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu4.txt; sourceTree = "<group>"; };
+		CE8DDAC4285BC17300FFD28A /* Beyoglu8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu8.txt; sourceTree = "<group>"; };
+		CE8DDAC5285BC17300FFD28A /* Beyoglu2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu2.txt; sourceTree = "<group>"; };
+		CE8DDAC6285BC17300FFD28A /* Beyoglu19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu19.txt; sourceTree = "<group>"; };
+		CE8DDAC7285BC17300FFD28A /* Beyoglu16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu16.txt; sourceTree = "<group>"; };
+		CE8DDAC8285BC17300FFD28A /* Beyoglu1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu1.txt; sourceTree = "<group>"; };
+		CE8DDAC9285BC17300FFD28A /* Beyoglu10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu10.txt; sourceTree = "<group>"; };
+		CE8DDACA285BC17300FFD28A /* Beyoglu13.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu13.txt; sourceTree = "<group>"; };
+		CE8DDAE9285BC38100FFD28A /* IstambulInOneDay3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay3.mp3; sourceTree = "<group>"; };
+		CE8DDAEA285BC38100FFD28A /* IstambulInOneDay32.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay32.mp3; sourceTree = "<group>"; };
+		CE8DDAEB285BC38100FFD28A /* IstambulInOneDay8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay8.mp3; sourceTree = "<group>"; };
+		CE8DDAEC285BC38100FFD28A /* IstambulInOneDay16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay16.mp3; sourceTree = "<group>"; };
+		CE8DDAED285BC38100FFD28A /* IstambulInOneDay1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay1.mp3; sourceTree = "<group>"; };
+		CE8DDAEE285BC38200FFD28A /* IstambulInOneDay36.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay36.mp3; sourceTree = "<group>"; };
+		CE8DDAEF285BC38200FFD28A /* IstambulInOneDay22.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay22.mp3; sourceTree = "<group>"; };
+		CE8DDAF0285BC38200FFD28A /* IstambulInOneDay41.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay41.mp3; sourceTree = "<group>"; };
+		CE8DDAF1285BC38200FFD28A /* IstambulInOneDay9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay9.mp3; sourceTree = "<group>"; };
+		CE8DDAF2285BC38200FFD28A /* IstambulInOneDay40.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay40.mp3; sourceTree = "<group>"; };
+		CE8DDAF3285BC38200FFD28A /* IstambulInOneDay25.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay25.mp3; sourceTree = "<group>"; };
+		CE8DDAF4285BC38200FFD28A /* IstambulInOneDay11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay11.mp3; sourceTree = "<group>"; };
+		CE8DDAF5285BC38200FFD28A /* IstambulInOneDay46.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay46.mp3; sourceTree = "<group>"; };
+		CE8DDAF6285BC38200FFD28A /* IstambulInOneDay13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay13.mp3; sourceTree = "<group>"; };
+		CE8DDAF7285BC38200FFD28A /* IstambulInOneDay15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay15.mp3; sourceTree = "<group>"; };
+		CE8DDAF8285BC38200FFD28A /* IstambulInOneDay38.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay38.mp3; sourceTree = "<group>"; };
+		CE8DDAF9285BC38200FFD28A /* IstambulInOneDay43.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay43.mp3; sourceTree = "<group>"; };
+		CE8DDAFA285BC38200FFD28A /* IstambulInOneDay44.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay44.mp3; sourceTree = "<group>"; };
+		CE8DDAFB285BC38200FFD28A /* IstambulInOneDay42.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay42.mp3; sourceTree = "<group>"; };
+		CE8DDAFC285BC38300FFD28A /* IstambulInOneDay14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay14.mp3; sourceTree = "<group>"; };
+		CE8DDAFD285BC38300FFD28A /* IstambulInOneDay33.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay33.mp3; sourceTree = "<group>"; };
+		CE8DDAFE285BC38300FFD28A /* IstambulInOneDay10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay10.mp3; sourceTree = "<group>"; };
+		CE8DDAFF285BC38300FFD28A /* IstambulInOneDay39.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay39.mp3; sourceTree = "<group>"; };
+		CE8DDB00285BC38300FFD28A /* IstambulInOneDay2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay2.mp3; sourceTree = "<group>"; };
+		CE8DDB01285BC38300FFD28A /* IstambulInOneDay4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay4.mp3; sourceTree = "<group>"; };
+		CE8DDB02285BC38300FFD28A /* IstambulInOneDay20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay20.mp3; sourceTree = "<group>"; };
+		CE8DDB03285BC38300FFD28A /* IstambulInOneDay21.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay21.mp3; sourceTree = "<group>"; };
+		CE8DDB04285BC38300FFD28A /* IstambulInOneDay47.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay47.mp3; sourceTree = "<group>"; };
+		CE8DDB05285BC38300FFD28A /* IstambulInOneDay12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay12.mp3; sourceTree = "<group>"; };
+		CE8DDB06285BC38300FFD28A /* IstambulInOneDay29.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay29.mp3; sourceTree = "<group>"; };
+		CE8DDB07285BC38300FFD28A /* IstambulInOneDay45.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay45.mp3; sourceTree = "<group>"; };
+		CE8DDB08285BC38300FFD28A /* IstambulInOneDay48.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay48.mp3; sourceTree = "<group>"; };
+		CE8DDB09285BC38300FFD28A /* IstambulInOneDay30.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay30.mp3; sourceTree = "<group>"; };
+		CE8DDB0A285BC38400FFD28A /* IstambulInOneDay23.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay23.mp3; sourceTree = "<group>"; };
+		CE8DDB0B285BC38400FFD28A /* IstambulInOneDay34.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay34.mp3; sourceTree = "<group>"; };
+		CE8DDB0C285BC38400FFD28A /* IstambulInOneDay37.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay37.mp3; sourceTree = "<group>"; };
+		CE8DDB0D285BC38400FFD28A /* IstambulInOneDay18.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay18.mp3; sourceTree = "<group>"; };
+		CE8DDB0E285BC38400FFD28A /* IstambulInOneDay49.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay49.mp3; sourceTree = "<group>"; };
+		CE8DDB0F285BC38400FFD28A /* IstambulInOneDay50.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay50.mp3; sourceTree = "<group>"; };
+		CE8DDB10285BC38400FFD28A /* IstambulInOneDay28.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay28.mp3; sourceTree = "<group>"; };
+		CE8DDB11285BC38400FFD28A /* IstambulInOneDay31.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay31.mp3; sourceTree = "<group>"; };
+		CE8DDB12285BC38400FFD28A /* IstambulInOneDay7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay7.mp3; sourceTree = "<group>"; };
+		CE8DDB13285BC38400FFD28A /* IstambulInOneDay6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay6.mp3; sourceTree = "<group>"; };
+		CE8DDB14285BC38400FFD28A /* IstambulInOneDay17.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay17.mp3; sourceTree = "<group>"; };
+		CE8DDB15285BC38400FFD28A /* IstambulInOneDay27.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay27.mp3; sourceTree = "<group>"; };
+		CE8DDB16285BC38400FFD28A /* IstambulInOneDay24.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay24.mp3; sourceTree = "<group>"; };
+		CE8DDB17285BC38400FFD28A /* IstambulInOneDay5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay5.mp3; sourceTree = "<group>"; };
+		CE8DDB18285BC38500FFD28A /* IstambulInOneDay35.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay35.mp3; sourceTree = "<group>"; };
+		CE8DDB19285BC38500FFD28A /* IstambulInOneDay19.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay19.mp3; sourceTree = "<group>"; };
+		CE8DDB1A285BC38500FFD28A /* IstambulInOneDay26.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay26.mp3; sourceTree = "<group>"; };
+		CE8DDB4D285BE79E00FFD28A /* Beyoglu1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu1.mp3; sourceTree = "<group>"; };
+		CE8DDB4E285BE79E00FFD28A /* Beyoglu13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu13.mp3; sourceTree = "<group>"; };
+		CE8DDB4F285BE79E00FFD28A /* Beyoglu19.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu19.mp3; sourceTree = "<group>"; };
+		CE8DDB50285BE79E00FFD28A /* Beyoglu4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu4.mp3; sourceTree = "<group>"; };
+		CE8DDB51285BE79E00FFD28A /* Beyoglu29.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu29.mp3; sourceTree = "<group>"; };
+		CE8DDB52285BE79E00FFD28A /* Beyoglu8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu8.mp3; sourceTree = "<group>"; };
+		CE8DDB53285BE79E00FFD28A /* Beyoglu2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu2.mp3; sourceTree = "<group>"; };
+		CE8DDB54285BE79E00FFD28A /* Beyoglu14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu14.mp3; sourceTree = "<group>"; };
+		CE8DDB55285BE79E00FFD28A /* Beyoglu17.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu17.mp3; sourceTree = "<group>"; };
+		CE8DDB56285BE79E00FFD28A /* Beyoglu18.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu18.mp3; sourceTree = "<group>"; };
+		CE8DDB57285BE79E00FFD28A /* Beyoglu11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu11.mp3; sourceTree = "<group>"; };
+		CE8DDB58285BE79E00FFD28A /* Beyoglu15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu15.mp3; sourceTree = "<group>"; };
+		CE8DDB59285BE79E00FFD28A /* Beyoglu26.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu26.mp3; sourceTree = "<group>"; };
+		CE8DDB5A285BE79F00FFD28A /* Beyoglu12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu12.mp3; sourceTree = "<group>"; };
+		CE8DDB5B285BE79F00FFD28A /* Beyoglu27.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu27.mp3; sourceTree = "<group>"; };
+		CE8DDB5C285BE79F00FFD28A /* Beyoglu16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu16.mp3; sourceTree = "<group>"; };
+		CE8DDB5D285BE79F00FFD28A /* Beyoglu20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu20.mp3; sourceTree = "<group>"; };
+		CE8DDB5E285BE79F00FFD28A /* Beyoglu23.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu23.mp3; sourceTree = "<group>"; };
+		CE8DDB5F285BE79F00FFD28A /* Beyoglu22.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu22.mp3; sourceTree = "<group>"; };
+		CE8DDB60285BE79F00FFD28A /* Beyoglu10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu10.mp3; sourceTree = "<group>"; };
+		CE8DDB61285BE79F00FFD28A /* Beyoglu3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu3.mp3; sourceTree = "<group>"; };
+		CE8DDB62285BE79F00FFD28A /* Beyoglu30.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu30.mp3; sourceTree = "<group>"; };
+		CE8DDB63285BE79F00FFD28A /* Beyoglu25.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu25.mp3; sourceTree = "<group>"; };
+		CE8DDB64285BE79F00FFD28A /* Beyoglu5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu5.mp3; sourceTree = "<group>"; };
+		CE8DDB65285BE79F00FFD28A /* Beyoglu0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu0.mp3; sourceTree = "<group>"; };
+		CE8DDB66285BE7A000FFD28A /* Beyoglu6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu6.mp3; sourceTree = "<group>"; };
+		CE8DDB67285BE7A000FFD28A /* Beyoglu28.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu28.mp3; sourceTree = "<group>"; };
+		CE8DDB68285BE7A000FFD28A /* Beyoglu24.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu24.mp3; sourceTree = "<group>"; };
+		CE8DDB69285BE7A000FFD28A /* Beyoglu7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu7.mp3; sourceTree = "<group>"; };
+		CE8DDB6A285BE7A000FFD28A /* Beyoglu21.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu21.mp3; sourceTree = "<group>"; };
+		CE8DDB6B285BE7A000FFD28A /* Beyoglu9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beyoglu9.mp3; sourceTree = "<group>"; };
+		CE8DDB8B285BE7E300FFD28A /* NontouristicIstanbul33.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul33.mp3; sourceTree = "<group>"; };
+		CE8DDB8C285BE7E300FFD28A /* NontouristicIstanbul10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul10.mp3; sourceTree = "<group>"; };
+		CE8DDB8D285BE7E300FFD28A /* NontouristicIstanbul18.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul18.mp3; sourceTree = "<group>"; };
+		CE8DDB8E285BE7E300FFD28A /* NontouristicIstanbul12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul12.mp3; sourceTree = "<group>"; };
+		CE8DDB8F285BE7E300FFD28A /* NontouristicIstanbul19.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul19.mp3; sourceTree = "<group>"; };
+		CE8DDB90285BE7E300FFD28A /* NontouristicIstanbul28.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul28.mp3; sourceTree = "<group>"; };
+		CE8DDB91285BE7E300FFD28A /* NontouristicIstanbul23.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul23.mp3; sourceTree = "<group>"; };
+		CE8DDB92285BE7E300FFD28A /* NontouristicIstanbul32.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul32.mp3; sourceTree = "<group>"; };
+		CE8DDB93285BE7E300FFD28A /* NontouristicIstanbul14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul14.mp3; sourceTree = "<group>"; };
+		CE8DDB94285BE7E400FFD28A /* NontouristicIstanbul4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul4.mp3; sourceTree = "<group>"; };
+		CE8DDB95285BE7E400FFD28A /* NontouristicIstanbul9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul9.mp3; sourceTree = "<group>"; };
+		CE8DDB96285BE7E400FFD28A /* NontouristicIstanbul27.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul27.mp3; sourceTree = "<group>"; };
+		CE8DDB97285BE7E400FFD28A /* NontouristicIstanbul31.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul31.mp3; sourceTree = "<group>"; };
+		CE8DDB98285BE7E400FFD28A /* NontouristicIstanbul24.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul24.mp3; sourceTree = "<group>"; };
+		CE8DDB99285BE7E400FFD28A /* NontouristicIstanbul5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul5.mp3; sourceTree = "<group>"; };
+		CE8DDB9A285BE7E400FFD28A /* NontouristicIstanbul15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul15.mp3; sourceTree = "<group>"; };
+		CE8DDB9B285BE7E400FFD28A /* NontouristicIstanbul26.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul26.mp3; sourceTree = "<group>"; };
+		CE8DDB9C285BE7E400FFD28A /* NontouristicIstanbul2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul2.mp3; sourceTree = "<group>"; };
+		CE8DDB9D285BE7E400FFD28A /* NontouristicIstanbul1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul1.mp3; sourceTree = "<group>"; };
+		CE8DDB9E285BE7E400FFD28A /* NontouristicIstanbul29.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul29.mp3; sourceTree = "<group>"; };
+		CE8DDB9F285BE7E400FFD28A /* NontouristicIstanbul34.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul34.mp3; sourceTree = "<group>"; };
+		CE8DDBA0285BE7E500FFD28A /* NontouristicIstanbul36.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul36.mp3; sourceTree = "<group>"; };
+		CE8DDBA1285BE7E500FFD28A /* NontouristicIstanbul13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul13.mp3; sourceTree = "<group>"; };
+		CE8DDBA2285BE7E500FFD28A /* NontouristicIstanbul17.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul17.mp3; sourceTree = "<group>"; };
+		CE8DDBA3285BE7E500FFD28A /* NontouristicIstanbul8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul8.mp3; sourceTree = "<group>"; };
+		CE8DDBA4285BE7E500FFD28A /* NontouristicIstanbul0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul0.mp3; sourceTree = "<group>"; };
+		CE8DDBA5285BE7E500FFD28A /* NontouristicIstanbul20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul20.mp3; sourceTree = "<group>"; };
+		CE8DDBA6285BE7E500FFD28A /* NontouristicIstanbul30.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul30.mp3; sourceTree = "<group>"; };
+		CE8DDBA7285BE7E500FFD28A /* NontouristicIstanbul16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul16.mp3; sourceTree = "<group>"; };
+		CE8DDBA8285BE7E500FFD28A /* NontouristicIstanbul11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul11.mp3; sourceTree = "<group>"; };
+		CE8DDBA9285BE7E500FFD28A /* NontouristicIstanbul35.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul35.mp3; sourceTree = "<group>"; };
+		CE8DDBAA285BE7E500FFD28A /* NontouristicIstanbul21.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul21.mp3; sourceTree = "<group>"; };
+		CE8DDBAB285BE7E500FFD28A /* NontouristicIstanbul25.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul25.mp3; sourceTree = "<group>"; };
+		CE8DDBAC285BE7E500FFD28A /* NontouristicIstanbul7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul7.mp3; sourceTree = "<group>"; };
+		CE8DDBAD285BE7E500FFD28A /* NontouristicIstanbul22.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul22.mp3; sourceTree = "<group>"; };
+		CE8DDBAE285BE7E600FFD28A /* NontouristicIstanbul3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul3.mp3; sourceTree = "<group>"; };
+		CE8DDBAF285BE7E600FFD28A /* NontouristicIstanbul6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NontouristicIstanbul6.mp3; sourceTree = "<group>"; };
 		CEE4AA7E283AF1BA000C1FF7 /* IstambulInOneDay0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IstambulInOneDay0.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +670,7 @@
 				CE200B3B2833CA010043F57A /* TextLoader.swift */,
 				CE4151402835098900CF9D53 /* GuideFeatureViewBuilder.swift */,
 				CE8DD9EE28577B8B00FFD28A /* ExcursionsPlistLoader.swift */,
+				CE8DD9FF2857DD0B00FFD28A /* AudioPlayer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -292,6 +763,56 @@
 			isa = PBXGroup;
 			children = (
 				CE8DD9F428578C0B00FFD28A /* IstambulInOneDay0.txt */,
+				CE8DDA1B285BB19800FFD28A /* IstambulInOneDay1.txt */,
+				CE8DDA17285BB19800FFD28A /* IstambulInOneDay2.txt */,
+				CE8DDA18285BB19800FFD28A /* IstambulInOneDay3.txt */,
+				CE8DDA0C285BB19800FFD28A /* IstambulInOneDay4.txt */,
+				CE8DDA29285BB19900FFD28A /* IstambulInOneDay5.txt */,
+				CE8DDA21285BB19800FFD28A /* IstambulInOneDay6.txt */,
+				CE8DDA2A285BB19900FFD28A /* IstambulInOneDay7.txt */,
+				CE8DDA2F285BB19900FFD28A /* IstambulInOneDay8.txt */,
+				CE8DDA0D285BB19800FFD28A /* IstambulInOneDay9.txt */,
+				CE8DDA24285BB19800FFD28A /* IstambulInOneDay10.txt */,
+				CE8DDA01285BB19700FFD28A /* IstambulInOneDay11.txt */,
+				CE8DDA1F285BB19800FFD28A /* IstambulInOneDay12.txt */,
+				CE8DDA19285BB19800FFD28A /* IstambulInOneDay13.txt */,
+				CE8DDA28285BB19900FFD28A /* IstambulInOneDay14.txt */,
+				CE8DDA31285BB19900FFD28A /* IstambulInOneDay15.txt */,
+				CE8DDA30285BB19900FFD28A /* IstambulInOneDay16.txt */,
+				CE8DDA23285BB19800FFD28A /* IstambulInOneDay17.txt */,
+				CE8DDA14285BB19800FFD28A /* IstambulInOneDay18.txt */,
+				CE8DDA2B285BB19900FFD28A /* IstambulInOneDay19.txt */,
+				CE8DDA20285BB19800FFD28A /* IstambulInOneDay20.txt */,
+				CE8DDA05285BB19800FFD28A /* IstambulInOneDay21.txt */,
+				CE8DDA07285BB19800FFD28A /* IstambulInOneDay22.txt */,
+				CE8DDA1D285BB19800FFD28A /* IstambulInOneDay23.txt */,
+				CE8DDA1A285BB19800FFD28A /* IstambulInOneDay24.txt */,
+				CE8DDA04285BB19800FFD28A /* IstambulInOneDay25.txt */,
+				CE8DDA2C285BB19900FFD28A /* IstambulInOneDay26.txt */,
+				CE8DDA0E285BB19800FFD28A /* IstambulInOneDay27.txt */,
+				CE8DDA10285BB19800FFD28A /* IstambulInOneDay28.txt */,
+				CE8DDA12285BB19800FFD28A /* IstambulInOneDay29.txt */,
+				CE8DDA32285BB19900FFD28A /* IstambulInOneDay30.txt */,
+				CE8DDA0B285BB19800FFD28A /* IstambulInOneDay31.txt */,
+				CE8DDA06285BB19800FFD28A /* IstambulInOneDay32.txt */,
+				CE8DDA1E285BB19800FFD28A /* IstambulInOneDay33.txt */,
+				CE8DDA0F285BB19800FFD28A /* IstambulInOneDay34.txt */,
+				CE8DDA26285BB19800FFD28A /* IstambulInOneDay35.txt */,
+				CE8DDA2D285BB19900FFD28A /* IstambulInOneDay36.txt */,
+				CE8DDA2E285BB19900FFD28A /* IstambulInOneDay37.txt */,
+				CE8DDA25285BB19800FFD28A /* IstambulInOneDay38.txt */,
+				CE8DDA08285BB19800FFD28A /* IstambulInOneDay39.txt */,
+				CE8DDA15285BB19800FFD28A /* IstambulInOneDay40.txt */,
+				CE8DDA11285BB19800FFD28A /* IstambulInOneDay41.txt */,
+				CE8DDA1C285BB19800FFD28A /* IstambulInOneDay42.txt */,
+				CE8DDA13285BB19800FFD28A /* IstambulInOneDay43.txt */,
+				CE8DDA16285BB19800FFD28A /* IstambulInOneDay44.txt */,
+				CE8DDA22285BB19800FFD28A /* IstambulInOneDay45.txt */,
+				CE8DDA09285BB19800FFD28A /* IstambulInOneDay46.txt */,
+				CE8DDA0A285BB19800FFD28A /* IstambulInOneDay47.txt */,
+				CE8DDA02285BB19700FFD28A /* IstambulInOneDay48.txt */,
+				CE8DDA03285BB19700FFD28A /* IstambulInOneDay49.txt */,
+				CE8DDA27285BB19900FFD28A /* IstambulInOneDay50.txt */,
 			);
 			path = Texts;
 			sourceTree = "<group>";
@@ -300,6 +821,56 @@
 			isa = PBXGroup;
 			children = (
 				CEE4AA7E283AF1BA000C1FF7 /* IstambulInOneDay0.mp3 */,
+				CE8DDAED285BC38100FFD28A /* IstambulInOneDay1.mp3 */,
+				CE8DDB00285BC38300FFD28A /* IstambulInOneDay2.mp3 */,
+				CE8DDAE9285BC38100FFD28A /* IstambulInOneDay3.mp3 */,
+				CE8DDB01285BC38300FFD28A /* IstambulInOneDay4.mp3 */,
+				CE8DDB17285BC38400FFD28A /* IstambulInOneDay5.mp3 */,
+				CE8DDB13285BC38400FFD28A /* IstambulInOneDay6.mp3 */,
+				CE8DDB12285BC38400FFD28A /* IstambulInOneDay7.mp3 */,
+				CE8DDAEB285BC38100FFD28A /* IstambulInOneDay8.mp3 */,
+				CE8DDAF1285BC38200FFD28A /* IstambulInOneDay9.mp3 */,
+				CE8DDAFE285BC38300FFD28A /* IstambulInOneDay10.mp3 */,
+				CE8DDAF4285BC38200FFD28A /* IstambulInOneDay11.mp3 */,
+				CE8DDB05285BC38300FFD28A /* IstambulInOneDay12.mp3 */,
+				CE8DDAF6285BC38200FFD28A /* IstambulInOneDay13.mp3 */,
+				CE8DDAFC285BC38300FFD28A /* IstambulInOneDay14.mp3 */,
+				CE8DDAF7285BC38200FFD28A /* IstambulInOneDay15.mp3 */,
+				CE8DDAEC285BC38100FFD28A /* IstambulInOneDay16.mp3 */,
+				CE8DDB14285BC38400FFD28A /* IstambulInOneDay17.mp3 */,
+				CE8DDB0D285BC38400FFD28A /* IstambulInOneDay18.mp3 */,
+				CE8DDB19285BC38500FFD28A /* IstambulInOneDay19.mp3 */,
+				CE8DDB02285BC38300FFD28A /* IstambulInOneDay20.mp3 */,
+				CE8DDB03285BC38300FFD28A /* IstambulInOneDay21.mp3 */,
+				CE8DDAEF285BC38200FFD28A /* IstambulInOneDay22.mp3 */,
+				CE8DDB0A285BC38400FFD28A /* IstambulInOneDay23.mp3 */,
+				CE8DDB16285BC38400FFD28A /* IstambulInOneDay24.mp3 */,
+				CE8DDAF3285BC38200FFD28A /* IstambulInOneDay25.mp3 */,
+				CE8DDB1A285BC38500FFD28A /* IstambulInOneDay26.mp3 */,
+				CE8DDB15285BC38400FFD28A /* IstambulInOneDay27.mp3 */,
+				CE8DDB10285BC38400FFD28A /* IstambulInOneDay28.mp3 */,
+				CE8DDB06285BC38300FFD28A /* IstambulInOneDay29.mp3 */,
+				CE8DDB09285BC38300FFD28A /* IstambulInOneDay30.mp3 */,
+				CE8DDB11285BC38400FFD28A /* IstambulInOneDay31.mp3 */,
+				CE8DDAEA285BC38100FFD28A /* IstambulInOneDay32.mp3 */,
+				CE8DDAFD285BC38300FFD28A /* IstambulInOneDay33.mp3 */,
+				CE8DDB0B285BC38400FFD28A /* IstambulInOneDay34.mp3 */,
+				CE8DDB18285BC38500FFD28A /* IstambulInOneDay35.mp3 */,
+				CE8DDAEE285BC38200FFD28A /* IstambulInOneDay36.mp3 */,
+				CE8DDB0C285BC38400FFD28A /* IstambulInOneDay37.mp3 */,
+				CE8DDAF8285BC38200FFD28A /* IstambulInOneDay38.mp3 */,
+				CE8DDAFF285BC38300FFD28A /* IstambulInOneDay39.mp3 */,
+				CE8DDAF2285BC38200FFD28A /* IstambulInOneDay40.mp3 */,
+				CE8DDAF0285BC38200FFD28A /* IstambulInOneDay41.mp3 */,
+				CE8DDAFB285BC38200FFD28A /* IstambulInOneDay42.mp3 */,
+				CE8DDAF9285BC38200FFD28A /* IstambulInOneDay43.mp3 */,
+				CE8DDAFA285BC38200FFD28A /* IstambulInOneDay44.mp3 */,
+				CE8DDB07285BC38300FFD28A /* IstambulInOneDay45.mp3 */,
+				CE8DDAF5285BC38200FFD28A /* IstambulInOneDay46.mp3 */,
+				CE8DDB04285BC38300FFD28A /* IstambulInOneDay47.mp3 */,
+				CE8DDB08285BC38300FFD28A /* IstambulInOneDay48.mp3 */,
+				CE8DDB0E285BC38400FFD28A /* IstambulInOneDay49.mp3 */,
+				CE8DDB0F285BC38400FFD28A /* IstambulInOneDay50.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -316,6 +887,37 @@
 		CE8DD9F728578C5600FFD28A /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				CE8DDB65285BE79F00FFD28A /* Beyoglu0.mp3 */,
+				CE8DDB4D285BE79E00FFD28A /* Beyoglu1.mp3 */,
+				CE8DDB53285BE79E00FFD28A /* Beyoglu2.mp3 */,
+				CE8DDB61285BE79F00FFD28A /* Beyoglu3.mp3 */,
+				CE8DDB50285BE79E00FFD28A /* Beyoglu4.mp3 */,
+				CE8DDB64285BE79F00FFD28A /* Beyoglu5.mp3 */,
+				CE8DDB66285BE7A000FFD28A /* Beyoglu6.mp3 */,
+				CE8DDB69285BE7A000FFD28A /* Beyoglu7.mp3 */,
+				CE8DDB52285BE79E00FFD28A /* Beyoglu8.mp3 */,
+				CE8DDB6B285BE7A000FFD28A /* Beyoglu9.mp3 */,
+				CE8DDB60285BE79F00FFD28A /* Beyoglu10.mp3 */,
+				CE8DDB57285BE79E00FFD28A /* Beyoglu11.mp3 */,
+				CE8DDB5A285BE79F00FFD28A /* Beyoglu12.mp3 */,
+				CE8DDB4E285BE79E00FFD28A /* Beyoglu13.mp3 */,
+				CE8DDB54285BE79E00FFD28A /* Beyoglu14.mp3 */,
+				CE8DDB58285BE79E00FFD28A /* Beyoglu15.mp3 */,
+				CE8DDB5C285BE79F00FFD28A /* Beyoglu16.mp3 */,
+				CE8DDB55285BE79E00FFD28A /* Beyoglu17.mp3 */,
+				CE8DDB56285BE79E00FFD28A /* Beyoglu18.mp3 */,
+				CE8DDB4F285BE79E00FFD28A /* Beyoglu19.mp3 */,
+				CE8DDB5D285BE79F00FFD28A /* Beyoglu20.mp3 */,
+				CE8DDB6A285BE7A000FFD28A /* Beyoglu21.mp3 */,
+				CE8DDB5F285BE79F00FFD28A /* Beyoglu22.mp3 */,
+				CE8DDB5E285BE79F00FFD28A /* Beyoglu23.mp3 */,
+				CE8DDB68285BE7A000FFD28A /* Beyoglu24.mp3 */,
+				CE8DDB63285BE79F00FFD28A /* Beyoglu25.mp3 */,
+				CE8DDB59285BE79E00FFD28A /* Beyoglu26.mp3 */,
+				CE8DDB5B285BE79F00FFD28A /* Beyoglu27.mp3 */,
+				CE8DDB67285BE7A000FFD28A /* Beyoglu28.mp3 */,
+				CE8DDB51285BE79E00FFD28A /* Beyoglu29.mp3 */,
+				CE8DDB62285BE79F00FFD28A /* Beyoglu30.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -324,6 +926,36 @@
 			isa = PBXGroup;
 			children = (
 				CE200B322833C13C0043F57A /* Beyoglu0.txt */,
+				CE8DDAC8285BC17300FFD28A /* Beyoglu1.txt */,
+				CE8DDAC5285BC17300FFD28A /* Beyoglu2.txt */,
+				CE8DDABF285BC17300FFD28A /* Beyoglu3.txt */,
+				CE8DDAC3285BC17300FFD28A /* Beyoglu4.txt */,
+				CE8DDAAE285BC17200FFD28A /* Beyoglu5.txt */,
+				CE8DDABB285BC17300FFD28A /* Beyoglu6.txt */,
+				CE8DDAB4285BC17200FFD28A /* Beyoglu7.txt */,
+				CE8DDAC4285BC17300FFD28A /* Beyoglu8.txt */,
+				CE8DDABD285BC17300FFD28A /* Beyoglu9.txt */,
+				CE8DDAC9285BC17300FFD28A /* Beyoglu10.txt */,
+				CE8DDAB2285BC17200FFD28A /* Beyoglu11.txt */,
+				CE8DDAC1285BC17300FFD28A /* Beyoglu12.txt */,
+				CE8DDACA285BC17300FFD28A /* Beyoglu13.txt */,
+				CE8DDAB6285BC17300FFD28A /* Beyoglu14.txt */,
+				CE8DDABC285BC17300FFD28A /* Beyoglu15.txt */,
+				CE8DDAC7285BC17300FFD28A /* Beyoglu16.txt */,
+				CE8DDAB7285BC17300FFD28A /* Beyoglu17.txt */,
+				CE8DDAB1285BC17200FFD28A /* Beyoglu18.txt */,
+				CE8DDAC6285BC17300FFD28A /* Beyoglu19.txt */,
+				CE8DDAB9285BC17300FFD28A /* Beyoglu20.txt */,
+				CE8DDABE285BC17300FFD28A /* Beyoglu21.txt */,
+				CE8DDAB5285BC17200FFD28A /* Beyoglu22.txt */,
+				CE8DDABA285BC17300FFD28A /* Beyoglu23.txt */,
+				CE8DDAB0285BC17200FFD28A /* Beyoglu24.txt */,
+				CE8DDAAF285BC17200FFD28A /* Beyoglu25.txt */,
+				CE8DDAB3285BC17200FFD28A /* Beyoglu26.txt */,
+				CE8DDAC2285BC17300FFD28A /* Beyoglu27.txt */,
+				CE8DDAC0285BC17300FFD28A /* Beyoglu28.txt */,
+				CE8DDAAD285BC17200FFD28A /* Beyoglu29.txt */,
+				CE8DDAB8285BC17300FFD28A /* Beyoglu30.txt */,
 			);
 			path = Texts;
 			sourceTree = "<group>";
@@ -340,6 +972,43 @@
 		CE8DD9FA28578C9C00FFD28A /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				CE8DDBA4285BE7E500FFD28A /* NontouristicIstanbul0.mp3 */,
+				CE8DDB9D285BE7E400FFD28A /* NontouristicIstanbul1.mp3 */,
+				CE8DDB9C285BE7E400FFD28A /* NontouristicIstanbul2.mp3 */,
+				CE8DDBAE285BE7E600FFD28A /* NontouristicIstanbul3.mp3 */,
+				CE8DDB94285BE7E400FFD28A /* NontouristicIstanbul4.mp3 */,
+				CE8DDB99285BE7E400FFD28A /* NontouristicIstanbul5.mp3 */,
+				CE8DDBAF285BE7E600FFD28A /* NontouristicIstanbul6.mp3 */,
+				CE8DDBAC285BE7E500FFD28A /* NontouristicIstanbul7.mp3 */,
+				CE8DDBA3285BE7E500FFD28A /* NontouristicIstanbul8.mp3 */,
+				CE8DDB95285BE7E400FFD28A /* NontouristicIstanbul9.mp3 */,
+				CE8DDB8C285BE7E300FFD28A /* NontouristicIstanbul10.mp3 */,
+				CE8DDBA8285BE7E500FFD28A /* NontouristicIstanbul11.mp3 */,
+				CE8DDB8E285BE7E300FFD28A /* NontouristicIstanbul12.mp3 */,
+				CE8DDBA1285BE7E500FFD28A /* NontouristicIstanbul13.mp3 */,
+				CE8DDB93285BE7E300FFD28A /* NontouristicIstanbul14.mp3 */,
+				CE8DDB9A285BE7E400FFD28A /* NontouristicIstanbul15.mp3 */,
+				CE8DDBA7285BE7E500FFD28A /* NontouristicIstanbul16.mp3 */,
+				CE8DDBA2285BE7E500FFD28A /* NontouristicIstanbul17.mp3 */,
+				CE8DDB8D285BE7E300FFD28A /* NontouristicIstanbul18.mp3 */,
+				CE8DDB8F285BE7E300FFD28A /* NontouristicIstanbul19.mp3 */,
+				CE8DDBA5285BE7E500FFD28A /* NontouristicIstanbul20.mp3 */,
+				CE8DDBAA285BE7E500FFD28A /* NontouristicIstanbul21.mp3 */,
+				CE8DDBAD285BE7E500FFD28A /* NontouristicIstanbul22.mp3 */,
+				CE8DDB91285BE7E300FFD28A /* NontouristicIstanbul23.mp3 */,
+				CE8DDB98285BE7E400FFD28A /* NontouristicIstanbul24.mp3 */,
+				CE8DDBAB285BE7E500FFD28A /* NontouristicIstanbul25.mp3 */,
+				CE8DDB9B285BE7E400FFD28A /* NontouristicIstanbul26.mp3 */,
+				CE8DDB96285BE7E400FFD28A /* NontouristicIstanbul27.mp3 */,
+				CE8DDB90285BE7E300FFD28A /* NontouristicIstanbul28.mp3 */,
+				CE8DDB9E285BE7E400FFD28A /* NontouristicIstanbul29.mp3 */,
+				CE8DDBA6285BE7E500FFD28A /* NontouristicIstanbul30.mp3 */,
+				CE8DDB97285BE7E400FFD28A /* NontouristicIstanbul31.mp3 */,
+				CE8DDB92285BE7E300FFD28A /* NontouristicIstanbul32.mp3 */,
+				CE8DDB8B285BE7E300FFD28A /* NontouristicIstanbul33.mp3 */,
+				CE8DDB9F285BE7E400FFD28A /* NontouristicIstanbul34.mp3 */,
+				CE8DDBA9285BE7E500FFD28A /* NontouristicIstanbul35.mp3 */,
+				CE8DDBA0285BE7E500FFD28A /* NontouristicIstanbul36.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -348,6 +1017,42 @@
 			isa = PBXGroup;
 			children = (
 				CE8DD9FD28578D2A00FFD28A /* NontouristicIstanbul0.txt */,
+				CE8DDA6D285BC12300FFD28A /* NontouristicIstanbul1.txt */,
+				CE8DDA67285BC12300FFD28A /* NontouristicIstanbul2.txt */,
+				CE8DDA7C285BC12300FFD28A /* NontouristicIstanbul3.txt */,
+				CE8DDA6A285BC12300FFD28A /* NontouristicIstanbul4.txt */,
+				CE8DDA83285BC12400FFD28A /* NontouristicIstanbul5.txt */,
+				CE8DDA7A285BC12300FFD28A /* NontouristicIstanbul6.txt */,
+				CE8DDA84285BC12400FFD28A /* NontouristicIstanbul7.txt */,
+				CE8DDA88285BC12400FFD28A /* NontouristicIstanbul8.txt */,
+				CE8DDA74285BC12300FFD28A /* NontouristicIstanbul9.txt */,
+				CE8DDA71285BC12300FFD28A /* NontouristicIstanbul10.txt */,
+				CE8DDA82285BC12400FFD28A /* NontouristicIstanbul11.txt */,
+				CE8DDA66285BC12300FFD28A /* NontouristicIstanbul12.txt */,
+				CE8DDA69285BC12300FFD28A /* NontouristicIstanbul13.txt */,
+				CE8DDA73285BC12300FFD28A /* NontouristicIstanbul14.txt */,
+				CE8DDA68285BC12300FFD28A /* NontouristicIstanbul15.txt */,
+				CE8DDA78285BC12300FFD28A /* NontouristicIstanbul16.txt */,
+				CE8DDA75285BC12300FFD28A /* NontouristicIstanbul17.txt */,
+				CE8DDA76285BC12300FFD28A /* NontouristicIstanbul18.txt */,
+				CE8DDA87285BC12400FFD28A /* NontouristicIstanbul19.txt */,
+				CE8DDA80285BC12300FFD28A /* NontouristicIstanbul20.txt */,
+				CE8DDA65285BC12300FFD28A /* NontouristicIstanbul21.txt */,
+				CE8DDA7F285BC12300FFD28A /* NontouristicIstanbul22.txt */,
+				CE8DDA6C285BC12300FFD28A /* NontouristicIstanbul23.txt */,
+				CE8DDA6B285BC12300FFD28A /* NontouristicIstanbul24.txt */,
+				CE8DDA72285BC12300FFD28A /* NontouristicIstanbul25.txt */,
+				CE8DDA7D285BC12300FFD28A /* NontouristicIstanbul26.txt */,
+				CE8DDA86285BC12400FFD28A /* NontouristicIstanbul27.txt */,
+				CE8DDA7E285BC12300FFD28A /* NontouristicIstanbul28.txt */,
+				CE8DDA7B285BC12300FFD28A /* NontouristicIstanbul29.txt */,
+				CE8DDA77285BC12300FFD28A /* NontouristicIstanbul30.txt */,
+				CE8DDA6F285BC12300FFD28A /* NontouristicIstanbul31.txt */,
+				CE8DDA6E285BC12300FFD28A /* NontouristicIstanbul32.txt */,
+				CE8DDA81285BC12300FFD28A /* NontouristicIstanbul33.txt */,
+				CE8DDA85285BC12400FFD28A /* NontouristicIstanbul34.txt */,
+				CE8DDA70285BC12300FFD28A /* NontouristicIstanbul35.txt */,
+				CE8DDA79285BC12300FFD28A /* NontouristicIstanbul36.txt */,
 			);
 			path = Texts;
 			sourceTree = "<group>";
@@ -426,15 +1131,249 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8DDB73285BE7A000FFD28A /* Beyoglu14.mp3 in Resources */,
+				CE8DDAA6285BC12400FFD28A /* NontouristicIstanbul11.txt in Resources */,
+				CE8DDA52285BB19900FFD28A /* IstambulInOneDay20.txt in Resources */,
+				CE8DDADC285BC17300FFD28A /* Beyoglu21.txt in Resources */,
+				CE8DDB4C285BC38500FFD28A /* IstambulInOneDay26.mp3 in Resources */,
+				CE8DDA44285BB19900FFD28A /* IstambulInOneDay29.txt in Resources */,
+				CE8DDB3A285BC38500FFD28A /* IstambulInOneDay48.mp3 in Resources */,
+				CE8DDB20285BC38500FFD28A /* IstambulInOneDay36.mp3 in Resources */,
+				CE8DDA58285BB19900FFD28A /* IstambulInOneDay35.txt in Resources */,
+				CE8DDB46285BC38500FFD28A /* IstambulInOneDay17.mp3 in Resources */,
+				CE8DDA99285BC12400FFD28A /* NontouristicIstanbul17.txt in Resources */,
+				CE8DDB87285BE7A000FFD28A /* Beyoglu24.mp3 in Resources */,
+				CE8DDAE0285BC17300FFD28A /* Beyoglu27.txt in Resources */,
+				CE8DDB4B285BC38500FFD28A /* IstambulInOneDay19.mp3 in Resources */,
+				CE8DDB21285BC38500FFD28A /* IstambulInOneDay22.mp3 in Resources */,
+				CE8DDB71285BE7A000FFD28A /* Beyoglu8.mp3 in Resources */,
+				CE8DDA40285BB19900FFD28A /* IstambulInOneDay27.txt in Resources */,
+				CE8DDBB5285BE7E600FFD28A /* NontouristicIstanbul28.mp3 in Resources */,
+				CE8DDB49285BC38500FFD28A /* IstambulInOneDay5.mp3 in Resources */,
+				CE8DDB48285BC38500FFD28A /* IstambulInOneDay24.mp3 in Resources */,
+				CE8DDB76285BE7A000FFD28A /* Beyoglu11.mp3 in Resources */,
+				CE8DDA39285BB19900FFD28A /* IstambulInOneDay22.txt in Resources */,
+				CE8DDB43285BC38500FFD28A /* IstambulInOneDay31.mp3 in Resources */,
+				CE8DDA45285BB19900FFD28A /* IstambulInOneDay43.txt in Resources */,
+				CE8DDBC5285BE7E600FFD28A /* NontouristicIstanbul36.mp3 in Resources */,
+				CE8DDAA3285BC12400FFD28A /* NontouristicIstanbul22.txt in Resources */,
+				CE8DDBBD285BE7E600FFD28A /* NontouristicIstanbul24.mp3 in Resources */,
+				CE8DDAAB285BC12400FFD28A /* NontouristicIstanbul19.txt in Resources */,
 				CE8DD9ED28575E9100FFD28A /* Excursions.plist in Resources */,
+				CE8DDBC1285BE7E600FFD28A /* NontouristicIstanbul2.mp3 in Resources */,
+				CE8DDAE5285BC17300FFD28A /* Beyoglu16.txt in Resources */,
+				CE8DDA8E285BC12400FFD28A /* NontouristicIstanbul4.txt in Resources */,
+				CE8DDA64285BB19900FFD28A /* IstambulInOneDay30.txt in Resources */,
+				CE8DDA43285BB19900FFD28A /* IstambulInOneDay41.txt in Resources */,
+				CE8DDADE285BC17300FFD28A /* Beyoglu28.txt in Resources */,
+				CE8DDAAC285BC12400FFD28A /* NontouristicIstanbul8.txt in Resources */,
+				CE8DDB3C285BC38500FFD28A /* IstambulInOneDay23.mp3 in Resources */,
+				CE8DDB3F285BC38500FFD28A /* IstambulInOneDay18.mp3 in Resources */,
+				CE8DDAAA285BC12400FFD28A /* NontouristicIstanbul27.txt in Resources */,
+				CE8DDA8C285BC12400FFD28A /* NontouristicIstanbul15.txt in Resources */,
+				CE8DDA93285BC12400FFD28A /* NontouristicIstanbul31.txt in Resources */,
+				CE8DDB6D285BE7A000FFD28A /* Beyoglu13.mp3 in Resources */,
+				CE8DDBC2285BE7E600FFD28A /* NontouristicIstanbul1.mp3 in Resources */,
+				CE8DDA57285BB19900FFD28A /* IstambulInOneDay38.txt in Resources */,
+				CE8DDA89285BC12400FFD28A /* NontouristicIstanbul21.txt in Resources */,
+				CE8DDA41285BB19900FFD28A /* IstambulInOneDay34.txt in Resources */,
+				CE8DDA37285BB19900FFD28A /* IstambulInOneDay21.txt in Resources */,
+				CE8DDA61285BB19900FFD28A /* IstambulInOneDay8.txt in Resources */,
+				CE8DDA98285BC12400FFD28A /* NontouristicIstanbul9.txt in Resources */,
+				CE8DDA62285BB19900FFD28A /* IstambulInOneDay16.txt in Resources */,
+				CE8DDB77285BE7A000FFD28A /* Beyoglu15.mp3 in Resources */,
+				CE8DDB7A285BE7A000FFD28A /* Beyoglu27.mp3 in Resources */,
+				CE8DDA90285BC12400FFD28A /* NontouristicIstanbul23.txt in Resources */,
+				CE8DDB78285BE7A000FFD28A /* Beyoglu26.mp3 in Resources */,
+				CE8DDB83285BE7A000FFD28A /* Beyoglu5.mp3 in Resources */,
+				CE8DDB40285BC38500FFD28A /* IstambulInOneDay49.mp3 in Resources */,
+				CE8DDA56285BB19900FFD28A /* IstambulInOneDay10.txt in Resources */,
+				CE8DDBBC285BE7E600FFD28A /* NontouristicIstanbul31.mp3 in Resources */,
+				CE8DDBC9285BE7E600FFD28A /* NontouristicIstanbul0.mp3 in Resources */,
+				CE8DDA9F285BC12400FFD28A /* NontouristicIstanbul29.txt in Resources */,
+				CE8DDB2D285BC38500FFD28A /* IstambulInOneDay42.mp3 in Resources */,
+				CE8DDB23285BC38500FFD28A /* IstambulInOneDay9.mp3 in Resources */,
+				CE8DDB2B285BC38500FFD28A /* IstambulInOneDay43.mp3 in Resources */,
+				CE8DDA63285BB19900FFD28A /* IstambulInOneDay15.txt in Resources */,
+				CE8DDB2C285BC38500FFD28A /* IstambulInOneDay44.mp3 in Resources */,
+				CE8DDB80285BE7A000FFD28A /* Beyoglu3.mp3 in Resources */,
+				CE8DDA94285BC12400FFD28A /* NontouristicIstanbul35.txt in Resources */,
+				CE8DDB88285BE7A000FFD28A /* Beyoglu7.mp3 in Resources */,
+				CE8DDB31285BC38500FFD28A /* IstambulInOneDay39.mp3 in Resources */,
+				CE8DDB86285BE7A000FFD28A /* Beyoglu28.mp3 in Resources */,
+				CE8DDB85285BE7A000FFD28A /* Beyoglu6.mp3 in Resources */,
+				CE8DDA5B285BB19900FFD28A /* IstambulInOneDay5.txt in Resources */,
+				CE8DDACD285BC17300FFD28A /* Beyoglu25.txt in Resources */,
+				CE8DDA8A285BC12400FFD28A /* NontouristicIstanbul12.txt in Resources */,
+				CE8DDB1C285BC38500FFD28A /* IstambulInOneDay32.mp3 in Resources */,
+				CE8DDBCA285BE7E600FFD28A /* NontouristicIstanbul20.mp3 in Resources */,
+				CE8DDB2E285BC38500FFD28A /* IstambulInOneDay14.mp3 in Resources */,
+				CE8DDA47285BB19900FFD28A /* IstambulInOneDay40.txt in Resources */,
+				CE8DDB4A285BC38500FFD28A /* IstambulInOneDay35.mp3 in Resources */,
+				CE8DDBCC285BE7E600FFD28A /* NontouristicIstanbul16.mp3 in Resources */,
+				CE8DDA4E285BB19900FFD28A /* IstambulInOneDay42.txt in Resources */,
+				CE8DDA3C285BB19900FFD28A /* IstambulInOneDay47.txt in Resources */,
+				CE8DDBC6285BE7E600FFD28A /* NontouristicIstanbul13.mp3 in Resources */,
 				5DCB590A283172C000A2C3CC /* LaunchScreen.storyboard in Resources */,
+				CE8DDA8F285BC12400FFD28A /* NontouristicIstanbul24.txt in Resources */,
 				CE8DD9F528578C0B00FFD28A /* IstambulInOneDay0.txt in Resources */,
+				CE8DDBBA285BE7E600FFD28A /* NontouristicIstanbul9.mp3 in Resources */,
+				CE8DDA9E285BC12400FFD28A /* NontouristicIstanbul6.txt in Resources */,
+				CE8DDAE2285BC17300FFD28A /* Beyoglu8.txt in Resources */,
+				CE8DDAD8285BC17300FFD28A /* Beyoglu23.txt in Resources */,
+				CE8DDA46285BB19900FFD28A /* IstambulInOneDay18.txt in Resources */,
+				CE8DDB7E285BE7A000FFD28A /* Beyoglu22.mp3 in Resources */,
+				CE8DDAA0285BC12400FFD28A /* NontouristicIstanbul3.txt in Resources */,
+				CE8DDBC0285BE7E600FFD28A /* NontouristicIstanbul26.mp3 in Resources */,
+				CE8DDAD5285BC17300FFD28A /* Beyoglu17.txt in Resources */,
+				CE8DDBB8285BE7E600FFD28A /* NontouristicIstanbul14.mp3 in Resources */,
+				CE8DDBB6285BE7E600FFD28A /* NontouristicIstanbul23.mp3 in Resources */,
+				CE8DDBB9285BE7E600FFD28A /* NontouristicIstanbul4.mp3 in Resources */,
+				CE8DDAD1285BC17300FFD28A /* Beyoglu26.txt in Resources */,
+				CE8DDB30285BC38500FFD28A /* IstambulInOneDay10.mp3 in Resources */,
+				CE8DDADA285BC17300FFD28A /* Beyoglu15.txt in Resources */,
+				CE8DDB28285BC38500FFD28A /* IstambulInOneDay13.mp3 in Resources */,
+				CE8DDBBE285BE7E600FFD28A /* NontouristicIstanbul5.mp3 in Resources */,
+				CE8DDA49285BB19900FFD28A /* IstambulInOneDay2.txt in Resources */,
+				CE8DDBB4285BE7E600FFD28A /* NontouristicIstanbul19.mp3 in Resources */,
+				CE8DDB37285BC38500FFD28A /* IstambulInOneDay12.mp3 in Resources */,
+				CE8DDA97285BC12400FFD28A /* NontouristicIstanbul14.txt in Resources */,
+				CE8DDB7F285BE7A000FFD28A /* Beyoglu10.mp3 in Resources */,
+				CE8DDB26285BC38500FFD28A /* IstambulInOneDay11.mp3 in Resources */,
+				CE8DDA42285BB19900FFD28A /* IstambulInOneDay28.txt in Resources */,
+				CE8DDB84285BE7A000FFD28A /* Beyoglu0.mp3 in Resources */,
+				CE8DDB47285BC38500FFD28A /* IstambulInOneDay27.mp3 in Resources */,
+				CE8DDA9D285BC12400FFD28A /* NontouristicIstanbul36.txt in Resources */,
+				CE8DDB70285BE7A000FFD28A /* Beyoglu29.mp3 in Resources */,
+				CE8DDB45285BC38500FFD28A /* IstambulInOneDay6.mp3 in Resources */,
+				CE8DDB33285BC38500FFD28A /* IstambulInOneDay4.mp3 in Resources */,
+				CE8DDB36285BC38500FFD28A /* IstambulInOneDay47.mp3 in Resources */,
 				5DCB5907283172C000A2C3CC /* Assets.xcassets in Resources */,
+				CE8DDAD4285BC17300FFD28A /* Beyoglu14.txt in Resources */,
+				CE8DDA4D285BB19900FFD28A /* IstambulInOneDay1.txt in Resources */,
+				CE8DDA33285BB19900FFD28A /* IstambulInOneDay11.txt in Resources */,
+				CE8DDBCB285BE7E600FFD28A /* NontouristicIstanbul30.mp3 in Resources */,
+				CE8DDA8D285BC12400FFD28A /* NontouristicIstanbul13.txt in Resources */,
+				CE8DDA3F285BB19900FFD28A /* IstambulInOneDay9.txt in Resources */,
+				CE8DDA4B285BB19900FFD28A /* IstambulInOneDay13.txt in Resources */,
+				CE8DDA3D285BB19900FFD28A /* IstambulInOneDay31.txt in Resources */,
+				CE8DDB25285BC38500FFD28A /* IstambulInOneDay25.mp3 in Resources */,
+				CE8DDAA1285BC12400FFD28A /* NontouristicIstanbul26.txt in Resources */,
+				CE8DDADF285BC17300FFD28A /* Beyoglu12.txt in Resources */,
+				CE8DDB3D285BC38500FFD28A /* IstambulInOneDay34.mp3 in Resources */,
+				CE8DDBBF285BE7E600FFD28A /* NontouristicIstanbul15.mp3 in Resources */,
+				CE8DDBD3285BE7E600FFD28A /* NontouristicIstanbul3.mp3 in Resources */,
+				CE8DDAE8285BC17300FFD28A /* Beyoglu13.txt in Resources */,
+				CE8DDB1D285BC38500FFD28A /* IstambulInOneDay8.mp3 in Resources */,
+				CE8DDB29285BC38500FFD28A /* IstambulInOneDay15.mp3 in Resources */,
+				CE8DDA35285BB19900FFD28A /* IstambulInOneDay49.txt in Resources */,
+				CE8DDACF285BC17300FFD28A /* Beyoglu18.txt in Resources */,
+				CE8DDAE7285BC17300FFD28A /* Beyoglu10.txt in Resources */,
+				CE8DDA5E285BB19900FFD28A /* IstambulInOneDay26.txt in Resources */,
+				CE8DDA48285BB19900FFD28A /* IstambulInOneDay44.txt in Resources */,
+				CE8DDA3B285BB19900FFD28A /* IstambulInOneDay46.txt in Resources */,
+				CE8DDA95285BC12400FFD28A /* NontouristicIstanbul10.txt in Resources */,
+				CE8DDB24285BC38500FFD28A /* IstambulInOneDay40.mp3 in Resources */,
+				CE8DDB72285BE7A000FFD28A /* Beyoglu2.mp3 in Resources */,
+				CE8DDBC7285BE7E600FFD28A /* NontouristicIstanbul17.mp3 in Resources */,
+				CE8DDA50285BB19900FFD28A /* IstambulInOneDay33.txt in Resources */,
+				CE8DDBD4285BE7E600FFD28A /* NontouristicIstanbul6.mp3 in Resources */,
+				CE8DDB42285BC38500FFD28A /* IstambulInOneDay28.mp3 in Resources */,
+				CE8DDA54285BB19900FFD28A /* IstambulInOneDay45.txt in Resources */,
+				CE8DDBD0285BE7E600FFD28A /* NontouristicIstanbul25.mp3 in Resources */,
+				CE8DDA60285BB19900FFD28A /* IstambulInOneDay37.txt in Resources */,
+				CE8DDB27285BC38500FFD28A /* IstambulInOneDay46.mp3 in Resources */,
+				CE8DDB6E285BE7A000FFD28A /* Beyoglu19.mp3 in Resources */,
+				CE8DDAD9285BC17300FFD28A /* Beyoglu6.txt in Resources */,
+				CE8DDAA9285BC12400FFD28A /* NontouristicIstanbul34.txt in Resources */,
+				CE8DDB6F285BE7A000FFD28A /* Beyoglu4.mp3 in Resources */,
+				CE8DDAE4285BC17300FFD28A /* Beyoglu19.txt in Resources */,
+				CE8DDB8A285BE7A000FFD28A /* Beyoglu9.mp3 in Resources */,
+				CE8DDB6C285BE7A000FFD28A /* Beyoglu1.mp3 in Resources */,
+				CE8DDAD0285BC17300FFD28A /* Beyoglu11.txt in Resources */,
+				CE8DDA55285BB19900FFD28A /* IstambulInOneDay17.txt in Resources */,
+				CE8DDA4F285BB19900FFD28A /* IstambulInOneDay23.txt in Resources */,
+				CE8DDA5D285BB19900FFD28A /* IstambulInOneDay19.txt in Resources */,
+				CE8DDB34285BC38500FFD28A /* IstambulInOneDay20.mp3 in Resources */,
+				CE8DDB1E285BC38500FFD28A /* IstambulInOneDay16.mp3 in Resources */,
+				CE8DDB7C285BE7A000FFD28A /* Beyoglu20.mp3 in Resources */,
+				CE8DDADB285BC17300FFD28A /* Beyoglu9.txt in Resources */,
+				CE8DDBB2285BE7E600FFD28A /* NontouristicIstanbul18.mp3 in Resources */,
+				CE8DDBC3285BE7E600FFD28A /* NontouristicIstanbul29.mp3 in Resources */,
+				CE8DDA92285BC12400FFD28A /* NontouristicIstanbul32.txt in Resources */,
+				CE8DDA59285BB19900FFD28A /* IstambulInOneDay50.txt in Resources */,
+				CE8DDA5F285BB19900FFD28A /* IstambulInOneDay36.txt in Resources */,
+				CE8DDB39285BC38500FFD28A /* IstambulInOneDay45.mp3 in Resources */,
+				CE8DDB81285BE7A000FFD28A /* Beyoglu30.mp3 in Resources */,
+				CE8DDACE285BC17300FFD28A /* Beyoglu24.txt in Resources */,
+				CE8DDBCF285BE7E600FFD28A /* NontouristicIstanbul21.mp3 in Resources */,
 				CEE4AA7F283AF1BA000C1FF7 /* IstambulInOneDay0.mp3 in Resources */,
+				CE8DDAA7285BC12400FFD28A /* NontouristicIstanbul5.txt in Resources */,
+				CE8DDB2F285BC38500FFD28A /* IstambulInOneDay33.mp3 in Resources */,
+				CE8DDBB3285BE7E600FFD28A /* NontouristicIstanbul12.mp3 in Resources */,
+				CE8DDA38285BB19900FFD28A /* IstambulInOneDay32.txt in Resources */,
+				CE8DDB79285BE7A000FFD28A /* Beyoglu12.mp3 in Resources */,
+				CE8DDA96285BC12400FFD28A /* NontouristicIstanbul25.txt in Resources */,
+				CE8DDBB1285BE7E600FFD28A /* NontouristicIstanbul10.mp3 in Resources */,
 				CE8DD9FE28578D2A00FFD28A /* NontouristicIstanbul0.txt in Resources */,
+				CE8DDAD3285BC17300FFD28A /* Beyoglu22.txt in Resources */,
+				CE8DDA53285BB19900FFD28A /* IstambulInOneDay6.txt in Resources */,
+				CE8DDB1F285BC38500FFD28A /* IstambulInOneDay1.mp3 in Resources */,
+				CE8DDACC285BC17300FFD28A /* Beyoglu5.txt in Resources */,
+				CE8DDBBB285BE7E600FFD28A /* NontouristicIstanbul27.mp3 in Resources */,
+				CE8DDAA4285BC12400FFD28A /* NontouristicIstanbul20.txt in Resources */,
+				CE8DDAD7285BC17300FFD28A /* Beyoglu20.txt in Resources */,
+				CE8DDAE1285BC17300FFD28A /* Beyoglu4.txt in Resources */,
+				CE8DDB41285BC38500FFD28A /* IstambulInOneDay50.mp3 in Resources */,
+				CE8DDA36285BB19900FFD28A /* IstambulInOneDay25.txt in Resources */,
+				CE8DDB32285BC38500FFD28A /* IstambulInOneDay2.mp3 in Resources */,
+				CE8DDB7D285BE7A000FFD28A /* Beyoglu23.mp3 in Resources */,
+				CE8DDBCD285BE7E600FFD28A /* NontouristicIstanbul11.mp3 in Resources */,
+				CE8DDAD6285BC17300FFD28A /* Beyoglu30.txt in Resources */,
 				5D0C3CA9284FB1B6005FBAE0 /* aboutPurchase.txt in Resources */,
+				CE8DDAD2285BC17300FFD28A /* Beyoglu7.txt in Resources */,
+				CE8DDB38285BC38500FFD28A /* IstambulInOneDay29.mp3 in Resources */,
+				CE8DDA3E285BB19900FFD28A /* IstambulInOneDay4.txt in Resources */,
+				CE8DDB2A285BC38500FFD28A /* IstambulInOneDay38.mp3 in Resources */,
+				CE8DDAA2285BC12400FFD28A /* NontouristicIstanbul28.txt in Resources */,
+				CE8DDAA5285BC12400FFD28A /* NontouristicIstanbul33.txt in Resources */,
+				CE8DDBC8285BE7E600FFD28A /* NontouristicIstanbul8.mp3 in Resources */,
+				CE8DDB3B285BC38500FFD28A /* IstambulInOneDay30.mp3 in Resources */,
+				CE8DDAE6285BC17300FFD28A /* Beyoglu1.txt in Resources */,
+				CE8DDBB7285BE7E600FFD28A /* NontouristicIstanbul32.mp3 in Resources */,
+				CE8DDA3A285BB19900FFD28A /* IstambulInOneDay39.txt in Resources */,
+				CE8DDBD1285BE7E600FFD28A /* NontouristicIstanbul7.mp3 in Resources */,
 				CE200B332833C13C0043F57A /* Beyoglu0.txt in Resources */,
+				CE8DDBB0285BE7E600FFD28A /* NontouristicIstanbul33.mp3 in Resources */,
+				CE8DDA9C285BC12400FFD28A /* NontouristicIstanbul16.txt in Resources */,
+				CE8DDA9A285BC12400FFD28A /* NontouristicIstanbul18.txt in Resources */,
+				CE8DDA9B285BC12400FFD28A /* NontouristicIstanbul30.txt in Resources */,
+				CE8DDB44285BC38500FFD28A /* IstambulInOneDay7.mp3 in Resources */,
+				CE8DDBD2285BE7E600FFD28A /* NontouristicIstanbul22.mp3 in Resources */,
+				CE8DDAE3285BC17300FFD28A /* Beyoglu2.txt in Resources */,
+				CE8DDA91285BC12400FFD28A /* NontouristicIstanbul1.txt in Resources */,
+				CE8DDA34285BB19900FFD28A /* IstambulInOneDay48.txt in Resources */,
+				CE8DDA4A285BB19900FFD28A /* IstambulInOneDay3.txt in Resources */,
+				CE8DDBC4285BE7E600FFD28A /* NontouristicIstanbul34.mp3 in Resources */,
+				CE8DDB89285BE7A000FFD28A /* Beyoglu21.mp3 in Resources */,
+				CE8DDB74285BE7A000FFD28A /* Beyoglu17.mp3 in Resources */,
+				CE8DDB7B285BE7A000FFD28A /* Beyoglu16.mp3 in Resources */,
+				CE8DDA5C285BB19900FFD28A /* IstambulInOneDay7.txt in Resources */,
+				CE8DDA4C285BB19900FFD28A /* IstambulInOneDay24.txt in Resources */,
+				CE8DDB75285BE7A000FFD28A /* Beyoglu18.mp3 in Resources */,
+				CE8DDAA8285BC12400FFD28A /* NontouristicIstanbul7.txt in Resources */,
+				CE8DDB35285BC38500FFD28A /* IstambulInOneDay21.mp3 in Resources */,
+				CE8DDA8B285BC12400FFD28A /* NontouristicIstanbul2.txt in Resources */,
 				5DE36F41283A677F00B191C7 /* infoAboutAuthor.txt in Resources */,
+				CE8DDADD285BC17300FFD28A /* Beyoglu3.txt in Resources */,
+				CE8DDBCE285BE7E600FFD28A /* NontouristicIstanbul35.mp3 in Resources */,
+				CE8DDACB285BC17300FFD28A /* Beyoglu29.txt in Resources */,
+				CE8DDA5A285BB19900FFD28A /* IstambulInOneDay14.txt in Resources */,
+				CE8DDB1B285BC38500FFD28A /* IstambulInOneDay3.mp3 in Resources */,
+				CE8DDB3E285BC38500FFD28A /* IstambulInOneDay37.mp3 in Resources */,
+				CE8DDB82285BE7A000FFD28A /* Beyoglu25.mp3 in Resources */,
+				CE8DDB22285BC38500FFD28A /* IstambulInOneDay41.mp3 in Resources */,
+				CE8DDA51285BB19900FFD28A /* IstambulInOneDay12.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +1402,7 @@
 				CE415155283AB61E00CF9D53 /* TimeInterval+minSecFormatted.swift in Sources */,
 				5DCB5905283172BE00A2C3CC /* MobileAudioGuide.xcdatamodeld in Sources */,
 				CE200B2A28339F680043F57A /* GuideScreenViewController.swift in Sources */,
+				CE8DDA002857DD0B00FFD28A /* AudioPlayer.swift in Sources */,
 				CE4151412835098900CF9D53 /* GuideFeatureViewBuilder.swift in Sources */,
 				CE200B3C2833CA010043F57A /* TextLoader.swift in Sources */,
 				CE05C07B2850FBAE00AF37CE /* BuyFullVersionTableViewCell.swift in Sources */,

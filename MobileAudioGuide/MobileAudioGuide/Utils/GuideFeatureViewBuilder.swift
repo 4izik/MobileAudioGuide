@@ -53,7 +53,7 @@ class GuideFeatureViewBuilder {
         case .route: return excursionInfo.excursionDuration
         case .distance: return excursionInfo.routeDistance
         case .transport: return excursionInfo.transportType
-        case .sightseengs: return excursionInfo.numberOfSightseengs
+        case .sightseengs: return excursionInfo.numberOfSightseengs + " objects"
         }
     }
 }

@@ -13,6 +13,8 @@ final class GuideScreenViewController: UIViewController {
     private let excursionInfo: ExcursionInfo
     private let infoImage = UIImage(systemName: "info.circle")
     private let textLoader: TextLoader
+    
+    /// Приобретена ли полная версия для этой экскурсии
     var isFullVersion = false
     
     private lazy var guideScreenTableView: UITableView = {
@@ -24,8 +26,8 @@ final class GuideScreenViewController: UIViewController {
     
     private lazy var audioPlayerView: AudioPlayerView = {
         let audioPlayerView = AudioPlayerView(audioFileName: excursionInfo.filenamePrefix + "0")
-        audioPlayerView.isHidden = true
-        audioPlayerView.alpha = 0
+        audioPlayerView.isHidden = AudioPlayer.shared.isPlaying ? false : true
+        audioPlayerView.alpha = AudioPlayer.shared.isPlaying ? 1 : 0
         return audioPlayerView
     }()
     
@@ -62,6 +64,14 @@ final class GuideScreenViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.title = "Istanbul"
+        
+        if AudioPlayer.shared.nowPlayingFileName != excursionInfo.filenamePrefix + "0" {
+            AudioPlayer.shared.stopPlaying()
+            audioPlayerView.isHidden = true
+            audioPlayerView.alpha = 0
+            tableViewToAudioPlayerViewBottomAnchor.isActive = false
+            tableViewToSuperViewBottomAnchor.isActive = true
+        }
     }
     
     private func setupViewController() {
@@ -85,7 +95,9 @@ final class GuideScreenViewController: UIViewController {
             guideScreenTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             guideScreenTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             guideScreenTableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableViewToSuperViewBottomAnchor,
+            
+            AudioPlayer.shared.isPlaying ?
+            tableViewToAudioPlayerViewBottomAnchor : tableViewToSuperViewBottomAnchor,
             
             audioPlayerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             audioPlayerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -122,6 +134,7 @@ final class GuideScreenViewController: UIViewController {
     private func hideAudioPlayerView() {
         self.tableViewToAudioPlayerViewBottomAnchor.isActive = false
         self.tableViewToSuperViewBottomAnchor.isActive = true
+        
         UIView.animate(withDuration: 0.3) { [weak self] in
             guard let self = self else { return }
             self.audioPlayerView.alpha = 0
@@ -133,6 +146,7 @@ final class GuideScreenViewController: UIViewController {
     
     private func showAudioPlayerView() {
         audioPlayerView.isHidden = false
+        
         UIView.animate(withDuration: 0.3) { [weak self] in
             guard let self = self else { return }
             self.audioPlayerView.alpha = 1
@@ -142,7 +156,7 @@ final class GuideScreenViewController: UIViewController {
             self.tableViewToAudioPlayerViewBottomAnchor.isActive = true
         }
     }
-    
+    /// Обработка нажатия на кнопку покупки экскурсий
     @objc func purchaseButtonTapped() {
         let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo)
         navigationController?.pushViewController(purchaseViewController, animated: true)

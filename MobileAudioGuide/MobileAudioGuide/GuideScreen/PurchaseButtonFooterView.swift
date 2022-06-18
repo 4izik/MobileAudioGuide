@@ -7,8 +7,10 @@
 
 import UIKit
 
-class PurchaseButtonFooterView: UITableViewHeaderFooterView {
+/// View с кнопокой покупки полной версии
+final class PurchaseButtonFooterView: UITableViewHeaderFooterView {
     
+    /// Кнопка перехода на экран покупки полной версии
     let purchaseButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
