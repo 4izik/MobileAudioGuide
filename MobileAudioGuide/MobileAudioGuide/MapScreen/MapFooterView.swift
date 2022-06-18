@@ -1,32 +1,15 @@
-import UIKit
-import MapKit
+//
+//  MapFooterView.swift
+//  MobileAudioGuide
+//
+//  Created by Настя on 14.06.2022.
+//
 
-class MapScreenView: UIView {
-    // MARK: - Definition UIElements
-    let mapView: MKMapView = {
-        let map = MKMapView()
-        map.showsUserLocation = true
-        map.userTrackingMode = .follow
-        return map
-    }()
+import UIKit
+
+class MapFooterView: UIView {
     
-    let myGeoButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "geo"), for: .normal)
-        button.backgroundColor = .white
-        return button
-    }()
-    
-    let moreButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "more"), for: .normal)
-        button.backgroundColor = .white
-        return button
-    }()
-    
-    
-    let audioPlayerView: AudioPlayerView = {
-        // В имя файла передавать excursionInfo.filenamePrefix + номер выбранного кружочка
+    var audioPlayerView: AudioPlayerView = {
         let audioPlayerView = AudioPlayerView(audioFileName: "IstambulInOneDay0")
         return audioPlayerView
     }()
@@ -53,14 +36,14 @@ class MapScreenView: UIView {
         return view
     }()
     
-    let imageView: UIImageView = {
+    var imageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         return imageView
     }()
     
-    let titleLabel: UILabel = {
+    var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         label.numberOfLines = 0
@@ -109,7 +92,7 @@ class MapScreenView: UIView {
             infoView.addSubview(view)
         }
         
-        [mapView, myGeoButton, moreButton, audioPlayerView, purchaseView, infoView].forEach { view in
+        [audioPlayerView, purchaseView, infoView].forEach { view in
             addSubview(view)
         }
 
@@ -119,26 +102,11 @@ class MapScreenView: UIView {
     // MARK: - Add constraints
 
     func applyUIConstraints() {
-        [mapView, myGeoButton, moreButton, audioPlayerView, purchaseView, purchaseButton, infoView, imageView, titleLabel, detailButton, closeButton].forEach { view in
+        [audioPlayerView, purchaseView, purchaseButton, infoView, imageView, titleLabel, detailButton, closeButton].forEach { view in
             view.translatesAutoresizingMaskIntoConstraints = false
         }
         
         NSLayoutConstraint.activate([
-            mapView.leftAnchor.constraint(equalTo: leftAnchor),
-            mapView.rightAnchor.constraint(equalTo: rightAnchor),
-            mapView.topAnchor.constraint(equalTo: topAnchor),
-            mapView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            myGeoButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -40),
-            myGeoButton.topAnchor.constraint(equalTo: topAnchor, constant: 100),
-            myGeoButton.heightAnchor.constraint(equalToConstant: 40),
-            myGeoButton.widthAnchor.constraint(equalToConstant: 40),
-            
-            moreButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -40),
-            moreButton.topAnchor.constraint(equalTo: myGeoButton.bottomAnchor, constant: 20),
-            moreButton.heightAnchor.constraint(equalToConstant: 40),
-            moreButton.widthAnchor.constraint(equalToConstant: 40),
-            
             purchaseView.rightAnchor.constraint(equalTo: rightAnchor),
             purchaseView.leftAnchor.constraint(equalTo: leftAnchor),
             purchaseView.bottomAnchor.constraint(equalTo: bottomAnchor),
@@ -181,4 +149,3 @@ class MapScreenView: UIView {
         ])
     }
 }
-

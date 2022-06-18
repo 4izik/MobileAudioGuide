@@ -19,5 +19,22 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>App need always have access to your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>App need always have access to your location</string>
+	<key>MBXAccessToken</key>
+	<string>pk.eyJ1IjoibjIzNDkyIiwiYSI6ImNsNGNka3o0dDA1cHMzZm53NzFmbTR5cnQifQ.6MrRlX46eo5aR_WQXKwhiQ</string>
+	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
+	<dict>
+		<key>CustomKey</key>
+		<string>We temporarily require your precise location for an optimal experience</string>
+	</dict>
 </dict>
 </plist>
