@@ -8,6 +8,7 @@
 import UIKit
 
 class PurchaseViewController: UIViewController {
+    
     private var excursionInfo: ExcursionInfo
     
     // MARK: - Properties
@@ -42,6 +43,9 @@ class PurchaseViewController: UIViewController {
             purchaseView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         loaderInfo()
+        purchaseView.buyOneTourButton.addTarget(self, action: #selector(makePurchaseOneTour), for: .touchUpInside)
+        purchaseView.buyThreeToursButton.addTarget(self, action: #selector(makePurchaseThreeTours), for: .touchUpInside)
+        purchaseView.restorePurchaseButton.addTarget(self, action: #selector(restorePurchase), for: .touchUpInside)
     }
     
     private func loaderInfo() {
@@ -50,4 +54,18 @@ class PurchaseViewController: UIViewController {
                 purchaseView.infoAboutPurchaseTextView.text = text
         }
     }
+    
+    @objc func makePurchaseOneTour() {
+        StoreManager(index: 2).buyInApp(inAppID: "com.istanbul.audioguide.onetour")
+    }
+    
+    @objc func makePurchaseThreeTours() {
+        StoreManager(index: 3).buyInApp(inAppID: "com.istanbul.audioguide.threetours")
+    }
+    
+    @objc func restorePurchase(_ sender: Any) {
+        StoreManager(index: 3).restorePurchases()
+    }
+
+
 }
