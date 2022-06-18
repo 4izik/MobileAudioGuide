@@ -8,6 +8,7 @@
 import Foundation
 import MapboxMaps
 import UIKit
+import Turf
 
 final class OfflineManagerViewController: UIViewController {
     
@@ -16,9 +17,23 @@ final class OfflineManagerViewController: UIViewController {
         return view
     }()
     
+    private let activityIndicator: UIActivityIndicatorView = {
+       let indicator = UIActivityIndicatorView()
+        indicator.isHidden = false
+        indicator.startAnimating()
+        return indicator
+    }()
+    
     private let myGeoButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "geo"), for: .normal)
+        button.backgroundColor = .white
+        return button
+    }()
+    
+    private let moreButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "more"), for: .normal)
         button.backgroundColor = .white
         return button
     }()
@@ -30,6 +45,7 @@ final class OfflineManagerViewController: UIViewController {
     let excursionInfo: ExcursionInfo
     private var isFullVersionPurchased = false
     private var selectedIndex = 0
+    private var markers: [UIImage] = []
     
     init(excursionInfo: ExcursionInfo) {
         self.excursionInfo = excursionInfo
@@ -67,22 +83,23 @@ final class OfflineManagerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        istanbulCoord = CLLocationCoordinate2D(latitude: excursionInfo.tours.first?.latitude ?? 41.011225, longitude: excursionInfo.tours.first?.longitude ?? 28.978151)
+        let index = excursionInfo.tours.count / 2
+        istanbulCoord = CLLocationCoordinate2D(latitude: excursionInfo.tours[index].latitude, longitude: excursionInfo.tours[index].longitude)
         state = .initial
+        setupImage()
         setupUI()
     }
     
     func setupUI() {
-        view.addSubview(mapViewContainer)
-        view.addSubview(myGeoButton)
-        view.addSubview(mapFooterView)
-        
+        [activityIndicator,mapViewContainer, myGeoButton, moreButton, mapFooterView].forEach { view in
+            self.view.addSubview(view)
+            view.translatesAutoresizingMaskIntoConstraints = false
+        }
+
         mapFooterView.alpha = 0
         mapFooterView.isHidden = true
 
-        mapViewContainer.translatesAutoresizingMaskIntoConstraints = false
-        myGeoButton.translatesAutoresizingMaskIntoConstraints = false
-        mapFooterView.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
         
         NSLayoutConstraint.activate([
             mapViewContainer.widthAnchor.constraint(equalTo: view.widthAnchor),
@@ -95,14 +112,37 @@ final class OfflineManagerViewController: UIViewController {
             myGeoButton.heightAnchor.constraint(equalToConstant: 40),
             myGeoButton.widthAnchor.constraint(equalToConstant: 40),
             
+            moreButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10),
+            moreButton.topAnchor.constraint(equalTo: myGeoButton.bottomAnchor, constant: 20),
+            moreButton.heightAnchor.constraint(equalToConstant: 40),
+            moreButton.widthAnchor.constraint(equalToConstant: 40),
+            
             mapFooterView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             mapFooterView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             mapFooterView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            mapFooterView.heightAnchor.constraint(equalToConstant: 300)
+            mapFooterView.heightAnchor.constraint(equalToConstant: 300),
+            
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            activityIndicator.widthAnchor.constraint(equalToConstant: 50),
+            activityIndicator.heightAnchor.constraint(equalToConstant: 50)
         ])
         downloadTileRegions()
-        
+    
         myGeoButton.addTarget(self, action: #selector(showMyGeo), for: .touchUpInside)
+        moreButton.addTarget(self, action: #selector(showAllTour), for: .touchUpInside)
+    }
+    
+    private func setupImage() {
+        for index in 0..<excursionInfo.tours.count {
+            var image = UIImage()
+            if !isFullVersionPurchased && index > 4 {
+                image = textToImage(drawText: NSString(string: "\(index + 1)"), inImage: UIImage(named: "mapbox-marker-icon-20px-gray")!)
+            } else {
+                image = textToImage(drawText: NSString(string: "\(index + 1)"), inImage: UIImage(named: "mapbox-marker-icon-20px-blue")!)
+            }
+            markers.append(image)
+        }
     }
     
     @objc func showMyGeo() {
@@ -110,6 +150,11 @@ final class OfflineManagerViewController: UIViewController {
         if let locationCoordinate = mapView?.location.latestLocation?.coordinate {
             mapView?.mapboxMap.setCamera(to: CameraOptions(center: locationCoordinate, zoom: 15))
         }
+    }
+    
+    @objc func showAllTour() {
+        let routeViewController = RouteViewController(excursionInfo: excursionInfo)
+        navigationController?.pushViewController(routeViewController, animated: true)
     }
     // MARK: - Actions
     private func downloadTileRegions() {
@@ -191,7 +236,7 @@ final class OfflineManagerViewController: UIViewController {
                 state = .mapViewDisplayed
             }
         }
-
+        
         downloads = [stylePackDownload, tileRegionDownload]
         state = .downloading
     }
@@ -207,10 +252,10 @@ final class OfflineManagerViewController: UIViewController {
     
         for (index,tour) in tours.enumerated() {
             var pointAnnotation = PointAnnotation(coordinate: CLLocationCoordinate2D(latitude: tour.latitude, longitude: tour.longitude))
-            if !isFullVersionPurchased && index > 5 {
-                pointAnnotation.image = .init(image: UIImage(named: "mapbox-marker-icon-20px-gray")!, name: "mapbox-marker-icon-20px-gray")
+            if !isFullVersionPurchased && index > 4 {
+                pointAnnotation.image = .init(image: markers[index], name: "marker \(index)")
             } else {
-                pointAnnotation.image = .init(image: UIImage(named: "mapbox-marker-icon-20px-blue")!, name: "mapbox-marker-icon-20px-blue")
+                pointAnnotation.image = .init(image: markers[index], name: "marker \(index)")
             }
             pointAnnotation.iconAnchor = .bottom
             pointAnnotation.userInfo = ["number" : index]
@@ -221,7 +266,27 @@ final class OfflineManagerViewController: UIViewController {
         // Add the annotation to the manager in order to render it on the map.
         pointAnnotationManager?.annotations = points
         pointAnnotationManager?.delegate = self
+    }
+    
+    private func textToImage(drawText text: NSString, inImage image: UIImage) -> UIImage {
+        
+        UIGraphicsBeginImageContext(image.size)
+        image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
 
+        let font = UIFont.systemFont(ofSize: 14)
+        let paraStyle = NSMutableParagraphStyle()
+        paraStyle.alignment = NSTextAlignment.center
+
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: font, NSAttributedString.Key.paragraphStyle: paraStyle]
+        let height = font.lineHeight
+        let y = (image.size.height-height) / 2
+        let strRect = CGRect(x: 0, y: y, width: image.size.width, height: height)
+        text.draw(in: strRect.integral, withAttributes: attributes)
+
+        guard let result = UIGraphicsGetImageFromCurrentImageContext() else { return UIImage()}
+        UIGraphicsEndImageContext()
+
+        return result
     }
     
     private func setFooterView(number: Int) {
@@ -314,6 +379,7 @@ final class OfflineManagerViewController: UIViewController {
 
             case (.downloaded, .mapViewDisplayed):
                 showMapView()
+                addLinesOnMap()
                 addMarkersOnMap()
 
             case (.mapViewDisplayed, .finished),
@@ -333,6 +399,9 @@ final class OfflineManagerViewController: UIViewController {
     }
 
     private func showMapView() {
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
+        
         let mapView = MapView(frame: mapViewContainer.bounds, mapInitOptions: mapInitOptions)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapViewContainer.addSubview(mapView)
@@ -368,12 +437,34 @@ final class OfflineManagerViewController: UIViewController {
         let detailScreenViewController = DetailsScreenViewController(excursionInfo: excursionInfo, viewpointIndex: selectedIndex)
         navigationController?.pushViewController(detailScreenViewController, animated: true)
     }
+    
+    private func addLinesOnMap() {
+        let tours = excursionInfo.tours
+        var lines: [PolylineAnnotation] = []
+    
+        for i in 0..<tours.count-1 {
+            let lineCoordinates = [
+                CLLocationCoordinate2DMake(tours[i].latitude, tours[i].longitude),
+                CLLocationCoordinate2DMake(tours[i+1].latitude, tours[i+1].longitude)
+            ]
+
+            // Create the line annotation.
+            var lineAnnotation = PolylineAnnotation(lineCoordinates: lineCoordinates)
+            lineAnnotation.lineColor = StyleColor(.systemBlue)
+            lines.append(lineAnnotation)
+        }
+        // Create the `PolylineAnnotationManager` which will be responsible for handling this annotation
+        let lineAnnnotationManager = mapView?.annotations.makePolylineAnnotationManager()
+
+        // Add the annotation to the manager.
+        lineAnnnotationManager?.annotations = lines
+    }
 }
 
 extension OfflineManagerViewController: AnnotationInteractionDelegate {
     public func annotationManager(_ manager: AnnotationManager, didDetectTappedAnnotations annotations: [Annotation]) {
         guard let number = annotations.last?.userInfo?["number"] as? Int else { return }
-        if !isFullVersionPurchased && number > 5 {
+        if !isFullVersionPurchased && number > 4 {
             mapFooterView.isHidden = false
             showPurchaseScreen()
         } else {
