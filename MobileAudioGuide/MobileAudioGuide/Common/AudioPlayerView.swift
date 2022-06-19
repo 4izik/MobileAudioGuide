@@ -8,27 +8,14 @@
 import UIKit
 import AVFoundation
 
-/// Вью с проигрываетелм для аудиогидов
+/// Вью с проигрывателем для аудиогидов
 final class AudioPlayerView: UIView {
     
-    private let audioFileName: String
+    private var audioFileName: String
     
-    private lazy var audioURL: URL? = {
-        guard let urlString = Bundle.main.path(forResource: audioFileName, ofType: "mp3") else { return nil }
-        return URL(fileURLWithPath: urlString)
-    }()
+    private var audioPlayer = AudioPlayer.shared
     
-    private lazy var audioPlayer: AVAudioPlayer? = {
-        guard let audioURL = audioURL,
-              let audioPlayer = try? AVAudioPlayer(contentsOf: audioURL)
-        else { return nil }
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateSliderPosition), userInfo: nil, repeats: true)
-        return audioPlayer
-    }()
-    
-    private lazy var audioDuration: TimeInterval = {
-        return audioPlayer?.duration ?? .zero
-    }()
+    private var audioDuration: TimeInterval { audioPlayer.getDurationForFile(named: audioFileName) }
     
     private lazy var backView: UIView = {
         let backView = UIView(frame: .zero)
@@ -36,7 +23,8 @@ final class AudioPlayerView: UIView {
         return backView
     }()
     
-    private lazy var playButton: UIButton = {
+    /// Кнопка воспроизведения/паузы
+    lazy var playButton: UIButton = {
         let playButton = UIButton(type: .custom)
         playButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
         playButton.contentVerticalAlignment = .fill
@@ -74,7 +62,7 @@ final class AudioPlayerView: UIView {
         label.alpha = 0.7
         return label
     }()
-    
+        
     /// Инициализатор
     /// - Parameter audioFileName: имя аудиофайла для воспроизведения, без расширения
     init(audioFileName: String) {
@@ -82,7 +70,7 @@ final class AudioPlayerView: UIView {
         super.init(frame: .zero)
         setupViews()
         setupConstraints()
-        setupAudioSession()
+        setupTimer()
     }
     
     required init?(coder: NSCoder) {
@@ -123,44 +111,43 @@ final class AudioPlayerView: UIView {
         ])
     }
     
-    private func setupAudioSession() {
-        do {
-            try AVAudioSession.sharedInstance().setMode(.default)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            print(error.localizedDescription)
-        }
+    private func setupTimer() {
+        let timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateSliderPosition), userInfo: nil, repeats: true)
+        RunLoop.current.add(timer, forMode: .common)
     }
     
-    @objc private func playButtonTapped() {
-        guard let audioPlayer = audioPlayer else { return }
-        
-        switch audioPlayer.isPlaying {
-        case true: audioPlayer.stop()
-        case false: audioPlayer.play()
-        }
+    @objc func playButtonTapped() {
+        audioPlayer.playerButtonTapped(audioFileName: audioFileName)
+    }
+    
+    /// Функция для синхронизации с маленькими кнопками в ячейках RootViewController
+    func playButtonTappedFor(filename: String, continuePlaying: Bool = false) {
+        audioFileName = filename
+        audioPlayer.playerButtonTapped(audioFileName: audioFileName, continuePlaying: continuePlaying)
+        totalPlayingTimeLabel.text = audioDuration.minSecFormatted
+        sliderView.maximumValue = Float(audioDuration)
     }
     
     @objc private func sliderPositionChanged() {
-        guard let audioPlayer = audioPlayer else { return }
         let isPlaying = audioPlayer.isPlaying
         updateCurrentPlayingTimeLabel()
-        audioPlayer.stop()
-        audioPlayer.currentTime = TimeInterval(sliderView.value)
+        audioPlayer.stopPlaying()
+        audioPlayer.setCurrentTimeTo(TimeInterval(sliderView.value))
         audioPlayer.prepareToPlay()
-        if isPlaying { audioPlayer.play() }
+        if isPlaying { audioPlayer.resumePlaying() }
     }
     
     @objc private func updateSliderPosition() {
-        guard let audioPlayer = audioPlayer else { return }
-        sliderView.value = Float(audioPlayer.currentTime)
-        let buttonImageName = audioPlayer.isPlaying ? "pause.circle" : "play.circle"
-        playButton.setImage(UIImage(systemName: buttonImageName), for: .normal)
+        sliderView.value = Float(audioPlayer.getCurrentTimeForFile(named: audioFileName))
         updateCurrentPlayingTimeLabel()
+        
+        guard let newFileNamePath = Bundle.main.path(forResource: audioFileName, ofType: "mp3") else { return }
+        let newFileNameURL = URL(fileURLWithPath: newFileNamePath)
+        let buttonImageName = audioPlayer.isPlaying && newFileNameURL == audioPlayer.getNowPlayingUrl() ? "pause.circle" : "play.circle"
+        playButton.setImage(UIImage(systemName: buttonImageName), for: .normal)
     }
     
     private func updateCurrentPlayingTimeLabel() {
-        currentPlayingTimeLabel.text = audioPlayer?.currentTime.minSecFormatted
+        currentPlayingTimeLabel.text = audioPlayer.getCurrentTimeForFile(named: audioFileName).minSecFormatted
     }
 }

@@ -7,18 +7,42 @@
 
 import UIKit
 
+/// Возможные варианты установки изображения для кнопки Play в ячейке
+enum PlayButtonOption {
+    /// Изображение "play.circle.fill"
+    case playImage
+    /// Изображение берется из самой ячейки в зависимости от состояния воспроизведения
+    case smallAudioPlayerButtonImage
+}
+
 /// ViewController для экрана "Маршрут экскурсии"
 final class RouteViewController: UIViewController {
     
-    // TODO: Передавать в excursions массив с моделями точек на маршруте
     private let excursionInfo: ExcursionInfo
-    private var isFullVersionPurchsded = false
+    private var isFullVersionPurchased = true
     private var numberOfFreePoints = 5
     
-    private lazy var audioPlayerView: AudioPlayerView = {
-        // TODO: Подставлять актуальное имя файла для каждого экрана
-        // TODO: Скрывать изначально, отображать при нажатии на кнопку play в ячейке
-        let audioPlayerView = AudioPlayerView(audioFileName: "Tour1About")
+    /// Индекс ячейки, в которой нужно будет изменить изображение кнопки play при изменении источника воспроизведения
+    lazy var indexOfCellToPause: Int? = {
+        guard let nowPlayingFileName = nowPlayingFileName,
+              let nowPlayingAudioNumberString = nowPlayingFileName.components(separatedBy: excursionInfo.filenamePrefix).last,
+              let nowPlayingAudioNumber = Int(nowPlayingAudioNumberString)
+        else { return nil }
+        return nowPlayingAudioNumber - 1
+    }()
+    
+    /// Имя аудиофайла, воспроизводимого на момент перехода на экран
+    var nowPlayingFileName: String? {
+        AudioPlayer.shared.nowPlayingFileName
+    }
+    
+    /// View с аудиопроигрываетелм
+    lazy var audioPlayerView: AudioPlayerView = {
+        let audioPlayerView = AudioPlayerView(audioFileName: nowPlayingFileName ?? excursionInfo.filenamePrefix + "1")
+        audioPlayerView.isHidden = (nowPlayingFileName != nil) ? false : true
+        audioPlayerView.alpha = (nowPlayingFileName != nil) ? 1 : 0
+        audioPlayerView.playButton.tag = indexOfCellToPause ?? 0
+        audioPlayerView.playButton.addTarget(self, action: #selector(audioPlayerViewPlayButtonTapped), for: .touchUpInside)
         return audioPlayerView
     }()
     
@@ -30,18 +54,11 @@ final class RouteViewController: UIViewController {
         tableView.allowsSelection = false
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.contentInset = UIEdgeInsets(top: 30, left: 0, bottom: 70, right: 0)
+        tableView.contentInset.top = 30
+        tableView.contentInset.bottom = 70
+        tableView.setContentOffset(CGPoint(x: 0, y: -tableView.contentInset.top), animated: false)
         return tableView
     }()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupViewController()
-        setupRouteTableView()
-        setupViews()
-        activateConstraints()
-        routeTableView.layoutIfNeeded()
-    }
     
     /// Инициализатор
     /// - Parameter excursionInfo: модель текущей экскурсии
@@ -54,8 +71,34 @@ final class RouteViewController: UIViewController {
         fatalError("Initializing from Storyboard isn't supported")
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViewController()
+        setupRouteTableView()
+        setupViews()
+        activateConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "Excursion route"
+        
+        audioPlayerView.isHidden = (nowPlayingFileName != nil) ? false : true
+        audioPlayerView.alpha = (nowPlayingFileName != nil) ? 1 : 0
+        
+        if let nowPlayingFileName = nowPlayingFileName, AudioPlayer.shared.isPlaying {
+            audioPlayerView.playButtonTappedFor(filename: nowPlayingFileName, continuePlaying: AudioPlayer.shared.isPlaying)
+        }
+        
+        setCellPlayAudioButtonImageTo(.smallAudioPlayerButtonImage)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        setCellPlayAudioButtonImageTo(.playImage)
+    }
+    
     private func setupViewController() {
-        title = "Excursion route"
         navigationController?.navigationBar.topItem?.title = ""
     }
     
@@ -73,6 +116,19 @@ final class RouteViewController: UIViewController {
         }
     }
     
+    @objc private func audioPlayerViewPlayButtonTapped(sender: UIButton) {
+        if let cell = routeTableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? PointOfInterestTableViewCell {
+            cell.playAudioButton.setImage(cell.smallAudioPlayerButtonImage, for: .normal)
+            
+            guard let nowPlayingFileName = nowPlayingFileName,
+                  let nowPlayingAudioNumberString = nowPlayingFileName.components(separatedBy: excursionInfo.filenamePrefix).last,
+                  let nowPlayingAudioNumber = Int(nowPlayingAudioNumberString)
+            else { return }
+            
+            audioPlayerView.playButton.tag = nowPlayingAudioNumber - 1
+        }
+    }
+    
     private func activateConstraints() {
         NSLayoutConstraint.activate([
             routeTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -86,43 +142,66 @@ final class RouteViewController: UIViewController {
             audioPlayerView.heightAnchor.constraint(equalToConstant: 90)
         ])
     }
+    
+    private func setCellPlayAudioButtonImageTo(_ option: PlayButtonOption) {
+        if let indexOfCellToPause = indexOfCellToPause,
+           let cell = routeTableView.cellForRow(at: IndexPath(row: indexOfCellToPause, section: 0)) as? PointOfInterestTableViewCell {
+            
+            switch option {
+            case .playImage:
+                cell.playAudioButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+            case .smallAudioPlayerButtonImage:
+                cell.playAudioButton.setImage(cell.smallAudioPlayerButtonImage, for: .normal)
+            }
+        }
+    }
 }
 
+// MARK: - Table view data source
 extension RouteViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        isFullVersionPurchsded ? excursionInfo.tours.count : numberOfFreePoints + 2
+        isFullVersionPurchased ? excursionInfo.tours.count : numberOfFreePoints + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch (isFullVersionPurchsded, indexPath.row) {
-        
+        switch (isFullVersionPurchased, indexPath.row) {
+            
         case (true, excursionInfo.tours.count - 1):
-            return getPointOfInterestCellIn(tableView, forIndexPath: indexPath, isLast: true)
+            return getPointOfInterestCellIn(tableView: tableView,
+                                            forIndexPath: indexPath,
+                                            isLast: true)
             
         case (true, _), (false, ..<numberOfFreePoints):
-            return getPointOfInterestCellIn(tableView, forIndexPath: indexPath, isLast: false)
+            return getPointOfInterestCellIn(tableView: tableView,
+                                            forIndexPath: indexPath,
+                                            isLast: false)
             
         case (false, numberOfFreePoints):
-            return getPointOfInterestCellIn(tableView, forIndexPath: indexPath, isLast: false, isActive: false)
+            return getPointOfInterestCellIn(tableView: tableView,
+                                            forIndexPath: indexPath,
+                                            isLast: false,
+                                            isActive: false)
             
         case (false, numberOfFreePoints + 1):
-            return getBuyFullVersionCellIn(tableView, forIndexPath: indexPath)
+            return getBuyFullVersionCellIn(tableView: tableView,
+                                           forIndexPath: indexPath)
             
         default: return UITableViewCell()
         }
     }
     
-    private func getBuyFullVersionCellIn(_ tableView: UITableView, forIndexPath indexPath: IndexPath) -> UITableViewCell {
+    private func getBuyFullVersionCellIn(tableView: UITableView, forIndexPath indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BuyFullVersionTableViewCell.identifier,
                                                        for: indexPath) as? BuyFullVersionTableViewCell
         else { return UITableViewCell() }
+        
         cell.totalPointsNumber = excursionInfo.tours.count
         cell.buyFullVersionButton.addTarget(self, action: #selector(purchaseButtonTapped), for: .touchUpInside)
         return cell
     }
     
-    private func getPointOfInterestCellIn(_ tableView: UITableView,
+    private func getPointOfInterestCellIn(tableView: UITableView,
                                           forIndexPath indexPath: IndexPath,
                                           isLast: Bool,
                                           isActive: Bool = true) -> UITableViewCell {
@@ -137,7 +216,10 @@ extension RouteViewController: UITableViewDelegate, UITableViewDataSource {
         cell.isLast = isLast
         if isActive {
             cell.showDetailsButton.tag = indexPath.row
+            cell.playAudioButton.tag = indexPath.row
             cell.showDetailsButton.addTarget(self, action: #selector(showDetailsButtonTapped), for: .touchUpInside)
+            cell.playAudioButton.addTarget(self, action: #selector(cellPlayAudioButtonTapped), for: .touchUpInside)
+            cell.playAudioButton.setImage(cell.smallAudioPlayerButtonImage, for: .normal)
         }
         return cell
     }
@@ -149,7 +231,25 @@ extension RouteViewController: UITableViewDelegate, UITableViewDataSource {
     
     @objc private func showDetailsButtonTapped(sender: UIButton) {
         let detailsViewController = DetailsScreenViewController(excursionInfo: excursionInfo, viewpointIndex: sender.tag + 1)
+        detailsViewController.delegate = self
         navigationController?.pushViewController(detailsViewController, animated: true)
         
+    }
+    
+    @objc private func cellPlayAudioButtonTapped(sender: UIButton) {
+        audioPlayerView.playButtonTappedFor(filename: excursionInfo.filenamePrefix + String(sender.tag + 1))
+        audioPlayerView.isHidden = false
+        audioPlayerView.alpha = 1
+        
+        setSmallPlayButtonImagesForPlaying(cellIndex: sender.tag)
+        audioPlayerView.playButton.tag = sender.tag
+    }
+    
+    private func setSmallPlayButtonImagesForPlaying(cellIndex: Int) {
+        setCellPlayAudioButtonImageTo(.smallAudioPlayerButtonImage)
+        
+        guard let thisCell = routeTableView.cellForRow(at: IndexPath(row: cellIndex, section: 0)) as? PointOfInterestTableViewCell else { return }
+        thisCell.playAudioButton.setImage(thisCell.smallAudioPlayerButtonImage, for: .normal)
+        indexOfCellToPause = cellIndex
     }
 }

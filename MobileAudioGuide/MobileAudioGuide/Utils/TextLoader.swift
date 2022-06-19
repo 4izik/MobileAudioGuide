@@ -20,5 +20,7 @@ class TextLoader {
         guard let path = path,
               let contentsOfFile = try? String(contentsOfFile: path)  else { return nil }
         return contentsOfFile
+            .replacingOccurrences(of: "\n", with: "\n\n")
+            .replacingOccurrences(of: "\"\"", with: "\"")
     }
 }

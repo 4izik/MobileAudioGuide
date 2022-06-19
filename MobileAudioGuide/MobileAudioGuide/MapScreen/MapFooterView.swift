@@ -10,7 +10,7 @@ import UIKit
 class MapFooterView: UIView {
     
     var audioPlayerView: AudioPlayerView = {
-        let audioPlayerView = AudioPlayerView(audioFileName: "IstambulInOneDay0")
+        let audioPlayerView = AudioPlayerView(audioFileName: "IstambulInOneDay1")
         return audioPlayerView
     }()
     

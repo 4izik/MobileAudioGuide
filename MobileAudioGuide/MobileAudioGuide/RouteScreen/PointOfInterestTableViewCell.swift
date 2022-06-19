@@ -11,7 +11,11 @@ import UIKit
 final class PointOfInterestTableViewCell: UITableViewCell {
     
     static let identifier = "PointOfInterestTableViewCell"
+    
+    /// Индекс текущей ячейки
     var cellIndex: Int = 1
+    
+    /// Модель с данными об экскурсии
     var excursionInfo: ExcursionInfo? {
         didSet {
             guard let excursionInfo = excursionInfo else { return }
@@ -21,6 +25,28 @@ final class PointOfInterestTableViewCell: UITableViewCell {
                 titleLabel.text = excursionInfo.tours[cellIndex].tourTitle
             }
         }
+    }
+    
+    private var nowPlayingAudioUrl: URL? {
+        AudioPlayer.shared.getNowPlayingUrl()
+    }
+    
+    private var thisCellAudioFileUrl: URL? {
+        guard let excursionInfo = excursionInfo else { return nil }
+        let thisCellAudioFilename = excursionInfo.filenamePrefix + String(cellIndex + 1)
+        guard let thisCellAudioFilePath = Bundle.main.path(forResource: thisCellAudioFilename, ofType: "mp3")
+        else { return nil }
+        
+        return URL(fileURLWithPath: thisCellAudioFilePath)
+    }
+    
+    private var thisCellAudioIsNowPlaying: Bool {
+        (nowPlayingAudioUrl == thisCellAudioFileUrl) && AudioPlayer.shared.isPlaying
+    }
+    
+    /// Изображение кнопки play в ячейке в зависимости от текущего воспроизодимого файла
+    var smallAudioPlayerButtonImage: UIImage? {
+        UIImage(systemName: thisCellAudioIsNowPlaying ? "pause.circle.fill" : "play.circle.fill")
     }
     
     /// Активна ли ячейка (цветная или серая)
@@ -87,6 +113,7 @@ final class PointOfInterestTableViewCell: UITableViewCell {
         return label
     }()
     
+    /// Кнопка перехода на экран с подробным описанием точки маршрута
     lazy var showDetailsButton: UIButton = {
         let button = UIButton()
         button.setTitleColor(Colors.vwBlueColor, for: .normal)
@@ -96,10 +123,10 @@ final class PointOfInterestTableViewCell: UITableViewCell {
         return button
     }()
     
-    // TODO: добавить действие кнопке
+    /// Кнопка воспроизведения аудио
     lazy var playAudioButton: UIButton = {
         let playButton = UIButton(type: .custom)
-        playButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+        playButton.setImage(smallAudioPlayerButtonImage, for: .normal)
         playButton.contentVerticalAlignment = .fill
         playButton.contentHorizontalAlignment = .fill
         playButton.tintColor = Colors.vwBlueColor

@@ -13,8 +13,10 @@ final class DetailsScreenViewController: UIViewController {
     private let excursionInfo: ExcursionInfo
     private let viewpointNumber: Int
     
+    /// Делегат для передачи данных о воспроизведении аудио
+    var delegate: RouteViewController?
+    
     private lazy var topImageView: UIImageView = {
-        // TODO: Подставлять актуальное имя изображения для каждого экрана
         let imageView = UIImageView(image: UIImage(named: excursionInfo.filenamePrefix + String(viewpointNumber)))
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -79,10 +81,18 @@ final class DetailsScreenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationItem.title = excursionInfo.shortTitle
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if AudioPlayer.shared.nowPlayingFileName == excursionInfo.filenamePrefix + String(viewpointNumber) {
+            delegate?.indexOfCellToPause = viewpointNumber - 1
+            delegate?.audioPlayerView.playButton.tag = viewpointNumber - 1
+        }
     }
     
     private func setupViewController() {
-        title = excursionInfo.shortTitle
         view.backgroundColor = .white
         navigationController?.navigationBar.topItem?.title = ""
     }

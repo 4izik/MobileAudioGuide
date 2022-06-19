@@ -61,6 +61,7 @@ final class BuyFullVersionTableViewCell: UITableViewCell {
         return label
     }()
     
+    /// Кнопка покупки полной версии приложения
     lazy var buyFullVersionButton: UIButton = {
         let button = UIButton(type: .roundedRect)
         button.setTitleColor(.white, for: .normal)
