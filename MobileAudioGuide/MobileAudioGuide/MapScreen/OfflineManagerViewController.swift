@@ -43,7 +43,7 @@ final class OfflineManagerViewController: UIViewController {
     private var mapView: MapView?
     private var tileStore: TileStore?
     let excursionInfo: ExcursionInfo
-    private var isFullVersionPurchased = false
+    private var isFullVersionPurchased = true
     private var selectedIndex = 0
     private var markers: [UIImage] = []
     
@@ -90,7 +90,13 @@ final class OfflineManagerViewController: UIViewController {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = excursionInfo.shortTitle
+    }
+    
     func setupUI() {
+        navigationController?.navigationBar.topItem?.title = ""
         [activityIndicator,mapViewContainer, myGeoButton, moreButton, mapFooterView].forEach { view in
             self.view.addSubview(view)
             view.translatesAutoresizingMaskIntoConstraints = false
@@ -408,7 +414,7 @@ final class OfflineManagerViewController: UIViewController {
 
         // Add a point annotation that shows the point geometry that were passed
         // to the tile region API.
-        mapView.mapboxMap.onNext(.styleLoaded) { [weak self] _ in
+        mapView.mapboxMap.onNext(event: .styleLoaded) { [weak self] _ in
             guard let self = self,
                   let mapView = self.mapView else {
                 return
