@@ -14,7 +14,7 @@ final class DetailsScreenViewController: UIViewController {
     private let viewpointNumber: Int
     
     /// Делегат для передачи данных о воспроизведении аудио
-    var delegate: RouteViewController?
+    weak var delegate: RouteViewController?
     
     private lazy var topImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: excursionInfo.filenamePrefix + String(viewpointNumber)))

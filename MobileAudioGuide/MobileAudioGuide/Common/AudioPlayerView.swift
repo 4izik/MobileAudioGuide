@@ -8,13 +8,16 @@
 import UIKit
 import AVFoundation
 
+protocol AudioPlayerViewDelegate: NSObject {
+    func audioStopped()
+}
+
 /// Вью с проигрывателем для аудиогидов
 final class AudioPlayerView: UIView {
     
     private var audioFileName: String
-    
     private var audioPlayer = AudioPlayer.shared
-    
+    weak var delegate: AudioPlayerViewDelegate?
     private var audioDuration: TimeInterval { audioPlayer.getDurationForFile(named: audioFileName) }
     
     private lazy var backView: UIView = {
@@ -145,6 +148,7 @@ final class AudioPlayerView: UIView {
         let newFileNameURL = URL(fileURLWithPath: newFileNamePath)
         let buttonImageName = audioPlayer.isPlaying && newFileNameURL == audioPlayer.getNowPlayingUrl() ? "pause.circle" : "play.circle"
         playButton.setImage(UIImage(systemName: buttonImageName), for: .normal)
+        if buttonImageName == "play.circle" { delegate?.audioStopped() }
     }
     
     private func updateCurrentPlayingTimeLabel() {

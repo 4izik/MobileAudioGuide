@@ -43,6 +43,7 @@ final class RouteViewController: UIViewController {
         audioPlayerView.alpha = (nowPlayingFileName != nil) ? 1 : 0
         audioPlayerView.playButton.tag = indexOfCellToPause ?? 0
         audioPlayerView.playButton.addTarget(self, action: #selector(audioPlayerViewPlayButtonTapped), for: .touchUpInside)
+        audioPlayerView.delegate = self
         return audioPlayerView
     }()
     
@@ -251,5 +252,11 @@ extension RouteViewController: UITableViewDelegate, UITableViewDataSource {
         guard let thisCell = routeTableView.cellForRow(at: IndexPath(row: cellIndex, section: 0)) as? PointOfInterestTableViewCell else { return }
         thisCell.playAudioButton.setImage(thisCell.smallAudioPlayerButtonImage, for: .normal)
         indexOfCellToPause = cellIndex
+    }
+}
+
+extension RouteViewController: AudioPlayerViewDelegate {
+    func audioStopped() {
+        setCellPlayAudioButtonImageTo(.playImage)
     }
 }
