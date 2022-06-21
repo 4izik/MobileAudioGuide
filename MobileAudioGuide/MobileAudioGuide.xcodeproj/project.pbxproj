@@ -10,17 +10,16 @@
 		5D0C3CA9284FB1B6005FBAE0 /* aboutPurchase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5D0C3CA8284FB1B6005FBAE0 /* aboutPurchase.txt */; };
 		5D0C3CAB284FB1BF005FBAE0 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C3CAA284FB1BF005FBAE0 /* PurchaseView.swift */; };
 		5D0C3CAD284FB1C3005FBAE0 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C3CAC284FB1C3005FBAE0 /* PurchaseViewController.swift */; };
-		5D18645C28573F2300A001E5 /* CameraLocationConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18645B28573F2300A001E5 /* CameraLocationConsumer.swift */; };
-		5D18645E2857818C00A001E5 /* OfflineManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18645D2857818C00A001E5 /* OfflineManagerViewController.swift */; };
 		5D0C3CAF285235FA005FBAE0 /* PriceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C3CAE285235FA005FBAE0 /* PriceManager.swift */; };
 		5D0C3CB128523601005FBAE0 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C3CB028523601005FBAE0 /* StoreManager.swift */; };
 		5D1864572854E03600A001E5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1864562854E03600A001E5 /* StoreKit.framework */; };
+		5D18645C28573F2300A001E5 /* CameraLocationConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18645B28573F2300A001E5 /* CameraLocationConsumer.swift */; };
+		5D18645E2857818C00A001E5 /* OfflineManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18645D2857818C00A001E5 /* OfflineManagerViewController.swift */; };
 		5D61FD1B28328A1E00AB33C3 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */; };
 		5D86A3B9285CD8110024ED23 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 5D86A3B8285CD8110024ED23 /* MapboxMaps */; };
 		5DCB58FB283172BE00A2C3CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FA283172BE00A2C3CC /* AppDelegate.swift */; };
 		5DCB58FD283172BE00A2C3CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FC283172BE00A2C3CC /* SceneDelegate.swift */; };
 		5DCB58FF283172BE00A2C3CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FE283172BE00A2C3CC /* MainViewController.swift */; };
-		5DCB5905283172BE00A2C3CC /* MobileAudioGuide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB5903283172BE00A2C3CC /* MobileAudioGuide.xcdatamodeld */; };
 		5DCB5907283172C000A2C3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB5906283172C000A2C3CC /* Assets.xcassets */; };
 		5DCB590A283172C000A2C3CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB5908283172C000A2C3CC /* LaunchScreen.storyboard */; };
 		5DCB59122831736E00A2C3CC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB59112831736E00A2C3CC /* MainView.swift */; };
@@ -291,17 +290,16 @@
 		5D0C3CA8284FB1B6005FBAE0 /* aboutPurchase.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aboutPurchase.txt; sourceTree = "<group>"; };
 		5D0C3CAA284FB1BF005FBAE0 /* PurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		5D0C3CAC284FB1C3005FBAE0 /* PurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
-		5D18645B28573F2300A001E5 /* CameraLocationConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraLocationConsumer.swift; sourceTree = "<group>"; };
-		5D18645D2857818C00A001E5 /* OfflineManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineManagerViewController.swift; sourceTree = "<group>"; };
 		5D0C3CAE285235FA005FBAE0 /* PriceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceManager.swift; sourceTree = "<group>"; };
 		5D0C3CB028523601005FBAE0 /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		5D1864562854E03600A001E5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5D18645B28573F2300A001E5 /* CameraLocationConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraLocationConsumer.swift; sourceTree = "<group>"; };
+		5D18645D2857818C00A001E5 /* OfflineManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineManagerViewController.swift; sourceTree = "<group>"; };
 		5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		5DCB58F7283172BE00A2C3CC /* MobileAudioGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAudioGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCB58FA283172BE00A2C3CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DCB58FC283172BE00A2C3CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5DCB58FE283172BE00A2C3CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		5DCB5904283172BE00A2C3CC /* MobileAudioGuide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MobileAudioGuide.xcdatamodel; sourceTree = "<group>"; };
 		5DCB5906283172C000A2C3CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DCB5909283172C000A2C3CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DCB590B283172C000A2C3CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -648,7 +646,6 @@
 				5DCB5906283172C000A2C3CC /* Assets.xcassets */,
 				5DCB5908283172C000A2C3CC /* LaunchScreen.storyboard */,
 				5DCB590B283172C000A2C3CC /* Info.plist */,
-				5DCB5903283172BE00A2C3CC /* MobileAudioGuide.xcdatamodeld */,
 			);
 			path = MobileAudioGuide;
 			sourceTree = "<group>";
@@ -1400,7 +1397,6 @@
 				CE05C0732850FA9D00AF37CE /* PointOfInterestTableViewCell.swift in Sources */,
 				5DD753FD28391D910093FFBE /* InfoScreenView.swift in Sources */,
 				CE415155283AB61E00CF9D53 /* TimeInterval+minSecFormatted.swift in Sources */,
-				5DCB5905283172BE00A2C3CC /* MobileAudioGuide.xcdatamodeld in Sources */,
 				CE200B2A28339F680043F57A /* GuideScreenViewController.swift in Sources */,
 				CE8DDA002857DD0B00FFD28A /* AudioPlayer.swift in Sources */,
 				CE4151412835098900CF9D53 /* GuideFeatureViewBuilder.swift in Sources */,
@@ -1657,19 +1653,6 @@
 			productName = MapboxMaps;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		5DCB5903283172BE00A2C3CC /* MobileAudioGuide.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5DCB5904283172BE00A2C3CC /* MobileAudioGuide.xcdatamodel */,
-			);
-			currentVersion = 5DCB5904283172BE00A2C3CC /* MobileAudioGuide.xcdatamodel */;
-			path = MobileAudioGuide.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 5DCB58EF283172BE00A2C3CC /* Project object */;
 }
