@@ -81,6 +81,7 @@ extension StoreManager: SKPaymentTransactionObserver {
                 queue.finishTransaction(transaction)
                 StoreManager.makePurchased(index: index)
             case .deferred: print("deferred")
+            @unknown default: return
             }
         }
     }
