@@ -38,13 +38,16 @@
 		CE200B332833C13C0043F57A /* Beyoglu0.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE200B322833C13C0043F57A /* Beyoglu0.txt */; };
 		CE200B382833C6EE0043F57A /* ExcursionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200B372833C6EE0043F57A /* ExcursionInfo.swift */; };
 		CE200B3C2833CA010043F57A /* TextLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200B3B2833CA010043F57A /* TextLoader.swift */; };
+		CE20E7902864EC56005CC1A0 /* IstambulInOneDay.geojson in Resources */ = {isa = PBXBuildFile; fileRef = CE20E78F2864EC56005CC1A0 /* IstambulInOneDay.geojson */; };
+		CE20E7922864EC64005CC1A0 /* Beyoglu.geojson in Resources */ = {isa = PBXBuildFile; fileRef = CE20E7912864EC64005CC1A0 /* Beyoglu.geojson */; };
+		CE20E7942864EC6E005CC1A0 /* NontouristicIstanbul.geojson in Resources */ = {isa = PBXBuildFile; fileRef = CE20E7932864EC6E005CC1A0 /* NontouristicIstanbul.geojson */; };
+		CE20E79628650038005CC1A0 /* Excursions.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE20E79528650038005CC1A0 /* Excursions.plist */; };
 		CE2E90E72843F295008D50E0 /* DetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE861D602843DECB005B3A53 /* DetailsScreenViewController.swift */; };
 		CE4151412835098900CF9D53 /* GuideFeatureViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4151402835098900CF9D53 /* GuideFeatureViewBuilder.swift */; };
 		CE415150283A9B1000CF9D53 /* AudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41514F283A9B0F00CF9D53 /* AudioPlayerView.swift */; };
 		CE415155283AB61E00CF9D53 /* TimeInterval+minSecFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE415154283AB61D00CF9D53 /* TimeInterval+minSecFormatted.swift */; };
 		CE634F4D283429FC006C2F73 /* GuideHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE634F4C283429FC006C2F73 /* GuideHeaderView.swift */; };
 		CE8A3C09285381EF004B8BFB /* PurchaseButtonFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A3C08285381EF004B8BFB /* PurchaseButtonFooterView.swift */; };
-		CE8DD9ED28575E9100FFD28A /* Excursions.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE8DD9EC28575E9100FFD28A /* Excursions.plist */; };
 		CE8DD9EF28577B8B00FFD28A /* ExcursionsPlistLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DD9EE28577B8B00FFD28A /* ExcursionsPlistLoader.swift */; };
 		CE8DD9F528578C0B00FFD28A /* IstambulInOneDay0.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DD9F428578C0B00FFD28A /* IstambulInOneDay0.txt */; };
 		CE8DD9FE28578D2A00FFD28A /* NontouristicIstanbul0.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DD9FD28578D2A00FFD28A /* NontouristicIstanbul0.txt */; };
@@ -319,13 +322,16 @@
 		CE200B322833C13C0043F57A /* Beyoglu0.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Beyoglu0.txt; sourceTree = "<group>"; };
 		CE200B372833C6EE0043F57A /* ExcursionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionInfo.swift; sourceTree = "<group>"; };
 		CE200B3B2833CA010043F57A /* TextLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLoader.swift; sourceTree = "<group>"; };
+		CE20E78F2864EC56005CC1A0 /* IstambulInOneDay.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay.geojson; sourceTree = "<group>"; };
+		CE20E7912864EC64005CC1A0 /* Beyoglu.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Beyoglu.geojson; sourceTree = "<group>"; };
+		CE20E7932864EC6E005CC1A0 /* NontouristicIstanbul.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NontouristicIstanbul.geojson; sourceTree = "<group>"; };
+		CE20E79528650038005CC1A0 /* Excursions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Excursions.plist; sourceTree = "<group>"; };
 		CE4151402835098900CF9D53 /* GuideFeatureViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideFeatureViewBuilder.swift; sourceTree = "<group>"; };
 		CE41514F283A9B0F00CF9D53 /* AudioPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerView.swift; sourceTree = "<group>"; };
 		CE415154283AB61D00CF9D53 /* TimeInterval+minSecFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+minSecFormatted.swift"; sourceTree = "<group>"; };
 		CE634F4C283429FC006C2F73 /* GuideHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideHeaderView.swift; sourceTree = "<group>"; };
 		CE861D602843DECB005B3A53 /* DetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewController.swift; sourceTree = "<group>"; };
 		CE8A3C08285381EF004B8BFB /* PurchaseButtonFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButtonFooterView.swift; sourceTree = "<group>"; };
-		CE8DD9EC28575E9100FFD28A /* Excursions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Excursions.plist; sourceTree = "<group>"; };
 		CE8DD9EE28577B8B00FFD28A /* ExcursionsPlistLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionsPlistLoader.swift; sourceTree = "<group>"; };
 		CE8DD9F428578C0B00FFD28A /* IstambulInOneDay0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IstambulInOneDay0.txt; sourceTree = "<group>"; };
 		CE8DD9FD28578D2A00FFD28A /* NontouristicIstanbul0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NontouristicIstanbul0.txt; path = MobileAudioGuide/Resources/ExcursionsInfoData/NontouristicIstanbul/Texts/NontouristicIstanbul0.txt; sourceTree = SOURCE_ROOT; };
@@ -716,7 +722,7 @@
 			isa = PBXGroup;
 			children = (
 				CE8DD9FC28578CC300FFD28A /* ExcursionsInfoData */,
-				CE8DD9EC28575E9100FFD28A /* Excursions.plist */,
+				CE20E79528650038005CC1A0 /* Excursions.plist */,
 				5D0C3CA8284FB1B6005FBAE0 /* aboutPurchase.txt */,
 				5DE36F40283A677F00B191C7 /* infoAboutAuthor.txt */,
 			);
@@ -729,6 +735,30 @@
 				CE200B372833C6EE0043F57A /* ExcursionInfo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE20E78C2864EC01005CC1A0 /* GeoJSON */ = {
+			isa = PBXGroup;
+			children = (
+				CE20E78F2864EC56005CC1A0 /* IstambulInOneDay.geojson */,
+			);
+			path = GeoJSON;
+			sourceTree = "<group>";
+		};
+		CE20E78D2864EC34005CC1A0 /* GeoJSON */ = {
+			isa = PBXGroup;
+			children = (
+				CE20E7912864EC64005CC1A0 /* Beyoglu.geojson */,
+			);
+			path = GeoJSON;
+			sourceTree = "<group>";
+		};
+		CE20E78E2864EC3A005CC1A0 /* GeoJSON */ = {
+			isa = PBXGroup;
+			children = (
+				CE20E7932864EC6E005CC1A0 /* NontouristicIstanbul.geojson */,
+			);
+			path = GeoJSON;
 			sourceTree = "<group>";
 		};
 		CE41514E283A9AE600CF9D53 /* Common */ = {
@@ -752,6 +782,7 @@
 			children = (
 				CE8DD9F32857859A00FFD28A /* Audio */,
 				CE8DD9F22857858A00FFD28A /* Texts */,
+				CE20E78C2864EC01005CC1A0 /* GeoJSON */,
 			);
 			path = IstambulInOneDay;
 			sourceTree = "<group>";
@@ -877,6 +908,7 @@
 			children = (
 				CE8DD9F728578C5600FFD28A /* Audio */,
 				CE8DD9F828578C6000FFD28A /* Texts */,
+				CE20E78D2864EC34005CC1A0 /* GeoJSON */,
 			);
 			path = Beyoglu;
 			sourceTree = "<group>";
@@ -962,6 +994,7 @@
 			children = (
 				CE8DD9FA28578C9C00FFD28A /* Audio */,
 				CE8DD9FB28578CA200FFD28A /* Texts */,
+				CE20E78E2864EC3A005CC1A0 /* GeoJSON */,
 			);
 			path = NontouristicIstanbul;
 			sourceTree = "<group>";
@@ -1156,7 +1189,6 @@
 				CE8DDAA3285BC12400FFD28A /* NontouristicIstanbul22.txt in Resources */,
 				CE8DDBBD285BE7E600FFD28A /* NontouristicIstanbul24.mp3 in Resources */,
 				CE8DDAAB285BC12400FFD28A /* NontouristicIstanbul19.txt in Resources */,
-				CE8DD9ED28575E9100FFD28A /* Excursions.plist in Resources */,
 				CE8DDBC1285BE7E600FFD28A /* NontouristicIstanbul2.mp3 in Resources */,
 				CE8DDAE5285BC17300FFD28A /* Beyoglu16.txt in Resources */,
 				CE8DDA8E285BC12400FFD28A /* NontouristicIstanbul4.txt in Resources */,
@@ -1180,6 +1212,7 @@
 				CE8DDA62285BB19900FFD28A /* IstambulInOneDay16.txt in Resources */,
 				CE8DDB77285BE7A000FFD28A /* Beyoglu15.mp3 in Resources */,
 				CE8DDB7A285BE7A000FFD28A /* Beyoglu27.mp3 in Resources */,
+				CE20E7942864EC6E005CC1A0 /* NontouristicIstanbul.geojson in Resources */,
 				CE8DDA90285BC12400FFD28A /* NontouristicIstanbul23.txt in Resources */,
 				CE8DDB78285BE7A000FFD28A /* Beyoglu26.mp3 in Resources */,
 				CE8DDB83285BE7A000FFD28A /* Beyoglu5.mp3 in Resources */,
@@ -1195,6 +1228,7 @@
 				CE8DDB2C285BC38500FFD28A /* IstambulInOneDay44.mp3 in Resources */,
 				CE8DDB80285BE7A000FFD28A /* Beyoglu3.mp3 in Resources */,
 				CE8DDA94285BC12400FFD28A /* NontouristicIstanbul35.txt in Resources */,
+				CE20E7922864EC64005CC1A0 /* Beyoglu.geojson in Resources */,
 				CE8DDB88285BE7A000FFD28A /* Beyoglu7.mp3 in Resources */,
 				CE8DDB31285BC38500FFD28A /* IstambulInOneDay39.mp3 in Resources */,
 				CE8DDB86285BE7A000FFD28A /* Beyoglu28.mp3 in Resources */,
@@ -1266,6 +1300,7 @@
 				CE8DDA35285BB19900FFD28A /* IstambulInOneDay49.txt in Resources */,
 				CE8DDACF285BC17300FFD28A /* Beyoglu18.txt in Resources */,
 				CE8DDAE7285BC17300FFD28A /* Beyoglu10.txt in Resources */,
+				CE20E79628650038005CC1A0 /* Excursions.plist in Resources */,
 				CE8DDA5E285BB19900FFD28A /* IstambulInOneDay26.txt in Resources */,
 				CE8DDA48285BB19900FFD28A /* IstambulInOneDay44.txt in Resources */,
 				CE8DDA3B285BB19900FFD28A /* IstambulInOneDay46.txt in Resources */,
@@ -1347,6 +1382,7 @@
 				CE8DDA9B285BC12400FFD28A /* NontouristicIstanbul30.txt in Resources */,
 				CE8DDB44285BC38500FFD28A /* IstambulInOneDay7.mp3 in Resources */,
 				CE8DDBD2285BE7E600FFD28A /* NontouristicIstanbul22.mp3 in Resources */,
+				CE20E7902864EC56005CC1A0 /* IstambulInOneDay.geojson in Resources */,
 				CE8DDAE3285BC17300FFD28A /* Beyoglu2.txt in Resources */,
 				CE8DDA91285BC12400FFD28A /* NontouristicIstanbul1.txt in Resources */,
 				CE8DDA34285BB19900FFD28A /* IstambulInOneDay48.txt in Resources */,
