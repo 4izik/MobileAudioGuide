@@ -8,7 +8,7 @@
 import Foundation
 
 /// Варианты характеристик экскурсии
-enum Feature: String {
+enum ExcursionFeature: String {
     case route
     case distance
     case transport
@@ -42,13 +42,13 @@ class GuideFeatureViewBuilder {
     /// Создать вью для одной из характеристик экскурсии
     /// - Parameter feature: характеристика экскурсии (продолжительность, километраж, транспорт, количество объектов)
     /// - Returns: вью для переданной характеристики
-    func buildFeatureViewFor(feature: Feature) -> GuideFeatureView {
+    func buildFeatureViewFor(feature: ExcursionFeature) -> GuideFeatureView {
         return GuideFeatureView(secondaryText: feature.secondaryText,
                                 primaryText: primaryTextFor(feature),
                                 iconName: feature.iconName)
     }
     
-    private func primaryTextFor(_ feature: Feature) -> String {
+    private func primaryTextFor(_ feature: ExcursionFeature) -> String {
         switch feature {
         case .route: return excursionInfo.excursionDuration
         case .distance: return excursionInfo.routeDistance
