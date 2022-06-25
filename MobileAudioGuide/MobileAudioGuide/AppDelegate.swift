@@ -14,10 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupAudioSession()
-        
         authNotification()
         UNUserNotificationCenter.current().delegate = self
         scheduleNotification()
+        
+        PurchaseManager.shared.setupPurchases { success in
+            if success {
+                PurchaseManager.shared.getAllProducts()
+            }
+        }
         
         return true
     }

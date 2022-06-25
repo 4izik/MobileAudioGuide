@@ -13,9 +13,12 @@ final class GuideScreenViewController: UIViewController {
     private let excursionInfo: ExcursionInfo
     private let infoImage = UIImage(systemName: "info.circle")
     private let textLoader: TextLoader
+    private let excursionIndex: Int
     
     /// Приобретена ли полная версия для этой экскурсии
-    var isFullVersion = false
+    var isFullVersion: Bool {
+        PurchaseManager.shared.isProductPurchased(withIdentifier: excursionIndex.getProductIdentifier())
+    }
     
     private lazy var guideScreenTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
@@ -41,11 +44,13 @@ final class GuideScreenViewController: UIViewController {
     
     /// Инициализатор
     /// - Parameters:
-    ///   - indexOfSelectedItem: индекс ячейки главного экрана, с которой совершен переход
-    ///   - textLoader: экземпляр загрузчика текста из файла
-    init(excursionInfo: ExcursionInfo, indexOfSelectedItem: Int, textLoader: TextLoader) {
+    ///   - excursionInfo: модель с информацией об экскурсии
+    ///   - textLoader: экземпляр загрузчика текстовых файлов
+    ///   - excursionIndex: индекс ячейки экскурсии с главного экрана
+    init(excursionInfo: ExcursionInfo, textLoader: TextLoader, excursionIndex: Int) {
         self.excursionInfo = excursionInfo
         self.textLoader = textLoader
+        self.excursionIndex = excursionIndex
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -127,7 +132,7 @@ final class GuideScreenViewController: UIViewController {
     }
     
     @objc private func beginExcursionButtonTapped() {
-        let mapScreenViewController = OfflineManagerViewController(excursionInfo: excursionInfo)//MapScreenViewController(excursionInfo: excursionInfo)
+        let mapScreenViewController = OfflineManagerViewController(excursionInfo: excursionInfo, excursionIndex: excursionIndex)
         navigationController?.pushViewController(mapScreenViewController, animated: true)
     }
     
@@ -158,7 +163,7 @@ final class GuideScreenViewController: UIViewController {
     }
     /// Обработка нажатия на кнопку покупки экскурсий
     @objc func purchaseButtonTapped() {
-        let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo)
+        let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo, excursionIndex: excursionIndex)
         navigationController?.pushViewController(purchaseViewController, animated: true)
     }
 }

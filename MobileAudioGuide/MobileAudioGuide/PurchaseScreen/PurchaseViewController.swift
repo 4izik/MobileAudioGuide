@@ -10,8 +10,7 @@ import UIKit
 class PurchaseViewController: UIViewController {
     
     private var excursionInfo: ExcursionInfo
-    
-    // MARK: - Properties
+    private let excursionIndex: Int
     private let purchaseView = PurchaseView()
     
     override func viewDidLoad() {
@@ -20,8 +19,9 @@ class PurchaseViewController: UIViewController {
         setupUI()
     }
     
-    init(excursionInfo: ExcursionInfo) {
+    init(excursionInfo: ExcursionInfo, excursionIndex: Int) {
         self.excursionInfo = excursionInfo
+        self.excursionIndex = excursionIndex
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,6 +35,7 @@ class PurchaseViewController: UIViewController {
         view.addSubview(purchaseView)
         view.backgroundColor = .black
         purchaseView.nameExcursionLabel.text = excursionInfo.excursionTitle
+        purchaseView.infoAboutPurchaseTextView.text = TextLoader.loadFromTxtFile(named: "aboutPurchase\(excursionIndex)")
 
         purchaseView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -42,30 +43,20 @@ class PurchaseViewController: UIViewController {
             purchaseView.heightAnchor.constraint(equalTo: view.heightAnchor),
             purchaseView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
-        loaderInfo()
-        purchaseView.buyOneTourButton.addTarget(self, action: #selector(makePurchaseOneTour), for: .touchUpInside)
-        purchaseView.buyThreeToursButton.addTarget(self, action: #selector(makePurchaseThreeTours), for: .touchUpInside)
+        purchaseView.buySingleTourButton.addTarget(self, action: #selector(makePurchaseSingleTour), for: .touchUpInside)
+        purchaseView.buyAllToursButton.addTarget(self, action: #selector(makePurchaseAllTours), for: .touchUpInside)
         purchaseView.restorePurchaseButton.addTarget(self, action: #selector(restorePurchase), for: .touchUpInside)
     }
     
-    private func loaderInfo() {
-        if let path = Bundle.main.path(forResource: "aboutPurchase", ofType: "txt"),
-           let text = try? String(contentsOfFile: path) {
-                purchaseView.infoAboutPurchaseTextView.text = text
-        }
+    @objc func makePurchaseSingleTour() {
+        PurchaseManager.shared.purchaseProduct(withIdentifier: excursionIndex.getProductIdentifier())
     }
     
-    @objc func makePurchaseOneTour() {
-        StoreManager(index: 2).buyInApp(inAppID: "com.istanbul.audioguide.onetour")
+    @objc func makePurchaseAllTours() {
+        PurchaseManager.shared.purchaseProduct(withIdentifier: InAppProducts.allTours.rawValue)
     }
     
-    @objc func makePurchaseThreeTours() {
-        StoreManager(index: 3).buyInApp(inAppID: "com.istanbul.audioguide.threetours")
+    @objc func restorePurchase() {
+        PurchaseManager.shared.restorePurchases()
     }
-    
-    @objc func restorePurchase(_ sender: Any) {
-        StoreManager(index: 3).restorePurchases()
-    }
-
-
 }

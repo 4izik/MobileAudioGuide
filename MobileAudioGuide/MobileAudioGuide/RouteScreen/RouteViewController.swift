@@ -19,8 +19,13 @@ enum PlayButtonOption {
 final class RouteViewController: UIViewController {
     
     private let excursionInfo: ExcursionInfo
-    private var isFullVersionPurchased = true
     private var numberOfFreePoints = 5
+    private let excursionIndex: Int
+    
+    /// Приобретена ли полная версия для этой экскурсии
+    var isFullVersion: Bool {
+        PurchaseManager.shared.isProductPurchased(withIdentifier: excursionIndex.getProductIdentifier())
+    }
     
     /// Индекс ячейки, в которой нужно будет изменить изображение кнопки play при изменении источника воспроизведения
     lazy var indexOfCellToPause: Int? = {
@@ -62,9 +67,12 @@ final class RouteViewController: UIViewController {
     }()
     
     /// Инициализатор
-    /// - Parameter excursionInfo: модель текущей экскурсии
-    init(excursionInfo: ExcursionInfo) {
+    /// - Parameters:
+    ///   - excursionInfo: модель текущей экскурсии
+    ///   - excursionIndex: индекс ячейки экскурсии с главного экрана
+    init(excursionInfo: ExcursionInfo, excursionIndex: Int) {
         self.excursionInfo = excursionInfo
+        self.excursionIndex = excursionIndex
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -162,11 +170,11 @@ final class RouteViewController: UIViewController {
 extension RouteViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        isFullVersionPurchased ? excursionInfo.tours.count : numberOfFreePoints + 2
+        isFullVersion ? excursionInfo.tours.count : numberOfFreePoints + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch (isFullVersionPurchased, indexPath.row) {
+        switch (isFullVersion, indexPath.row) {
             
         case (true, excursionInfo.tours.count - 1):
             return getPointOfInterestCellIn(tableView: tableView,
@@ -226,7 +234,7 @@ extension RouteViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     @objc private func purchaseButtonTapped() {
-        let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo)
+        let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo, excursionIndex: excursionIndex)
         navigationController?.pushViewController(purchaseViewController, animated: true)
     }
     

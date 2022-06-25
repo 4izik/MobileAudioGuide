@@ -49,9 +49,14 @@ final class OfflineManagerViewController: UIViewController {
     private let mapFooterView = MapFooterView()
     private var mapView: MapView?
     private var tileStore: TileStore?
-    private var isFullVersionPurchased = true
     private var selectedIndex = 0
     private var markers: [UIImage] = []
+    private let excursionIndex: Int
+    
+    /// Приобретена ли полная версия для этой экскурсии
+    var isFullVersion: Bool {
+        PurchaseManager.shared.isProductPurchased(withIdentifier: excursionIndex.getProductIdentifier())
+    }
     
     private lazy var mapInitOptions: MapInitOptions = {
         MapInitOptions(cameraOptions: CameraOptions(center: istanbulCoord, zoom: istanbulZoom),
@@ -68,8 +73,9 @@ final class OfflineManagerViewController: UIViewController {
     private let istanbulZoom: CGFloat = 13
     private let tileRegionId = "myTileRegion"
     
-    init(excursionInfo: ExcursionInfo) {
+    init(excursionInfo: ExcursionInfo, excursionIndex: Int) {
         self.excursionInfo = excursionInfo
+        self.excursionIndex = excursionIndex
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -137,7 +143,7 @@ final class OfflineManagerViewController: UIViewController {
     private func setupImage() {
         for index in 0..<excursionInfo.tours.count {
             var image = UIImage()
-            if !isFullVersionPurchased && index > 4 {
+            if !isFullVersion && index > 4 {
                 image = textToImage(drawText: NSString(string: "\(index + 1)"), inImage: UIImage(named: "mapbox-marker-icon-20px-gray")!)
             } else {
                 image = textToImage(drawText: NSString(string: "\(index + 1)"), inImage: UIImage(named: "mapbox-marker-icon-20px-blue")!)
@@ -194,7 +200,7 @@ final class OfflineManagerViewController: UIViewController {
     }
     
     @objc func showAllTour() {
-        let routeViewController = RouteViewController(excursionInfo: excursionInfo)
+        let routeViewController = RouteViewController(excursionInfo: excursionInfo, excursionIndex: excursionIndex)
         navigationController?.pushViewController(routeViewController, animated: true)
     }
     
@@ -293,7 +299,7 @@ final class OfflineManagerViewController: UIViewController {
         
         for (index,tour) in tours.enumerated() {
             var pointAnnotation = PointAnnotation(coordinate: CLLocationCoordinate2D(latitude: tour.latitude, longitude: tour.longitude))
-            if !isFullVersionPurchased && index > 4 {
+            if !isFullVersion && index > 4 {
                 pointAnnotation.image = .init(image: markers[index], name: "marker \(index)")
             } else {
                 pointAnnotation.image = .init(image: markers[index], name: "marker \(index)")
@@ -443,13 +449,16 @@ final class OfflineManagerViewController: UIViewController {
     }
     
     @objc func showPurchaseScreen() {
-        let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo)
+        let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo, excursionIndex: excursionIndex)
         navigationController?.pushViewController(purchaseViewController, animated: true)
     }
     
     @objc func hideMapFooterView() {
-        mapFooterView.isHidden = true
-        mapFooterView.alpha = 0
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.mapFooterView.alpha = 0
+        } completion: { [weak self] _ in
+            self?.mapFooterView.isHidden = true
+        }
     }
     
     @objc func showDetailScreen() {
@@ -461,7 +470,7 @@ final class OfflineManagerViewController: UIViewController {
 extension OfflineManagerViewController: AnnotationInteractionDelegate {
     public func annotationManager(_ manager: AnnotationManager, didDetectTappedAnnotations annotations: [Annotation]) {
         guard let number = annotations.last?.userInfo?["number"] as? Int else { return }
-        if !isFullVersionPurchased && number > 4 {
+        if !isFullVersion && number > 4 {
             mapFooterView.isHidden = false
             showPurchaseScreen()
         } else {
