@@ -51,7 +51,7 @@ class PurchaseView: UIView {
         return view
     }()
     
-    let buyOneTourButton: UIButton = {
+    let buySingleTourButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .clear
         button.layer.borderColor = UIColor.white.cgColor
@@ -90,7 +90,7 @@ class PurchaseView: UIView {
         return label
     }()
     
-    let buyThreeToursButton: UIButton = {
+    let buyAllToursButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .clear
         button.layer.borderColor = UIColor.white.cgColor
@@ -172,7 +172,7 @@ class PurchaseView: UIView {
 
     private func setupViews() {
         
-        [forOnlyOneTourLabel, priceOneTourLabel, buyOneTourLabel, buyOneTourButton, backThreeToursView, buyThreeToursLabel, forOnlyThreeToursLabel, priceThreeToursLabel, oldPriceLabel, buyThreeToursButton, restorePurchaseButton].forEach { view in
+        [forOnlyOneTourLabel, priceOneTourLabel, buyOneTourLabel, buySingleTourButton, backThreeToursView, buyThreeToursLabel, forOnlyThreeToursLabel, priceThreeToursLabel, oldPriceLabel, buyAllToursButton, restorePurchaseButton].forEach { view in
             footerView.addSubview(view)
         }
         
@@ -186,7 +186,7 @@ class PurchaseView: UIView {
     // MARK: - Add constraints
 
     func applyUIConstraints() {
-        [backgroundView, backgroundImageView, nameExcursionLabel, infoAboutPurchaseTextView, footerView, buyOneTourButton, buyOneTourLabel, priceOneTourLabel, buyThreeToursButton, buyThreeToursLabel, priceThreeToursLabel, backThreeToursView, forOnlyOneTourLabel, forOnlyThreeToursLabel, oldPriceLabel, restorePurchaseButton].forEach { view in
+        [backgroundView, backgroundImageView, nameExcursionLabel, infoAboutPurchaseTextView, footerView, buySingleTourButton, buyOneTourLabel, priceOneTourLabel, buyAllToursButton, buyThreeToursLabel, priceThreeToursLabel, backThreeToursView, forOnlyOneTourLabel, forOnlyThreeToursLabel, oldPriceLabel, restorePurchaseButton].forEach { view in
             view.translatesAutoresizingMaskIntoConstraints = false
         }
         
@@ -211,10 +211,10 @@ class PurchaseView: UIView {
             footerView.bottomAnchor.constraint(equalTo: bottomAnchor),
             footerView.heightAnchor.constraint(equalToConstant: 170),
             
-            buyOneTourButton.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 20),
-            buyOneTourButton.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -20),
-            buyOneTourButton.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 10),
-            buyOneTourButton.heightAnchor.constraint(equalToConstant: 40),
+            buySingleTourButton.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 20),
+            buySingleTourButton.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -20),
+            buySingleTourButton.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 10),
+            buySingleTourButton.heightAnchor.constraint(equalToConstant: 40),
             
             buyOneTourLabel.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 30),
             buyOneTourLabel.widthAnchor.constraint(equalToConstant: 150),
@@ -223,7 +223,7 @@ class PurchaseView: UIView {
             
             forOnlyOneTourLabel.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -45),
             forOnlyOneTourLabel.widthAnchor.constraint(equalToConstant: 100),
-            forOnlyOneTourLabel.topAnchor.constraint(equalTo: buyOneTourButton.topAnchor, constant: 2),
+            forOnlyOneTourLabel.topAnchor.constraint(equalTo: buySingleTourButton.topAnchor, constant: 2),
             forOnlyOneTourLabel.heightAnchor.constraint(equalToConstant: 16),
             
             priceOneTourLabel.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -45),
@@ -231,24 +231,24 @@ class PurchaseView: UIView {
             priceOneTourLabel.topAnchor.constraint(equalTo: forOnlyOneTourLabel.bottomAnchor),
             priceOneTourLabel.heightAnchor.constraint(equalToConstant: 20),
             
-            buyThreeToursButton.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 20),
-            buyThreeToursButton.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -20),
-            buyThreeToursButton.topAnchor.constraint(equalTo: buyOneTourButton.bottomAnchor, constant: 10),
-            buyThreeToursButton.heightAnchor.constraint(equalToConstant: 50),
+            buyAllToursButton.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 20),
+            buyAllToursButton.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -20),
+            buyAllToursButton.topAnchor.constraint(equalTo: buySingleTourButton.bottomAnchor, constant: 10),
+            buyAllToursButton.heightAnchor.constraint(equalToConstant: 50),
             
             buyThreeToursLabel.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 30),
             buyThreeToursLabel.widthAnchor.constraint(equalToConstant: 150),
-            buyThreeToursLabel.topAnchor.constraint(equalTo: buyThreeToursButton.topAnchor, constant: 5),
+            buyThreeToursLabel.topAnchor.constraint(equalTo: buyAllToursButton.topAnchor, constant: 5),
             buyThreeToursLabel.heightAnchor.constraint(equalToConstant: 40),
             
             oldPriceLabel.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -45),
             oldPriceLabel.widthAnchor.constraint(equalToConstant: 30),
-            oldPriceLabel.topAnchor.constraint(equalTo: buyThreeToursButton.topAnchor, constant: 6),
+            oldPriceLabel.topAnchor.constraint(equalTo: buyAllToursButton.topAnchor, constant: 6),
             oldPriceLabel.heightAnchor.constraint(equalToConstant: 16),
             
             forOnlyThreeToursLabel.trailingAnchor.constraint(equalTo: oldPriceLabel.leadingAnchor),
             forOnlyThreeToursLabel.widthAnchor.constraint(equalToConstant: 100),
-            forOnlyThreeToursLabel.topAnchor.constraint(equalTo: buyThreeToursButton.topAnchor, constant: 6),
+            forOnlyThreeToursLabel.topAnchor.constraint(equalTo: buyAllToursButton.topAnchor, constant: 6),
             forOnlyThreeToursLabel.heightAnchor.constraint(equalToConstant: 16),
             
             priceThreeToursLabel.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -45),
@@ -258,18 +258,18 @@ class PurchaseView: UIView {
             
             backThreeToursView.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 20),
             backThreeToursView.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -20),
-            backThreeToursView.topAnchor.constraint(equalTo: buyOneTourButton.bottomAnchor, constant: 10),
+            backThreeToursView.topAnchor.constraint(equalTo: buySingleTourButton.bottomAnchor, constant: 10),
             backThreeToursView.heightAnchor.constraint(equalToConstant: 50),
             
             infoAboutPurchaseTextView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             infoAboutPurchaseTextView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
-            infoAboutPurchaseTextView.topAnchor.constraint(equalTo: nameExcursionLabel.bottomAnchor, constant: 20),
-            infoAboutPurchaseTextView.bottomAnchor.constraint(equalTo: footerView.topAnchor, constant: -10),
+            infoAboutPurchaseTextView.topAnchor.constraint(equalTo: nameExcursionLabel.bottomAnchor, constant: 10),
+            infoAboutPurchaseTextView.bottomAnchor.constraint(equalTo: footerView.topAnchor),
             
             restorePurchaseButton.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 50),
             restorePurchaseButton.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -50),
             restorePurchaseButton.heightAnchor.constraint(equalToConstant: 20),
-            restorePurchaseButton.topAnchor.constraint(equalTo: buyThreeToursButton.bottomAnchor, constant: 10)
+            restorePurchaseButton.topAnchor.constraint(equalTo: buyAllToursButton.bottomAnchor, constant: 10)
         ])
     }
 }

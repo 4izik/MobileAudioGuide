@@ -74,8 +74,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let guideScreenViewController = GuideScreenViewController(excursionInfo: excursionsInfo[indexPath.row], indexOfSelectedItem: indexPath.row,
-                                                                       textLoader: TextLoader())
+        let guideScreenViewController = GuideScreenViewController(excursionInfo: excursionsInfo[indexPath.row],
+                                                                  textLoader: TextLoader(),
+                                                                  excursionIndex: indexPath.row)
         navigationController?.pushViewController(guideScreenViewController, animated: true)
     }
 }

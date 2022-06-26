@@ -11,7 +11,7 @@ class InfoScreenView: UIView {
     // MARK: - Definition UIElements
     
     let segmentedControl: UISegmentedControl = {
-        let control = UISegmentedControl(items: ["Photo authors", "Alex"])
+        let control = UISegmentedControl(items: ["Photo authors", "Christopher"])
         control.selectedSegmentIndex = 1
         control.layer.borderColor = UIColor.gray.cgColor
         control.tintColor = .gray
@@ -31,7 +31,7 @@ class InfoScreenView: UIView {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Alex"
+        label.text = "Christopher"
         label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         label.textAlignment = .center
         label.textColor = .black
@@ -87,21 +87,26 @@ class InfoScreenView: UIView {
         textView.isEditable = false
         textView.textColor = .black
         textView.textAlignment = .left
+        textView.dataDetectorTypes = .link
         textView.showsVerticalScrollIndicator = false
         textView.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         return textView
     }()
     
-    private let photoAuthorsLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        label.isHidden = true
-        label.numberOfLines = 0
-        label.text = "This application uses photos by Christopher Matiaz and the following authors under a Creative common license"
-        return label
+    let photoAuthorsTextView: UITextView = {
+        let textView = UITextView()
+        textView.isSelectable = true
+        textView.isEditable = false
+        textView.textColor = .black
+        textView.textAlignment = .left
+        textView.showsVerticalScrollIndicator = false
+        textView.isScrollEnabled = false
+        textView.isHidden = true
+        textView.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        textView.text = "This application uses photos by Christopher Matiaz and the following authors under a Creative common license"
+        return textView
     }()
+    
     // MARK: - Init
 
     required init?(coder aDecoder: NSCoder) {
@@ -124,8 +129,10 @@ class InfoScreenView: UIView {
     private func setupViews() {
         socialNetworksStackView.addArrangedSubview(facebookButton)
         socialNetworksStackView.addArrangedSubview(instagramButton)
+        // Заменить на нужную строку и ссылку
+        photoAuthorsTextView.addHyperLinksToText(hyperLinks: ["Christopher Matiaz" : "https://yandex.ru"])
         
-        [segmentedControl, photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, infoAboutAuthorTextView, photoAuthorsLabel].forEach { view in
+        [segmentedControl, photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, infoAboutAuthorTextView, photoAuthorsTextView].forEach { view in
             addSubview(view)
         }
 
@@ -135,7 +142,7 @@ class InfoScreenView: UIView {
     // MARK: - Add constraints
 
     func applyUIConstraints() {
-        [segmentedControl, photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, facebookButton, instagramButton, infoAboutAuthorTextView, photoAuthorsLabel].forEach { view in
+        [segmentedControl, photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, facebookButton, instagramButton, infoAboutAuthorTextView, photoAuthorsTextView].forEach { view in
             view.translatesAutoresizingMaskIntoConstraints = false
         }
         
@@ -175,16 +182,16 @@ class InfoScreenView: UIView {
             infoAboutAuthorTextView.topAnchor.constraint(equalTo: socialNetworksStackView.bottomAnchor, constant: 20),
             infoAboutAuthorTextView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30),
             
-            photoAuthorsLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            photoAuthorsLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            photoAuthorsLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
-            photoAuthorsLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -20)
+            photoAuthorsTextView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            photoAuthorsTextView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            photoAuthorsTextView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
+            photoAuthorsTextView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20)
         ])
     }
     
     func showView(selectedSegment: Int) {
         [photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, facebookButton, instagramButton, infoAboutAuthorTextView].forEach { $0.isHidden = (selectedSegment != 1) }
-        photoAuthorsLabel.isHidden = (selectedSegment == 1)
+        photoAuthorsTextView.isHidden = (selectedSegment == 1)
     }
 }
 

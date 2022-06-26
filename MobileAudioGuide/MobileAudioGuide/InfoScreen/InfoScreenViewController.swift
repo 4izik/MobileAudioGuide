@@ -21,6 +21,7 @@ class InfoScreenViewController: UIViewController {
         view.addSubview(infoScreenView)
         view.backgroundColor = .white
         navigationController?.navigationBar.topItem?.title = ""
+        infoScreenView.infoAboutAuthorTextView.text = TextLoader.loadFromTxtFile(named: "infoAboutAuthor")
 
         infoScreenView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -33,7 +34,6 @@ class InfoScreenViewController: UIViewController {
         infoScreenView.segmentedControl.addTarget(self, action: #selector(changeView), for: .valueChanged)
         infoScreenView.instagramButton.addTarget(self, action: #selector(openInstagram), for: .touchUpInside)
         infoScreenView.facebookButton.addTarget(self, action: #selector(openFacebook), for: .touchUpInside)
-        loaderInfo()
     }
     
     @objc func openInstagram() {
@@ -49,12 +49,5 @@ class InfoScreenViewController: UIViewController {
     @objc func changeView() {
         let value = infoScreenView.segmentedControl.selectedSegmentIndex
         infoScreenView.showView(selectedSegment: value)
-    }
-    
-    private func loaderInfo() {
-        if let path = Bundle.main.path(forResource: "infoAboutAuthor", ofType: "txt"),
-           let text = try? String(contentsOfFile: path) {
-                infoScreenView.infoAboutAuthorTextView.text = text
-        }
     }
 }
