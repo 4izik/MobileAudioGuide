@@ -99,6 +99,8 @@ final class DetailsScreenViewController: UIViewController {
     
     @objc private func showInfo() {
         let infoScreenViewController = InfoScreenViewController()
+        infoScreenViewController.infoScreenView.segmentedControl.selectedSegmentIndex = 0
+        infoScreenViewController.changeView()
         navigationController?.pushViewController(infoScreenViewController, animated: true)
     }
     

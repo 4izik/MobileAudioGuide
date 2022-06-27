@@ -148,4 +148,9 @@ class MapFooterView: UIView {
             closeButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
+    
+    func updateAudioPlayerView() {
+        guard let nowPlayingFilename = AudioPlayer.shared.nowPlayingFileName else { return }
+        audioPlayerView.playButtonTappedFor(filename: nowPlayingFilename, continuePlaying: true)
+    }
 }
