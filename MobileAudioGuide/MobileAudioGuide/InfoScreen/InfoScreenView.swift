@@ -108,37 +108,36 @@ class InfoScreenView: UIView {
     }()
     
     // MARK: - Init
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupViews()
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
     }
-
+    
     init() {
         super.init(frame: UIScreen.main.bounds)
         setupViews()
     }
-
+    
     // MARK: - Setup View
-
+    
     private func setupViews() {
         socialNetworksStackView.addArrangedSubview(facebookButton)
         socialNetworksStackView.addArrangedSubview(instagramButton)
-        // Заменить на нужную строку и ссылку
-        photoAuthorsTextView.addHyperLinksToText(hyperLinks: ["Christopher Matiaz" : "https://yandex.ru"])
+        photoAuthorsTextView.addHyperLinksToText(hyperLinks: ["Creative common license" : "https://creativecommons.org/"])
         
         [segmentedControl, photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, infoAboutAuthorTextView, photoAuthorsTextView].forEach { view in
             addSubview(view)
         }
-
+        
         applyUIConstraints()
     }
-
+    
     // MARK: - Add constraints
 
     func applyUIConstraints() {
@@ -194,4 +193,3 @@ class InfoScreenView: UIView {
         photoAuthorsTextView.isHidden = (selectedSegment == 1)
     }
 }
-

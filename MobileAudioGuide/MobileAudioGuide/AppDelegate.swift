@@ -46,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupAudioSession() {
         do {
             try AVAudioSession.sharedInstance().setMode(.default)
+            try AVAudioSession.sharedInstance().setCategory(.playback)
             try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
         }
         catch {

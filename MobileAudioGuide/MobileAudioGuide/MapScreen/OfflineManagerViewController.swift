@@ -35,6 +35,8 @@ final class OfflineManagerViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(named: "geo"), for: .normal)
         button.backgroundColor = .white
+        button.layer.cornerRadius = 4
+        button.clipsToBounds = true
         return button
     }()
     
@@ -42,6 +44,8 @@ final class OfflineManagerViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(named: "more"), for: .normal)
         button.backgroundColor = .white
+        button.layer.cornerRadius = 4
+        button.clipsToBounds = true
         return button
     }()
     
@@ -49,13 +53,21 @@ final class OfflineManagerViewController: UIViewController {
     private let mapFooterView = MapFooterView()
     private var mapView: MapView?
     private var tileStore: TileStore?
-    private var selectedIndex = 0
     private var markers: [UIImage] = []
     private let excursionIndex: Int
     
     /// Приобретена ли полная версия для этой экскурсии
     var isFullVersion: Bool {
         PurchaseManager.shared.isProductPurchased(withIdentifier: excursionIndex.getProductIdentifier())
+    }
+    
+    /// Индекс проигрываемого на данный момент аудиофайла
+    var indexOfNowPlayingFile: Int? {
+        guard let nowPlayingFileName = AudioPlayer.shared.nowPlayingFileName,
+              let nowPlayingAudioNumberString = nowPlayingFileName.components(separatedBy: excursionInfo.filenamePrefix).last,
+              let nowPlayingAudioNumber = Int(nowPlayingAudioNumberString)
+        else { return nil }
+        return nowPlayingAudioNumber
     }
     
     private lazy var mapInitOptions: MapInitOptions = {
@@ -95,6 +107,8 @@ final class OfflineManagerViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.title = excursionInfo.shortTitle
+        mapFooterView.updateAudioPlayerView()
+        updateMapFooterView()
     }
     
     func setupUI() {
@@ -104,7 +118,6 @@ final class OfflineManagerViewController: UIViewController {
             view.translatesAutoresizingMaskIntoConstraints = false
         }
         
-        mapFooterView.alpha = 0
         mapFooterView.isHidden = true
         view.backgroundColor = .white
         
@@ -337,13 +350,13 @@ final class OfflineManagerViewController: UIViewController {
     }
     
     private func setFooterView(number: Int) {
-        mapFooterView.imageView.image = UIImage(named: excursionInfo.filenamePrefix + String(number))
+        mapFooterView.imageView.image = UIImage(named: excursionInfo.filenamePrefix + String(number + 1))
         mapFooterView.titleLabel.text = excursionInfo.tours[number].tourTitle
-        mapFooterView.audioPlayerView = AudioPlayerView(audioFileName: excursionInfo.filenamePrefix + String(number))
+        mapFooterView.audioPlayerView.playButtonTappedFor(filename: excursionInfo.filenamePrefix + String(number + 1))
+        mapFooterView.audioPlayerView.playButtonTapped()
         mapFooterView.purchaseButton.addTarget(self, action: #selector(showPurchaseScreen), for: .touchUpInside)
         mapFooterView.closeButton.addTarget(self, action: #selector(hideMapFooterView), for: .touchUpInside)
         mapFooterView.detailButton.addTarget(self, action: #selector(showDetailScreen), for: .touchUpInside)
-        selectedIndex = number
     }
     
     private func logDownloadResult<T, Error>(message: String, result: Result<[T], Error>) {
@@ -448,21 +461,28 @@ final class OfflineManagerViewController: UIViewController {
         self.mapView = mapView
     }
     
+    private func updateMapFooterView() {
+        guard let indexOfNowPlayingFile = indexOfNowPlayingFile,
+              AudioPlayer.shared.nowPlayingFileName != excursionInfo.filenamePrefix + "0" else {
+            mapFooterView.isHidden = true
+            return
+        }
+        mapFooterView.imageView.image = UIImage(named: excursionInfo.filenamePrefix + String(indexOfNowPlayingFile))
+        mapFooterView.titleLabel.text = excursionInfo.tours[indexOfNowPlayingFile - 1].tourTitle
+    }
+    
     @objc func showPurchaseScreen() {
         let purchaseViewController = PurchaseViewController(excursionInfo: excursionInfo, excursionIndex: excursionIndex)
         navigationController?.pushViewController(purchaseViewController, animated: true)
     }
     
     @objc func hideMapFooterView() {
-        UIView.animate(withDuration: 0.3) { [weak self] in
-            self?.mapFooterView.alpha = 0
-        } completion: { [weak self] _ in
-            self?.mapFooterView.isHidden = true
-        }
+        mapFooterView.isHidden = true
     }
     
     @objc func showDetailScreen() {
-        let detailScreenViewController = DetailsScreenViewController(excursionInfo: excursionInfo, viewpointIndex: selectedIndex)
+        guard let indexOfNowPlayingFile = indexOfNowPlayingFile else { return }
+        let detailScreenViewController = DetailsScreenViewController(excursionInfo: excursionInfo, viewpointIndex: indexOfNowPlayingFile)
         navigationController?.pushViewController(detailScreenViewController, animated: true)
     }
 }
@@ -471,14 +491,11 @@ extension OfflineManagerViewController: AnnotationInteractionDelegate {
     public func annotationManager(_ manager: AnnotationManager, didDetectTappedAnnotations annotations: [Annotation]) {
         guard let number = annotations.last?.userInfo?["number"] as? Int else { return }
         if !isFullVersion && number > 4 {
-            mapFooterView.isHidden = false
+            mapFooterView.isHidden = true
             showPurchaseScreen()
         } else {
             setFooterView(number: number)
             mapFooterView.isHidden = false
-            UIView.animate(withDuration: 0.3) { [self] in
-                mapFooterView.alpha = 1
-            }
         }
     }
 }
