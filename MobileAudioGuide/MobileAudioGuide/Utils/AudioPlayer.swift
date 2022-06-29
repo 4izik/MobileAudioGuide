@@ -85,7 +85,7 @@ final class AudioPlayer {
         
         guard let nowPlayingUrl = nowPlayingUrl,
               let audioPlayer = try? AVAudioPlayer(contentsOf: nowPlayingUrl) else {
-            nowPlayingUrl = nil
+            self.nowPlayingUrl = nil
             return
         }
         self.nowPlayingFileName = audioFileName
