@@ -11,7 +11,13 @@ import AVFoundation
 final class AudioPlayer {
     static let shared = AudioPlayer()
     
-    private var audioPlayer: AVAudioPlayer?
+    private var audioPlayer: AVAudioPlayer? {
+        didSet {
+            if let nowPlayingFileName = nowPlayingFileName {
+                UserDefaults.standard.set(true, forKey: nowPlayingFileName)
+            }
+        }
+    }
     private var nowPlayingUrl: URL?
     
     /// Воспроизводится ли в данный момент аудио

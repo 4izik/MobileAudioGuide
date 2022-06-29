@@ -9,13 +9,13 @@ import UIKit
 
 class MainTableViewCell: UITableViewCell {
     
-    private var backView: UIView = {
+    private lazy var backView: UIView = {
         let view = UIView()
         view.backgroundColor = .clear
         return view
     }()
     
-    var imageToursView: UIImageView = {
+    lazy var imageToursView: UIImageView = {
         let imageView  = UIImageView()
         imageView.layer.cornerRadius = 8
         imageView.clipsToBounds = true
@@ -23,14 +23,14 @@ class MainTableViewCell: UITableViewCell {
         return imageView
     }()
     
-    private let filterView: UIView = {
+    private lazy var filterView: UIView = {
         let view = UIView()
         view.backgroundColor = .black
         view.alpha = 0.4
         return view
     }()
     
-    var tagLabel: UILabel = {
+    lazy var tagLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 10, weight: .semibold)
         label.textAlignment = .center
@@ -40,7 +40,7 @@ class MainTableViewCell: UITableViewCell {
         return label
     }()
     
-    var infoLabel: UILabel = {
+    lazy var infoLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         label.textAlignment = .left
@@ -48,13 +48,26 @@ class MainTableViewCell: UITableViewCell {
         label.textColor = Colors.lblMainInfo
         return label
     }()
+    
+    lazy var greenCheckMarkView: UIImageView = {
+        let imageView  = UIImageView()
+        imageView.image = UIImage(systemName: "checkmark.circle.fill")
+        imageView.tintColor = .systemGreen
+        imageView.backgroundColor = .white
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = greenCheckMarkViewWidth / 2
+        imageView.layer.borderColor = UIColor.systemGreen.cgColor
+        imageView.layer.borderWidth = 3
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+    
+    private let greenCheckMarkViewWidth: CGFloat = 36
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backView.addSubview(imageToursView)
-        backView.addSubview(filterView)
-        backView.addSubview(infoLabel)
-        backView.addSubview(tagLabel)
+        [imageToursView, filterView, infoLabel, tagLabel, greenCheckMarkView]
+            .forEach { backView.addSubview($0) }
         
         contentView.addSubview(backView)
         contentView.backgroundColor = .clear
@@ -68,7 +81,7 @@ class MainTableViewCell: UITableViewCell {
     }
     
     func applyUIConstraints() {
-        [backView, imageToursView, infoLabel, filterView, tagLabel].forEach { view in
+        [backView, imageToursView, infoLabel, filterView, tagLabel, greenCheckMarkView].forEach { view in
             view.translatesAutoresizingMaskIntoConstraints = false
         }
     
@@ -96,7 +109,12 @@ class MainTableViewCell: UITableViewCell {
             tagLabel.topAnchor.constraint(equalTo: backView.topAnchor, constant: 14),
             tagLabel.rightAnchor.constraint(equalTo: backView.rightAnchor, constant: -20),
             tagLabel.heightAnchor.constraint(equalToConstant: 20),
-            tagLabel.widthAnchor.constraint(equalToConstant: 70)
+            tagLabel.widthAnchor.constraint(equalToConstant: 70),
+            
+            greenCheckMarkView.rightAnchor.constraint(equalTo: backView.rightAnchor, constant: -30),
+            greenCheckMarkView.bottomAnchor.constraint(equalTo: infoLabel.bottomAnchor),
+            greenCheckMarkView.heightAnchor.constraint(equalToConstant: greenCheckMarkViewWidth),
+            greenCheckMarkView.widthAnchor.constraint(equalTo: greenCheckMarkView.heightAnchor)
         ])
     }
 }

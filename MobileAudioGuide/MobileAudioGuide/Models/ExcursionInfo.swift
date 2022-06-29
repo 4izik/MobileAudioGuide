@@ -45,3 +45,16 @@ struct TourInfo: Decodable {
     let latitude: Double
     let longitude: Double
 }
+
+extension ExcursionInfo {
+    func isCompleted() -> Bool {
+        guard tours.count > 0 else { return false }
+        var passedToursCount: Double = 0
+        for number in 1...self.tours.count {
+            if UserDefaults.standard.bool(forKey: filenamePrefix + "\(number)") {
+                passedToursCount += 1
+            }
+        }
+        return passedToursCount / Double(tours.count) >= 0.9
+    }
+}
