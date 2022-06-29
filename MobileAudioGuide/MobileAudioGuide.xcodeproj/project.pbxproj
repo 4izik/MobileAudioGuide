@@ -14,7 +14,6 @@
 		5D18645C28573F2300A001E5 /* CameraLocationConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18645B28573F2300A001E5 /* CameraLocationConsumer.swift */; };
 		5D18645E2857818C00A001E5 /* OfflineManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18645D2857818C00A001E5 /* OfflineManagerViewController.swift */; };
 		5D61FD1B28328A1E00AB33C3 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */; };
-		5D86A3B9285CD8110024ED23 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 5D86A3B8285CD8110024ED23 /* MapboxMaps */; };
 		5DCB58FB283172BE00A2C3CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FA283172BE00A2C3CC /* AppDelegate.swift */; };
 		5DCB58FD283172BE00A2C3CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FC283172BE00A2C3CC /* SceneDelegate.swift */; };
 		5DCB58FF283172BE00A2C3CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FE283172BE00A2C3CC /* MainViewController.swift */; };
@@ -51,6 +50,16 @@
 		CE415150283A9B1000CF9D53 /* AudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41514F283A9B0F00CF9D53 /* AudioPlayerView.swift */; };
 		CE415155283AB61E00CF9D53 /* TimeInterval+minSecFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE415154283AB61D00CF9D53 /* TimeInterval+minSecFormatted.swift */; };
 		CE634F4D283429FC006C2F73 /* GuideHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE634F4C283429FC006C2F73 /* GuideHeaderView.swift */; };
+		CE734A1D286C3ACB001D1E56 /* MapboxCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE734A14286C3A68001D1E56 /* MapboxCommon.xcframework */; };
+		CE734A1E286C3ACB001D1E56 /* MapboxCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE734A14286C3A68001D1E56 /* MapboxCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE734A20286C3ACD001D1E56 /* MapboxCoreMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE734A16286C3A77001D1E56 /* MapboxCoreMaps.xcframework */; };
+		CE734A21286C3ACD001D1E56 /* MapboxCoreMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE734A16286C3A77001D1E56 /* MapboxCoreMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE734A22286C3ACF001D1E56 /* MapboxMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE734A15286C3A6B001D1E56 /* MapboxMaps.xcframework */; };
+		CE734A23286C3ACF001D1E56 /* MapboxMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE734A15286C3A6B001D1E56 /* MapboxMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE734A24286C3AD2001D1E56 /* MapboxMobileEvents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE734A12286C3A5F001D1E56 /* MapboxMobileEvents.xcframework */; };
+		CE734A25286C3AD2001D1E56 /* MapboxMobileEvents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE734A12286C3A5F001D1E56 /* MapboxMobileEvents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE734A26286C3AD5001D1E56 /* Turf.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE734A13286C3A5F001D1E56 /* Turf.xcframework */; };
+		CE734A27286C3AD5001D1E56 /* Turf.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE734A13286C3A5F001D1E56 /* Turf.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE8A3C09285381EF004B8BFB /* PurchaseButtonFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A3C08285381EF004B8BFB /* PurchaseButtonFooterView.swift */; };
 		CE8DD9EF28577B8B00FFD28A /* ExcursionsPlistLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DD9EE28577B8B00FFD28A /* ExcursionsPlistLoader.swift */; };
 		CE8DD9F528578C0B00FFD28A /* IstambulInOneDay0.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE8DD9F428578C0B00FFD28A /* IstambulInOneDay0.txt */; };
@@ -293,6 +302,24 @@
 		CEE4AA7F283AF1BA000C1FF7 /* IstambulInOneDay0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEE4AA7E283AF1BA000C1FF7 /* IstambulInOneDay0.mp3 */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CE734A1F286C3ACB001D1E56 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE734A21286C3ACD001D1E56 /* MapboxCoreMaps.xcframework in Embed Frameworks */,
+				CE734A25286C3AD2001D1E56 /* MapboxMobileEvents.xcframework in Embed Frameworks */,
+				CE734A1E286C3ACB001D1E56 /* MapboxCommon.xcframework in Embed Frameworks */,
+				CE734A27286C3AD5001D1E56 /* Turf.xcframework in Embed Frameworks */,
+				CE734A23286C3ACF001D1E56 /* MapboxMaps.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5D0C3CA8284FB1B6005FBAE0 /* aboutPurchase0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aboutPurchase0.txt; sourceTree = "<group>"; };
 		5D0C3CAA284FB1BF005FBAE0 /* PurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
@@ -338,6 +365,11 @@
 		CE41514F283A9B0F00CF9D53 /* AudioPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerView.swift; sourceTree = "<group>"; };
 		CE415154283AB61D00CF9D53 /* TimeInterval+minSecFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+minSecFormatted.swift"; sourceTree = "<group>"; };
 		CE634F4C283429FC006C2F73 /* GuideHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideHeaderView.swift; sourceTree = "<group>"; };
+		CE734A12286C3A5F001D1E56 /* MapboxMobileEvents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapboxMobileEvents.xcframework; sourceTree = "<group>"; };
+		CE734A13286C3A5F001D1E56 /* Turf.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Turf.xcframework; sourceTree = "<group>"; };
+		CE734A14286C3A68001D1E56 /* MapboxCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapboxCommon.xcframework; sourceTree = "<group>"; };
+		CE734A15286C3A6B001D1E56 /* MapboxMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapboxMaps.xcframework; sourceTree = "<group>"; };
+		CE734A16286C3A77001D1E56 /* MapboxCoreMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapboxCoreMaps.xcframework; sourceTree = "<group>"; };
 		CE861D602843DECB005B3A53 /* DetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewController.swift; sourceTree = "<group>"; };
 		CE8A3C08285381EF004B8BFB /* PurchaseButtonFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButtonFooterView.swift; sourceTree = "<group>"; };
 		CE8DD9EE28577B8B00FFD28A /* ExcursionsPlistLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionsPlistLoader.swift; sourceTree = "<group>"; };
@@ -586,8 +618,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D86A3B9285CD8110024ED23 /* MapboxMaps in Frameworks */,
+				CE734A26286C3AD5001D1E56 /* Turf.xcframework in Frameworks */,
+				CE734A20286C3ACD001D1E56 /* MapboxCoreMaps.xcframework in Frameworks */,
+				CE734A1D286C3ACB001D1E56 /* MapboxCommon.xcframework in Frameworks */,
 				5D1864572854E03600A001E5 /* StoreKit.framework in Frameworks */,
+				CE734A22286C3ACF001D1E56 /* MapboxMaps.xcframework in Frameworks */,
+				CE734A24286C3AD2001D1E56 /* MapboxMobileEvents.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +643,11 @@
 			isa = PBXGroup;
 			children = (
 				5D1864562854E03600A001E5 /* StoreKit.framework */,
+				CE734A14286C3A68001D1E56 /* MapboxCommon.xcframework */,
+				CE734A16286C3A77001D1E56 /* MapboxCoreMaps.xcframework */,
+				CE734A15286C3A6B001D1E56 /* MapboxMaps.xcframework */,
+				CE734A12286C3A5F001D1E56 /* MapboxMobileEvents.xcframework */,
+				CE734A13286C3A5F001D1E56 /* Turf.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1119,6 +1160,7 @@
 				5DCB58F3283172BE00A2C3CC /* Sources */,
 				5DCB58F4283172BE00A2C3CC /* Frameworks */,
 				5DCB58F5283172BE00A2C3CC /* Resources */,
+				CE734A1F286C3ACB001D1E56 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1126,7 +1168,6 @@
 			);
 			name = MobileAudioGuide;
 			packageProductDependencies = (
-				5D86A3B8285CD8110024ED23 /* MapboxMaps */,
 			);
 			productName = MobileAudioGuide;
 			productReference = 5DCB58F7283172BE00A2C3CC /* MobileAudioGuide.app */;
@@ -1157,7 +1198,6 @@
 			);
 			mainGroup = 5DCB58EE283172BE00A2C3CC;
 			packageReferences = (
-				5D86A3B7285CD8110024ED23 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
 			);
 			productRefGroup = 5DCB58F8283172BE00A2C3CC /* Products */;
 			projectDirPath = "";
@@ -1616,7 +1656,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1649,7 +1689,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1686,25 +1726,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		5D86A3B7285CD8110024ED23 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5D86A3B8285CD8110024ED23 /* MapboxMaps */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5D86A3B7285CD8110024ED23 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
-			productName = MapboxMaps;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5DCB58EF283172BE00A2C3CC /* Project object */;
 }
