@@ -28,6 +28,7 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+        mainView.tableView.reloadData()
     }
     
     private func setupUI() {
@@ -70,6 +71,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = .clear
         cell.tagLabel.text = tagsNames[indexPath.row]
         cell.tagLabel.backgroundColor = tagsColors[indexPath.row]
+        cell.greenCheckMarkView.isHidden = !excursionsInfo[indexPath.row].isCompleted()
         return cell
     }
     

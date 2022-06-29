@@ -467,8 +467,12 @@ final class OfflineManagerViewController: UIViewController {
             mapFooterView.isHidden = true
             return
         }
+        mapFooterView.isHidden = false
         mapFooterView.imageView.image = UIImage(named: excursionInfo.filenamePrefix + String(indexOfNowPlayingFile))
         mapFooterView.titleLabel.text = excursionInfo.tours[indexOfNowPlayingFile - 1].tourTitle
+        mapFooterView.purchaseButton.addTarget(self, action: #selector(showPurchaseScreen), for: .touchUpInside)
+        mapFooterView.closeButton.addTarget(self, action: #selector(hideMapFooterView), for: .touchUpInside)
+        mapFooterView.detailButton.addTarget(self, action: #selector(showDetailScreen), for: .touchUpInside)
     }
     
     @objc func showPurchaseScreen() {
