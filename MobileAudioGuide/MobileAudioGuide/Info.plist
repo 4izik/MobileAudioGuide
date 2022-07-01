@@ -30,7 +30,7 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>App need always have access to your location</string>
 	<key>MBXAccessToken</key>
-	<string>pk.eyJ1IjoibjIzNDkyIiwiYSI6ImNsNGNka3o0dDA1cHMzZm53NzFmbTR5cnQifQ.6MrRlX46eo5aR_WQXKwhiQ</string>
+	<string>pk.eyJ1IjoiYnJhbmRhbmRmYWNlIiwiYSI6ImNqdWgzaXMwZDAwdDkzeW80aTV2ODJzd2gifQ.ZELOQYtZV9Jmmk8AaOOOWQ</string>
 	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
 	<dict>
 		<key>CustomKey</key>
