@@ -50,6 +50,8 @@ final class DetailsScreenViewController: UIViewController {
     private lazy var excursionTextView: UITextView = {
         let textView = UITextView(frame: .zero)
         textView.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        textView.isEditable = false
+        textView.isSelectable = false
         textView.text = TextLoader.loadFromTxtFile(named: excursionInfo.filenamePrefix + String(viewpointNumber))
         return textView
     }()
