@@ -31,6 +31,16 @@ final class OfflineManagerViewController: UIViewController {
         return indicator
     }()
     
+    private let progressView: UIProgressView = {
+        let progressView = UIProgressView()
+        progressView.progressTintColor = Colors.vwBlueColor
+        progressView.layer.cornerRadius = 3
+        progressView.layer.borderColor = UIColor.white.cgColor
+        progressView.layer.borderWidth = 1
+        progressView.progress = 0
+        return progressView
+    }()
+    
     private let myGeoButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "geo"), for: .normal)
@@ -113,7 +123,7 @@ final class OfflineManagerViewController: UIViewController {
     
     func setupUI() {
         navigationController?.navigationBar.topItem?.title = ""
-        [activityIndicator, mapViewContainer, myGeoButton, moreButton, mapFooterView].forEach { view in
+        [activityIndicator, progressView, mapViewContainer, myGeoButton, moreButton, mapFooterView].forEach { view in
             self.view.addSubview(view)
             view.translatesAutoresizingMaskIntoConstraints = false
         }
@@ -145,7 +155,12 @@ final class OfflineManagerViewController: UIViewController {
             activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             activityIndicator.widthAnchor.constraint(equalToConstant: 50),
-            activityIndicator.heightAnchor.constraint(equalToConstant: 50)
+            activityIndicator.heightAnchor.constraint(equalToConstant: 50),
+            
+            progressView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            progressView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            progressView.topAnchor.constraint(equalTo: activityIndicator.bottomAnchor, constant: 10),
+            progressView.heightAnchor.constraint(equalToConstant: 15)
         ])
         downloadTileRegions()
         
@@ -229,23 +244,24 @@ final class OfflineManagerViewController: UIViewController {
         var downloadError = false
         
         // Create style package with loadStylePack() call.
-        let stylePackLoadOptions = StylePackLoadOptions(glyphsRasterizationMode: .ideographsRasterizedLocally,
-                                                        metadata: ["tag": "my-outdoors-style-pack"])!
+        let stylePackLoadOptions = StylePackLoadOptions(glyphsRasterizationMode: .ideographsRasterizedLocally, metadata: ["tag": "my-outdoors-style-pack"])!
         dispatchGroup.enter()
-        let stylePackDownload = offlineManager.loadStylePack(for: .outdoors, loadOptions: stylePackLoadOptions) { progress in
-            NSLog("StylePack = \(progress)")
+        let stylePackDownload = offlineManager.loadStylePack(for: .outdoors, loadOptions: stylePackLoadOptions) { [weak self] progress in
             DispatchQueue.main.async {
                 NSLog("StylePack = \(progress)")
+                let progressValue = Float(progress.loadedResourceCount) / Float(progress.requiredResourceCount)
+                self?.progressView.setProgress(progressValue, animated: true)
             }
         } completion: { result in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
                 defer {
                     dispatchGroup.leave()
                 }
+                self?.progressView.isHidden = true
                 
                 switch result {
                 case let .success(stylePack):
-                    NSLog("StylePack = \(stylePack)")
+                    NSLog("StylePack download completed = \(stylePack)")
                 case let .failure(error):
                     NSLog("stylePack download Error = \(error)")
                     downloadError = true
@@ -437,6 +453,7 @@ final class OfflineManagerViewController: UIViewController {
     private func showMapView() {
         activityIndicator.isHidden = true
         activityIndicator.stopAnimating()
+        progressView.isHidden = true
         
         let mapView = MapView(frame: mapViewContainer.bounds, mapInitOptions: mapInitOptions)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
