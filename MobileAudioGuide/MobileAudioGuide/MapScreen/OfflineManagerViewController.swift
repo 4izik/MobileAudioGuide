@@ -81,8 +81,8 @@ final class OfflineManagerViewController: UIViewController {
     
     // Regions and style pack downloads
     private var downloads: [Cancelable] = []
-    private var istanbulCoord: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 41.011225, longitude: 28.978151)
-    private let istanbulZoom: CGFloat = 13
+    private var istanbulCoord: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 41.0102, longitude: 28.9743)
+    private let istanbulZoom: CGFloat = 13.2
     private let tileRegionId = "myTileRegion"
     
     init(excursionInfo: ExcursionInfo, excursionIndex: Int) {
@@ -97,8 +97,7 @@ final class OfflineManagerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let index = excursionInfo.tours.count / 2
-        istanbulCoord = CLLocationCoordinate2D(latitude: excursionInfo.tours[index].latitude, longitude: excursionInfo.tours[index].longitude)
+        istanbulCoord = CLLocationCoordinate2D(latitude: excursionInfo.mapScreenCoordinates.latitude, longitude: excursionInfo.mapScreenCoordinates.longitude)
         state = .initial
         setupImage()
         setupUI()
@@ -254,7 +253,7 @@ final class OfflineManagerViewController: UIViewController {
         }
         // Create an offline region with tiles for the outdoors style
         let outdoorsOptions = TilesetDescriptorOptions(styleURI: .outdoors,
-                                                       zoomRange: 10...16)
+                                                       zoomRange: 14...16)
         
         let outdoorsDescriptor = offlineManager.createTilesetDescriptor(for: outdoorsOptions)
         
