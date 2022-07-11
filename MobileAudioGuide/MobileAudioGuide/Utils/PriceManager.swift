@@ -27,7 +27,7 @@ extension PriceManager: SKProductsRequestDelegate {
             nf.numberStyle = .currency
             nf.locale = product.priceLocale
             let price = product.price.stringValue + " " + nf.currencySymbol
-            UserDefaults.standard.set(price, forKey: product.productIdentifier)
+            UserDefaults.standard.set(price, forKey: product.productIdentifier + "price")
         }
         
         print("Invalid identifiers: \(response.invalidProductIdentifiers)")
