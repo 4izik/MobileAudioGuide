@@ -70,9 +70,9 @@ class PurchaseView: UIView {
         return label
     }()
     
-    private let priceOneTourLabel: UILabel = {
+    var priceOneTourLabel: UILabel = {
         let label = UILabel()
-        label.text = "5 $"
+        label.text = ""
         label.textAlignment = .right
         label.textColor = .white
         label.backgroundColor = .clear
@@ -110,9 +110,9 @@ class PurchaseView: UIView {
         return label
     }()
     
-    private let priceThreeToursLabel: UILabel = {
+    var priceThreeToursLabel: UILabel = {
         let label = UILabel()
-        label.text = "12 $"
+        label.text = ""
         label.textAlignment = .right
         label.textColor = .white
         label.backgroundColor = .clear
@@ -130,15 +130,12 @@ class PurchaseView: UIView {
         return label
     }()
     
-    private let oldPriceLabel: UILabel = {
+    var oldPriceLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .right
         label.textColor = .black
         label.backgroundColor = .clear
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: "14 $")
-        attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
-        label.attributedText = attributeString
         return label
     }()
     

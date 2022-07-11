@@ -14,6 +14,7 @@
 		5D18645C28573F2300A001E5 /* CameraLocationConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18645B28573F2300A001E5 /* CameraLocationConsumer.swift */; };
 		5D18645E2857818C00A001E5 /* OfflineManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D18645D2857818C00A001E5 /* OfflineManagerViewController.swift */; };
 		5D61FD1B28328A1E00AB33C3 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */; };
+		5D8D9416287C054D005F1ABC /* PriceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D9415287C054D005F1ABC /* PriceManager.swift */; };
 		5DCB58FB283172BE00A2C3CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FA283172BE00A2C3CC /* AppDelegate.swift */; };
 		5DCB58FD283172BE00A2C3CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FC283172BE00A2C3CC /* SceneDelegate.swift */; };
 		5DCB58FF283172BE00A2C3CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB58FE283172BE00A2C3CC /* MainViewController.swift */; };
@@ -328,6 +329,7 @@
 		5D18645B28573F2300A001E5 /* CameraLocationConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraLocationConsumer.swift; sourceTree = "<group>"; };
 		5D18645D2857818C00A001E5 /* OfflineManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineManagerViewController.swift; sourceTree = "<group>"; };
 		5D61FD1A28328A1E00AB33C3 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		5D8D9415287C054D005F1ABC /* PriceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceManager.swift; sourceTree = "<group>"; };
 		5DCB58F7283172BE00A2C3CC /* MobileAudioGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAudioGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCB58FA283172BE00A2C3CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DCB58FC283172BE00A2C3CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -722,6 +724,7 @@
 				CE8DD9EE28577B8B00FFD28A /* ExcursionsPlistLoader.swift */,
 				CE8DD9FF2857DD0B00FFD28A /* AudioPlayer.swift */,
 				CE20E799286624DC005CC1A0 /* PurchaseManager.swift */,
+				5D8D9415287C054D005F1ABC /* PriceManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1501,6 +1504,7 @@
 				5DCB58FD283172BE00A2C3CC /* SceneDelegate.swift in Sources */,
 				5D18645E2857818C00A001E5 /* OfflineManagerViewController.swift in Sources */,
 				5DCB5916283174CE00A2C3CC /* Constants.swift in Sources */,
+				5D8D9416287C054D005F1ABC /* PriceManager.swift in Sources */,
 				CE05C070284B54CC00AF37CE /* RouteViewController.swift in Sources */,
 				CE415150283A9B1000CF9D53 /* AudioPlayerView.swift in Sources */,
 				CE20E7A22866504A005CC1A0 /* UITextView+addHyperLinksToText.swift in Sources */,
@@ -1655,7 +1659,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1688,7 +1692,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

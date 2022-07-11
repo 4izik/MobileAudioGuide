@@ -36,6 +36,13 @@ class PurchaseViewController: UIViewController {
         view.backgroundColor = .black
         purchaseView.nameExcursionLabel.text = excursionInfo.excursionTitle
         purchaseView.infoAboutPurchaseTextView.text = TextLoader.loadFromTxtFile(named: "aboutPurchase\(excursionIndex)")
+        
+        purchaseView.priceOneTourLabel.text = UserDefaults.standard.object(forKey: "com.istanbul.audioguide.firstTour") as? String
+        purchaseView.priceThreeToursLabel.text = UserDefaults.standard.object(forKey: "com.istanbul.audioguide.allTours") as? String
+        let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: getOldPrice(oneTourPrice: UserDefaults.standard.object(forKey: "com.istanbul.audioguide.firstTour") as? String ?? ""))
+        attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+        purchaseView.oldPriceLabel.attributedText = attributeString
+        
 
         purchaseView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -58,5 +65,13 @@ class PurchaseViewController: UIViewController {
     
     @objc func restorePurchase() {
         PurchaseManager.shared.restorePurchases()
+    }
+    
+    private func getOldPrice (oneTourPrice: String) -> String {
+        var newString = oneTourPrice
+        newString.removeLast()
+        newString.removeLast()
+        guard let price = Double(newString) else { return "14" }
+        return "\(round(price * 3))"
     }
 }
