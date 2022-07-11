@@ -11,12 +11,15 @@ import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    let priceManager = PriceManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupAudioSession()
         authNotification()
         UNUserNotificationCenter.current().delegate = self
         scheduleNotification()
+        
+        priceManager.getPricesForInApps(inAppsIDs: [InAppProducts.firstTour.rawValue, InAppProducts.allTours.rawValue])
         
         PurchaseManager.shared.setupPurchases { success in
             if success {
