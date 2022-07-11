@@ -80,16 +80,17 @@
 ## Offline карта
 
 Приложению требуется один раз скачать карту при первом входе на экран карты и после этого Интернет не будет нужен для ее отображения (до момента удаления приложения с утройства).
-Чтобы изменить координаты скачиваемой карты в OfflineManager следует изменить переменную istanbulCoord
+
+Чтобы изменить координаты скачиваемой карты в OfflineManager следует изменить переменную istanbulCoord в OfflineManagerViewController.
 
 ##  Главный экран Main
-Фоновую картинку закинуть в Assets
+Фоновую картинку закинуть в Assets.<br>
 Фоновая картинка экрана должна называться backGroundImage
 
-Названия туров находятся в MainViewController массив namesTours
+Названия туров находятся в MainViewController массив namesTours.
 
-Изменение ссылки на отели в функции openHotelsURL (MainViewController)
-Изменение ссылки на туры в функции openTicketsURL (MainViewController)
+Изменение ссылки на отели в функции openHotelsURL (MainViewController).<br>
+Изменение ссылки на туры в функции openTicketsURL (MainViewController).
 
 ##  Экран GuideHeaderView
 
