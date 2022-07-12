@@ -21,7 +21,7 @@
 		5DCB5907283172C000A2C3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB5906283172C000A2C3CC /* Assets.xcassets */; };
 		5DCB590A283172C000A2C3CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB5908283172C000A2C3CC /* LaunchScreen.storyboard */; };
 		5DCB59122831736E00A2C3CC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB59112831736E00A2C3CC /* MainView.swift */; };
-		5DCB5916283174CE00A2C3CC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB5915283174CE00A2C3CC /* Constants.swift */; };
+		5DCB5916283174CE00A2C3CC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB5915283174CE00A2C3CC /* Colors.swift */; };
 		5DCB59192831758200A2C3CC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB59182831758200A2C3CC /* UIColor+Extension.swift */; };
 		5DCF99F02858F3E900FD5588 /* MapFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCF99EF2858F3E900FD5588 /* MapFooterView.swift */; };
 		5DD753FB28391C230093FFBE /* InfoScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD753FA28391C230093FFBE /* InfoScreenViewController.swift */; };
@@ -338,7 +338,7 @@
 		5DCB5909283172C000A2C3CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DCB590B283172C000A2C3CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DCB59112831736E00A2C3CC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		5DCB5915283174CE00A2C3CC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5DCB5915283174CE00A2C3CC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5DCB59182831758200A2C3CC /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		5DCF99EF2858F3E900FD5588 /* MapFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFooterView.swift; sourceTree = "<group>"; };
 		5DD753FA28391C230093FFBE /* InfoScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenViewController.swift; sourceTree = "<group>"; };
@@ -718,7 +718,7 @@
 		5DCB59142831746D00A2C3CC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				5DCB5915283174CE00A2C3CC /* Constants.swift */,
+				5DCB5915283174CE00A2C3CC /* Colors.swift */,
 				CE200B3B2833CA010043F57A /* TextLoader.swift */,
 				CE4151402835098900CF9D53 /* GuideFeatureViewBuilder.swift */,
 				CE8DD9EE28577B8B00FFD28A /* ExcursionsPlistLoader.swift */,
@@ -1503,7 +1503,7 @@
 				5DCB59122831736E00A2C3CC /* MainView.swift in Sources */,
 				5DCB58FD283172BE00A2C3CC /* SceneDelegate.swift in Sources */,
 				5D18645E2857818C00A001E5 /* OfflineManagerViewController.swift in Sources */,
-				5DCB5916283174CE00A2C3CC /* Constants.swift in Sources */,
+				5DCB5916283174CE00A2C3CC /* Colors.swift in Sources */,
 				5D8D9416287C054D005F1ABC /* PriceManager.swift in Sources */,
 				CE05C070284B54CC00AF37CE /* RouteViewController.swift in Sources */,
 				CE415150283A9B1000CF9D53 /* AudioPlayerView.swift in Sources */,

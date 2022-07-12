@@ -48,7 +48,7 @@ class MainView: UIView {
     
     var ticketsButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = Colors.btnBlue
+        button.backgroundColor = Colors.ticketsButton
         button.setTitle("Tickets/tours", for: .normal)
         button.titleLabel?.font =  UIFont.systemFont(ofSize: 12, weight: .medium)
         button.clipsToBounds = true
@@ -58,7 +58,7 @@ class MainView: UIView {
     
     var hotelsButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = Colors.btnYellow
+        button.backgroundColor = Colors.hotelsButton
         button.setTitle("Hotels", for: .normal)
         button.titleLabel?.font =  UIFont.systemFont(ofSize: 12, weight: .medium)
         button.clipsToBounds = true

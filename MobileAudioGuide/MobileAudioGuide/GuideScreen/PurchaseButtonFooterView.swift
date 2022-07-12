@@ -15,10 +15,10 @@ final class PurchaseButtonFooterView: UITableViewHeaderFooterView {
         let button = UIButton()
         button.backgroundColor = .white
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        button.layer.borderColor = Colors.vwBlueColor.cgColor
+        button.layer.borderColor = Colors.appAccentColor.cgColor
         button.layer.borderWidth = 1
         button.setTitle("Buy full version", for: .normal)
-        button.setTitleColor(Colors.vwBlueColor, for: .normal)
+        button.setTitleColor(Colors.appAccentColor, for: .normal)
         button.layer.cornerRadius = 3
         return button
     }()

@@ -23,10 +23,10 @@ class MapFooterView: UIView {
     let purchaseButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
-        button.layer.borderColor = Colors.vwBlueColor.cgColor
+        button.layer.borderColor = Colors.appAccentColor.cgColor
         button.layer.borderWidth = 1
         button.setTitle("Buy full version", for: .normal)
-        button.setTitleColor(Colors.vwBlueColor, for: .normal)
+        button.setTitleColor(Colors.appAccentColor, for: .normal)
         return button
     }()
     
@@ -57,7 +57,7 @@ class MapFooterView: UIView {
         button.backgroundColor = .white
         button.setTitle("More", for: .normal)
         button.titleLabel?.textAlignment = .left
-        button.setTitleColor(Colors.vwBlueColor, for: .normal)
+        button.setTitleColor(Colors.appAccentColor, for: .normal)
         return button
     }()
     

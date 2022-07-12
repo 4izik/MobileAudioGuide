@@ -42,6 +42,7 @@ struct MapScreenCoordinates: Decodable {
 
 struct TourInfo: Decodable {
     let tourTitle: String
+    let imageUrl: String
     let latitude: Double
     let longitude: Double
 }
