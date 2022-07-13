@@ -24,7 +24,7 @@ class InfoScreenView: UIView {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 50
-        imageView.layer.borderColor = Colors.vwBlueColor.cgColor
+        imageView.layer.borderColor = Colors.appAccentColor.cgColor
         imageView.layer.borderWidth = 1
         return imageView
     }()
@@ -52,14 +52,15 @@ class InfoScreenView: UIView {
         label.text = "contact@offlineofficialguide.com"
         label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         label.textAlignment = .center
-        label.textColor = Colors.vwBlueColor
+        label.textColor = Colors.appAccentColor
         return label
     }()
     
     let facebookButton: UIButton = {
         let button = UIButton()
         button.setTitle("", for: .normal)
-        button.setImage(UIImage(named: "facebook"), for: .normal)
+        let buttonImage = UIImage(named: "facebook") ?? UIImage()
+        button.setImage(buttonImage.withTintColor(Colors.appAccentColor), for: .normal)
         button.clipsToBounds = true
         return button
     }()
@@ -67,7 +68,8 @@ class InfoScreenView: UIView {
     let instagramButton: UIButton = {
         let button = UIButton()
         button.setTitle("", for: .normal)
-        button.setImage(UIImage(named: "instagram"), for: .normal)
+        let buttonImage = UIImage(named: "instagram") ?? UIImage()
+        button.setImage(buttonImage.withTintColor(Colors.appAccentColor), for: .normal)
         button.clipsToBounds = true
         return button
     }()
@@ -129,7 +131,6 @@ class InfoScreenView: UIView {
     private func setupViews() {
         socialNetworksStackView.addArrangedSubview(facebookButton)
         socialNetworksStackView.addArrangedSubview(instagramButton)
-        photoAuthorsTextView.addHyperLinksToText(hyperLinks: ["Creative common license" : "https://creativecommons.org/"])
         
         [segmentedControl, photoImageView, nameLabel, infoLabel, emailLabel, socialNetworksStackView, infoAboutAuthorTextView, photoAuthorsTextView].forEach { view in
             addSubview(view)

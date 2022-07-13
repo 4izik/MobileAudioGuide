@@ -27,6 +27,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Sirkeci Railway station</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/2/25/%D0%92%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB_Sirkeci_-_panoramio.jpg</string>
 				<key>latitude</key>
 				<real>41.015282</real>
 				<key>longitude</key>
@@ -35,6 +37,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Byzantium, Constantinople, Istanbul</string>
+                <key>imageUrl</key>
+                <string>https://cdn18.picryl.com/photo/2019/10/09/the-dardanelles-and-the-troad-the-bosphorus-and-constantinople-bd9a12-1024.jpg</string>
 				<key>latitude</key>
 				<real>41.016342</real>
 				<key>longitude</key>
@@ -43,6 +47,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Golden Horn</string>
+                <key>imageUrl</key>
+                <string>https://cdn.pixabay.com/photo/2018/10/21/11/05/golden-horn-3762653_1280.jpg</string>
 				<key>latitude</key>
 				<real>41.017407</real>
 				<key>longitude</key>
@@ -51,6 +57,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Bosphorus Strait</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/8/8d/%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D0%B4%D0%B5%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BA%D0%B0%D1%82%D0%B5%D1%80_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0_%D0%9F%D0%921415_%D0%B2_%D0%BF%D1%80%D0%BE%D0%BB%D0%B8%D0%B2%D0%B5_%D0%91%D0%BE%D1%81%D1%84%D0%BE%D1%80_%D0%92%D0%BE%D1%81%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B9.jpg</string>
 				<key>latitude</key>
 				<real>41.016742</real>
 				<key>longitude</key>
@@ -59,6 +67,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>View of the Maiden Tower</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/7/71/Maiden%27s_Tower%2C_Istanbul.jpg</string>
 				<key>latitude</key>
 				<real>41.016722</real>
 				<key>longitude</key>
@@ -67,6 +77,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Gulhane Park</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/G%C3%BClhane_Park%2C_Istanbul.jpg/800px-G%C3%BClhane_Park%2C_Istanbul.jpg?20150915142159</string>
 				<key>latitude</key>
 				<real>41.01343</real>
 				<key>longitude</key>
@@ -75,6 +87,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Gothic column</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Goths%27_Column%2C_Gulhane_Park%2C_Istanbul%2C_2017.jpg/800px-Goths%27_Column%2C_Gulhane_Park%2C_Istanbul%2C_2017.jpg?20170611115628</string>
 				<key>latitude</key>
 				<real>41.01453</real>
 				<key>longitude</key>
@@ -83,6 +97,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Topkapi Palace</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/a/a8/%D0%92%D0%BE%D1%80%D0%BE%D1%82%D0%B0_%D0%B2%D0%BE_%D0%B4%D0%B2%D0%BE%D1%80%D0%B5%D1%86_%D0%A2%D0%BE%D0%BF_%D0%9A%D0%B0%D0%BF%D1%8B.JPG</string>
 				<key>latitude</key>
 				<real>41.012768</real>
 				<key>longitude</key>
@@ -91,6 +107,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Harem of Topkapi Palace</string>
+                <key>imageUrl</key>
+                <string>https://live.staticflickr.com/7165/6526101629_f981b92785_b.jpg</string>
 				<key>latitude</key>
 				<real>41.013463</real>
 				<key>longitude</key>
@@ -99,6 +117,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The tulip is the main flower of the Ottoman Empire</string>
+                <key>imageUrl</key>
+                <string>https://c.pxhere.com/images/9e/25/772969cbb2e67811389fb076a14b-1624985.jpg!d</string>
 				<key>latitude</key>
 				<real>41.012554</real>
 				<key>longitude</key>
@@ -107,6 +127,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Istanbul Archaeological Museum.</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/%C4%B0stanbul_Arkeoloji_M%C3%BCzeleri.JPG/800px-%C4%B0stanbul_Arkeoloji_M%C3%BCzeleri.JPG?20120118175256</string>
 				<key>latitude</key>
 				<real>41.011601</real>
 				<key>longitude</key>
@@ -115,6 +137,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The first courtyard of Topkapi</string>
+                <key>imageUrl</key>
+                <string>http://sindbad.life/wp-content/uploads/2018/12/pervyy-dvor-topkapy.png</string>
 				<key>latitude</key>
 				<real>41.01186</real>
 				<key>longitude</key>
@@ -123,6 +147,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Gate of greetings</string>
+                <key>imageUrl</key>
+                <string>https://img-fotki.yandex.ru/get/876984/99239988.200/0_1ade8f_a0e5ebce_XL.jpg</string>
 				<key>latitude</key>
 				<real>41.0115</real>
 				<key>longitude</key>
@@ -131,6 +157,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Mint</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/a/ac/Istanbul_Topkapi_Palace_Royal_Mint_of_Ottoman_Empire_IMG_7370_1800.jpg</string>
 				<key>latitude</key>
 				<real>41.0103</real>
 				<key>longitude</key>
@@ -139,6 +167,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Church of St. Irene</string>
+                <key>imageUrl</key>
+                <string>https://live.staticflickr.com/3944/15718429516_d26fc2bb79_b.jpg</string>
 				<key>latitude</key>
 				<real>41.0096</real>
 				<key>longitude</key>
@@ -147,6 +177,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Sultan Gate</string>
+                <key>imageUrl</key>
+                <string>https://c.pxhere.com/photos/68/3e/hagia_sophia_istanbul_sultanahmet-1328699.jpg!d</string>
 				<key>latitude</key>
 				<real>41.007782</real>
 				<key>longitude</key>
@@ -155,6 +187,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Fountain of Ahmed III</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/3/30/Fountain_of_Ahmed_III_%281%29.jpg</string>
 				<key>latitude</key>
 				<real>41.008216</real>
 				<key>longitude</key>
@@ -163,6 +197,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Hagia Sophia</string>
+                <key>imageUrl</key>
+                <string>https://c.pxhere.com/photos/02/f1/hagia_sophia_turkey_istanbul_church_mosque_museum_faith_muslim-1005513.jpg!d</string>
 				<key>latitude</key>
 				<real>41.00856</real>
 				<key>longitude</key>
@@ -171,6 +207,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Secrets and legends of St. Sophia</string>
+                <key>imageUrl</key>
+                <string>https://img-fotki.yandex.ru/get/202427/99239988.1bd/0_198c40_c43907a3_XL.jpg</string>
 				<key>latitude</key>
 				<real>41.00856</real>
 				<key>longitude</key>
@@ -179,6 +217,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Sultan&apos;s tombs</string>
+                <key>imageUrl</key>
+                <string>https://moystambul.ru/wp-content/uploads/2017/05/Depositphotos_65040651_xl-2015.jpg</string>
 				<key>latitude</key>
 				<real>41.008498</real>
 				<key>longitude</key>
@@ -187,6 +227,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Augusteion</string>
+                <key>imageUrl</key>
+                <string>https://media-cdn.tripadvisor.com/media/photo-s/09/82/9b/ed/es-una-plaza-bonita-localizada.jpg</string>
 				<key>latitude</key>
 				<real>41.007289</real>
 				<key>longitude</key>
@@ -195,6 +237,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Milion</string>
+                <key>imageUrl</key>
+                <string>https://wecityguide.s3.amazonaws.com/wp-content/uploads/2019/12/02084929/Milion-Stone-with-sign.jpg</string>
 				<key>latitude</key>
 				<real>41.0081</real>
 				<key>longitude</key>
@@ -203,6 +247,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Basilica cistern</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/e/e6/Basilica_Cistern_Istanbul.JPG</string>
 				<key>latitude</key>
 				<real>41.008372</real>
 				<key>longitude</key>
@@ -211,6 +257,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Sultanahmet Square</string>
+                <key>imageUrl</key>
+                <string>https://avatars.mds.yandex.net/i?id=772a316c3c4c24fa1e27a8a0d7b78385-5233525-images-thumbs&amp;n=13</string>
 				<key>latitude</key>
 				<real>41.006591</real>
 				<key>longitude</key>
@@ -219,6 +267,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Baths of Roksolana</string>
+                <key>imageUrl</key>
+                <string>https://www.nostalgic.ru/img/galleries/Puteshestviya_i_progulki/Vesenniy_Stambul__chast_3:_park_Sultanahmet__Mramornoe_more__ruini_dvortsa_Bukoleon/DSC05506.jpg</string>
 				<key>latitude</key>
 				<real>41.007223</real>
 				<key>longitude</key>
@@ -227,6 +277,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Blue Mosque</string>
+                <key>imageUrl</key>
+                <string>https://cdn.pixabay.com/photo/2017/06/23/19/45/blue-mosque-2435694_1280.jpg</string>
 				<key>latitude</key>
 				<real>41.005243</real>
 				<key>longitude</key>
@@ -235,6 +287,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Grand Imperial Palace</string>
+                <key>imageUrl</key>
+                <string>https://554a875a-71dc-4f5f-b6bf-ae8967f137d5.selcdn.net/thumbs2/5edbebfa-56a4-11ec-aa11-b2ca626e95b6.800x600.jpg</string>
 				<key>latitude</key>
 				<real>41.004302</real>
 				<key>longitude</key>
@@ -243,6 +297,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Constantine the Great</string>
+                <key>imageUrl</key>
+                <string>https://i1.wp.com/history-doc.ru/wp-content/uploads/2017/12/10.jpg</string>
 				<key>latitude</key>
 				<real>41.00441</real>
 				<key>longitude</key>
@@ -251,6 +307,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The hippodrome</string>
+                <key>imageUrl</key>
+                <string>https://img1.liveinternet.ru/images/attach/d/3/156/270/156270791_5774028_yasta7.jpg</string>
 				<key>latitude</key>
 				<real>41.004697</real>
 				<key>longitude</key>
@@ -259,6 +317,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The obelisk of Constantine</string>
+                <key>imageUrl</key>
+                <string>https://1.bp.blogspot.com/-ik5eHXYAoRY/XY9R2of_ozI/AAAAAAAAKrc/KcTGZ8V45H4Hd-d_V2CQTpEUk5aNo3cPwCLcBGAsYHQ/s1600/DSC01326.JPG</string>
 				<key>latitude</key>
 				<real>41.005411</real>
 				<key>longitude</key>
@@ -267,6 +327,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Snake column</string>
+                <key>imageUrl</key>
+                <string>https://www.nostalgic.ru/img/galleries/Puteshestviya_i_progulki/Vesenniy_Stambul__chast_1:_stariy_gorod__Sultanahmet__tsisterna_Bazilika/DSC05140.jpg</string>
 				<key>latitude</key>
 				<real>41.005687</real>
 				<key>longitude</key>
@@ -275,6 +337,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The obelisk of Theodosius</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/e/e3/Obelisk_of_Theodosius.jpg</string>
 				<key>latitude</key>
 				<real>41.005919</real>
 				<key>longitude</key>
@@ -283,6 +347,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Museum of Turkish and Islamic Art</string>
+                <key>imageUrl</key>
+                <string>https://pbs.twimg.com/media/FA_oeiUVEAMHBIX.jpg</string>
 				<key>latitude</key>
 				<real>41.006182</real>
 				<key>longitude</key>
@@ -291,6 +357,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>German fountain</string>
+                <key>imageUrl</key>
+                <string>https://img-fotki.yandex.ru/get/5014/213948141.f3/0_1c74e5_a57d729_XXL.jpg</string>
 				<key>latitude</key>
 				<real>41.007095</real>
 				<key>longitude</key>
@@ -299,6 +367,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Firuz-Agha Mosque</string>
+                <key>imageUrl</key>
+                <string>https://www.dunyabizim.com/images/haberler/haber/2016/05/07/iskender-pasa-camii-fatih-foto-1200x800.jpg</string>
 				<key>latitude</key>
 				<real>41.007867</real>
 				<key>longitude</key>
@@ -307,6 +377,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Divan-Yolu Street</string>
+                <key>imageUrl</key>
+                <string>https://www.andrewmarcus.ru/img/travel/vienna-may-2014/IMG_9760.jpg</string>
 				<key>latitude</key>
 				<real>41.008234</real>
 				<key>longitude</key>
@@ -315,6 +387,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The mausoleum of Mahmud II</string>
+                <key>imageUrl</key>
+                <string>https://pbs.twimg.com/media/DVrD6o9WAAAbeEY.jpg</string>
 				<key>latitude</key>
 				<real>41.008518</real>
 				<key>longitude</key>
@@ -323,6 +397,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The column of Constantine the Great</string>
+                <key>imageUrl</key>
+                <string>https://must-see.top/wp-content/uploads/2019/05/kolonna-konstantina.jpg</string>
 				<key>latitude</key>
 				<real>41.008571</real>
 				<key>longitude</key>
@@ -331,6 +407,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Chamberlitash Square</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Lubliniec_rynek_782.jpg/1200px-Lubliniec_rynek_782.jpg</string>
 				<key>latitude</key>
 				<real>41.008683</real>
 				<key>longitude</key>
@@ -339,6 +417,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Kullike Koja Sinan Pasha</string>
+                <key>imageUrl</key>
+                <string>https://img-fotki.yandex.ru/get/196142/26384437.726/0_14fdcf_7c0d1ac0_XXXL.jpg</string>
 				<key>latitude</key>
 				<real>41.0088</real>
 				<key>longitude</key>
@@ -347,6 +427,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The former madrasah of Chorlulu Damat Ali Pasha</string>
+                <key>imageUrl</key>
+                <string>https://last-cdn.com/2020/02/17/r51bE9qarPz580OD1rTp3OZngnV4vdxlkYbkiThZ.jpeg</string>
 				<key>latitude</key>
 				<real>41.009242</real>
 				<key>longitude</key>
@@ -355,6 +437,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Grand Bazaar</string>
+                <key>imageUrl</key>
+                <string>https://avatars.mds.yandex.net/i?id=a2a29a3e39884bd7fc9ab8cc6b8f6027-5578456-images-thumbs&amp;n=13</string>
 				<key>latitude</key>
 				<real>41.0107</real>
 				<key>longitude</key>
@@ -363,6 +447,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Bayezid Mosque</string>
+                <key>imageUrl</key>
+                <string>https://avatars.mds.yandex.net/i?id=47e116954a0972a99584e938af97163a_l-4556414-images-thumbs&amp;n=13</string>
 				<key>latitude</key>
 				<real>41.009854</real>
 				<key>longitude</key>
@@ -371,6 +457,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Istanbul University</string>
+                <key>imageUrl</key>
+                <string>https://pbs.twimg.com/media/Dyt2HOBWsAASpvA.jpg:large</string>
 				<key>latitude</key>
 				<real>41.0126</real>
 				<key>longitude</key>
@@ -379,6 +467,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Suleymaniye Mosque</string>
+                <key>imageUrl</key>
+                <string>https://avatars.mds.yandex.net/get-zen_doc/1066925/pub_5de8bb443642b600afe5415b_5de8bc7e7cccba00b1c307e9/scale_1200</string>
 				<key>latitude</key>
 				<real>41.016099</real>
 				<key>longitude</key>
@@ -387,6 +477,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Suleiman the Magnificent and his Hurrem</string>
+                <key>imageUrl</key>
+                <string>https://static.euronews.com/articles/stories/05/51/31/42/602x338_cmsv2_55889d35-3592-512d-9908-004db1c6632e-5513142.jpg</string>
 				<key>latitude</key>
 				<real>41.015743</real>
 				<key>longitude</key>
@@ -395,6 +487,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Turkish coffee</string>
+                <key>imageUrl</key>
+                <string>https://omtea.ru/wp-content/uploads/7/c/1/7c145c1aa91b481d1af2f31a5c1af949.jpeg</string>
 				<key>latitude</key>
 				<real>41.015083</real>
 				<key>longitude</key>
@@ -403,6 +497,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Buyuk Valide Sultan Khan</string>
+                <key>imageUrl</key>
+                <string>https://pbs.twimg.com/media/Cwf2pnuWEAAeYN0.jpg</string>
 				<key>latitude</key>
 				<real>41.013806</real>
 				<key>longitude</key>
@@ -411,6 +507,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Egyptian bazaar</string>
+                <key>imageUrl</key>
+                <string>https://sun9-16.userapi.com/impg/TsFKhUcGgMeWJtq4kzLMY2vGE-sdXARSxKgchg/YJSUUIChc0s.jpg?size=1280x854&amp;quality=96&amp;sign=a8f6493c865b05e4c7c6b0e1758f7a85&amp;type=album</string>
 				<key>latitude</key>
 				<real>41.016389</real>
 				<key>longitude</key>
@@ -419,6 +517,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Yeni-Jami</string>
+                <key>imageUrl</key>
+                <string>https://ppzs.ru/wp-content/uploads/2019/8623920.jpg</string>
 				<key>latitude</key>
 				<real>41.016855</real>
 				<key>longitude</key>
@@ -451,6 +551,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Galata Bridge</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/iXkaaM8TyHx4icR27</string>
 				<key>latitude</key>
 				<real>41.02021784638747</real>
 				<key>longitude</key>
@@ -459,6 +561,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Karayoi district</string>
+                <key>imageUrl</key>
+                <string>https://www.publicdomainpictures.net/pictures/130000/velka/istanbul-karakoy-street.jpg</string>
 				<key>latitude</key>
 				<real>41.022393</real>
 				<key>longitude</key>
@@ -467,6 +571,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Karaköl Beyoglu Tunnel</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/VtbiBWVXJWK5GdP77</string>
 				<key>latitude</key>
 				<real>41.02307123667627</real>
 				<key>longitude</key>
@@ -475,6 +581,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Galata District</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/4U1QBk7uazH1HxzL7</string>
 				<key>latitude</key>
 				<real>41.025658</real>
 				<key>longitude</key>
@@ -483,6 +591,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Ashkenazi synagogue. Jewish Quarter</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/wiFs66FeSwhceJVS8</string>
 				<key>latitude</key>
 				<real>41.02561</real>
 				<key>longitude</key>
@@ -491,6 +601,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Galata Tower</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/e/e3/Galata_Tower_at_night%2C_2019.jpg</string>
 				<key>latitude</key>
 				<real>41.02573075338267</real>
 				<key>longitude</key>
@@ -499,6 +611,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Galib-Dede street</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/q5sZXQ2Puiw8qpRv6</string>
 				<key>latitude</key>
 				<real>41.0266998172043</real>
 				<key>longitude</key>
@@ -507,6 +621,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Galata Cloister of Mavlevi</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/WUMtPzCGAtgijo6m6</string>
 				<key>latitude</key>
 				<real>41.02811547283998</real>
 				<key>longitude</key>
@@ -515,6 +631,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Istiklal Street</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/8Kn6jZhZ5iyq6eFcA</string>
 				<key>latitude</key>
 				<real>41.0288198863139</real>
 				<key>longitude</key>
@@ -523,6 +641,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Normans Khan</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/2wcFLtToJWi2GoC8A</string>
 				<key>latitude</key>
 				<real>41.02908813020771</real>
 				<key>longitude</key>
@@ -531,6 +651,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Consulate General of the Russian Federation</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/p2aG8BT7WUexqFyr7</string>
 				<key>latitude</key>
 				<real>41.0302202749316</real>
 				<key>longitude</key>
@@ -539,6 +661,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Russians in Istanbul</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/2bH1Bhtny1LJLx5G8</string>
 				<key>latitude</key>
 				<real>41.03039063589064</real>
 				<key>longitude</key>
@@ -547,6 +671,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Korpi Palace</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/Hfmnjn1TfpUXVRpX8</string>
 				<key>latitude</key>
 				<real>41.03031363782122</real>
 				<key>longitude</key>
@@ -555,6 +681,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Pera Palace Hotel</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/Gjhy5sZcuvYBhiBh6</string>
 				<key>latitude</key>
 				<real>41.03105474052515</real>
 				<key>longitude</key>
@@ -563,6 +691,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Pera district</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/LWaNkMpdzRCzaEc57</string>
 				<key>latitude</key>
 				<real>41.031451</real>
 				<key>longitude</key>
@@ -571,6 +701,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Pera Museum</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/xgSpQhhrNy9nL6no9</string>
 				<key>latitude</key>
 				<real>41.0318</real>
 				<key>longitude</key>
@@ -579,6 +711,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Streetcar on Istiklal Street</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/3/37/Tram-trolley_on_Istiklal_Avenue%2C_Istanbul_%28June_2009%29.jpg</string>
 				<key>latitude</key>
 				<real>41.03199795011016</real>
 				<key>longitude</key>
@@ -587,6 +721,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Church of Anthony of Padua</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/XFKsXWP2V3WJPWUR7</string>
 				<key>latitude</key>
 				<real>41.0323</real>
 				<key>longitude</key>
@@ -595,6 +731,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Cultural Center of Japa Kredi Bank</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/R8JrWS1PXr7R7ngv6</string>
 				<key>latitude</key>
 				<real>41.03326356212207</real>
 				<key>longitude</key>
@@ -603,6 +741,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Galatasaray Lyceum</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/4xvFZj5ymnVG4FsN9</string>
 				<key>latitude</key>
 				<real>41.03270534842007</real>
 				<key>longitude</key>
@@ -611,6 +751,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Flower Passage</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/6vdZH4EmVMz3sTCE8</string>
 				<key>latitude</key>
 				<real>41.0339</real>
 				<key>longitude</key>
@@ -619,6 +761,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>European Passage</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/jALWxue9Cxtqebp9A</string>
 				<key>latitude</key>
 				<real>41.03424523683393</real>
 				<key>longitude</key>
@@ -627,6 +771,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Atlas Passage</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/PcL7Kr1c1m6kTYpj7</string>
 				<key>latitude</key>
 				<real>41.03424042474136</real>
 				<key>longitude</key>
@@ -635,6 +781,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Hüseyin-Agi Mosque</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/a6psCX2NNFU9NuXHA</string>
 				<key>latitude</key>
 				<real>41.03526539306449</real>
 				<key>longitude</key>
@@ -643,6 +791,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Hadji Bekir&apos;s Confectionery</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/Wadt7rz8RNMTR7Ri6</string>
 				<key>latitude</key>
 				<real>41.03501516753035</real>
 				<key>longitude</key>
@@ -651,6 +801,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Turkish sweets</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/1qQ4WwijYhCUX19i9</string>
 				<key>latitude</key>
 				<real>41.03539531748592</real>
 				<key>longitude</key>
@@ -659,6 +811,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Church of the Holy Trinity</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/TGJra6BX6xvBcwFN7</string>
 				<key>latitude</key>
 				<real>41.03566960155344</real>
 				<key>longitude</key>
@@ -667,6 +821,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Taksim Maxemi</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/FRd4cLSeqQFtX1eu5</string>
 				<key>latitude</key>
 				<real>41.03630478127591</real>
 				<key>longitude</key>
@@ -675,6 +831,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Monument of the Republic.</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/z7goQn5cuJ9KBEY99</string>
 				<key>latitude</key>
 				<real>41.03693514297986</real>
 				<key>longitude</key>
@@ -683,6 +841,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Taksim Square</string>
+                <key>imageUrl</key>
+                <string>https://images.app.goo.gl/3bu2CkkJYpcxyRzn8</string>
 				<key>latitude</key>
 				<real>41.037</real>
 				<key>longitude</key>
@@ -715,6 +875,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Subway &quot;Vesnedzhiler&quot;</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Vezneciler_metro.jpg/2560px-Vezneciler_metro.jpg</string>
 				<key>latitude</key>
 				<real>41.01285293189557</real>
 				<key>longitude</key>
@@ -723,6 +885,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Aqueduct of Valens</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/0/00/Su_kemeri_%28yakın%29.JPG</string>
 				<key>latitude</key>
 				<real>41.013832</real>
 				<key>longitude</key>
@@ -731,6 +895,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The secret church of One Day</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Rasimpaşa%2C_Haydarpaşa_İskelesi%2C_Haydarpaşa_Gar_Binası_Yanı%2C_34716_Kadıköy-İstanbul%2C_Turkey_-_panoramio.jpg/2560px-Rasimpaşa%2C_Haydarpaşa_İskelesi%2C_Haydarpaşa_Gar_Binası_Yanı%2C_34716_Kadıköy-İstanbul%2C_Turkey_-_panoramio.jpg</string>
 				<key>latitude</key>
 				<real>41.014562</real>
 				<key>longitude</key>
@@ -739,6 +905,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Small Blachernae Palace</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Palace_of_the_Porphyrogenitus_2.jpg/2560px-Palace_of_the_Porphyrogenitus_2.jpg</string>
 				<key>latitude</key>
 				<real>41.013698</real>
 				<key>longitude</key>
@@ -747,6 +915,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Theodosian walls</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Theodosian_Walls_of_Constantinople%2C_Istanbul_%2837874293302%29.jpg/2560px-Theodosian_Walls_of_Constantinople%2C_Istanbul_%2837874293302%29.jpg</string>
 				<key>latitude</key>
 				<real>41.014275</real>
 				<key>longitude</key>
@@ -755,6 +925,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Fatih Mosque</string>
+                <key>imageUrl</key>
+                <string>https://travelermap.ru/wp-content/gallery/1-482/Mechet-Fatich-5.jpg</string>
 				<key>latitude</key>
 				<real>41.019534</real>
 				<key>longitude</key>
@@ -763,6 +935,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Church of the Holy Apostles</string>
+                <key>imageUrl</key>
+                <string>https://tripplanet.ru/wp-content/uploads/europe/greece/thessaloniki/church-of-the-holy-apostles.jpg</string>
 				<key>latitude</key>
 				<real>41.019518</real>
 				<key>longitude</key>
@@ -771,6 +945,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Monument to Mehmed the Conqueror</string>
+                <key>imageUrl</key>
+                <string>https://i.pinimg.com/originals/30/76/80/3076803c6a6f5bfb7db420b649b91d47.jpg</string>
 				<key>latitude</key>
 				<real>41.015626</real>
 				<key>longitude</key>
@@ -779,6 +955,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Aqueduct of Valens</string>
+                <key>imageUrl</key>
+                <string>https://travelermap.ru/wp-content/gallery/1-472/Acveduc-Valenta-9.JPG</string>
 				<key>latitude</key>
 				<real>41.016235</real>
 				<key>longitude</key>
@@ -787,6 +965,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Gazanfer-agi Madrasah</string>
+                <key>imageUrl</key>
+                <string>https://i.pinimg.com/originals/e8/b8/28/e8b8288c59a06922672721156adc0d46.jpg</string>
 				<key>latitude</key>
 				<real>41.016258</real>
 				<key>longitude</key>
@@ -795,6 +975,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Church of One Day</string>
+                <key>imageUrl</key>
+                <string>https://kulturologia.ru/files/u11119/fb_keyyy11.jpg</string>
 				<key>latitude</key>
 				<real>41.01818546995313</real>
 				<key>longitude</key>
@@ -803,6 +985,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Shep Sefa Khatun Mosque</string>
+                <key>imageUrl</key>
+                <string>https://pbs.twimg.com/media/De9UTPYXcAAuM6i.jpg</string>
 				<key>latitude</key>
 				<real>41.019381</real>
 				<key>longitude</key>
@@ -811,6 +995,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Zeyrek cistern</string>
+                <key>imageUrl</key>
+                <string>http://photos.wikimapia.org/p/00/07/36/26/24_big.jpg</string>
 				<key>latitude</key>
 				<real>41.02029</real>
 				<key>longitude</key>
@@ -819,6 +1005,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Boulevard and the Ataturk Bridge</string>
+                <key>imageUrl</key>
+                <string>https://i.ytimg.com/vi/CT-kyb7KCbU/maxresdefault.jpg</string>
 				<key>latitude</key>
 				<real>41.02154784796925</real>
 				<key>longitude</key>
@@ -827,6 +1015,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Jibali district</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Jibla_IMG_5662.JPG/600px-Jibla_IMG_5662.JPG</string>
 				<key>latitude</key>
 				<real>41.02432170785288</real>
 				<key>longitude</key>
@@ -835,6 +1025,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Jibali Police Station</string>
+                <key>imageUrl</key>
+                <string>https://s3-eu-west-1.amazonaws.com/de-asitcp-ir-bz-data-prod/data/uploads/2016/01/afp_707yb_1452615946-1920x1080.jpg</string>
 				<key>latitude</key>
 				<real>41.02628128468834</real>
 				<key>longitude</key>
@@ -843,6 +1035,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Greek fire</string>
+                <key>imageUrl</key>
+                <string>https://history-doc.ru/wp-content/uploads/2019/10/2-39.jpg</string>
 				<key>latitude</key>
 				<real>41.02832666730639</real>
 				<key>longitude</key>
@@ -851,6 +1045,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Fanar district</string>
+                <key>imageUrl</key>
+                <string>https://4.bp.blogspot.com/-FLtd2GU5VjQ/WzkvAhcl2dI/AAAAAAAA930/YtnFRkGhLxoZDS37MbQXWlfeNgXXtKQWQCLcBGAs/s1600/03.jpg</string>
 				<key>latitude</key>
 				<real>41.028682</real>
 				<key>longitude</key>
@@ -859,6 +1055,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>St. George&apos;s Cathedral. The Patriarchate of Constantinople</string>
+                <key>imageUrl</key>
+                <string>https://3pulse.com/uploads/photo/00/71/78/2017/07/06/377423b9fa.jpg</string>
 				<key>latitude</key>
 				<real>41.02935</real>
 				<key>longitude</key>
@@ -867,6 +1065,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>A double-headed eagle</string>
+                <key>imageUrl</key>
+                <string>https://regnum.ru/uploads/pictures/news/2017/04/11/regnum_picture_1491902057178162_normal.jpg</string>
 				<key>latitude</key>
 				<real>41.02978347818313</real>
 				<key>longitude</key>
@@ -875,6 +1075,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Church of Mary of Mongolia</string>
+                <key>imageUrl</key>
+                <string>https://istanbultravelblog.com/wp-content/uploads/2021/01/Mary-Mongols-05.jpg</string>
 				<key>latitude</key>
 				<real>41.02957325646459</real>
 				<key>longitude</key>
@@ -883,6 +1085,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Greek Lyceum</string>
+                <key>imageUrl</key>
+                <string>https://forum.sibmama.ru/usrpx/42745/42745_800x600_IMG_20180605_121928918e82bc.jpg</string>
 				<key>latitude</key>
 				<real>41.029438</real>
 				<key>longitude</key>
@@ -891,6 +1095,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Bulgarian Church of St. Stephen</string>
+                <key>imageUrl</key>
+                <string>https://avatars.mds.yandex.net/get-zen_doc/1064817/pub_5d4ed17731878200ad3747b2_5d4ed868e4f39f00add1ac28/scale_1200</string>
 				<key>latitude</key>
 				<real>41.031909</real>
 				<key>longitude</key>
@@ -899,6 +1105,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Cafe &quot;Agora Meyhanesi&quot;</string>
+                <key>imageUrl</key>
+                <string>https://images.kojaro.com/2019/7/e6a99dce-05cb-40d9-8846-9591e8e823b5.jpg</string>
 				<key>latitude</key>
 				<real>41.033353</real>
 				<key>longitude</key>
@@ -907,6 +1115,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Balat district</string>
+                <key>imageUrl</key>
+                <string>https://www.putivodi.ru/upload/medialibrary/b38/%D1%80%D0%B0%D0%B9%D0%BE%D0%BD-%D0%91%D0%B0%D0%BB%D0%B0%D1%82.jpg</string>
 				<key>latitude</key>
 				<real>41.035049</real>
 				<key>longitude</key>
@@ -915,6 +1125,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Cats in Istanbul</string>
+                <key>imageUrl</key>
+                <string>https://krasivosti.pro/uploads/posts/2021-07/thumbs/1625876375_20-krasivosti-pro-p-koshki-v-turtsii-koti-krasivo-foto-23.jpg</string>
 				<key>latitude</key>
 				<real>41.03714771113506</real>
 				<key>longitude</key>
@@ -923,6 +1135,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Blachernae Church</string>
+                <key>imageUrl</key>
+                <string>https://nne.ru/wp-content/uploads/2020/04/Vlahernskaya_tserkov7.jpg</string>
 				<key>latitude</key>
 				<real>41.038367</real>
 				<key>longitude</key>
@@ -931,6 +1145,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Aivaz Effendi Mosque</string>
+                <key>imageUrl</key>
+                <string>https://lh5.googleusercontent.com/proxy/NCFJKX62pnVX76TVesmkuMw6bTQelKgw-nWaNXV115e-7VDVwaY7vzDsaZh990eVkt-g0fNsEJjKONao_YZ-Jw0BkR0HI3cLs8h6h64Xcz9eUGZcl467YjnXtylRSO3wVxpFSPqcv17W4NRFcquI9rajwGiHh4EbU-Gah0Rza3u_sbHq_2BQN-kuf8Xz_AflB7ziTgUgGqx5zT_wOXuwm4cQovIBWHL1a-bu6oe-5dyKOzWdjURAjIeKXjPNl-u-5aL3rDuJqHcj97mJWo47AKklsRfWnCvGcYSLmAhXwyjLz8NInwFUwQtfy8QOd_Tnpgq9rLueNNNmEXjNbc7Rfl131_Noz0ntd_BEu7Jc3vWfa38_4EPp_5tWEw80_eA4ZJGQS8HRDSUT-Cu_lnVoRmAIKn8eF0g=w1200-h630-p-k-no-nu</string>
 				<key>latitude</key>
 				<real>41.038143</real>
 				<key>longitude</key>
@@ -939,6 +1155,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Constantinople walls</string>
+                <key>imageUrl</key>
+                <string>https://i0.wp.com/guruturizma.ru/wp-content/uploads/2021/03/streni-feodosiya.jpg?w=1280&amp;ssl=1</string>
 				<key>latitude</key>
 				<real>41.036416</real>
 				<key>longitude</key>
@@ -947,6 +1165,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The area of Blachernae</string>
+                <key>imageUrl</key>
+                <string>https://upload.wikimedia.org/wikipedia/commons/0/09/Saint_Mary_of_Blachernae_8938.jpg</string>
 				<key>latitude</key>
 				<real>41.035085</real>
 				<key>longitude</key>
@@ -955,6 +1175,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Small Blachernae Palace</string>
+                <key>imageUrl</key>
+                <string>https://naukatv.ru/upload/files/21%284%29.jpg</string>
 				<key>latitude</key>
 				<real>41.033723</real>
 				<key>longitude</key>
@@ -963,6 +1185,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The capture of Constantinople by the Ottomans</string>
+                <key>imageUrl</key>
+                <string>https://atoapiwag.ru/uploads/posts/2020-04/padenie-konstantinopolja-voennoe-obozrenie-1.jpg</string>
 				<key>latitude</key>
 				<real>41.032599</real>
 				<key>longitude</key>
@@ -971,6 +1195,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>The Monastery of Hora</string>
+                <key>imageUrl</key>
+                <string>https://1.bp.blogspot.com/-DCe8MxzoTyc/WUwwty96_zI/AAAAAAAAA5Q/Sp9mtC-EWoU964ZLNzuIuU_2Rx7a5rrjgCLcBGAs/s1600/Chora-Church-1.jpg</string>
 				<key>latitude</key>
 				<real>41.031195</real>
 				<key>longitude</key>
@@ -979,6 +1205,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>St. George &apos;s Church</string>
+                <key>imageUrl</key>
+                <string>https://sozvezdie-tour.ru/Images/articles_files/599/1509px_starayaladoga_stgeorgechurch_002_4547.jpg</string>
 				<key>latitude</key>
 				<real>41.030373</real>
 				<key>longitude</key>
@@ -987,6 +1215,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Charisian Gate</string>
+                <key>imageUrl</key>
+                <string>https://i0.wp.com/ic.pics.livejournal.com/ludmylasavina/44284453/862675/862675_original.jpg</string>
 				<key>latitude</key>
 				<real>41.030192</real>
 				<key>longitude</key>
@@ -995,6 +1225,8 @@
 			<dict>
 				<key>tourTitle</key>
 				<string>Mihrimah Sultan Mosque</string>
+                <key>imageUrl</key>
+                <string>https://nowturkey.ru/wp-content/uploads/2021/02/mihrimah-2048x1366.jpg</string>
 				<key>latitude</key>
 				<real>41.029373</real>
 				<key>longitude</key>

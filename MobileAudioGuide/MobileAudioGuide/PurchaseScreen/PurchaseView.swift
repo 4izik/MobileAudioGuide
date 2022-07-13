@@ -47,7 +47,7 @@ class PurchaseView: UIView {
     
     private let footerView: UIView = {
         let view = UIView()
-        view.backgroundColor = Colors.vwBlueColor
+        view.backgroundColor = Colors.appAccentColor
         return view
     }()
     
@@ -150,7 +150,7 @@ class PurchaseView: UIView {
     
     private let backThreeToursView: UIView = {
         let view = UIView()
-        view.backgroundColor = .orange
+        view.backgroundColor = Colors.buyThreeToursButton
         return view
     }()
 

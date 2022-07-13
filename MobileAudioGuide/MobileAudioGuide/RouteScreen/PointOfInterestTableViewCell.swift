@@ -68,7 +68,7 @@ final class PointOfInterestTableViewCell: UITableViewCell {
     }()
     
     private lazy var checkPointView: UIImageView = {
-        let image = UIImage(named: "mapPin")?.withTintColor(Colors.vwBlueColor)
+        let image = UIImage(named: "mapPin")?.withTintColor(Colors.appAccentColor)
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
@@ -77,7 +77,7 @@ final class PointOfInterestTableViewCell: UITableViewCell {
     
     private lazy var checkPointNumberLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Colors.vwBlueColor
+        label.textColor = Colors.appAccentColor
         label.font = UIFont.systemFont(ofSize: 11, weight: .regular)
         label.textAlignment = .center
         label.text = "49"
@@ -116,7 +116,7 @@ final class PointOfInterestTableViewCell: UITableViewCell {
     /// Кнопка перехода на экран с подробным описанием точки маршрута
     lazy var showDetailsButton: UIButton = {
         let button = UIButton()
-        button.setTitleColor(Colors.vwBlueColor, for: .normal)
+        button.setTitleColor(Colors.appAccentColor, for: .normal)
         button.setTitle("More info", for: .normal)
         button.backgroundColor = .clear
         button.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .regular)
@@ -129,7 +129,7 @@ final class PointOfInterestTableViewCell: UITableViewCell {
         playButton.setImage(smallAudioPlayerButtonImage, for: .normal)
         playButton.contentVerticalAlignment = .fill
         playButton.contentHorizontalAlignment = .fill
-        playButton.tintColor = Colors.vwBlueColor
+        playButton.tintColor = Colors.appAccentColor
         return playButton
     }()
     

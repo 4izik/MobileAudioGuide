@@ -100,7 +100,14 @@ final class DetailsScreenViewController: UIViewController {
     }
     
     @objc private func showInfo() {
-        let infoScreenViewController = InfoScreenViewController()
+        let infoScreenViewController: InfoScreenViewController
+        
+        if excursionInfo.tours.indices.contains(viewpointNumber - 1) {
+            infoScreenViewController = InfoScreenViewController(creativeCommonUrl: excursionInfo.tours[viewpointNumber - 1].imageUrl)
+        } else {
+            infoScreenViewController = InfoScreenViewController()
+        }
+        
         infoScreenViewController.infoScreenView.segmentedControl.selectedSegmentIndex = 0
         infoScreenViewController.changeView()
         navigationController?.pushViewController(infoScreenViewController, animated: true)

@@ -10,10 +10,21 @@ import UIKit
 class InfoScreenViewController: UIViewController {
     
     let infoScreenView = InfoScreenView()
-
+    var creativeCommonUrl: String = "https://creativecommons.org/"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+    }
+    
+    init(creativeCommonUrl: String? = nil) {
+        super.init(nibName: nil, bundle: nil)
+        guard let creativeCommonUrl = creativeCommonUrl else { return }
+        self.creativeCommonUrl = creativeCommonUrl
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func setupViews() {
@@ -22,6 +33,7 @@ class InfoScreenViewController: UIViewController {
         view.backgroundColor = .white
         navigationController?.navigationBar.topItem?.title = ""
         infoScreenView.infoAboutAuthorTextView.text = TextLoader.loadFromTxtFile(named: "infoAboutAuthor")
+        infoScreenView.photoAuthorsTextView.addHyperLinksToText(hyperLinks: ["Creative common license" : creativeCommonUrl])
 
         infoScreenView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

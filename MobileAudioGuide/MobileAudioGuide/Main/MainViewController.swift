@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
     // MARK: - Properties
     let mainView = MainView()
     let namesTours = ["Istanbul in 1 day: The most popular route", "From Galata Bridge\nto Taksim Square", "Non-touristic Istanbul and\nthe legacy of Constantinople"]
-    let tagsColors = [Colors.btnHit, Colors.btnNew, Colors.btnSpecial]
+    let tagsColors = [Colors.hitBanner, Colors.newBanner, Colors.specialBanner]
     let tagsNames = ["hit","new","special"]
     let excursionsInfo: [ExcursionInfo]
     

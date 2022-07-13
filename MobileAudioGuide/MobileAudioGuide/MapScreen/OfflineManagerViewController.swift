@@ -33,7 +33,7 @@ final class OfflineManagerViewController: UIViewController {
     
     private let progressView: UIProgressView = {
         let progressView = UIProgressView()
-        progressView.progressTintColor = Colors.vwBlueColor
+        progressView.progressTintColor = Colors.appAccentColor
         progressView.layer.cornerRadius = 3
         progressView.layer.borderColor = UIColor.white.cgColor
         progressView.layer.borderWidth = 1
@@ -205,7 +205,7 @@ final class OfflineManagerViewController: UIViewController {
         
         var lineLayer = LineLayer(id: "line-layer")
         lineLayer.source = geoJSONDataSourceIdentifier
-        lineLayer.lineColor = .constant(StyleColor(Colors.vwBlueColor))
+        lineLayer.lineColor = .constant(StyleColor(Colors.appAccentColor))
         lineLayer.lineWidth = .constant(2)
         lineLayer.lineCap = .constant(.round)
         lineLayer.lineJoin = .constant(.round)
