@@ -8,16 +8,20 @@
 import MapboxMaps
 import UIKit
 
-private enum State {
-    case unknown
-    case initial
-    case downloading
-    case downloaded
-    case mapViewDisplayed
-    case finished
-}
-
 final class OfflineManagerViewController: UIViewController {
+    
+    private let excursionInfo: ExcursionInfo
+    private let excursionIndex: Int
+    private let mapFooterView = MapFooterView()
+    private var markers: [UIImage] = []
+    private var mapView: MapView?
+    private let istanbulZoom: CGFloat = 13.2
+    
+    private var mapInitOptions: MapInitOptions {
+        MapInitOptions(cameraOptions: CameraOptions(center: istanbulCoord, zoom: istanbulZoom), styleURI: .outdoors)
+    }
+    
+    private lazy var istanbulCoord = CLLocationCoordinate2D(latitude: excursionInfo.mapScreenCoordinates.latitude, longitude: excursionInfo.mapScreenCoordinates.longitude)
     
     private var mapViewContainer: UIView = {
         let view = UIView()
@@ -29,16 +33,6 @@ final class OfflineManagerViewController: UIViewController {
         indicator.isHidden = false
         indicator.startAnimating()
         return indicator
-    }()
-    
-    private let progressView: UIProgressView = {
-        let progressView = UIProgressView()
-        progressView.progressTintColor = Colors.appAccentColor
-        progressView.layer.cornerRadius = 3
-        progressView.layer.borderColor = UIColor.white.cgColor
-        progressView.layer.borderWidth = 1
-        progressView.progress = 0
-        return progressView
     }()
     
     private let myGeoButton: UIButton = {
@@ -59,13 +53,6 @@ final class OfflineManagerViewController: UIViewController {
         return button
     }()
     
-    private let excursionInfo: ExcursionInfo
-    private let mapFooterView = MapFooterView()
-    private var mapView: MapView?
-    private var tileStore: TileStore?
-    private var markers: [UIImage] = []
-    private let excursionIndex: Int
-    
     /// Приобретена ли полная версия для этой экскурсии
     var isFullVersion: Bool {
         PurchaseManager.shared.isProductPurchased(withIdentifier: excursionIndex.getProductIdentifier())
@@ -79,22 +66,7 @@ final class OfflineManagerViewController: UIViewController {
         else { return nil }
         return nowPlayingAudioNumber
     }
-    
-    private lazy var mapInitOptions: MapInitOptions = {
-        MapInitOptions(cameraOptions: CameraOptions(center: istanbulCoord, zoom: istanbulZoom),
-                       styleURI: .outdoors)
-    }()
-    
-    private lazy var offlineManager: OfflineManager = {
-        return OfflineManager(resourceOptions: mapInitOptions.resourceOptions)
-    }()
-    
-    // Regions and style pack downloads
-    private var downloads: [Cancelable] = []
-    private var istanbulCoord: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 41.0102, longitude: 28.9743)
-    private let istanbulZoom: CGFloat = 13.2
-    private let tileRegionId = "myTileRegion"
-    
+    // MARK: - init()
     init(excursionInfo: ExcursionInfo, excursionIndex: Int) {
         self.excursionInfo = excursionInfo
         self.excursionIndex = excursionIndex
@@ -107,10 +79,9 @@ final class OfflineManagerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        istanbulCoord = CLLocationCoordinate2D(latitude: excursionInfo.mapScreenCoordinates.latitude, longitude: excursionInfo.mapScreenCoordinates.longitude)
-        state = .initial
         setupImage()
         setupUI()
+        showMapView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -122,7 +93,7 @@ final class OfflineManagerViewController: UIViewController {
     
     func setupUI() {
         navigationController?.navigationBar.topItem?.title = ""
-        [activityIndicator, progressView, mapViewContainer, myGeoButton, moreButton, mapFooterView].forEach { view in
+        [activityIndicator, mapViewContainer, myGeoButton, moreButton, mapFooterView].forEach { view in
             self.view.addSubview(view)
             view.translatesAutoresizingMaskIntoConstraints = false
         }
@@ -154,14 +125,8 @@ final class OfflineManagerViewController: UIViewController {
             activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             activityIndicator.widthAnchor.constraint(equalToConstant: 50),
-            activityIndicator.heightAnchor.constraint(equalToConstant: 50),
-            
-            progressView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            progressView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            progressView.topAnchor.constraint(equalTo: activityIndicator.bottomAnchor, constant: 10),
-            progressView.heightAnchor.constraint(equalToConstant: 15)
+            activityIndicator.heightAnchor.constraint(equalToConstant: 50)
         ])
-        downloadTileRegions()
         
         myGeoButton.addTarget(self, action: #selector(showMyGeo), for: .touchUpInside)
         moreButton.addTarget(self, action: #selector(showAllTour), for: .touchUpInside)
@@ -232,94 +197,6 @@ final class OfflineManagerViewController: UIViewController {
     }
     
     // MARK: - Actions
-    private func downloadTileRegions() {
-        guard let tileStore = tileStore else {
-            preconditionFailure()
-        }
-        
-        precondition(downloads.isEmpty)
-        
-        let dispatchGroup = DispatchGroup()
-        var downloadError = false
-        
-        // Create style package with loadStylePack() call.
-        let stylePackLoadOptions = StylePackLoadOptions(glyphsRasterizationMode: .ideographsRasterizedLocally, metadata: ["tag": "my-outdoors-style-pack"])!
-        dispatchGroup.enter()
-        let stylePackDownload = offlineManager.loadStylePack(for: .outdoors, loadOptions: stylePackLoadOptions) { [weak self] progress in
-            DispatchQueue.main.async {
-                NSLog("StylePack = \(progress)")
-                let progressValue = Float(progress.loadedResourceCount) / Float(progress.requiredResourceCount)
-                self?.progressView.setProgress(progressValue, animated: true)
-            }
-        } completion: { result in
-            DispatchQueue.main.async { [weak self] in
-                defer {
-                    dispatchGroup.leave()
-                }
-                self?.progressView.isHidden = true
-                
-                switch result {
-                case let .success(stylePack):
-                    NSLog("StylePack download completed = \(stylePack)")
-                case let .failure(error):
-                    NSLog("stylePack download Error = \(error)")
-                    downloadError = true
-                }
-            }
-        }
-        // Create an offline region with tiles for the outdoors style
-        let outdoorsOptions = TilesetDescriptorOptions(styleURI: .outdoors,
-                                                       zoomRange: 14...16)
-        
-        let outdoorsDescriptor = offlineManager.createTilesetDescriptor(for: outdoorsOptions)
-        
-        // Load the tile region
-        let tileRegionLoadOptions = TileRegionLoadOptions(
-            geometry: .point(Point(istanbulCoord)),
-            descriptors: [outdoorsDescriptor],
-            metadata: ["tag": "my-outdoors-tile-region"],
-            acceptExpired: true)!
-        
-        dispatchGroup.enter()
-        let tileRegionDownload = tileStore.loadTileRegion(forId: tileRegionId,
-                                                          loadOptions: tileRegionLoadOptions) { (progress) in
-            DispatchQueue.main.async {
-                NSLog("\(progress)")
-            }
-        } completion: { result in
-            DispatchQueue.main.async {
-                defer {
-                    dispatchGroup.leave()
-                }
-                
-                switch result {
-                case let .success(tileRegion):
-                    NSLog("tileRegion = \(tileRegion)")
-                    
-                case let .failure(error):
-                    NSLog("tileRegion download Error = \(error)")
-                    downloadError = true
-                }
-            }
-        }
-        
-        // Wait for both downloads before moving to the next state
-        dispatchGroup.notify(queue: .main) { [self] in
-            self.downloads = []
-            self.state = downloadError ? .finished : .downloaded
-            if state == .downloaded {
-                state = .mapViewDisplayed
-            }
-        }
-        
-        downloads = [stylePackDownload, tileRegionDownload]
-        state = .downloading
-    }
-    
-    private func cancelDownloads() {
-        // Canceling will trigger `.canceled` errors that will then change state
-        downloads.forEach { $0.cancel() }
-    }
     
     private func addMarkersOnMap() {
         let tours = excursionInfo.tours
@@ -374,92 +251,30 @@ final class OfflineManagerViewController: UIViewController {
         mapFooterView.detailButton.addTarget(self, action: #selector(showDetailScreen), for: .touchUpInside)
     }
     
-    private func logDownloadResult<T, Error>(message: String, result: Result<[T], Error>) {
-        switch result {
-        case let .success(array):
-            NSLog(message)
-            for element in array {
-                NSLog("\t\(element)")
-            }
-            
-        case let .failure(error):
-            NSLog("\(message) \(error)")
-        }
-    }
     
-    private func downloadedRegions() {
-        guard let tileStore = tileStore else {
-            preconditionFailure()
-        }
-        
-        offlineManager.allStylePacks { result in
-            self.logDownloadResult(message: "Style packs:", result: result)
-        }
-        
-        tileStore.allTileRegions { result in
-            self.logDownloadResult(message: "Tile regions:", result: result)
-        }
-    }
-    
-    // Remove downloaded region and style pack
-    private func removeTileRegionAndStylePack() {
-        tileStore?.removeTileRegion(forId: tileRegionId)
-        tileStore?.setOptionForKey(TileStoreOptions.diskQuota, value: 0)
-        offlineManager.removeStylePack(for: .outdoors)
-    }
-    
-    private var state: State = .unknown {
-        didSet {
-            NSLog("Changing state from \(oldValue) -> \(state)")
-            
-            switch (oldValue, state) {
-            case (_, .initial):
-                resetUI()
-                
-                let tileStore = TileStore.default
-                let accessToken = ResourceOptionsManager.default.resourceOptions.accessToken
-                tileStore.setOptionForKey(TileStoreOptions.mapboxAccessToken, value: accessToken)
-                
-                self.tileStore = tileStore
-                
-                OfflineSwitch.shared.isMapboxStackConnected = true
-                
-            case (.initial, .downloading):
-                // Can cancel
-                print("Start downloading")
-            case (.downloading, .downloaded):
-                OfflineSwitch.shared.isMapboxStackConnected = false
-                
-            case (.downloaded, .mapViewDisplayed):
-                showMapView()
-                
-            case (.mapViewDisplayed, .finished),
-                (.downloading, .finished):
-                print("Finish downloading")
-                
-            default:
-                fatalError("Invalid transition from \(oldValue) to \(state)")
-            }
-        }
-    }
     
     // MARK: - UI changes
-    private func resetUI() {
-        mapView?.removeFromSuperview()
-        mapView = nil
-    }
     
     private func showMapView() {
+        if !MapTilesLoader.shared.tilesLoaded && MapTilesLoader.shared.state != .downloading { MapTilesLoader.shared.loadTiles() }
+        guard MapTilesLoader.shared.state != .noConnection || MapTilesLoader.shared.tilesLoaded else {
+            AlertService().presentAlert(title: "No Internet connection",
+                                        message: """
+                                                     
+                                                     Map needs to be downloaded once to appear on screen.
+                                                     
+                                                     Please turn on your Internet connection. Once map data is downloaded you won't need Internet connection in the future.
+                                                     """,
+                                        in: self)
+            return
+        }
         activityIndicator.isHidden = true
         activityIndicator.stopAnimating()
-        progressView.isHidden = true
         
         let mapView = MapView(frame: mapViewContainer.bounds, mapInitOptions: mapInitOptions)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapViewContainer.addSubview(mapView)
         
-        // Add a point annotation that shows the point geometry that were passed
-        // to the tile region API.
         mapView.mapboxMap.onNext(.styleLoaded) { [weak self] _ in
             guard let self = self,
                   let mapView = self.mapView else {
