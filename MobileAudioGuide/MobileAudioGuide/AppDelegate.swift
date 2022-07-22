@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().delegate = self
         scheduleNotification()
         
+        MapTilesLoader.shared.state = .initial
+        MapTilesLoader.shared.loadTiles()
+        
         priceManager.getPricesForInApps(inAppsIDs: [InAppProducts.firstTour.rawValue, InAppProducts.allTours.rawValue])
         
         PurchaseManager.shared.setupPurchases { success in
@@ -26,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 PurchaseManager.shared.getAllProducts()
             }
         }
-        
         return true
     }
 
